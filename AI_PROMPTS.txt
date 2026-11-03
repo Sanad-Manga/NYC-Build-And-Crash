@@ -107,3 +107,62 @@ How the output was used: Fixed the review findings in the collisions notebook:
 borough Title Case to match housing, always loading from the raw API pull, 
 safer download cache, stale numbers in markdown, and the missing prompts section.
 ================================================
+
+
+
+================================================
+Date: 2026-11-03
+Student: Yassin
+Tool: Codex
+Related Requirement: Phase 1 - Project inspection and planning
+
+Prompt: Read the project PDFs and inspect the GitHub repository, existing notebooks, and team responsibilities. Plan the loading, missing-value handling, and duplicate cleaning for the Motor Vehicle Collisions dataset (2022+). Do not implement before approval.
+
+How the output was used:
+Codex identified the dataset structure, integration fields, project requirements, and proposed the Phase 1 implementation plan.
+
+================================================
+Date: 2026-11-03
+Student: Yassin
+Tool: Codex
+Related Requirement: Phase 1 - Dataset loading and cleaning
+
+Prompt: Implement 02_collisions_cleaning.ipynb using the approved plan. Include API pagination, 2022+ filtering, missing-value analysis, duplicate detection, validation, and export for Ahmed. Preserve all 29 columns and test on 100 records first. Do not modify teammates' files.
+
+How the output was used:
+Created the Phase 1 notebook and successfully tested it on 100 collision records, preserving the original columns and missing ZIP values.
+
+================================================
+Date: 2026-11-03
+Student: Yassin
+Tool: Codex
+Related Requirement: Phase 1 - Code review and bug fixes
+
+Prompt: Audit the notebook for bugs, incomplete downloads, missing-value errors, duplicate handling, schema problems, CSV export issues, and compatibility with Ahmed's notebook. Fix confirmed problems and run synthetic tests without downloading the full dataset.
+
+How the output was used:
+Fixed pagination completeness checks, export data types, identifier reconciliation, cache validation, and schema checks. Improved compatibility with Ahmed's next stage.
+
+================================================
+Date: 2026-11-03
+Student: Yassin
+Tool: Codex
+Related Requirement: Phase 1 - Testing and validation
+
+Prompt: Rerun controlled tests and the 100-row notebook outside the sandbox to resolve Jupyter permission errors. Test cleaning, duplicates, cache integrity, and exports. Do not download the complete dataset.
+
+How the output was used:
+All 12 controlled test groups and nine notebook code cells passed, confirming the fixes worked on test data.
+
+================================================
+Date: 2026-11-03
+Student: Yassin
+Tool: Codex
+Related Requirement: Phase 1 - Full dataset cleaning and export
+
+Prompt: Download and process all Motor Vehicle Collisions records from 2022 onward. Run cleaning and validation, verify row counts and duplicates, and export collisions_step1.csv.gz for Ahmed. Do not modify teammates' files or push changes.
+
+How the output was used:
+Processed 447,156 crashes (2022–2026), retained all 29 columns and 125,794 missing-ZIP records, and found zero duplicates. Exported the verified 28.31 MB cleaned dataset for Ahmed's Stage 2 work.
+
+================================================
