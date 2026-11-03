@@ -1,0 +1,1107 @@
+================================================
+PROMPT 1 — INITIAL HOUSING EDA AND CLEANING AUDIT
+=================================================
+
+Date: [Verify exact date in Codex history — November 2 or 3, 2026]
+
+Student: Mohamed Walid
+
+Tool: OpenAI Codex (prompt prepared with ChatGPT)
+
+Related Requirement: Phase 1 — Housing Exploratory Data Analysis, Initial Cleaning Audit, Missing Values, Outliers, and Data Quality Assessment
+
+Prompt:
+
+## Context
+
+I am **Mohamed Walid**, working on my assigned Housing EDA and Cleaning responsibilities in Phase 1.
+
+Before starting, read `AGENTS.md` and consult the relevant sections of `docs/SPEC.md`, `docs/TEAM_PLAN.md`, and `docs/CONTRACT.md`.
+
+Follow the established project conventions and contributor boundaries.
+
+## Task
+
+Work inside my existing notebook:
+
+`phase1_housing_eda_cleaning_walid.ipynb`
+
+### 1. Audit Previous Work
+
+Mohamed Issa has completed the initial housing cleaning stage.
+
+His notebook: `01_housing_cleaning.ipynb`
+
+His output: `data/housing_step1.csv.gz`
+
+Independently review his implementation for:
+
+* Correctness of missing-value handling.
+* Duplicate detection and removal.
+* Data integrity and preservation of important attributes.
+* Potential errors, unjustified decisions, or overlooked problems.
+
+Verify findings against the actual dataset. Distinguish verified results from assumptions. If the original data is unavailable, do not claim to have verified transformations that require it.
+
+Document important audit findings in my notebook without modifying Issa's work.
+
+### 2. Implement Housing EDA
+
+Using Issa's processed dataset, implement:
+
+* Dataset overview and descriptive statistics.
+* Missing-value analysis.
+* Numerical and categorical distributions.
+* Outlier detection and investigation.
+* Inconsistency detection.
+* ZIP-code and date quality assessment.
+* Meaningful exploratory visualizations.
+
+Pay particular attention to construction costs, floor areas, dwelling units, geographic attributes, and the distinction between unique jobs and individual filings.
+
+### 3. Documentation
+
+Organize the notebook using clear Markdown sections.
+
+Explain the purpose of each analysis, report actual findings, and identify issues that should be addressed during cleaning.
+
+Keep the implementation readable, efficient, and suitable for university evaluation.
+
+## Constraints
+
+* Modify only my notebook.
+* Preserve existing working cells.
+* Do not modify Issa's notebook or the input dataset.
+* Do not perform cleaning transformations yet; this pass is for auditing and EDA.
+* Do not implement other phases or unrelated features.
+* Do not create unnecessary files.
+* Do not commit or push changes.
+* Avoid unnecessary full-dataset processing.
+* Do not invent findings or claim unexecuted checks passed.
+
+## Execution and Validation
+
+Implement the notebook, execute relevant cells using the existing `.venv` environment where feasible, and verify the outputs.
+
+Investigate and fix errors within the authorized scope.
+
+## Expected Response
+
+After completing the task, provide a concise report containing:
+
+1. Changes implemented.
+2. Results of Issa's cleaning audit.
+3. Important EDA findings.
+4. Validation results and unresolved issues.
+5. Recommended cleaning operations for the next step.
+
+**Do not implement the recommended cleaning operations yet. We will review the findings first.**
+
+How the output was used:
+
+Codex implemented the initial housing audit and Exploratory Data Analysis in Sections 1–10 of `phase1_housing_eda_cleaning_walid.ipynb`.
+
+The implementation included descriptive statistics, missing-value analysis, categorical and numerical distributions, IQR-based outlier investigation, geographic checks, ZIP-code validation, date analysis, and filing-versus-job comparisons.
+
+The analysis was executed on Mohamed Issa's first-stage output containing 972,679 filing records and 25 columns.
+
+The results were reviewed with ChatGPT before proceeding to the cleaning stage.
+
+The audit identified suspicious numerical values, geographic inconsistencies, date anomalies, and limitations in verifying Issa's original raw-data cleaning decisions.
+
+The initial analysis and findings were retained. No cleaning transformations were performed during this stage.
+
+
+________________________________________________________________________________
+________________________________________________________________________________
+
+
+================================================
+PROMPT 2 — HOUSING CLEANING AND VALIDATION
+==========================================
+
+Date: [Verify exact date in Codex history — November 2 or 3, 2026]
+
+Student: Mohamed Walid
+
+Tool: OpenAI Codex (prompt prepared with ChatGPT)
+
+Related Requirement: Phase 1 — Housing Data Cleaning, Outlier Treatment, Inconsistency Handling, Standardization, and Final Dataset Validation
+
+Prompt:
+
+## Context
+
+I am **Mohamed Walid**, continuing my assigned Phase 1 housing responsibilities.
+
+Read `AGENTS.md` and consult the relevant sections of `docs/SPEC.md`, `docs/TEAM_PLAN.md`, and `docs/CONTRACT.md`.
+
+We have completed the initial cleaning audit and Exploratory Data Analysis (EDA).
+
+My existing notebook is:
+
+`phase1_housing_eda_cleaning_walid.ipynb`
+
+The input dataset is:
+
+`data/housing_step1.csv.gz`
+
+**Your objective is to complete the remaining housing cleaning, standardization, and validation tasks using the findings from the existing EDA.**
+
+Do not repeat the analysis unnecessarily.
+
+## 1. Review Existing Findings
+
+Before implementing changes, inspect the existing notebook, its findings, and relevant data.
+
+Pay particular attention to:
+
+* Suspicious construction costs, floor areas, and dwelling-unit values.
+* Zero-cost and zero-area observations.
+* Potentially invalid ZIP codes and geographic inconsistencies.
+* Date-format and chronological inconsistencies.
+* Filing-level versus unique-job-level observations.
+* Categorical inconsistencies and unusual filing types.
+
+Use the existing analysis to guide cleaning decisions.
+
+Do not assume that every flagged observation requires modification.
+
+## 2. Implement Housing Cleaning
+
+### A. Outlier Treatment
+
+Investigate suspicious numerical values, particularly:
+
+* `initial_cost`
+* `total_construction_floor_area`
+* `existing_dwelling_units`
+* `proposed_dwelling_units`
+
+The EDA identified extreme values, including 111,111,111 existing dwelling units and exceptionally large floor areas.
+
+Requirements:
+
+* Distinguish statistical outliers from demonstrably invalid values.
+* Apply justified, field-specific cleaning rules.
+* Preserve legitimate extreme observations.
+* Never automatically remove all IQR outliers.
+* Investigate zero-cost and zero-area records before modifying them.
+* Avoid deleting entire records when only one attribute is problematic.
+* Preserve uncertain observations with documented quality flags when their validity cannot be established.
+
+If a value is demonstrably invalid, handle it transparently and document the decision.
+
+Do not invent replacement values.
+
+### B. Inconsistent Values
+
+Investigate and resolve confirmed inconsistencies in:
+
+* Categorical attributes.
+* Numerical attributes.
+* Building and job classifications.
+* Relevant geographic fields.
+
+The initial EDA found that the main categorical attributes were already consistently formatted.
+
+Do not introduce unnecessary transformations.
+
+Investigate unusual categories using the available data and source documentation.
+
+Preserve legitimate filing categories and existing identifiers.
+
+### C. ZIP-Code Standardization
+
+Ensure `zip_code` follows the agreed contract.
+
+Requirements:
+
+* Preserve ZIP codes as strings.
+* Use a consistent five-digit format.
+* Remove formatting inconsistencies where necessary.
+* Investigate suspicious ZIP codes, including `01226` and `10803`.
+* Investigate ZIP codes associated with multiple boroughs.
+* Validate geographic inconsistencies using authoritative references when accessible.
+
+**Do not invent ZIP-code corrections or change boroughs based solely on assumptions.**
+
+If authoritative verification is unavailable, preserve the original values, flag unresolved anomalies, and document the limitation.
+
+Ensure that the resulting format is compatible with the transportation dataset's planned integration keys.
+
+### D. Date Standardization
+
+Standardize:
+
+* `filing_date`
+* `approved_date`
+* `first_permit_date`
+* `current_status_date`
+
+Requirements:
+
+* Convert dates to appropriate datetime types.
+* Report parsing failures.
+* Preserve legitimate missing dates.
+* Derive a nullable integer `year` column from `filing_date`.
+* Validate the resulting temporal coverage.
+* Investigate chronological inconsistencies.
+
+**Important correction from our EDA review:**
+
+The original audit compared complete timestamps, which can incorrectly flag same-day events when one field contains a time and another defaults to midnight.
+
+For chronological validation, distinguish between:
+
+1. Events occurring earlier on the same calendar day.
+2. Events occurring on genuinely earlier calendar dates.
+
+Previous analysis suggested approximately:
+
+* 27 approvals on earlier calendar dates.
+* 15 first permits on earlier calendar dates.
+* 14 status dates on earlier calendar dates.
+
+Independently verify these figures before reporting them.
+
+Do not automatically delete or alter suspicious dates without justified evidence.
+
+## 3. Preserve Data Integrity
+
+The housing dataset contains multiple filings for some construction jobs.
+
+Requirements:
+
+* Preserve `job_filing_number`.
+* Preserve `job_id`.
+* Preserve `is_initial_filing`.
+* Preserve legitimate filing records.
+* Do not perform premature job-level aggregation.
+* Do not confuse filing counts with unique-job counts.
+* Do not sum repeated job-level values across multiple filings without an appropriate aggregation rule.
+
+The final housing dataset should remain suitable for different research questions and later ZIP-code/year aggregation.
+
+Do not implement the housing/transportation integration. That belongs to Phase 2.
+
+## 4. Documentation
+
+Continue working inside:
+
+`phase1_housing_eda_cleaning_walid.ipynb`
+
+Add organized cleaning and validation sections after the existing EDA.
+
+Document:
+
+* Issues investigated.
+* Cleaning decisions.
+* Reasons for each transformation.
+* Records or values affected.
+* Anomalies preserved.
+* Unresolved limitations.
+
+Include a concise before-and-after comparison.
+
+Update existing Markdown statements that describe cleaning as "not implemented" so the final notebook accurately distinguishes the completed EDA from the newly implemented cleaning.
+
+Do not remove useful EDA findings or contributor attribution.
+
+## 5. Final Dataset Export
+
+After completing and validating the cleaning stage, export the final housing dataset to:
+
+`data/housing_step2.csv.gz`
+
+Requirements:
+
+* Use GZIP compression.
+* Preserve required analytical attributes.
+* Include the standardized integration fields.
+* Preserve appropriate data types where CSV permits.
+* Avoid exporting the DataFrame index.
+* Ensure the file can be loaded independently.
+* Do not overwrite `housing_step1.csv.gz`.
+
+The final output will be handed to Mohamed Issa for Phase 2 integration.
+
+Ensure its schema complies with the applicable requirements in `docs/CONTRACT.md`.
+
+If the contract conflicts with the proposed output schema, identify the conflict rather than silently changing an agreed interface.
+
+## 6. Final Validation
+
+Validate the cleaned dataset before completion.
+
+Check:
+
+1. Dataset dimensions and row-count changes.
+2. Required columns and data types.
+3. Missing values.
+4. Duplicate filing identifiers.
+5. ZIP-code formatting.
+6. Date parsing and `year` extraction.
+7. Numerical validity.
+8. Preservation of legitimate records.
+9. Compatibility with planned integration keys.
+10. Successful export and reload of the final CSV.
+
+Include explicit validation checks in the notebook.
+
+Every meaningful data modification must be traceable and justified.
+
+Do not report tests as passed unless they were executed successfully.
+
+## 7. Constraints
+
+* Modify only my existing notebook and create the required final dataset.
+* Do not modify Mohamed Issa's notebook or dataset.
+* Do not modify unrelated project files.
+* Do not change the project's documentation contracts.
+* Do not implement Phase 2 or Phase 3.
+* Do not create unnecessary files.
+* Do not commit or push changes to GitHub.
+* Avoid unnecessary full-dataset processing.
+* Do not fabricate findings or silently suppress errors.
+
+Work autonomously within these boundaries.
+
+## 8. Expected Final Report
+
+After implementation, provide a concise report containing:
+
+**1. Cleaning Performed**
+
+* Transformations applied.
+* Number of affected records or values.
+* Reasons for the changes.
+
+**2. Preserved and Unresolved Anomalies**
+
+* Suspicious observations retained.
+* Issues requiring authoritative verification.
+* Potential implications for integration.
+
+**3. Dataset Comparison**
+
+* Original versus final dimensions.
+* Changes in missing values.
+* Changes in data types.
+
+**4. Validation Results**
+
+* Passed checks.
+* Failed checks.
+* Warnings.
+* Unverified assumptions.
+
+**5. Final Deliverables**
+
+* Modified notebook.
+* Exported cleaned dataset.
+* Confirmation that both can be loaded and executed successfully.
+
+The objective is to deliver a **validated, documented, integration-ready housing dataset** while preserving legitimate information and avoiding unjustified data modifications.
+
+How the output was used:
+
+Codex implemented the housing cleaning, standardization, and validation pipeline in Sections 11–17 of `phase1_housing_eda_cleaning_walid.ipynb`.
+
+The implementation standardized ZIP codes and dates, derived the `year` column, investigated numerical anomalies, and added quality flags.
+
+One ZIP code was corrected from `01226` to `10303` using a documented NYC PLUTO address match.
+
+Fourteen floor-area values, seventeen existing dwelling-unit values, and twenty-three proposed dwelling-unit values were set to missing according to the documented cleaning rules.
+
+All 972,679 filing records were preserved during this stage.
+
+Codex exported the cleaned dataset to `data/housing_step2.csv.gz` and reported successful execution of the cleaning and validation cells.
+
+The generated output was reviewed with ChatGPT. Two areas were identified for improvement: overly broad ZIP-code quality flags and ambiguity in the numerical outlier documentation. These were addressed through a subsequent Codex prompt.
+
+
+________________________________________________________________________________
+________________________________________________________________________________
+
+
+================================================
+PROMPT 3 — FINAL CLEANING REFINEMENTS
+=====================================
+
+Date: [Verify exact date in Codex history — November 2 or 3, 2026]
+
+Student: Mohamed Walid
+
+Tool: OpenAI Codex (prompt prepared with ChatGPT)
+
+Related Requirement: Phase 1 — Data Quality Assurance, ZIP-Code Classification Refinement, Numerical Outlier Documentation, and Final Validation
+
+Prompt:
+
+## Context
+
+I am Mohamed Walid, finalizing my Phase 1 housing EDA and cleaning work.
+
+Follow `AGENTS.md` and the relevant sections of `docs/SPEC.md`, `docs/TEAM_PLAN.md`, and `docs/CONTRACT.md`.
+
+My notebook:
+`phase1_housing_eda_cleaning_walid.ipynb`
+
+Input:
+`data/housing_step1.csv.gz`
+
+Output:
+`data/housing_step2.csv.gz`
+
+The implementation is already complete and has passed its existing validation checks.
+
+**Your task is to make two targeted corrections, not redesign or repeat the entire analysis.**
+
+## Task 1 — Refine ZIP-Code Quality Flags
+
+The current implementation assigns `verified_boundary_or_cross_borough` to every record whose ZIP code belongs to:
+
+* `10463`
+* `10803`
+* `11208`
+* `11370`
+
+This is too broad because most records with these ZIP codes have ordinary geographic classifications.
+
+### Requirements
+
+1. Review the existing ZIP-code analysis and authoritative evidence documented in the notebook.
+2. Identify the specific ZIP/borough combinations requiring special classification.
+3. Flag only the relevant exceptional records.
+4. Preserve ordinary ZIP/borough combinations as `standard_five_digit`.
+5. Distinguish unusual but verified postal ZIPs from verified cross-borough cases where appropriate.
+6. Preserve the authoritative correction from `01226` to `10303`.
+7. Preserve all original filing records and geographic attributes.
+8. Do not introduce new ZIP corrections without authoritative evidence.
+
+The previous review identified these combinations for investigation:
+
+| ZIP Code | Borough   | Records |
+| -------- | --------- | ------: |
+| `10463`  | Manhattan |     377 |
+| `10803`  | Bronx     |      25 |
+| `11208`  | Queens    |       6 |
+| `11370`  | Bronx     |      51 |
+
+These counts are reference findings, not hardcoded acceptance criteria. Recalculate them from the actual dataset.
+
+**Important:** Do not assume that a minority ZIP/borough combination is incorrect merely because it is uncommon. The goal is accurate quality metadata, not forced geographic normalization.
+
+## Task 2 — Clarify Numerical Outlier Reporting
+
+The current notebook reports 283 records exceeding numerical review thresholds.
+
+However, some of these records also received justified invalid-value corrections.
+
+The previous review identified:
+
+* 283 records originally exceeding review thresholds.
+* 38 distinct records receiving numerical corrections.
+* 245 records remaining above review thresholds without those corrections.
+
+### Requirements
+
+1. Independently verify these counts from the existing DataFrames.
+2. Clearly distinguish between originally flagged records, corrected records, and records retained for review.
+3. Keep the original `numeric_outlier_review_flag` if it is intended to preserve the pre-cleaning investigation history.
+4. If useful, introduce a separate post-cleaning review indicator, but avoid unnecessary columns.
+5. Update misleading Markdown statements and the final handoff summary.
+6. Preserve the existing numerical correction decisions unless a demonstrable implementation error is found.
+7. Do not delete additional outliers or change numerical thresholds.
+
+Document the distinction clearly so the Phase 2 integration team does not confuse corrected values with unresolved anomalies.
+
+## Task 3 — Validation and Output
+
+After applying the refinements:
+
+1. Re-execute the affected notebook cells in the correct order.
+2. Regenerate `data/housing_step2.csv.gz` using the revised implementation.
+3. Verify the exported dataset can be reloaded successfully.
+4. Confirm that row counts, identifiers, and existing numerical corrections remain unchanged.
+5. Confirm that the ZIP quality flags match the intended ZIP/borough combinations.
+6. Confirm that numerical review counts match their documented definitions.
+7. Run the existing final validation checks.
+8. Add targeted validation assertions for the two refinements where appropriate.
+
+Do not report checks as passed unless they were actually executed.
+
+## Constraints
+
+* Modify only `phase1_housing_eda_cleaning_walid.ipynb` and regenerate `data/housing_step2.csv.gz`.
+* Do not modify Mohamed Issa's notebook or input dataset.
+* Do not modify `AGENTS.md`, `SPEC.md`, `TEAM_PLAN.md`, or `CONTRACT.md`.
+* Do not change unrelated cleaning logic.
+* Do not implement Phase 2 integration.
+* Do not create unnecessary files or dependencies.
+* Do not commit or push to GitHub.
+* Preserve all legitimate records and contributor attribution.
+* Avoid unnecessary full-dataset processing.
+
+## Expected Final Report
+
+Provide a concise summary covering:
+
+1. **ZIP Refinement:** Which combinations were flagged, their final counts, and the classification logic.
+2. **Outlier Clarification:** Original, corrected, and unresolved review counts.
+3. **Files Changed:** Exact files modified or regenerated.
+4. **Validation:** Checks executed, results, and any remaining warnings.
+5. **Handoff Readiness:** Whether the dataset is ready for Mohamed Issa's Phase 2 integration.
+
+Do not expand into unrelated improvements.
+
+The goal is to finalize the existing implementation with accurate quality flags, clear documentation, and verified outputs.
+
+How the output was used:
+
+Codex refined the housing dataset's geographic quality flags so that only verified exceptional ZIP-code and borough combinations received special classifications.
+
+The changes affected 459 exceptional records, while ordinary ZIP-code and borough combinations retained their standard classification.
+
+The numerical outlier documentation was also clarified:
+
+* 283 records originally exceeded review thresholds.
+* 38 distinct records received numerical corrections.
+* 245 records retained unresolved extreme values.
+
+No additional rows were deleted, and the original cleaning thresholds remained unchanged.
+
+Codex regenerated `data/housing_step2.csv.gz` and reported that all 29 final validation checks passed.
+
+The refinements were retained in `phase1_housing_eda_cleaning_walid.ipynb`.
+
+________________________________________________________________________________
+________________________________________________________________________________
+
+
+================================================
+PROMPT 4 — SANAD'S PR REVIEW CORRECTIONS
+========================================
+
+Date: 2026-11-03
+
+Student: Mohamed Walid
+
+Tool: OpenAI Codex (prompt prepared with ChatGPT)
+
+Related Requirement: Phase 1 — Pull Request Review, Reproducibility, Project Documentation, AI Prompt Logging, Aggregation Metric Definitions, and Notebook Presentation (W2–W6)
+
+Prompt:
+
+# Task: Resolve Mohamed Walid's PR #1 Review Issues
+
+## Context
+
+I am Mohamed Walid, working on the NYC Build and Crash project.
+
+Current branch:
+
+`feature/housing-eda-walid`
+
+Pull request:
+
+`https://github.com/Sanad-Manga/NYC-Build-And-Crash/pull/1`
+
+The team reviewed my Phase 1 housing EDA, cleaning, and validation work.
+
+The reviewer confirmed that the analysis and cleaning methodology are good. The remaining problems concern reproducibility, PR organization, AI prompt documentation, metric definitions, and notebook presentation.
+
+Read `AGENTS.md` and the relevant project documentation before working.
+
+Follow the latest reviewer instructions in `FIXES_WALID.md` if that file is available locally. This prompt incorporates the updated instructions.
+
+## Important: W1 Is Not My Responsibility
+
+Mohamed Issa is responsible for implementing the 2022-onward filter.
+
+The team leader has explicitly instructed me to complete the remaining issues while Issa handles W1 separately.
+
+Therefore:
+
+* Do not implement the 2022 filter.
+* Do not remove historical observations.
+* Do not change the existing cleaning methodology.
+* Do not change numerical thresholds or ZIP corrections.
+* Do not regenerate the cleaned dataset unnecessarily.
+* Do not modify Issa's notebook.
+* Do not implement Phase 2 integration.
+
+Preserve the existing dataset and mark W1 as a pending dependency.
+
+Do not claim that the final 2022-specific acceptance checks have passed.
+
+---
+
+## W2 — Reproducibility and Gitignore (CRITICAL)
+
+### 1. Update .gitignore
+
+Remove the blanket exclusion:
+
+`data/`
+
+We want the data directory to be visible to Git so the team can establish a proper dataset-sharing strategy.
+
+However:
+
+* Do not automatically stage or commit datasets.
+* Inspect all files under `data/`.
+* Report their sizes.
+* Identify files exceeding GitHub's normal file-size limits.
+* Recommend normal Git tracking, Git LFS, or external storage as appropriate.
+* Preserve exclusions for `.venv/`, Python caches, notebook checkpoints, and temporary files.
+
+Never force-add a large dataset without authorization.
+
+### 2. Add Notebook Setup Instructions
+
+At the beginning of:
+
+`phase1_housing_eda_cleaning_walid.ipynb`
+
+Add a Markdown section titled:
+
+`How to Run`
+
+Include:
+
+* The Python version used.
+* Required dependencies.
+* Installation command: `pip install -r requirements.txt`.
+* Local VS Code and Jupyter setup.
+* Notebook execution order.
+* Expected input file: `data/housing_step1.csv.gz`.
+* Expected output file: `data/housing_step2.csv.gz`.
+* Expected output size, clearly identified as approximate.
+* Instructions to restart the kernel and execute all cells.
+
+The team does not use Google Colab.
+
+### 3. Add Missing Input Handling
+
+Before reading `data/housing_step1.csv.gz`, check whether the file exists.
+
+If missing, raise:
+
+```python
+FileNotFoundError(
+    "Run 01_housing_cleaning.ipynb first. "
+    "It creates data/housing_step1.csv.gz"
+)
+```
+
+Do not change the existing input path.
+
+### 4. Create requirements.txt
+
+Create a root-level:
+
+`requirements.txt`
+
+Use the actual versions installed in the current Python environment.
+
+Include only the required dependencies, such as:
+
+* pandas
+* numpy
+* matplotlib
+* ipykernel or the required Jupyter dependencies
+
+Use `pip freeze` to identify installed versions.
+
+Do not copy unrelated packages into the requirements file.
+
+### 5. Reproducibility Validation
+
+Verify:
+
+* No machine-specific absolute paths.
+* Dependencies can be installed.
+* Input and output paths are documented.
+* The notebook provides a meaningful error if its input is missing.
+* The notebook can execute in the available environment.
+
+Attempt a clean-environment reproduction where feasible.
+
+If Issa's original source data is unavailable, explain the limitation rather than claiming full fresh-clone reproducibility.
+
+---
+
+## W3 — Separate Unapproved Project Documentation (MAJOR)
+
+The current PR contains:
+
+* `AGENTS.md`
+* `docs/SPEC.md`
+* `docs/TEAM_PLAN.md`
+* `docs/CONTRACT.md`
+
+These documents contain proposed project-wide standards and must be reviewed separately.
+
+### Requirements
+
+1. Preserve all existing documentation.
+2. Remove `AGENTS.md` and `docs/` from the final diff of PR #1.
+3. Prepare a separate branch based on `main`.
+
+Suggested branch:
+
+`docs/proposed-team-standards`
+
+4. Ensure the documentation branch contains the four documentation files.
+5. Do not rewrite Git history or force-push.
+6. Do not modify `main`.
+7. Do not accidentally lose the documentation during branch operations.
+
+Use a safe Git workflow, such as a temporary worktree, if necessary.
+
+### CONTRACT.md Requirements
+
+Ensure the beginning of `docs/CONTRACT.md` clearly states:
+
+* `zip_code`: five-digit string.
+* `year`: integer.
+* Integration grain: one record per ZIP code × year.
+* Agreed analytical scope: 2022 onward.
+
+The contract must not contradict these decisions elsewhere.
+
+Do not unnecessarily rewrite the existing documentation.
+
+### Filename Validation
+
+Check:
+
+`phase1_housing_eda_cleaning_walid.ipynb`
+
+against the contract's naming convention.
+
+Rename it only if it genuinely violates that convention.
+
+### Git Operations
+
+Prepare the branch changes locally.
+
+Do not push either branch, create pull requests, or merge changes yet.
+
+Report the resulting branch structure and file differences before proceeding.
+
+---
+
+## W4 — Create AI_PROMPTS.txt (MAJOR)
+
+The course requires an AI prompt log.
+
+Create or append to:
+
+`AI_PROMPTS.txt`
+
+at the repository root.
+
+### Required Format
+
+Use this exact structure for every significant prompt:
+
+```text
+================================================
+Date: 2026-11-03
+Student: Mohamed Walid
+Tool: <tool name>
+Related Requirement: Phase 1 - housing EDA/cleaning (<specific part>)
+Prompt: <original prompt, verbatim>
+How the output was used: <what was kept, changed, or rejected, and where>
+================================================
+```
+
+### Relevant AI Development Stages
+
+My notebook was developed through three main Codex stages:
+
+1. Initial housing audit and EDA.
+2. Housing cleaning, standardization, and validation.
+3. ZIP-quality and numerical-outlier refinements.
+
+Additional significant prompts may be included where relevant.
+
+### Critical Requirements
+
+* Record the original prompts verbatim when available.
+* Do not invent missing prompt text.
+* Do not pretend reconstructed prompts are verbatim.
+* Do not include trivial prompts unrelated to project implementation.
+* Preserve chronological order.
+* Use the correct tool names.
+* Explain how each AI-generated result was used.
+* Identify the affected notebook sections or cells.
+
+If the exact original prompts are unavailable, insert clearly labeled placeholders requiring my input.
+
+Do not invent prompt dates. Use the original date when known; otherwise mark it for verification.
+
+### Notebook Reference
+
+At the end of the notebook, add a Markdown section titled:
+
+`Prompts Used`
+
+Include:
+
+`Full log in AI_PROMPTS.txt (entries by Mohamed Walid).`
+
+Also identify which notebook sections or cells were AI-assisted.
+
+Do not duplicate the full prompt log inside the notebook.
+
+### PR Handling
+
+Because `AI_PROMPTS.txt` is explicitly required by the course, prepare it for inclusion in PR #1.
+
+The review document's PR file-list requirement does not mention this file, creating a minor conflict with W4.
+
+Report this discrepancy. Do not omit the required prompt log merely to satisfy the shorter file list.
+
+---
+
+## W5 — Define Housing Aggregation Metrics (MAJOR)
+
+Add a short Markdown section:
+
+`Metric Definitions for ZIP × Year Aggregation`
+
+Do not perform the aggregation.
+
+The purpose is to provide unambiguous metric definitions for Mohamed Issa and Yassin.
+
+### housing_job_count
+
+Define:
+
+`housing_job_count`
+
+as the number of unique construction jobs assigned to each ZIP-code/year combination.
+
+Requirements:
+
+* Use `job_id` as the unique identifier.
+* Assign each job to one representative filing.
+* Prefer the initial filing (`I1`) where available.
+* Derive the assigned year from the representative filing date.
+* Define a deterministic fallback for jobs without `I1`.
+* Define how the representative ZIP code is selected.
+* Prevent the same job from being counted in multiple years.
+
+Proposed fallback:
+
+Use the earliest observed filing date for jobs without `I1`.
+
+If multiple filings have the same date, apply a documented deterministic tie-breaking rule.
+
+Label this fallback as a proposed decision requiring team confirmation.
+
+### new_building_count
+
+Define:
+
+`new_building_count`
+
+as the number of unique `job_id` values classified as:
+
+`job_type == "New Building"`
+
+within each ZIP-code/year combination.
+
+Requirements:
+
+* Use the documented representative filing.
+* Use a consistent job-type classification.
+* Explicitly address jobs with multiple job types.
+* Avoid double-counting.
+
+### Additional Explanation
+
+Explain why filing-record counts are not an appropriate substitute for unique construction-job counts.
+
+Make the definitions precise enough for Phase 2 implementation.
+
+Do not introduce new aggregation code.
+
+---
+
+## W6 — Notebook Presentation (MINOR)
+
+### Visualizations
+
+Inspect every plot and ensure it has:
+
+* A descriptive title.
+* Labelled axes.
+* Appropriate units.
+* A clear legend where necessary.
+
+Examples:
+
+* `Filing records (count)`
+* `Construction cost (USD)`
+* `Floor area (square feet)`
+* `log10(Construction cost in USD)`
+
+Do not change the statistical methodology or underlying results.
+
+### Output Size
+
+Avoid unnecessarily long notebook outputs.
+
+Where appropriate:
+
+* Use `.head()` for large tables.
+* Keep important summary tables intact.
+* Preserve necessary validation results.
+* Avoid redundant displays.
+
+### Contributor Attribution
+
+Update the contribution note to explicitly state:
+
+* Mohamed Issa authored the Stage 1 housing cleaning.
+* Mohamed Walid authored the Stage 2 housing EDA, additional cleaning, standardization, and validation.
+
+Preserve existing attribution throughout the notebook.
+
+---
+
+## Final Validation
+
+After completing W2–W6:
+
+### Notebook
+
+* Validate notebook structure.
+* Check setup instructions.
+* Confirm missing-file handling.
+* Confirm the AI prompts reference.
+* Confirm aggregation definitions.
+* Check chart titles, labels, and units.
+* Verify that numerical claims match executed outputs.
+* Preserve all existing analytical results.
+
+### Environment
+
+* Verify dependency versions.
+* Test the requirements file.
+* Confirm local VS Code/Jupyter compatibility.
+* Report any unverified reproducibility requirements.
+
+### Git
+
+* Check the housing branch diff.
+* Check the documentation branch diff.
+* Ensure no documentation is lost.
+* Ensure no unrelated contributor files were changed.
+* Confirm no large datasets were accidentally staged.
+* Confirm `main` remains unchanged.
+
+### Existing Dataset
+
+Do not apply the 2022 filter.
+
+Do not change housing cleaning logic or regenerate the output unless essential for validating the requested modifications.
+
+If the existing dataset remains unchanged, say so explicitly.
+
+### Review Acceptance
+
+Do not claim that W1 or the final 2022-onward validation criteria are complete.
+
+The team will address those after Mohamed Issa finishes his filtering work.
+
+---
+
+## Constraints
+
+* Work on the existing housing branch unless creating the required separate documentation branch.
+* Never modify `main`.
+* Never force-push.
+* Do not modify Issa's notebook.
+* Do not implement W1.
+* Do not implement Phase 2.
+* Do not rewrite existing data-cleaning logic.
+* Do not introduce unnecessary dependencies.
+* Do not fabricate AI prompts.
+* Do not delete documentation.
+* Do not push, merge, or create pull requests without my approval.
+* Preserve all existing contributor work.
+
+---
+
+## Expected Final Report
+
+Provide a concise report containing:
+
+### 1. Review Issues
+
+Status of W2, W3, W4, W5, and W6.
+
+### 2. Files Changed
+
+Exact files created or modified.
+
+### 3. AI Prompt Documentation
+
+* Entries created.
+* Original prompts still required.
+* Notebook references added.
+
+### 4. Git and Documentation
+
+* Housing branch status.
+* Documentation branch status.
+* Files included in each branch.
+* Confirmation that no files were lost.
+
+### 5. Validation
+
+* Tests executed.
+* Actual results.
+* Unverified checks.
+* Remaining blockers.
+
+### 6. Pending Work
+
+Explicitly identify W1 as assigned to Mohamed Issa.
+
+Do not mark PR #1 ready for merging until the agreed acceptance requirements are satisfied.
+
+**Goal:** Complete all remaining assigned review corrections while preserving the existing housing analysis and keeping the 2022 filter outside my responsibility.
+
+How the output was used:
+
+Codex implemented the requested PR review corrections W2–W6 without implementing W1.
+
+The following changes were retained:
+
+1. Reproducibility improvements, including local VS Code/Jupyter execution instructions, input-file checks, and a pinned `requirements.txt`.
+2. Removal of unapproved team-wide documentation from the housing PR branch.
+3. Preparation of the separate `docs/proposed-team-standards` branch containing `AGENTS.md` and the three project documentation files.
+4. Proposed deterministic definitions for `housing_job_count` and `new_building_count`.
+5. Visualization, Markdown, and contribution-attribution improvements.
+
+The housing branch received local review commits `d638709` and `b8dd277`.
+
+The documentation branch received local commit `5524c5e`.
+
+The changes were reviewed through Codex's execution report. Neither branch had been pushed at the time of that report.
+
+The following work remained unresolved:
+
+* The 2022-onward filtering requirement, assigned to Mohamed Issa.
+* Full fresh-clone reproducibility, which depends on Issa's first-stage notebook producing the expected local input file.
+* Team confirmation of the proposed representative-filing aggregation rules.
+* Completion of the original AI prompt history.
+
+The existing housing-cleaning methodology and numerical thresholds were preserved.
