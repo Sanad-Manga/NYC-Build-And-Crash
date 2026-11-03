@@ -24,3 +24,86 @@ How the output was used: What was kept/changed/rejected and where
 
 ENTRIES (append below)
 
+================================================
+Date: 2026-11-03
+Student: Ahmed Sanad
+Tool: Claude Code sonnet 5.5
+Related Requirement: Phase 1 - collisions load, EDA and cleaning (stage 2)
+
+Prompt: yassin hasnt done anything yet and im just making the part i dont need him for ... do everything then give me a summary explaining what you did and why.
+
+How the output was used: 
+Kept the whole notebook 02_collisions_eda_cleaning.ipynb: paginated 2022+ API pull, feasibility check, EDA, and every cleaning step with its justification (sections 1-7).
+Changed: several numbers in the markdown that did not match the real output 
+(IQR fence, share of crashes with zero injuries, ZIP count, ZIP/borough consistency) were corrected after checking the printed results.
+Rejected: recovering missing ZIPs from latitude/longitude (needs an extra boundary dataset), listed as an optional improvement in section 4.5.
+================================================
+
+================================================
+Date: 2026-11-03
+Student: Ahmed Sanad
+Tool: Claude Code sonnet 5.5
+Related Requirement: Phase 1 - collisions EDA (clear plots and labels)
+
+Prompt: these 2 are undreadable , what are those ? (with screenshots of the crash map and the injury charts)
+
+How the output was used: 
+Kept the explanation and the fixes: the crash map is now coloured by borough with a legend and before/after panels (section 4.6), 
+the top-15 chart is labelled with borough and date instead of the collision_id hash,
+the injury histogram says its y-axis is a log scale (section 4.7), 
+and a plain-language "how to read" paragraph was added under each. Nothing rejected.
+================================================
+
+================================================
+Date: 2026-11-03
+Student: Ahmed Sanad
+Tool: Claude
+Related Requirement: Phase 1 - collisions review fixes (PR 3)
+
+Prompt: TASK: fix review findings on PR 3. Do exactly this list. Do not add scope, do not touch other notebooks, do not merge the PR.
+
+How the output was used:
+Kept all of fixes 1-7 and 9: Title Case boroughs (sections 4.3 and 4.6), always loading collisions_raw.csv (sections 1 and 2), 
+a temp-file download cache (section 1), the post-cleaning coordinate missing share of 6.9% (section 4.6), 
+the printed count of crashes with 15 or more injured (section 4.7), the peak hour of 17:00 and quietest hour of 03:00 (section 3),
+and renamed map variables (section 4.6).
+================================================
+
+================================================
+Date: 2026-11-03
+Student: Ahmed Sanad
+Tool: Claude Code Sonnet 5.5 (Code Reviewer)
+Related Requirement: Project management - code review of team work against the grading rubric
+
+Prompt: Act as a senior reviewing engineer / data-science TA and quality gate for the whole team. Review every member's branch against 
+the Milestone 1 rubric and the project traps (ZIP as 5-digit strings, missing ZIP/lat-lon handling, 2022+ scope, correlational wording, fresh-clone reproducibility). 
+Report in a fixed STATUS UPDATE format. (Long role prompt, summarised here.)
+
+How the output was used: Used the review to find that housing notebooks needed the 2022 filter, 
+requirements.txt and no Colab dependency, and that Walid's PR mixed unapproved docs with the notebook.
+Drove the fix requests to Issa and Walid and the "no Colab, VS Code only" team rule.
+================================================
+
+================================================
+Date: 2026-11-03
+Student: Ahmed Sanad
+Tool: Claude Code Sonnet 5.5 (Code Reviewer)
+Related Requirement: Team workflow - fix instructions for Issa and Walid
+
+Prompt: Write an md file for Issa and Walid each with their own fixes, 
+with exact metrics and rubrics to follow, to give to their AI agent. 
+
+How the output was used: Sent FIXES_ISSA.md and FIXES_WALID.md to the teammates' agents.
+================================================
+
+================================================
+Date: 2026-11-03
+Student: Ahmed Sanad
+Tool: Claude Code Sonnet 5.5 (Code Reviewer)
+Related Requirement: Phase 1 - collisions notebook review (PR 3)
+
+Prompt: Review PR #3, then give me the review as a prompt I can paste to the coding agent.
+How the output was used: Fixed the review findings in the collisions notebook:
+borough Title Case to match housing, always loading from the raw API pull, 
+safer download cache, stale numbers in markdown, and the missing prompts section.
+================================================
