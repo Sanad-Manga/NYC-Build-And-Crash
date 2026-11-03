@@ -1,0 +1,26 @@
+AI_PROMPTS.txt
+Project: NYC Build and Crash (Data Engineering and Visualization, Milestone 1)
+
+Rules for the whole team:
+- Record prompts that materially contributed to the submitted project (design,
+  cleaning decisions, bug fixes). Skip trivial ones.
+- Append your entries at the BOTTOM of this file, on your own branch.
+  On a merge conflict, keep both blocks.
+- For long multi-turn chats, log the key prompts/responses, or one chronological
+  entry explaining how the AI contributed.
+- "How the output was used" must say what you kept, changed or rejected, and where
+  it ended up (notebook cell or file).
+
+Entry format (copy this block):
+
+================================================
+Date: YYYY-MM-DD
+Student: Full Name
+Tool: Tool name
+Related Requirement: e.g. Phase 1 - housing cleaning (ZIP check)
+Prompt: The prompt, verbatim
+How the output was used: What was kept/changed/rejected and where
+================================================
+
+ENTRIES (append below)
+
