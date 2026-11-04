@@ -107,7 +107,48 @@ How the output was used: Fixed the review findings in the collisions notebook:
 borough Title Case to match housing, always loading from the raw API pull, 
 safer download cache, stale numbers in markdown, and the missing prompts section.
 ================================================
-================================================
+
+Date: 2026-11-02
+Student: Mohamed Issa
+Tool: Claude (claude.ai)
+Related Requirement: Phase 1 - housing load/cleaning (overall plan and missing values)
+Prompt: ok listen up claude, i have this project i need to do, first you should explain what the project is and stuff, just briefly, in two pictures i sent you, i am mohamed issa, and in the other image i am person A, what i need you to do is give me step by step instructions to finish my part of the project, and like start with me from the very beginning because i dont know anything about the project,
+How the output was used: Followed the step-by-step cleaning plan in 01_housing_cleaning.ipynb: column selection, dropping rows missing a filing number, date, or ZIP, handling duplicates, and adding job_id and is_initial_filing. Changed: the column list was decided after checking the printed missing-value percentages. Later changed by the team lead's review: added the 2022 filter and removed the Google Drive steps.
+
+Date: 2026-11-02
+Student: Mohamed Issa
+Tool: Claude (claude.ai)
+Related Requirement: Phase 1 - housing load/cleaning (download method)
+Prompt: its been 17 minutes
+How the output was used: Rejected the single-file download that had not finished, and did not use the suggested wget fallback. Kept the paged API download with a stable sort order in the loading cell of 01_housing_cleaning.ipynb (later made resumable and parallel, see the Claude Code entry below).
+
+Date: 2026-11-02
+Student: Mohamed Issa
+Tool: Claude (claude.ai)
+Related Requirement: Phase 1 - housing load/cleaning (notebook review and ZIP check)
+Prompt: ok i did it to github, just check the ipnb to check i did everything correctly
+How the output was used: Kept: the title cell with the dataset link, the na_position="first" fix so a row with an unreadable date can't be kept as the newest, and the check comparing postcode with zip and filing status with missing dates (now moved before the cleaning steps, in the missing-value inspection cells). The review also corrected the AI's own earlier sorting mistake.
+
+Date: 2026-11-03
+Student: Mohamed Issa
+Tool: Claude (claude.ai)
+Related Requirement: Phase 1 - housing load/cleaning (moving from Colab to VS Code)
+Prompt: ok claude, we need to somethings. have a look (w yaret m7dsh ysht8l colab , 5alona men VScode f extension jupyter w n run as a python env .... dah hy5aleena n access code kol wa7ed w m7dsh hy3mel local only files) As you can see we will not work on colab and instead we will work on vs code with juptyerr extension youll have to walk me through that step by step because i am not literate in theese type of things at alll
+How the output was used: Kept the local setup steps (VS Code, Jupyter extension, .venv, requirements.txt). Rejected the AI's first suggestion of a shared Drive folder for data, and used the team's git-ignored data/ folder with a saved-file check instead, as in 02_collisions_eda_cleaning.ipynb.
+
+Date: 2026-11-03
+Student: Mohamed Issa
+Tool: Claude (claude.ai)
+Related Requirement: Phase 1 - housing load/cleaning (planning the team lead's fixes)
+Prompt: ok claude look, team leader sent this, issa 3shan 3amalt 3ala colab fa m7dsh 8erak hy3rf y run el code ( 3shan enta 3amalt link lel google drive beta3tak ) (i am sending it again to remind you, to ensure you did everything, and this is a list of fixed team lead sent me, from here on i will be coutinuing with claude code on vs code, so i need you to tell him everything that must be done, before you do that id there something i need to do?
+How the output was used: Produced the handoff to Claude Code, which listed risks to check while applying FIXES_ISSA: a stale full raw file bypassing the filter, verifying the date filter, and the filter's effect on is_initial_filing. The fixes themselves were then made with Claude Code in 01_housing_cleaning.ipynb (see the entries below).
+
+Date: 2026-11-03
+Student: Mohamed Issa
+Tool: Claude Code (Opus 5.5, VS Code extension)
+Related Requirement: Phase 1 - housing load/cleaning (team lead's fixes F1 to F5)
+Prompt: Read ~/Downloads/HANDOFF_ISSA_CLAUDE_CODE.md fully, then carry it out in this repo from start to finish. Don’t stop to show me a plan. Only stop if you need something from me, like a GitHub sign-in or permission to discard my uncommitted notebook edits
+How the output was used: Kept all of it, on branch fix/housing-issa-portable: removed the Colab badge and Google Drive code and switched to relative data/ paths (F1); added the 2022 filter in the API request plus a second filter after loading, after checking that filing_date is a calendar_date in the API, and the "Scope: why 2022 onward" cell (F2); the "Prompts used" cell and these entries (F3); the "Which ZIP column and why" cell and the ZIP assert (F4); the community_board rename and the postcode note (F5). Also added the date-stage check cell, the pre-2022 I1 check cell, and a save-and-reload check, and rewrote every markdown number from the printed output. Changed during the work: the first download was lost when the API dropped the connection, so the download now retries failed requests, runs 4 pages at a time, and saves each page so it can resume. Rejected: downloading only the kept columns to save time, because the missing-value table needs all 95 columns.
 Date: 2026-11-05
 Student: Ahmed Sanad
 Tool: Claude Code Sonnet 5.5
