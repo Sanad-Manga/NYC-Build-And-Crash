@@ -89,13 +89,18 @@ Rules:
 
 ## Deployment (Render)
 
-*Owner: Mohamed Walid. To be filled in once the deployment works; nothing below has been run yet.*
+*Owner: Mohamed Walid. Deployment configuration is prepared and locally tested; service creation is pending workspace confirmation.*
 
-- Live URL: _to be added_
-- Build command: _to be added_
-- Start command: _to be added_
-- Python version and environment variables: _to be added_
-- Data: `data/zip_year.csv` is git-ignored, so the deployment must either commit it or generate it during the build. Decision: _to be added_
+- Service: Render Python web service on the Free compute plan, defined by `render.yaml`.
+- Deployment branch: `deploy/render-config`.
+- Live URL: _pending — the Render service has not been created yet_.
+- Python: `3.14.0`, selected explicitly with the `PYTHON_VERSION` Blueprint environment variable.
+- Build command: `pip install -r requirements.txt`.
+- Start command: `streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true`.
+- Health endpoint: `/_stcore/health`.
+- Redeployment: after the Blueprint is connected, Render automatically deploys each new commit pushed to `deploy/render-config` (`autoDeployTrigger: commit`). Free services can spin down after inactivity, so the next request can have a cold start.
+- Initial data: because `data/zip_year.csv` is not present, the app loads the committed `data/dummy_zip_year.csv` and displays the visible `DUMMY DATA` warning.
+- Real data handoff: `.gitignore` allows `data/zip_year.csv` when the team is ready. If that file is included in a later deployment, the existing loader selects it automatically instead of the dummy table; no application-code change is required.
 
 ## Team and contributions
 

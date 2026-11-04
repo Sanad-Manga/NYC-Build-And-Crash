@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: nyc-build-and-crash
+    runtime: python
+    plan: free
+    branch: deploy/render-config
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+    healthCheckPath: /_stcore/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.14.0
