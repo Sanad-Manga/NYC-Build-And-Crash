@@ -52,7 +52,7 @@ def trend_line(df: pd.DataFrame, metric: str) -> go.Figure:
 
 
 def pearson_r(df: pd.DataFrame):
-    """Pearson correlation of per-ZIP new-building filings and collisions, plus the number of ZIPs."""
+    """Pearson correlation of per-ZIP new-building jobs and collisions, plus the number of ZIPs."""
     per_zip = df.groupby("zip_code")[["new_building_count", "collision_count"]].sum()
     if len(per_zip) < 3 or per_zip.std().eq(0).any():
         return None, len(per_zip)
@@ -60,14 +60,14 @@ def pearson_r(df: pd.DataFrame):
 
 
 def construction_vs_crashes(df: pd.DataFrame) -> go.Figure:
-    """(c) Relationship between the two domains: new-building filings vs collisions, one dot per ZIP."""
+    """(c) Relationship between the two domains: new-building jobs vs collisions, one dot per ZIP."""
     per_zip = df.groupby(["zip_code", "borough"], as_index=False)[["new_building_count", "collision_count"]].sum()
     fig = px.scatter(per_zip, x="new_building_count", y="collision_count", color="borough",
                      color_discrete_map=BOROUGH_COLORS, template=TEMPLATE,
                      hover_name="zip_code", hover_data={"borough": True, "zip_code": False},
-                     labels={"new_building_count": "New-building filings (count per ZIP)",
+                     labels={"new_building_count": "New-building jobs started (count per ZIP)",
                              "collision_count": "Collisions (count per ZIP)", "borough": "Borough"},
-                     title="New-building filings vs collisions")
+                     title="New-building jobs vs collisions")
     fig.update_traces(marker={"size": 9, "opacity": 0.8})
     return _style(fig)
 

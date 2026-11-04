@@ -46,7 +46,7 @@ def make_dummy_table(seed: int = SEED) -> pd.DataFrame:
             for year in YEARS:
                 share = PARTIAL_SHARE if year == PARTIAL_YEAR else 1.0
                 trend_c = 1 - 0.05 * (year - 2022)       # fake: collisions drift down a little
-                trend_h = 1 + 0.04 * (year - 2022)       # fake: filings drift up a little
+                trend_h = 1 + 0.04 * (year - 2022)       # fake: jobs drift up a little
                 collisions = rng.poisson(300 * busy * trend_c * share)
                 housing = rng.poisson(450 * dev * trend_h * share)
                 new_buildings = rng.poisson(housing * rng.uniform(0.04, 0.09))

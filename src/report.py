@@ -3,8 +3,8 @@ import pandas as pd
 
 # metric column -> (dropdown label, axis unit). Order = order in the metric dropdown.
 METRICS = {
-    "housing_job_count": ("Housing job filings", "filings"),
-    "new_building_count": ("New-building filings", "filings"),
+    "housing_job_count": ("Housing jobs started", "jobs"),
+    "new_building_count": ("New-building jobs started", "jobs"),
     "collision_count": ("Collisions", "crashes"),
     "persons_injured": ("Persons injured", "people"),
     "persons_killed": ("Persons killed", "people"),

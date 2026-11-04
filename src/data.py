@@ -2,6 +2,9 @@
 
 To switch from the dummy table to the real one, put the join notebook's output at
 data/zip_year.csv. `resolve_data_path()` then picks it automatically; nothing else changes.
+
+Extra columns in the file (e.g. top_contributing_factor, pedestrians_killed) are allowed:
+they are ignored and dropped after validation. Only a missing REQUIRED column is an error.
 """
 from pathlib import Path
 
@@ -36,12 +39,13 @@ def is_dummy(path) -> bool:
 
 
 def validate(df: pd.DataFrame) -> pd.DataFrame:
-    """Check columns, dtypes and value ranges; raise DataValidationError with a clear message."""
+    """Check columns, dtypes and value ranges; raise DataValidationError with a clear message.
+
+    Extra columns are allowed. On success only the REQUIRED_COLUMNS are returned (a copy).
+    """
     missing = [c for c in REQUIRED_COLUMNS if c not in df.columns]
-    extra = [c for c in df.columns if c not in REQUIRED_COLUMNS]
-    if missing or extra:
-        raise DataValidationError(
-            f"Columns do not match the agreed schema. Missing: {missing}; unexpected: {extra}")
+    if missing:
+        raise DataValidationError(f"Required columns are missing: {missing}")
 
     if not df["zip_code"].map(lambda z: isinstance(z, str) and len(z) == 5 and z.isdigit()).all():
         raise DataValidationError("zip_code must be a 5-digit string (e.g. '10001'); found other values.")
@@ -62,7 +66,7 @@ def validate(df: pd.DataFrame) -> pd.DataFrame:
         raise DataValidationError("is_partial_year must be a boolean column.")
     if df.duplicated(["zip_code", "year"]).any():
         raise DataValidationError("There must be exactly one row per zip_code x year; found duplicates.")
-    return df
+    return df[REQUIRED_COLUMNS].copy()
 
 
 def load_data(path=None) -> pd.DataFrame:
