@@ -33,7 +33,7 @@ Related Requirement: Phase 1 - collisions load, EDA and cleaning (stage 2)
 Prompt: yassin hasnt done anything yet and im just making the part i dont need him for ... do everything then give me a summary explaining what you did and why.
 
 How the output was used: 
-Kept the whole notebook 02_collisions_eda_cleaning.ipynb: paginated 2022+ API pull, feasibility check, EDA, and every cleaning step with its justification (sections 1-7).
+Kept the whole notebook phase1_collisions_eda_cleaning_ahmed.ipynb: paginated 2022+ API pull, feasibility check, EDA, and every cleaning step with its justification (sections 1-7).
 Changed: several numbers in the markdown that did not match the real output 
 (IQR fence, share of crashes with zero injuries, ZIP count, ZIP/borough consistency) were corrected after checking the printed results.
 Rejected: recovering missing ZIPs from latitude/longitude (needs an extra boundary dataset), listed as an optional improvement in section 4.5.
@@ -108,56 +108,75 @@ borough Title Case to match housing, always loading from the raw API pull,
 safer download cache, stale numbers in markdown, and the missing prompts section.
 ================================================
 
-================================================
 Date: 2026-11-02
 Student: Mohamed Issa
 Tool: Claude (claude.ai)
 Related Requirement: Phase 1 - housing load/cleaning (overall plan and missing values)
 Prompt: ok listen up claude, i have this project i need to do, first you should explain what the project is and stuff, just briefly, in two pictures i sent you, i am mohamed issa, and in the other image i am person A, what i need you to do is give me step by step instructions to finish my part of the project, and like start with me from the very beginning because i dont know anything about the project,
 How the output was used: Followed the step-by-step cleaning plan in 01_housing_cleaning.ipynb: column selection, dropping rows missing a filing number, date, or ZIP, handling duplicates, and adding job_id and is_initial_filing. Changed: the column list was decided after checking the printed missing-value percentages. Later changed by the team lead's review: added the 2022 filter and removed the Google Drive steps.
-================================================
 
-================================================
 Date: 2026-11-02
 Student: Mohamed Issa
 Tool: Claude (claude.ai)
 Related Requirement: Phase 1 - housing load/cleaning (download method)
 Prompt: its been 17 minutes
 How the output was used: Rejected the single-file download that had not finished, and did not use the suggested wget fallback. Kept the paged API download with a stable sort order in the loading cell of 01_housing_cleaning.ipynb (later made resumable and parallel, see the Claude Code entry below).
-================================================
 
-================================================
 Date: 2026-11-02
 Student: Mohamed Issa
 Tool: Claude (claude.ai)
 Related Requirement: Phase 1 - housing load/cleaning (notebook review and ZIP check)
 Prompt: ok i did it to github, just check the ipnb to check i did everything correctly
 How the output was used: Kept: the title cell with the dataset link, the na_position="first" fix so a row with an unreadable date can't be kept as the newest, and the check comparing postcode with zip and filing status with missing dates (now moved before the cleaning steps, in the missing-value inspection cells). The review also corrected the AI's own earlier sorting mistake.
-================================================
 
-================================================
 Date: 2026-11-03
 Student: Mohamed Issa
 Tool: Claude (claude.ai)
 Related Requirement: Phase 1 - housing load/cleaning (moving from Colab to VS Code)
 Prompt: ok claude, we need to somethings. have a look (w yaret m7dsh ysht8l colab , 5alona men VScode f extension jupyter w n run as a python env .... dah hy5aleena n access code kol wa7ed w m7dsh hy3mel local only files) As you can see we will not work on colab and instead we will work on vs code with juptyerr extension youll have to walk me through that step by step because i am not literate in theese type of things at alll
 How the output was used: Kept the local setup steps (VS Code, Jupyter extension, .venv, requirements.txt). Rejected the AI's first suggestion of a shared Drive folder for data, and used the team's git-ignored data/ folder with a saved-file check instead, as in 02_collisions_eda_cleaning.ipynb.
-================================================
 
-================================================
 Date: 2026-11-03
 Student: Mohamed Issa
 Tool: Claude (claude.ai)
 Related Requirement: Phase 1 - housing load/cleaning (planning the team lead's fixes)
 Prompt: ok claude look, team leader sent this, issa 3shan 3amalt 3ala colab fa m7dsh 8erak hy3rf y run el code ( 3shan enta 3amalt link lel google drive beta3tak ) (i am sending it again to remind you, to ensure you did everything, and this is a list of fixed team lead sent me, from here on i will be coutinuing with claude code on vs code, so i need you to tell him everything that must be done, before you do that id there something i need to do?
 How the output was used: Produced the handoff to Claude Code, which listed risks to check while applying FIXES_ISSA: a stale full raw file bypassing the filter, verifying the date filter, and the filter's effect on is_initial_filing. The fixes themselves were then made with Claude Code in 01_housing_cleaning.ipynb (see the entries below).
-================================================
 
-================================================
 Date: 2026-11-03
 Student: Mohamed Issa
 Tool: Claude Code (Opus 5.5, VS Code extension)
 Related Requirement: Phase 1 - housing load/cleaning (team lead's fixes F1 to F5)
 Prompt: Read ~/Downloads/HANDOFF_ISSA_CLAUDE_CODE.md fully, then carry it out in this repo from start to finish. Don’t stop to show me a plan. Only stop if you need something from me, like a GitHub sign-in or permission to discard my uncommitted notebook edits
 How the output was used: Kept all of it, on branch fix/housing-issa-portable: removed the Colab badge and Google Drive code and switched to relative data/ paths (F1); added the 2022 filter in the API request plus a second filter after loading, after checking that filing_date is a calendar_date in the API, and the "Scope: why 2022 onward" cell (F2); the "Prompts used" cell and these entries (F3); the "Which ZIP column and why" cell and the ZIP assert (F4); the community_board rename and the postcode note (F5). Also added the date-stage check cell, the pre-2022 I1 check cell, and a save-and-reload check, and rewrote every markdown number from the printed output. Changed during the work: the first download was lost when the API dropped the connection, so the download now retries failed requests, runs 4 pages at a time, and saves each page so it can resume. Rejected: downloading only the kept columns to save time, because the missing-value table needs all 95 columns.
+Date: 2026-11-05
+Student: Ahmed Sanad
+Tool: Claude Code Sonnet 5.5
+Related Requirement: Phase 2 - website skeleton on dummy data (filters, search mode, Generate Report)
+Prompt: TASK: build the website skeleton on DUMMY data. Do exactly this, no extra scope. Do not merge.
+
+CONTEXT
+Project: NYC Build and Crash (ICS503 Data Engineering and Visualization, Milestone 1, due 9 Nov). Story: do neighborhoods with the most new construction also become the most dangerous to walk, bike and drive in? Both datasets are aggregated to ZIP x year. Correlation only, never causation.
+Repo: https://github.com/Sanad-Manga/NYC-Build-And-Crash. Create branch feature/website-skeleton off origin/main. Never commit to main, never force-push, do not edit other people's files.
+Team rules: VS Code + venv only (no Colab), relative paths only, one shared requirements.txt (append pinned lines for new packages and say so in the PR), zip_code = 5-digit STRING, year = integer, borough values Title Case (Manhattan, Brooklyn, Queens, Bronx, Staten Island), scope 2022 onward (2026 is partial, ends 31 Oct).
+
+STACK (assumed, confirm it against docs/SPEC.md if that file is on main; if SPEC says otherwise, stop and tell me): Streamlit + Plotly, later deployed on Render.
+
+BUILD
+1. data/dummy_zip_year.csv generated by a small script scripts/make_dummy_data.py (seeded, ~60 ZIPs across the 5 boroughs, years 2022-2026). Columns exactly: zip_code, year, borough, housing_job_count, new_building_count, collision_count, persons_injured, persons_killed, pedestrians_injured, cyclist_injured, motorist_injured, is_partial_year. Real-looking but clearly fake. The app must show a visible banner "DUMMY DATA" while this file is used.
+2. src/data.py: load_data(path) reading zip_code as string, validating the schema and dtypes (raise a clear error otherwise). One place to switch to the real file later (data/zip_year.csv).
+3. src/search.py: parse_query(text) -> dict(borough, year, metric, zip_code, unparsed). Rules: borough (case-insensitive, also "the bronx", "bk", "si", "nyc" = no filter), 4-digit year 2022-2026, 5-digit ZIP, metric keywords: "new buildings"/"new construction" -> new_building_count; "buildings"/"filings"/"jobs"/"housing" -> housing_job_count; "collisions"/"crashes" -> collision_count; "injuries"/"injured" -> persons_injured. Example: "Brooklyn 2022 new buildings" -> borough=Brooklyn, year=2022, metric=new_building_count. Unknown words are returned in `unparsed` and shown to the user ("Ignored: ..."). Add tests/test_search.py with at least 10 cases including that example, a ZIP, a typo, empty input.
+4. app.py (Streamlit):
+   - Sidebar: at least 3 dropdown filters (borough, year or "All years", metric) plus a ZIP multiselect, and a search box (search mode). A parsed search sets the filters and tells the user what it understood.
+   - ONE central "Generate Report" button. Nothing on the page updates until it is clicked; clicking updates ALL visuals and the summary together (use st.session_state to hold the applied filters).
+   - At least 4 varied interactive Plotly charts that all respond to Generate Report: (a) bar: top 10 ZIPs by chosen metric, (b) line: citywide trend by year (mark 2026 as partial), (c) scatter relating the two domains: new_building_count vs collision_count per ZIP (hover shows ZIP, borough; log or per-ZIP caveat noted), (d) grouped bar by borough. Every chart has a title, labelled axes with units, and a one-line caption.
+   - A "Story" section with placeholders: question, findings, limitations (ZIP missing ~28% in collisions, partial 2026, no traffic-volume data, counts not normalised), NYC benefit. Wording must stay correlational.
+5. README.md section "Run the website": venv, pip install -r requirements.txt, streamlit run app.py. Do not touch other README sections.
+
+CODE QUALITY: modular (src/ for logic, app.py thin), commented, docstrings on public functions, no hardcoded absolute paths.
+
+AI LOG: append entries to AI_PROMPTS.txt (bottom only) for the prompts that shaped this work, Student: Ahmed Sanad.
+
+PROOF REQUIRED IN THE PR DESCRIPTION: fresh clone, new venv, pip install -r requirements.txt, python -m pytest tests (pass), streamlit run app.py opens without errors; screenshot or text description of each chart; list of files changed. Say clearly what you could NOT verify. Do not claim anything works unless you ran it.
+How the output was used: Kept the whole skeleton (src/data.py, src/search.py, src/report.py, src/charts.py, app.py, scripts/make_dummy_data.py, tests/test_search.py, README section). Changed after checking it in a browser: chart titles shortened and legends moved below the plots because they were cut off, deprecated Streamlit width arguments replaced, the "Highest ZIP" tile shows only the ZIP. The .gitignore was changed so the committed dummy CSV is not ignored while the real data/ files stay ignored. Not verified: nothing was deployed to Render.
 ================================================
