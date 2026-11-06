@@ -32,6 +32,15 @@ Detailed project information is maintained in separate documents.
 
 The official university requirements take precedence over internal plans.
 
+## 2.1 Team Rules
+
+* Development uses local VS Code and Jupyter, not Google Colab.
+* Record AI prompts in the root-level `AI_PROMPTS.txt` using the existing team format: date, student, tool, related requirement, prompt or clearly labelled summary, and how the output was used.
+* Maintain one shared root-level `requirements.txt`; do not create contributor-specific dependency files.
+* A pull request may merge only after a fresh-clone reproducibility test.
+* For that test, create a new virtual environment, install `requirements.txt`, and run every relevant notebook from top to bottom with **Run All** and zero errors.
+* Create one branch per task from the latest `origin/main`.
+
 ## 3. Development Environment
 
 The project currently uses:

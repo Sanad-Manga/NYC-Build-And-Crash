@@ -19,7 +19,18 @@ This contract covers:
 * Git collaboration.
 * Contract changes.
 
-### 1.1 Agreed Technical Requirements
+### 1.1 Team Rules
+
+The following collaboration rules are agreed and mandatory:
+
+* Development uses local VS Code and Jupyter, not Google Colab.
+* AI prompts are recorded in the root-level `AI_PROMPTS.txt` using the existing team format: date, student, tool, related requirement, prompt or clearly labelled summary, and how the output was used.
+* The repository uses one shared root-level `requirements.txt`; contributor-specific requirements files are not permitted.
+* A pull request may merge only after a fresh-clone reproducibility test.
+* The fresh-clone test uses a new virtual environment, installs the shared requirements with `pip install -r requirements.txt`, and executes each relevant notebook from top to bottom with **Run All** and zero errors.
+* Each task uses its own branch created from the latest `origin/main`.
+
+#### Agreed Technical Requirements
 
 The following requirements are agreed for the shared Phase 2 interface:
 
@@ -90,18 +101,20 @@ For contributor-owned development artifacts, use:
 
 Additional identifiers must be agreed upon by the team.
 
-### Examples
+### Required Phase 1 Notebook Names
 
-| Responsibility             | Filename                                          |
-| -------------------------- | ------------------------------------------------- |
-| Housing initial cleaning   | `phase1_housing_initial_cleaning_issa.ipynb`      |
-| Housing EDA and cleaning   | `phase1_housing_eda_cleaning_walid.ipynb`         |
-| Collision initial cleaning | `phase1_collisions_initial_cleaning_yassin.ipynb` |
-| Collision EDA and cleaning | `phase1_collisions_eda_cleaning_ahmed.ipynb`      |
-| Dataset integration        | `phase2_data_integration_issa.ipynb`              |
-| Post-integration cleaning  | `phase2_data_post_cleaning_yassin.ipynb`          |
+All Phase 1 contributor notebooks must use the following names:
 
-These examples establish naming conventions; they do not require existing files to be renamed.
+| Contributor   | Responsibility             | Required filename                                    |
+| ------------- | -------------------------- | ---------------------------------------------------- |
+| Mohamed Issa  | Housing initial cleaning   | `phase1_housing_initial_cleaning_issa.ipynb`         |
+| Yassin        | Collision initial cleaning | `phase1_collisions_initial_cleaning_yassin.ipynb`    |
+| Ahmed         | Collision EDA and cleaning | `phase1_collisions_eda_cleaning_ahmed.ipynb`         |
+| Mohamed Walid | Housing EDA and cleaning   | `phase1_housing_eda_cleaning_walid.ipynb`            |
+
+Issa's legacy `01_housing_cleaning.ipynb` must be renamed to `phase1_housing_initial_cleaning_issa.ipynb`. Any required rename belongs to the notebook's contributor and must be coordinated with consumers; this contract does not authorize one contributor to rename another contributor's file.
+
+Other contributor-owned artifacts continue to follow the general pattern. Proposed examples include `phase2_data_integration_issa.ipynb` and `phase2_data_post_cleaning_yassin.ipynb`.
 
 ## 2.2 Exceptions
 
@@ -191,7 +204,7 @@ This is a proposed organizational structure, not a requirement to reorganize the
 * Avoid hardcoded personal filesystem paths.
 * Preserve existing project structure unless reorganization is authorized.
 
-Existing notebooks may remain in the repository root until the team agrees to move them.
+Notebooks may remain in the repository root until the team agrees to move them, but Phase 1 notebook filenames must follow Section 2.1.
 
 ---
 
@@ -312,7 +325,7 @@ Do not automatically assume that every five-digit number is a valid NYC ZIP code
 
 ## 5.2 Borough Naming
 
-The proposed canonical borough values are:
+The agreed canonical borough values are the following Title Case strings:
 
 ```text
 Manhattan
@@ -333,6 +346,8 @@ manhattan
 ```
 
 These can be standardized to the agreed canonical form.
+
+Ahmed's collision-cleaning pipeline already produces these Title Case values. This was independently verified in `phase1_collisions_eda_cleaning_ahmed.ipynb`: the cleaning step strips surrounding whitespace and applies `.str.title()` to `borough` while preserving missing values.
 
 Unknown or invalid values must not automatically be mapped to a borough.
 
@@ -482,9 +497,13 @@ Source:
 
 The housing workflow begins with Mohamed Issa's initial cleaning stage.
 
-Existing notebook:
+Legacy notebook pending its contributor-owned rename:
 
 `01_housing_cleaning.ipynb`
+
+Required Phase 1 name:
+
+`phase1_housing_initial_cleaning_issa.ipynb`
 
 Existing output:
 

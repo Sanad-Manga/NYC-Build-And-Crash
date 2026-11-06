@@ -83,6 +83,17 @@ All times above are local team times in Egypt. **November 9, 2026** is also
 the university's submission date. Passing a deadline does not by itself prove
 that a phase is complete; verify current repository state and team updates.
 
+### 4.1 Final Internal Checkpoints
+
+These checkpoints supplement the original phase schedule above; they do not replace the university deadline or existing contributor responsibilities.
+
+| Date | Internal checkpoint |
+| --- | --- |
+| Friday, November 6, 2026 | Everything works locally. |
+| Saturday, November 7, 2026 | Website deployed and tested. |
+| Sunday, November 8, 2026 | Fixes only. |
+| Monday, November 9, 2026 | Final submission email sent to [ICS503Data@gmail.com](mailto:ICS503Data@gmail.com). |
+
 ## 5. Phase 1 — Independent Dataset Cleaning and EDA
 
 ### 5.1 Goal and Working Pairs
