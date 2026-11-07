@@ -107,7 +107,48 @@ How the output was used: Fixed the review findings in the collisions notebook:
 borough Title Case to match housing, always loading from the raw API pull, 
 safer download cache, stale numbers in markdown, and the missing prompts section.
 ================================================
-================================================
+
+Date: 2026-11-02
+Student: Mohamed Issa
+Tool: Claude (claude.ai)
+Related Requirement: Phase 1 - housing load/cleaning (overall plan and missing values)
+Prompt: ok listen up claude, i have this project i need to do, first you should explain what the project is and stuff, just briefly, in two pictures i sent you, i am mohamed issa, and in the other image i am person A, what i need you to do is give me step by step instructions to finish my part of the project, and like start with me from the very beginning because i dont know anything about the project,
+How the output was used: Followed the step-by-step cleaning plan in phase1_housing_initial_cleaning_issa.ipynb: column selection, dropping rows missing a filing number, date, or ZIP, handling duplicates, and adding job_id and is_initial_filing. Changed: the column list was decided after checking the printed missing-value percentages. Later changed by the team lead's review: added the 2022 filter and removed the Google Drive steps.
+
+Date: 2026-11-02
+Student: Mohamed Issa
+Tool: Claude (claude.ai)
+Related Requirement: Phase 1 - housing load/cleaning (download method)
+Prompt: its been 17 minutes
+How the output was used: Rejected the single-file download that had not finished, and did not use the suggested wget fallback. Kept the paged API download with a stable sort order in the loading cell of phase1_housing_initial_cleaning_issa.ipynb (later made resumable and parallel, see the Claude Code entry below).
+
+Date: 2026-11-02
+Student: Mohamed Issa
+Tool: Claude (claude.ai)
+Related Requirement: Phase 1 - housing load/cleaning (notebook review and ZIP check)
+Prompt: ok i did it to github, just check the ipnb to check i did everything correctly
+How the output was used: Kept: the title cell with the dataset link, the na_position="first" fix so a row with an unreadable date can't be kept as the newest, and the check comparing postcode with zip and filing status with missing dates (now moved before the cleaning steps, in the missing-value inspection cells). The review also corrected the AI's own earlier sorting mistake.
+
+Date: 2026-11-03
+Student: Mohamed Issa
+Tool: Claude (claude.ai)
+Related Requirement: Phase 1 - housing load/cleaning (moving from Colab to VS Code)
+Prompt: ok claude, we need to somethings. have a look (w yaret m7dsh ysht8l colab , 5alona men VScode f extension jupyter w n run as a python env .... dah hy5aleena n access code kol wa7ed w m7dsh hy3mel local only files) As you can see we will not work on colab and instead we will work on vs code with juptyerr extension youll have to walk me through that step by step because i am not literate in theese type of things at alll
+How the output was used: Kept the local setup steps (VS Code, Jupyter extension, .venv, requirements.txt). Rejected the AI's first suggestion of a shared Drive folder for data, and used the team's git-ignored data/ folder with a saved-file check instead, as in 02_collisions_eda_cleaning.ipynb.
+
+Date: 2026-11-03
+Student: Mohamed Issa
+Tool: Claude (claude.ai)
+Related Requirement: Phase 1 - housing load/cleaning (planning the team lead's fixes)
+Prompt: ok claude look, team leader sent this, issa 3shan 3amalt 3ala colab fa m7dsh 8erak hy3rf y run el code ( 3shan enta 3amalt link lel google drive beta3tak ) (i am sending it again to remind you, to ensure you did everything, and this is a list of fixed team lead sent me, from here on i will be coutinuing with claude code on vs code, so i need you to tell him everything that must be done, before you do that id there something i need to do?
+How the output was used: Produced the handoff to Claude Code, which listed risks to check while applying FIXES_ISSA: a stale full raw file bypassing the filter, verifying the date filter, and the filter's effect on is_initial_filing. The fixes themselves were then made with Claude Code in phase1_housing_initial_cleaning_issa.ipynb (see the entries below).
+
+Date: 2026-11-03
+Student: Mohamed Issa
+Tool: Claude Code (Opus 5.5, VS Code extension)
+Related Requirement: Phase 1 - housing load/cleaning (team lead's fixes F1 to F5)
+Prompt: Read ~/Downloads/HANDOFF_ISSA_CLAUDE_CODE.md fully, then carry it out in this repo from start to finish. Don’t stop to show me a plan. Only stop if you need something from me, like a GitHub sign-in or permission to discard my uncommitted notebook edits
+How the output was used: Kept all of it, on branch fix/housing-issa-portable: removed the Colab badge and Google Drive code and switched to relative data/ paths (F1); added the 2022 filter in the API request plus a second filter after loading, after checking that filing_date is a calendar_date in the API, and the "Scope: why 2022 onward" cell (F2); the "Prompts used" cell and these entries (F3); the "Which ZIP column and why" cell and the ZIP assert (F4); the community_board rename and the postcode note (F5). Also added the date-stage check cell, the pre-2022 I1 check cell, and a save-and-reload check, and rewrote every markdown number from the printed output. Changed during the work: the first download was lost when the API dropped the connection, so the download now retries failed requests, runs 4 pages at a time, and saves each page so it can resume. Rejected: downloading only the kept columns to save time, because the missing-value table needs all 95 columns.
 Date: 2026-11-05
 Student: Ahmed Sanad
 Tool: Claude Code Sonnet 5.5
@@ -139,6 +180,12 @@ AI LOG: append entries to AI_PROMPTS.txt (bottom only) for the prompts that shap
 PROOF REQUIRED IN THE PR DESCRIPTION: fresh clone, new venv, pip install -r requirements.txt, python -m pytest tests (pass), streamlit run app.py opens without errors; screenshot or text description of each chart; list of files changed. Say clearly what you could NOT verify. Do not claim anything works unless you ran it.
 How the output was used: Kept the whole skeleton (src/data.py, src/search.py, src/report.py, src/charts.py, app.py, scripts/make_dummy_data.py, tests/test_search.py, README section). Changed after checking it in a browser: chart titles shortened and legends moved below the plots because they were cut off, deprecated Streamlit width arguments replaced, the "Highest ZIP" tile shows only the ZIP. The .gitignore was changed so the committed dummy CSV is not ignored while the real data/ files stay ignored. Not verified: nothing was deployed to Render.
 ================================================
+Date: 2026-11-07
+Student: Mohamed Issa
+Tool: Claude Code (Opus 5.5)
+Related Requirement: Phase 1 - housing load/cleaning (review fixes for PR 6)
+Prompt: [pasted Ahmed's review of PR 6: rename the notebook to phase1_housing_initial_cleaning_issa.ipynb, add a "Definition for Phase 2" cell counting jobs from I1 rows only, fresh-clone proof, merge origin/main] do whatever this text says
+How the output was used: Kept the rename (git mv, references in README.md and this file updated), the new "Definition for Phase 2" markdown cell after the I1 check cell, and the reworded Phase 2 note in the "Step 3: filings versus jobs" cell. Merged origin/main into the branch. The fresh-clone run output was pasted into the PR description.
 Date: 2026-11-03
 Student: Yassin
 Tool: Codex
@@ -865,7 +912,6 @@ Read the PDFs and inspect the repository, then explain your proposed implementat
 
 Do not start editing files until I approve the plan.
 How the output was used: Kept the inspection and approved plan for collision loading, conservative missingness, duplicates, and handoff. This is the original pasted master prompt, reproduced in full.
-================================================
 Date: 2026-11-03
 Student: Yassin
 Tool: Codex
@@ -899,7 +945,6 @@ If Python dependencies are missing, install them in an appropriate project virtu
 Do not modify teammates' notebooks, README, or AI_PROMPTS.txt.
 **Proceed with implementation now. Stop before downloading the complete dataset.**
 How the output was used: Kept the notebook implementation and 100-row test. Preserved all 29 columns and optional missing fields; restricted changes to Yassin's notebook and generated ignored artifacts.
-================================================
 Date: 2026-11-03
 Student: Yassin
 Tool: Codex
@@ -1018,7 +1063,6 @@ Do not modify teammate notebooks or shared project files without authorization.
 
 **Do not download the complete dataset yet. Do not push changes. Report the audit results first.**
 How the output was used: Kept confirmed completeness, export dtype, identifier reconciliation, cache, and schema fixes. All 12 controlled test groups and nine code cells passed. The former separate summarized testing entry had no corresponding user message; its testing work is documented here under this real audit prompt.
-================================================
 Date: 2026-11-03
 Student: Yassin
 Tool: Codex
@@ -1048,7 +1092,6 @@ Check all validation results, the output row count, file size, and Git ignore ru
 
 Do not modify teammates' files, commit, push, or merge anything. If validation fails, stop and report the error.
 How the output was used: Kept the approved full run: 447,156 rows, 29 columns, dates 2022-01-01 through 2026-10-31, zero duplicate removals, and 125,794 missing-ZIP records retained. Exported and independently verified data/collisions_step1.csv.gz (28.31 MB). Authorization comes from the explicit approval paragraph in the 2026-11-03T16:23:26.836Z user message, quoted above in full. That same recorded message begins with an output-verification request; its checklist alone is not download approval. Later verification requests, including offline snapshot verification, do not authorize refreshing the live dataset.
-================================================
 Date: 2026-11-04
 Student: Yassin
 Tool: Codex
@@ -1197,7 +1240,6 @@ After completion, provide the files changed, verification results, any remaining
 
 Do not merge the PR. Ahmed will merge it after reviewing.
 How the output was used: Used the review request to update setup and run guidance, add verified findings and one final-data missingness chart, document Stage 2 ZIP reconciliation, rename the notebook to phase1_collisions_initial_cleaning_yassin.ipynb, and replace summarized prompt entries with actual conversation text. Verification outcomes are recorded in the PR review report; no commit, push or merge was requested.
-================================================
 Date: 2026-11-04
 Student: Yassin
 Tool: Codex

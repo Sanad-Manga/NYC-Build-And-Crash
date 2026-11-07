@@ -18,7 +18,7 @@ app.py                                     Streamlit website (thin: layout only)
 src/                                       website logic: data.py (load + validate), search.py, report.py, charts.py
 scripts/make_dummy_data.py                 generates data/dummy_zip_year.csv
 data/dummy_zip_year.csv                    committed fake ZIP x year table used until the real one exists
-01_housing_cleaning.ipynb                  housing: loading and cleaning
+phase1_housing_initial_cleaning_issa.ipynb housing: loading and cleaning
 phase1_collisions_eda_cleaning_ahmed.ipynb collisions: feasibility check, EDA and cleaning
 tests/                                     pytest tests (search parser, data validation)
 AI_PROMPTS.txt                             log of the AI prompts used, per member
@@ -47,7 +47,7 @@ All members add their packages to the single `requirements.txt` (pinned versions
 Open a notebook in VS Code, click **Select Kernel** and pick `.venv`, then **Restart** and **Run All**.
 
 - `phase1_collisions_eda_cleaning_ahmed.ipynb`: the first run downloads about 450k collision rows from the NYC Open Data API (1-2 minutes) into `data/collisions_raw.csv`; later runs reuse that file. It ends by writing `data/collisions_step2.csv.gz`.
-- `01_housing_cleaning.ipynb`: housing loading and cleaning. Its fixes are still under review in an open pull request.
+- `phase1_housing_initial_cleaning_issa.ipynb`: housing loading and cleaning. Its fixes are still under review in an open pull request.
 
 The collisions notebook ends with a "Prompts used" cell that points to `AI_PROMPTS.txt`; the course requires one in every notebook.
 
