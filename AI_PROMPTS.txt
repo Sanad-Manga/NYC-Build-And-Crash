@@ -139,3 +139,1090 @@ AI LOG: append entries to AI_PROMPTS.txt (bottom only) for the prompts that shap
 PROOF REQUIRED IN THE PR DESCRIPTION: fresh clone, new venv, pip install -r requirements.txt, python -m pytest tests (pass), streamlit run app.py opens without errors; screenshot or text description of each chart; list of files changed. Say clearly what you could NOT verify. Do not claim anything works unless you ran it.
 How the output was used: Kept the whole skeleton (src/data.py, src/search.py, src/report.py, src/charts.py, app.py, scripts/make_dummy_data.py, tests/test_search.py, README section). Changed after checking it in a browser: chart titles shortened and legends moved below the plots because they were cut off, deprecated Streamlit width arguments replaced, the "Highest ZIP" tile shows only the ZIP. The .gitignore was changed so the committed dummy CSV is not ignored while the real data/ files stay ignored. Not verified: nothing was deployed to Render.
 ================================================
+Date: 2026-11-03
+Student: Yassin
+Tool: Codex
+Related Requirement: Phase 1 - Project inspection and planning
+Prompt: # MASTER PROMPT — NYC Build and Crash | Yassin's Phase 1
+
+## 1. YOUR ROLE
+
+You are my AI coding assistant working inside VS Code on a university Data Engineering & Visualization project.
+
+I am **Yassin**, a member of a four-person team at the German International University (GIU), Faculty of Informatics and Computer Science.
+
+I want you to understand the entire project, inspect the existing work, and help me complete my assigned responsibilities accurately, professionally, and without interfering with my teammates' work.
+
+**Important:** Before implementing anything, read the two attached PDFs, inspect the existing GitHub repository, and present a clear implementation plan. Wait for my approval before editing files or downloading the complete dataset.
+
+Once approved, implement my assigned work and verify it thoroughly.
+
+---
+
+## 2. OFFICIAL PROJECT INFORMATION
+
+**Course:** ICS503 — Data Engineering and Visualization
+
+**Semester:** Winter 2026
+
+**Instructor:** Dr. Nada Sharaf
+
+**Project:** NYC Housing & Development and Transportation Data Integration
+
+**Milestone:** Milestone 1 — Cleaning, Integration, and Visualization
+
+**Official submission deadline:** November 9, 2026.
+
+I am attaching two official university documents:
+
+1. `Project Description.pdf` — the primary source of truth for requirements, grading, deliverables, and submission.
+2. `Data Catalog.pdf` — the recommended datasets and possible integration attributes.
+
+Read both documents completely.
+
+If any instruction in this prompt conflicts with an explicit university requirement, identify that conflict and ask me before proceeding.
+
+### Overall project objective
+
+Our team must investigate meaningful relationships between two different NYC Open Data domains:
+
+- Housing & Development
+- Transportation
+
+We must select exactly one dataset from each domain, perform exploratory data analysis, clean and integrate them, and create an interactive website presenting research questions, visualizations, insights, and limitations.
+
+The official requirements include:
+
+- At least nine columns in each selected dataset.
+- Meaningful geographic or temporal integration attributes.
+- Descriptive statistics and initial exploratory plots.
+- Pre-integration cleaning.
+- Justified integration, including appropriate aggregation.
+- Post-integration cleaning.
+- An interactive website with dropdown filters, text search, and a Generate Report button.
+- Interactive charts showing meaningful relationships between the domains.
+- A story explaining findings, limitations, and benefits to NYC.
+- A deployed website.
+- GitHub source code, a documented Jupyter notebook, and a README.
+- Clear documentation of individual contributions.
+- Documentation of AI prompts used throughout the project.
+
+Our team has four members, so the final project requires **eight research questions and eight supporting visualizations**, with two questions and two charts contributed by each member.
+
+These are overall project requirements. Do not attempt to implement the entire project during my current task.
+
+---
+
+## 3. OUR SELECTED DATASETS
+
+We have already selected our two datasets.
+
+### Dataset A: Housing
+
+**Name:** DOB NOW: Build — Job Application Filings
+
+**NYC Open Data ID:** `w9ak-ipjd`
+
+**Dataset URL:**
+https://data.cityofnewyork.us/d/w9ak-ipjd
+
+**Assigned members:** Mohamed Issa and Mohamed Walid.
+
+This dataset is not my responsibility during the initial cleaning stage.
+
+Mohamed Issa has already created the housing cleaning notebook, and Mohamed Walid has worked on his assigned housing tasks.
+
+Do not overwrite or replace their work.
+
+### Dataset B: Transportation
+
+**Name:** Motor Vehicle Collisions — Crashes
+
+**NYC Open Data ID:** `h9gi-nx95`
+
+**Dataset URL:**
+https://data.cityofnewyork.us/d/h9gi-nx95
+
+**Assigned members:** Yassin (me) and Ahmed Sanad.
+
+This is the dataset I need to work on now.
+
+### Mandatory date range
+
+Our team agreed that both datasets must contain records from **January 1, 2022 onward, inclusive**.
+
+The date-filtering condition for my transportation dataset is:
+
+`crash_date >= 2022-01-01`
+
+Verify the actual API field names before using them.
+
+Do not silently limit the analysis to 2022 alone, and do not impose an arbitrary upper date unless the team agrees.
+
+### Intended integration
+
+Our team plans to integrate the housing and collision datasets using:
+
+- ZIP code
+- Year
+
+The integration will be handled during Phase 2.
+
+For now, preserve the fields necessary for that later integration, especially crash date, ZIP code, borough, and collision identifier.
+
+Do not perform the integration during my current task.
+
+---
+
+## 4. OUR GITHUB REPOSITORY
+
+**Repository:**
+https://github.com/Sanad-Manga/NYC-Build-And-Crash
+
+**Local project location:**
+`D:\NYC-Build-And-Crash\NYC-Build-And-Crash`
+
+The repository has already been successfully cloned.
+
+I completed these Git operations:
+
+1. Cloned the repository.
+2. Entered the cloned repository directory.
+3. Switched to `main`.
+4. Pulled the latest changes from `origin/main`.
+5. Created my personal feature branch.
+6. Opened the repository in VS Code.
+7. Created my own Jupyter notebook.
+
+### My active Git branch
+
+`feature/yassin-collisions-cleaning`
+
+Do not switch branches unnecessarily.
+
+Do not commit directly to `main`.
+
+Do not merge anything without permission.
+
+### Existing repository structure
+
+At the time of setup, my VS Code Explorer showed:
+
+- `01_housing_cleaning.ipynb`
+- `02_collisions_cleaning.ipynb`
+- `AI_PROMPTS.txt`
+- `README.md`
+
+The repository may contain additional files or have changed since then. Inspect the actual filesystem before making assumptions.
+
+### Important file ownership
+
+**`01_housing_cleaning.ipynb`**
+
+This belongs to Mohamed Issa.
+
+Read it to understand the project's coding conventions, formatting, notebook structure, and documentation style.
+
+Do not modify it.
+
+**`02_collisions_cleaning.ipynb`**
+
+This is my new notebook.
+
+It was created successfully and was empty when I last checked.
+
+This is where you should implement my initial collision cleaning work.
+
+**`AI_PROMPTS.txt`**
+
+This file is used to document AI prompts for the university project.
+
+Do not overwrite it.
+
+I will record the prompts myself, including the date, purpose, prompt content, and how the output was used.
+
+**`README.md`**
+
+Read it for context, but leave it unchanged because the README is assigned to Ahmed Sanad.
+
+Avoid changing unrelated files.
+
+---
+
+## 5. OUR TEAM'S WORK DIVISION
+
+Our team consists of four members:
+
+1. Mohamed Issa
+2. Mohamed Walid
+3. Yassin (me)
+4. Ahmed Sanad
+
+We internally divided Milestone 1 into three phases.
+
+These phases are our team's workflow, not three separate official university milestones.
+
+### PHASE 1 — CLEAN BOTH DATASETS
+
+#### Housing pair
+
+**Mohamed Issa:**
+- Load DOB NOW Job Application Filings.
+- Inspect missing values.
+- Inspect duplicates.
+- Handle missing values and duplicates.
+- Document decisions.
+
+**Mohamed Walid:**
+- Explore the housing dataset with descriptive statistics and plots.
+- Handle outliers.
+- Handle inconsistent values.
+- Standardize ZIP codes.
+- Standardize dates.
+
+Mohamed Issa and Mohamed Walid have already worked on their assigned parts.
+
+#### Transportation pair
+
+**Yassin — ME:**
+- Load Motor Vehicle Collisions — Crashes.
+- Filter records from January 1, 2022 onward.
+- Inspect missing values.
+- Handle missing values appropriately.
+- Inspect duplicates.
+- Remove genuine duplicates.
+- Document every cleaning decision.
+- Prepare cleaned output that Ahmed can continue working with.
+
+**Ahmed Sanad:**
+- Explore the collision dataset using statistics and visualizations.
+- Handle outliers.
+- Handle inconsistent data.
+- Standardize ZIP codes.
+- Standardize dates.
+
+Ahmed needs my output to continue his assigned transportation cleaning work.
+
+**Therefore, my current task is the first cleaning stage of the transportation dataset.**
+
+### PHASE 2 — COMBINE THE DATASETS
+
+The team will swap partners.
+
+**Mohamed Issa:**
+- Integrate housing and transportation by ZIP code and year.
+- Explain and justify the integration strategy.
+- Aggregate records when necessary to obtain meaningful matching granularity.
+
+**Yassin — ME:**
+- Perform post-integration cleaning.
+- Investigate new missing values introduced by joining.
+- Remove redundant or inconsistent columns.
+- Resolve data type mismatches.
+- Document all post-integration cleaning decisions.
+
+**Mohamed Walid:**
+- Build the website page structure.
+- Build the story section.
+
+**Ahmed Sanad:**
+- Build the website dropdown filters.
+- Implement text-based search.
+- Implement the Generate Report button.
+- Use dummy data initially if the integrated dataset is not ready.
+
+Do not implement these Phase 2 responsibilities now.
+
+### PHASE 3 — WEBSITE AND RESEARCH QUESTIONS
+
+Each member must create two research questions and two visualizations showing meaningful relationships between housing and transportation.
+
+**Mohamed Issa:**
+- Two research questions and two charts.
+- Website deployment.
+
+**Mohamed Walid:**
+- Two research questions and two charts.
+- Layout and styling.
+- Story and limitations section.
+
+**Yassin — ME:**
+- Two research questions and two charts.
+- Map visualization.
+- Final Jupyter notebook assembly.
+
+**Ahmed Sanad:**
+- Two research questions and two charts.
+- Website filters.
+- Report generation logic.
+- README documentation.
+
+Do not implement Phase 3 yet.
+
+Your immediate priority is Phase 1, because Ahmed cannot continue his transportation work until my initial cleaning is available.
+
+---
+
+## 6. MY CURRENT IMPLEMENTATION TASK
+
+Implement a professional, reproducible Jupyter notebook in:
+
+`02_collisions_cleaning.ipynb`
+
+Use Python and pandas, following appropriate notebook conventions.
+
+The notebook must be understandable to another student, easy to execute, and sufficiently documented for university evaluation.
+
+### Task A — Dataset loading
+
+Load the NYC Motor Vehicle Collisions — Crashes dataset from NYC Open Data.
+
+Dataset ID: `h9gi-nx95`.
+
+Filter records to January 1, 2022 onward.
+
+The dataset may be large, so avoid unnecessary full downloads.
+
+Investigate whether Socrata API filtering and pagination are appropriate.
+
+Important requirements:
+
+1. Verify the dataset schema first.
+2. Test the API on a small sample.
+3. Use the proper date field.
+4. Explicitly set appropriate API limits.
+5. Do not accidentally retrieve only the default 1,000 records.
+6. Use deterministic pagination or another justified full-data retrieval approach.
+7. Verify completeness, ideally by comparing the retrieved row count against an independently requested filtered count.
+8. Handle API errors and interrupted downloads appropriately.
+9. Avoid loading multiple unnecessary copies of a huge dataset into memory.
+10. Do not silently fall back to a small sample and present it as the complete dataset.
+
+If retrieving all records is expensive, first explain the expected scale and request my approval.
+
+Document whether the data represents the complete filtered dataset or a sample.
+
+### Task B — Initial dataset inspection
+
+After loading, investigate:
+
+- Total number of rows.
+- Total number of columns.
+- Column names.
+- Data types.
+- Initial sample records.
+- Available geographic information.
+- Date range.
+- Available unique identifiers.
+
+Useful pandas operations may include:
+
+- `df.shape`
+- `df.head()`
+- `df.info()`
+- `df.dtypes`
+- `df.isna().sum()`
+
+Use the appropriate functions rather than blindly copying examples.
+
+Do not yet perform Ahmed's detailed exploratory analysis or plotting.
+
+### Task C — Missing-value analysis
+
+This is one of my main responsibilities.
+
+Calculate and present:
+
+- Missing-value count for every column.
+- Missing-value percentage for every column.
+- Which columns are completely populated.
+- Which columns have significant missingness.
+- Which missing fields are important for later integration.
+
+Display the results in a readable table, preferably ordered by missing-value percentage.
+
+Investigate missingness by column meaning rather than relying only on numerical percentages.
+
+Distinguish between:
+
+- Essential identifiers.
+- Dates.
+- Geographic fields.
+- Numeric collision measurements.
+- Optional vehicle information.
+- Other optional information.
+
+### Task D — Missing-value handling
+
+Implement a justified missing-value strategy.
+
+Important rules:
+
+**Do not simply call `dropna()` on the entire dataset.**
+
+That could discard a large number of legitimate collision records.
+
+For every cleaning decision, explain:
+
+- What was missing.
+- Why it matters.
+- Which treatment was selected.
+- How many rows or values were affected.
+- What information might be lost.
+- Whether a reasonable alternative was considered.
+
+Avoid inventing information.
+
+For example, do not replace missing ZIP codes with arbitrary ZIP codes, missing coordinates with fabricated locations, or unknown collision measurements with zero without strong justification.
+
+Preserve records with missing geographic information when they remain useful for other analyses, while documenting that they may not be eligible for ZIP-level integration.
+
+Do not assume that every blank field represents an error.
+
+Some optional vehicle-related fields may be legitimately empty.
+
+Make context-sensitive decisions.
+
+Preserve original information wherever possible.
+
+If a field requires investigation beyond my assigned scope, flag it for Ahmed instead of performing his work.
+
+### Task E — Duplicate detection
+
+Investigate duplicates carefully.
+
+Check at least:
+
+1. Exact duplicate rows.
+2. Repeated collision identifiers, if the dataset contains a valid collision ID column.
+
+Do not automatically assume every repeated value in a non-unique column is a duplicate collision.
+
+Evaluate whether the collision identifier should be unique.
+
+If duplicate collision IDs have conflicting data, inspect and explain the issue rather than arbitrarily keeping one row.
+
+For genuine duplicates:
+
+- Explain why they are duplicates.
+- Remove them using a justified rule.
+- Display the number removed.
+- Show the row count before and after.
+- Verify the outcome.
+
+Where useful, include assertions or equivalent validation.
+
+### Task F — Preserve future integration fields
+
+The final output must preserve the information Ahmed and Mohamed Issa will need later.
+
+Important candidate fields include:
+
+- Collision identifier.
+- Crash date.
+- ZIP code.
+- Borough.
+- Latitude.
+- Longitude.
+- Injury and fatality counts.
+- Other relevant collision characteristics.
+
+Verify the actual column names from the API.
+
+Do not drop potentially useful fields merely because they are not used in my cleaning steps.
+
+Future integration will use ZIP code and year, so the necessary source information must remain available.
+
+Do not perform full ZIP formatting or date standardization, since those responsibilities belong to Ahmed.
+
+However, use appropriate date parsing or validation as necessary to correctly filter the dataset to 2022 onward.
+
+### Task G — Cleaning validation
+
+After cleaning, show a clear before-and-after summary.
+
+Include:
+
+- Rows initially loaded.
+- Rows excluded by the date filter, if applicable and measurable.
+- Rows removed because of missing critical information.
+- Rows removed as genuine duplicates.
+- Rows remaining.
+- Missing values before cleaning.
+- Missing values after cleaning.
+- Duplicate counts before and after.
+
+Check that:
+
+1. No records before January 1, 2022 remain.
+2. The expected collision identifiers are preserved.
+3. Duplicate handling has worked correctly.
+4. Missing-value treatments match the documented decisions.
+5. Important integration attributes remain present.
+6. No unexpected large-scale loss of records occurred.
+
+Do not invent results or numerical counts.
+
+Only report quantities that the code actually calculates.
+
+### Task H — Save the cleaned output
+
+Prepare a cleaned dataset that Ahmed Sanad can load and continue working with.
+
+Recommend an appropriate location, such as:
+
+`data/processed/collisions_phase1_2022plus.csv`
+
+You may suggest Parquet instead if it is significantly more suitable.
+
+Keep the following requirements in mind:
+
+- Preserve suitable data types.
+- Make the export reproducible.
+- Do not overwrite another team member's files.
+- Do not commit very large datasets into Git unnecessarily.
+- Check the output size.
+- If GitHub is unsuitable for storing the complete export, explain an alternative handoff method.
+- Document exactly how Ahmed can regenerate or load the cleaned result.
+
+The notebook should work without requiring hidden, undocumented local files.
+
+If you propose changing `.gitignore` or other shared configuration, ask for permission first.
+
+---
+
+## 7. NOTEBOOK STRUCTURE AND DOCUMENTATION
+
+Organize the notebook with clear Markdown headings.
+
+A suggested structure is:
+
+1. Project title and contributor information.
+2. Dataset description and source link.
+3. Scope of Yassin's work.
+4. Imports and configuration.
+5. Dataset loading.
+6. Initial dataset inspection.
+7. Missing-value analysis.
+8. Missing-value treatment and justifications.
+9. Duplicate identification.
+10. Duplicate handling and justifications.
+11. Cleaning validation.
+12. Before-and-after summary.
+13. Exporting cleaned data.
+14. Handoff notes for Ahmed Sanad.
+15. Limitations and decisions deferred to the next stage.
+
+Use well-written Markdown cells to explain the methodology.
+
+Include comments for non-obvious code.
+
+Use descriptive variable names and modular functions where useful.
+
+Avoid unnecessary complexity, excessive abstractions, unrelated charts, or complicated dependencies.
+
+Keep the notebook consistent with the existing housing notebook's style where reasonable.
+
+Do not copy questionable assumptions from the housing notebook without validation.
+
+---
+
+## 8. WHAT YOU MUST NOT DO
+
+These constraints are extremely important.
+
+Do not:
+
+- Modify Mohamed Issa's housing notebook.
+- Overwrite Mohamed Walid's work.
+- Implement Ahmed Sanad's outlier, consistency, or detailed standardization tasks.
+- Start the ZIP/year integration.
+- Perform post-integration cleaning yet.
+- Create the website.
+- Implement the Generate Report button.
+- Create Phase 3 research questions or charts.
+- Modify the project README.
+- Overwrite AI_PROMPTS.txt.
+- Change the Git branch without asking.
+- Commit, push, or merge without my approval.
+- Download a potentially huge dataset without first explaining the approach.
+- Claim a sample is the full dataset.
+- Invent cleaning results.
+- Delete significant numbers of records without justification.
+- Add unnecessary dependencies.
+- Change unrelated project files.
+
+Focus strictly on completing my current assigned work while making it easy for Ahmed to continue.
+
+---
+
+## 9. EXPECTED HANDOFF TO AHMED SANAD
+
+After my notebook is complete, Ahmed should be able to:
+
+1. Open the project.
+2. Understand how the collisions dataset was loaded.
+3. Understand every missing-value and duplicate-cleaning decision.
+4. Execute the notebook or load its reproducible output.
+5. Continue with exploratory statistics and plots.
+6. Handle outliers and inconsistent values.
+7. Standardize ZIP codes and dates.
+8. Produce the final cleaned transportation data for integration.
+
+Include a concise handoff section that explains:
+
+- Where the cleaned data is located.
+- How to load or regenerate it.
+- What cleaning has already been performed.
+- Which issues remain unresolved.
+- Which fields are important for integration.
+- What Ahmed should do next.
+
+Avoid making undocumented assumptions about his future work.
+
+---
+
+## 10. YOUR REQUIRED WORKFLOW
+
+### Stage 1 — Inspect and plan
+
+Before editing any files:
+
+1. Read the attached official project PDFs.
+2. Inspect the current repository structure.
+3. Read the README.
+4. Examine Mohamed Issa's existing notebook for conventions.
+5. Inspect my empty or existing collisions notebook.
+6. Verify my active Git branch.
+7. Identify the required Python dependencies.
+8. Propose an efficient data-loading strategy.
+9. Explain the missing-value and duplicate-cleaning approach.
+10. Identify the files you intend to create or modify.
+
+Then provide a detailed but understandable implementation plan.
+
+**Stop and wait for my approval.**
+
+### Stage 2 — Implement after approval
+
+Once I approve:
+
+1. Implement the notebook.
+2. Test the loading mechanism on a small sample.
+3. Request approval before any expensive full-data download.
+4. Execute and validate the appropriate parts.
+5. Review the cleaning outcomes.
+6. Fix any implementation errors.
+7. Check the before-and-after counts.
+8. Ensure the output can be reproduced.
+9. Check that no teammate files were modified.
+10. Prepare a handoff summary.
+
+If the execution environment lacks internet access or necessary dependencies, explain the exact blocker and give me the commands needed to run the notebook locally.
+
+Do not pretend that unexecuted code has been tested successfully.
+
+### Stage 3 — Final report
+
+After implementation, tell me:
+
+- Which files were created or modified.
+- What code was implemented.
+- Which notebook cells were successfully executed.
+- Whether the complete 2022+ dataset was retrieved.
+- How many rows were loaded.
+- How many records were removed and why.
+- Whether duplicates remain.
+- Where the cleaned data is saved.
+- Any unresolved issues.
+- How Ahmed should continue.
+- Which commands I need to run.
+- What I should verify before committing to GitHub.
+
+Do not commit, push, or merge unless I explicitly instruct you to.
+
+---
+
+## 11. COMMUNICATION PREFERENCES
+
+I want to understand the project and its methodology, but I am using AI-assisted development to implement the code.
+
+Therefore:
+
+- Explain the important technical decisions in clear English.
+- Tell me why each major operation is needed.
+- Use precise commands when I need to do something in VS Code.
+- Avoid unnecessary complexity.
+- Do not repeatedly ask questions already answered here.
+- Do not assume something is complete without checking it.
+- Clearly distinguish planned work from implemented work.
+- Preserve my teammates' contributions.
+- Keep the implementation aligned with the university's official requirements.
+
+**START NOW WITH STAGE 1 ONLY.**
+
+Read the PDFs and inspect the repository, then explain your proposed implementation plan for Yassin's Phase 1 collision-cleaning notebook.
+
+Do not start editing files until I approve the plan.
+How the output was used: Kept the inspection and approved plan for collision loading, conservative missingness, duplicates, and handoff. This is the original pasted master prompt, reproduced in full.
+================================================
+Date: 2026-11-03
+Student: Yassin
+Tool: Codex
+Related Requirement: Phase 1 - Dataset loading and cleaning
+Prompt: I have reviewed your Stage 1 plan, and **I approve proceeding with Stage 2 implementation**, with the following adjustments.
+**1. Synchronize GitHub first**
+You discovered that remote `main` contains newer work by Ahmed, including `02_collisions_eda_cleaning.ipynb`, `requirements.txt`, and `.gitignore`.
+Before implementation, safely incorporate the latest `origin/main` changes into my existing `feature/yassin-collisions-cleaning` branch.
+Preserve my untracked `02_collisions_cleaning.ipynb` and all existing teammates' work. Check Git status before making changes and stop if there are conflicts or risks of overwriting files.
+Do not commit, push, or merge my feature branch into main.
+**2. Implement my Phase 1 notebook**
+Proceed with the complete implementation of `02_collisions_cleaning.ipynb` according to your proposed plan.
+Include the dataset feasibility check, reproducible loading, initial inspection, missing-value analysis and treatment, duplicate detection and treatment, verification, documentation, and Ahmed's handoff instructions.
+Preserve all 29 source columns unless there is a well-justified reason otherwise.
+Use the date range January 1, 2022 onward.
+**3. Test the loading process first**
+You have permission to test the API using small samples and metadata requests.
+Implement the full-data loading process, but do not execute the complete dataset download yet.
+Once the notebook is implemented and its small-scale loading test succeeds, present the results and request my separate approval for the full retrieval.
+**4. Clean missing values conservatively**
+Preserve legitimately missing optional information. Do not fabricate missing geographical information or injury/fatality counts.
+Document missing-value percentages, treatment decisions, and affected records.
+Preserve records with missing ZIP codes when they remain useful for analyses other than ZIP-level integration.
+**5. Prepare Ahmed's handoff**
+Use `data/collisions_step1.csv.gz` as the intended output, matching Ahmed's existing notebook expectations.
+Ensure generated data and temporary caches will not accidentally be committed to GitHub.
+Explain how Ahmed can load or regenerate the cleaned output and which tasks remain his responsibility.
+**6. Verify the implementation**
+After coding, check notebook structure, syntax, code consistency, documentation, testable functionality, and Git changes.
+If Python dependencies are missing, install them in an appropriate project virtual environment if possible, or provide the exact installation commands.
+Do not modify teammates' notebooks, README, or AI_PROMPTS.txt.
+**Proceed with implementation now. Stop before downloading the complete dataset.**
+How the output was used: Kept the notebook implementation and 100-row test. Preserved all 29 columns and optional missing fields; restricted changes to Yassin's notebook and generated ignored artifacts.
+================================================
+Date: 2026-11-03
+Student: Yassin
+Tool: Codex
+Related Requirement: Phase 1 - Code review, fixes, and regression validation
+Prompt: # FINAL PRE-PUSH CODE REVIEW — YASSIN PHASE 1
+
+You have implemented `02_collisions_cleaning.ipynb` for my NYC Build and Crash university project.
+
+Before I approve the full dataset download or push anything to GitHub, I want a rigorous independent audit of your implementation.
+
+**Your job is to find errors, incorrect assumptions, untested execution paths, missing requirements, and compatibility problems. Do not assume that your earlier implementation is correct simply because its sample tests passed.**
+
+## 1. Inspect everything relevant
+
+Read:
+
+- `02_collisions_cleaning.ipynb` — my Phase 1 notebook.
+- `02_collisions_eda_cleaning.ipynb` — Ahmed Sanad's Stage 2 notebook.
+- `01_housing_cleaning.ipynb` — Mohamed Issa's work.
+- The current repository structure, README, requirements, and `.gitignore`.
+- Both official university project PDFs.
+
+Inspect the actual notebook files, not just previous implementation summaries.
+
+## 2. Investigate specific suspected problems
+
+**A. Diagnostic export dtype mismatch**
+
+Inspect `clean_phase1()` and `write_verified_csv()`.
+
+The review-reason column may have object dtype, while the CSV reader forces nullable pandas string dtype. `pd.testing.assert_frame_equal()` might consequently reject a valid diagnostic export.
+
+Reproduce this using a temporary synthetic DataFrame with critical anomalies. If confirmed, fix it and add regression tests.
+
+Test both freshly created and existing diagnostic exports.
+
+**B. Critical date handling**
+
+`assert_source_frame()` rejects unreadable or missing dates before `clean_phase1()` can create review records.
+
+Determine whether this matches the documented handling policy. Either implement consistent, safe quarantine behavior or clearly document that the loader intentionally stops before extraction.
+
+Never silently accept invalid dates.
+
+**C. Dataset completeness**
+
+Verify that pagination uses stable ordering, explicit limits, and valid row-count checks.
+
+Check interrupted downloads, invalid caches, schema changes, source changes, and export corruption.
+
+Do not download the complete dataset yet.
+
+**D. Handoff compatibility**
+
+Ahmed's notebook currently reads `data/collisions_raw.csv`, while my verified output will be `data/collisions_step1.csv.gz`.
+
+Inspect Ahmed's actual required columns, dtypes, and cleaning assumptions.
+
+Verify that my full output schema can be consumed by his next stage.
+
+Identify necessary changes for Ahmed, but do not edit his notebook.
+
+**E. Project alignment**
+
+Verify that my assigned Phase 1 work is complete and that I have not implemented Ahmed's EDA, outliers, or standardization tasks.
+
+Confirm the dataset is restricted to January 1, 2022 onward and that its source columns are preserved.
+
+Flag any housing-side incompatibilities, but do not modify teammates' work.
+
+## 3. Perform targeted and regression testing
+
+Test the following using small, controlled datasets:
+
+- Normal records.
+- Missing ZIP codes.
+- Whitespace-only values.
+- Missing collision identifiers.
+- Missing or invalid dates.
+- Exact duplicate rows.
+- Duplicate IDs containing conflicting information.
+- Unexpected schema changes.
+- Incomplete API pages.
+- Cache corruption.
+- CSV and gzip export round-trips.
+- Existing-output conflict behavior.
+
+Verify the actual file-writing paths, not just in-memory functions.
+
+Use temporary or ignored test files. Do not add unnecessary test artifacts to Git.
+
+## 4. Verify Git safety
+
+Check the active branch, working tree, and changes relative to `main`.
+
+Confirm that my work does not modify teammate files and that generated CSVs, caches, and `.venv` are excluded.
+
+Do not commit, push, or merge.
+
+## 5. Your output
+
+Provide a review report containing:
+
+1. Confirmed bugs with file/cell location, severity, and evidence.
+2. Fixes implemented in my notebook.
+3. Tests executed and whether they passed.
+4. Remaining untested behavior.
+5. Compatibility findings with Ahmed and Issa.
+6. Anything required by the university that is still missing.
+7. Exact readiness status for full-data retrieval.
+8. Any blockers that must be resolved before pushing.
+
+You may fix confirmed problems inside `02_collisions_cleaning.ipynb`.
+
+Do not modify teammate notebooks or shared project files without authorization.
+
+**Do not download the complete dataset yet. Do not push changes. Report the audit results first.**
+How the output was used: Kept confirmed completeness, export dtype, identifier reconciliation, cache, and schema fixes. All 12 controlled test groups and nine code cells passed. The former separate summarized testing entry had no corresponding user message; its testing work is documented here under this real audit prompt.
+================================================
+Date: 2026-11-03
+Student: Yassin
+Tool: Codex
+Related Requirement: Phase 1 - Explicit full-download approval and output verification (combined original message)
+Prompt: Verify that `data/collisions_step1.csv.gz` exists, is readable, and contains the complete verified 2022+ collision dataset.
+
+Check that:
+
+1. The file is a valid compressed CSV.
+2. It contains exactly 29 columns.
+3. Its row count agrees with the notebook's cleaning audit.
+4. Ahmed can load it using pandas without losing ZIP codes, collision IDs, or numeric data types.
+5. Git ignores the output and no dataset files are tracked.
+6. My notebook is the only new source file intended for my feature branch.
+
+Do not modify or push anything. Report the results.
+
+
+
+The audit has passed, and I approve executing the complete 2022+ Motor Vehicle Collisions dataset retrieval.
+
+The final output `data/collisions_step1.csv.gz` does not exist yet.
+
+Set `RUN_MODE = "full"` and `FULL_DOWNLOAD_APPROVED = True`, execute the entire notebook in the existing `.venv`, and verify that the complete dataset is downloaded, cleaned, and exported successfully.
+
+Check all validation results, the output row count, file size, and Git ignore rules.
+
+Do not modify teammates' files, commit, push, or merge anything. If validation fails, stop and report the error.
+How the output was used: Kept the approved full run: 447,156 rows, 29 columns, dates 2022-01-01 through 2026-10-31, zero duplicate removals, and 125,794 missing-ZIP records retained. Exported and independently verified data/collisions_step1.csv.gz (28.31 MB). Authorization comes from the explicit approval paragraph in the 2026-11-03T16:23:26.836Z user message, quoted above in full. That same recorded message begins with an output-verification request; its checklist alone is not download approval. Later verification requests, including offline snapshot verification, do not authorize refreshing the live dataset.
+================================================
+Date: 2026-11-04
+Student: Yassin
+Tool: Codex
+Related Requirement: PR 4 - Address Ahmed Sanad's seven review fixes
+Prompt: there is this pr
+
+\## Review of PR 4 for the coding agent (fix list) — reviewer: Ahmed\
+\
+\*\*Verdict: good work, mergeable after the small fixes below. Nothing critical.\*\* The notebook is well documented, uses relative paths, has no Colab, regenerates data from the API, and the PR touches only your notebook and \`AI_PROMPTS.txt\`. Cross-check passed: your 125,794 missing ZIPs + the 443 invalid placeholder ZIPs (\`10000\`, \`12345\`) found in stage 2 = 126,237 missing ZIPs in stage 2. Row count (447,156), 0 duplicates and the date range also agree.\
+\
+\*\*Rules:\*\* edit only \`02_collisions_cleaning.ipynb\` (and \`AI_PROMPTS.txt\` format if needed) on this branch. No scope additions. Do not merge.\
+\
+\### Fixes (do all)\
+1\. \*\*Run warning.\*\* The notebook is saved with \`RUN_MODE = "full"\` and \`FULL_DOWNLOAD_APPROVED = True\`, so Run All starts a 447k-row, \~100 MB download. Add one line at the top of "How to run": expected time, size, and that a quick test is \`RUN_MODE = "sample"\` + \`FULL_DOWNLOAD_APPROVED = False\`.\
+2\. \*\*Setup.\*\* Replace the unpinned \`pip install pandas requests ipykernel nbformat nbclient\` / \`py -3.14\` instructions with \`pip install -r requirements.txt\` (the team file on \`main\`). State the Python version used (3.14.8) and that the kernel must start at the repo root (the notebook uses \`Path.cwd()\` as project root).\
+3\. \*\*Findings at the top.\*\* Add a short markdown block at the very top (5 lines max) with the key results taken from the printed outputs: rows (447,156), columns (29), date range, missing ZIP % (28.13%), missing borough % (22.65%), missing lat/lon % (5.48%), duplicates (0). Every number must match a printed output.\
+4\. \*\*One plot.\*\* Add one bar chart of missing % per column (title, labelled axes with units, sorted). Rubric asks for EDA with plots.\
+5\. \*\*Reconciliation note.\*\* Add a short markdown cell in the handoff section: stage 2 (\`02_collisions_eda_cleaning.ipynb\`) loads the raw API pull itself; the two stages reconcile: 125,794 missing ZIP here + 443 placeholder ZIPs set to missing there = 126,237.\
+6\. \*\*Notebook name.\*\* Team decision: use the naming scheme from \`docs/CONTRACT.md\` section 2 (\`phase\<N>\_\<component>\_\<task>\_\<contributor>.ipynb\`). Rename to \`phase1_collisions_initial_cleaning_yassin.ipynb\` (git mv, no content change) and update any internal references. Stage 2 will be renamed \`phase1_collisions_eda_cleaning_ahmed.ipynb\` by Ahmed.\
+7\. \*\*AI_PROMPTS.txt cosmetics.\*\* Remove the stray blank lines around the separators, keep the exact required format, end the file with a newline. Prompts must be your real prompts, verbatim.\
+\
+\### Proof required in the PR description\
+\- Restart Kernel and Run All in VS Code: zero errors, execution counts 1..N in order.\
+\- Fresh clone, new venv, \`pip install -r requirements.txt\`, Run All: result pasted.\
+\- \`data/\` still ignored by Git; no data files in the PR.\
+\
+Do not merge; Ahmed merges after reviewing.\
+
+
+
+
+what i want you to do&#x20;
+
+
+
+# PR #4 — Address Ahmed Sanad's Review
+
+Ahmed reviewed my Phase 1 collision-cleaning Pull Request and confirmed that it is mergeable after seven small fixes.
+
+**Task:** Implement all seven review fixes exactly as requested. Do not expand the scope or rewrite the existing cleaning pipeline.
+
+## 1. Add execution warning
+
+At the beginning of the notebook, clearly state:
+
+- Full mode downloads/processes approximately 447,156 records.
+- Include the expected time and download size, labelling estimates appropriately.
+- Quick testing uses `RUN_MODE = "sample"` and `FULL_DOWNLOAD_APPROVED = False`.
+- Explain that full mode requires explicit approval.
+
+Preserve previously verified full-run results.
+
+## 2. Fix setup instructions
+
+Replace individual pip installations with:
+
+`pip install -r requirements.txt`
+
+Document Python 3.14.8 as the version used and explain that the notebook kernel must start in the repository root because `Path.cwd()` is used.
+
+Do not modify requirements.txt.
+
+## 3. Add a short findings summary
+
+Add a Markdown summary near the top, no more than five lines, showing:
+
+- 447,156 rows and 29 columns.
+- Date range: 2022-01-01 to 2026-10-31.
+- Missing ZIP: 28.13%.
+- Missing borough: 22.65%.
+- Missing latitude/longitude: 5.48%.
+- Zero duplicates.
+
+Verify all numbers against actual executed notebook outputs before including them. If any value differs, investigate and report the discrepancy.
+
+## 4. Add missing-value visualization
+
+Add one horizontal bar chart showing missing-value percentages for all columns, sorted from highest to lowest.
+
+Include:
+
+- Descriptive title.
+- Properly labelled axes and percentage units.
+- Readable column names.
+- Accurate values from the final dataset.
+
+Keep the chart inside my missing-value analysis section. Do not implement Ahmed's broader EDA responsibilities.
+
+## 5. Add reconciliation documentation
+
+In the handoff section, explain:
+
+125,794 missing ZIPs in my Stage 1 output + 443 invalid placeholder ZIPs (`10000` and `12345`) converted to missing in Ahmed's Stage 2 = 126,237 missing ZIPs.
+
+Clarify that Ahmed's notebook currently retrieves its own raw data rather than automatically reading my output.
+
+Do not modify Ahmed's notebook.
+
+## 6. Rename my notebook
+
+Follow the team's naming convention specified by Ahmed:
+
+`phase1_collisions_initial_cleaning_yassin.ipynb`
+
+Use `git mv` to preserve Git's rename history.
+
+Inspect `docs/CONTRACT.md` if available, and update internal filename references, path validations, and notebook instructions.
+
+Ensure the renamed notebook executes correctly. Do not rename Ahmed's or Issa's notebooks.
+
+## 7. Correct AI_PROMPTS.txt
+
+Remove unnecessary blank lines around separators and ensure the file ends with a newline.
+
+Ahmed requires real, verbatim prompts. Compare the existing five summarized entries with the actual Codex conversation. Replace summaries with the original prompts where available.
+
+Do not invent or paraphrase prompts and label them verbatim. If the original messages are inaccessible, tell me exactly what I need to supply.
+
+Preserve all other team members' entries.
+
+## 8. Full verification
+
+After the fixes:
+
+1. Validate notebook structure using nbformat.
+2. Check the Python syntax of all code cells.
+3. Run notebook regression tests.
+4. Restart the kernel and execute all code cells in order, checking execution counts and errors.
+5. Verify the complete dataset's 447,156 rows, 29 columns, dates, missingness, and duplicate counts remain unchanged.
+6. Confirm the output is still correctly ignored by Git.
+7. Check Git status and ensure only my notebook rename and authorized AI_PROMPTS.txt edits are included.
+8. Document the actual results of all checks.
+
+Also prepare the exact fresh-clone verification procedure using the team's requirements.txt, as Ahmed requested. Do not claim that a fresh-clone test passed unless you actually performed it.
+
+**IMPORTANT:**
+
+- Work only on `feature/yassin-collisions-cleaning`.
+- Do not modify teammates' notebooks, README, or shared configuration.
+- Do not stage or commit the unrelated local changes in `01_housing_cleaning.ipynb`.
+- Do not commit, push, or merge.
+- Do not unnecessarily redownload the dataset if the existing validated cache is reusable.
+- Stop and report any failed test instead of bypassing it.
+
+After completion, provide the files changed, verification results, any remaining issues, and the exact commands needed to update PR #4.
+
+Do not merge the PR. Ahmed will merge it after reviewing.
+How the output was used: Used the review request to update setup and run guidance, add verified findings and one final-data missingness chart, document Stage 2 ZIP reconciliation, rename the notebook to phase1_collisions_initial_cleaning_yassin.ipynb, and replace summarized prompt entries with actual conversation text. Verification outcomes are recorded in the PR review report; no commit, push or merge was requested.
+================================================
+Date: 2026-11-04
+Student: Yassin
+Tool: Codex
+Related Requirement: PR 4 - Offline verification of the preserved November 3 snapshot
+Prompt: Proceed with offline verification of the previously validated November 3 dataset snapshot.
+
+The goal is to verify Ahmed's seven PR review fixes without unnecessarily changing our agreed dataset snapshot.
+
+Instructions:
+
+1. Preserve the existing 447,156-row dataset, its audit JSON, and previously verified outputs.
+2. Verify the stored dataset's integrity, row counts, all 29 columns, dates, missing values, and duplicate counts.
+3. Execute the new missing-values visualization against the preserved full dataset and verify that it renders correctly.
+4. Run all offline regression tests and check notebook structure, syntax, and numerical consistency.
+5. Use a temporary offline execution copy or controlled test environment if necessary. Do not disable or weaken the production API completeness and cache validation checks.
+6. Verify that the renamed notebook's internal file references are correct.
+7. Confirm that the seven PR review fixes are present.
+8. Check Git staging carefully. Do not include changes to `01_housing_cleaning.ipynb` in my commit.
+9. Verify that `AI_PROMPTS.txt` contains accurately attributed original prompts. In particular, distinguish the original full-download approval from later output-verification requests.
+10. Do not download the updated live dataset, commit, push, or merge.
+
+Clearly distinguish offline snapshot verification from a successful fresh-clone online Run All.
+
+Report which tests passed, which tests remain incomplete, and whether any reviewer requirement still needs live verification.
+
+Do not claim the fresh-clone requirement has passed unless it was actually tested.
+How the output was used: Verified the preserved dataset and audit offline; all 12 synthetic regression groups and the embedded notebook regressions passed. A temporary offline execution copy completed counts 1-11 and reproduced an identical export. Rendered and visually checked the missingness plot, preserving earlier production outputs and every production code cell. Clarified the original full-download approval attribution. Fresh-clone online Run All and VS Code UI verification remain unperformed; no updated dataset was downloaded.
+================================================
