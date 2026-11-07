@@ -113,14 +113,14 @@ Student: Mohamed Issa
 Tool: Claude (claude.ai)
 Related Requirement: Phase 1 - housing load/cleaning (overall plan and missing values)
 Prompt: ok listen up claude, i have this project i need to do, first you should explain what the project is and stuff, just briefly, in two pictures i sent you, i am mohamed issa, and in the other image i am person A, what i need you to do is give me step by step instructions to finish my part of the project, and like start with me from the very beginning because i dont know anything about the project,
-How the output was used: Followed the step-by-step cleaning plan in 01_housing_cleaning.ipynb: column selection, dropping rows missing a filing number, date, or ZIP, handling duplicates, and adding job_id and is_initial_filing. Changed: the column list was decided after checking the printed missing-value percentages. Later changed by the team lead's review: added the 2022 filter and removed the Google Drive steps.
+How the output was used: Followed the step-by-step cleaning plan in phase1_housing_initial_cleaning_issa.ipynb: column selection, dropping rows missing a filing number, date, or ZIP, handling duplicates, and adding job_id and is_initial_filing. Changed: the column list was decided after checking the printed missing-value percentages. Later changed by the team lead's review: added the 2022 filter and removed the Google Drive steps.
 
 Date: 2026-11-02
 Student: Mohamed Issa
 Tool: Claude (claude.ai)
 Related Requirement: Phase 1 - housing load/cleaning (download method)
 Prompt: its been 17 minutes
-How the output was used: Rejected the single-file download that had not finished, and did not use the suggested wget fallback. Kept the paged API download with a stable sort order in the loading cell of 01_housing_cleaning.ipynb (later made resumable and parallel, see the Claude Code entry below).
+How the output was used: Rejected the single-file download that had not finished, and did not use the suggested wget fallback. Kept the paged API download with a stable sort order in the loading cell of phase1_housing_initial_cleaning_issa.ipynb (later made resumable and parallel, see the Claude Code entry below).
 
 Date: 2026-11-02
 Student: Mohamed Issa
@@ -141,7 +141,7 @@ Student: Mohamed Issa
 Tool: Claude (claude.ai)
 Related Requirement: Phase 1 - housing load/cleaning (planning the team lead's fixes)
 Prompt: ok claude look, team leader sent this, issa 3shan 3amalt 3ala colab fa m7dsh 8erak hy3rf y run el code ( 3shan enta 3amalt link lel google drive beta3tak ) (i am sending it again to remind you, to ensure you did everything, and this is a list of fixed team lead sent me, from here on i will be coutinuing with claude code on vs code, so i need you to tell him everything that must be done, before you do that id there something i need to do?
-How the output was used: Produced the handoff to Claude Code, which listed risks to check while applying FIXES_ISSA: a stale full raw file bypassing the filter, verifying the date filter, and the filter's effect on is_initial_filing. The fixes themselves were then made with Claude Code in 01_housing_cleaning.ipynb (see the entries below).
+How the output was used: Produced the handoff to Claude Code, which listed risks to check while applying FIXES_ISSA: a stale full raw file bypassing the filter, verifying the date filter, and the filter's effect on is_initial_filing. The fixes themselves were then made with Claude Code in phase1_housing_initial_cleaning_issa.ipynb (see the entries below).
 
 Date: 2026-11-03
 Student: Mohamed Issa
@@ -179,4 +179,11 @@ AI LOG: append entries to AI_PROMPTS.txt (bottom only) for the prompts that shap
 
 PROOF REQUIRED IN THE PR DESCRIPTION: fresh clone, new venv, pip install -r requirements.txt, python -m pytest tests (pass), streamlit run app.py opens without errors; screenshot or text description of each chart; list of files changed. Say clearly what you could NOT verify. Do not claim anything works unless you ran it.
 How the output was used: Kept the whole skeleton (src/data.py, src/search.py, src/report.py, src/charts.py, app.py, scripts/make_dummy_data.py, tests/test_search.py, README section). Changed after checking it in a browser: chart titles shortened and legends moved below the plots because they were cut off, deprecated Streamlit width arguments replaced, the "Highest ZIP" tile shows only the ZIP. The .gitignore was changed so the committed dummy CSV is not ignored while the real data/ files stay ignored. Not verified: nothing was deployed to Render.
+================================================
+Date: 2026-11-07
+Student: Mohamed Issa
+Tool: Claude Code (Opus 5.5)
+Related Requirement: Phase 1 - housing load/cleaning (review fixes for PR 6)
+Prompt: [pasted Ahmed's review of PR 6: rename the notebook to phase1_housing_initial_cleaning_issa.ipynb, add a "Definition for Phase 2" cell counting jobs from I1 rows only, fresh-clone proof, merge origin/main] do whatever this text says
+How the output was used: Kept the rename (git mv, references in README.md and this file updated), the new "Definition for Phase 2" markdown cell after the I1 check cell, and the reworded Phase 2 note in the "Step 3: filings versus jobs" cell. Merged origin/main into the branch. The fresh-clone run output was pasted into the PR description.
 ================================================
