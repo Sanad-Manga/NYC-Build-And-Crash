@@ -2057,3 +2057,19 @@ Do not push either branch, create pull requests, or merge changes yet.
 
 Report the resulting branch structure and file differences before proceeding.
 
+
+================================================
+Date: 2026-11-08
+Student: Ahmed Sanad
+Tool: Claude Code Sonnet 5.5
+Related Requirement: Phase 3 - analysis (2 research questions, 2 visualizations)
+Prompt: You are Ahmed's coding agent (Ahmed is team leader, GitHub Sanad-Manga). Read AGENTS.md, docs/CONTRACT.md, docs/SPEC.md and README.md first. Rules: VS Code + .venv only (no Colab), relative paths, never commit to main, never force-push, never edit a teammate's file, fresh-clone test (new venv, pip install -r requirements.txt, Run All, zero errors) before each PR, every number in markdown equals a printed output, correlation-only wording ("is associated with", never "causes"), scope 2022-01-01 to 2026-10-31 (2026 is a partial year, January to October). Append your entries to the bottom of AI_PROMPTS.txt (existing lines untouched).
+PART A: branch `feature/analysis-ahmed`, notebook `phase3_analysis_ahmed.ipynb`
+Input: `data/zip_year.csv` (Issa's integrated table; raise FileNotFoundError naming phase2_data_integration_issa.ipynb if missing). Read zip_code as string, year as int. Columns: zip_code, year, borough, housing_job_count, new_building_count, collision_count, persons_injured, persons_killed, pedestrians_injured, cyclist_injured, motorist_injured, is_partial_year (+ extras).
+Answer two research questions, each with a markdown "question, method, why this chart, finding, limitation" block and one labelled chart (title, axis labels with units):
+Q1. Are ZIP codes with more new buildings also the ones with more pedestrian and cyclist injuries? Method: use FULL years only (2022-2025), rank ZIPs by new_building_count, split into top quartile vs bottom quartile, compare pedestrian+cyclist injuries per collision (not raw counts, which grow with size), plus Spearman correlation with its p-value. Chart: grouped bars with the two groups.
+Q2. Do ZIPs with the most new construction have a different contributing-factor profile? Method: use `top_contributing_factor` if present in the integrated table (else say it is unavailable and use injuries-per-100-collisions by borough); compare the share of each top factor between high-construction and low-construction ZIPs. Chart: stacked (100%) bars.
+Both: state the confounder (busy ZIPs have both more building and more traffic), the missing-ZIP share (about 28% of crashes have no ZIP and are excluded, higher in 2022-2023), that low_data_flag ZIPs are excluded or shown separately, and that 2026 is partial. No causal wording.
+End with a one-paragraph conclusion, "Contribution note" (Ahmed authored the collisions EDA/cleaning, the website skeleton and this analysis) and "Prompts used".
+(Parts B and C of the same prompt - website real data, Render deployment - are logged in their own PRs.)
+How the output was used: Claude built phase3_analysis_ahmed.ipynb. Because the Phase 2 PRs were not merged, it was run on an interim data/zip_year.csv produced locally by running the teammates' branches; it must be re-run after they merge. Kept: full years 2022-2025, low_data_flag ZIP-years excluded, a 100-collision minimum per ZIP (my addition, justified in the notebook), quartile comparison with bootstrap intervals, Spearman with a permutation p-value, and the Q2 permutation test. Findings text was filled from printed numbers.
