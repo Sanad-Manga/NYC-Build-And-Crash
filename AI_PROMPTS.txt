@@ -2057,3 +2057,12 @@ Do not push either branch, create pull requests, or merge changes yet.
 
 Report the resulting branch structure and file differences before proceeding.
 
+
+================================================
+Date: 2026-11-08
+Student: Mohamed Issa
+Tool: Claude Code (Opus 5.5)
+Related Requirement: Phase 2 - data integration and post-join cleaning (phase2_data_integration_issa.ipynb)
+Prompt: [pasted the team lead's PHASE2_PROMPTS.md, PROMPT 3: join data/collisions_zip_year.csv.gz and data/housing_zip_year.csv.gz on (zip_code, year) with an outer join, zero-fill counts, borough from collisions first, post-join ZIP and outlier cleaning with low_data_flag, derived columns new_buildings_per_year_rank and injuries_per_100_collisions, export data/zip_year.csv that passes src.data.validate, validation plots and reconciliation] complete Mohamed Issa's part
+How the output was used: Kept the notebook structure and decisions: outer join with validate="one_to_one", zero-fill justified against CONTRACT 10.5, one borough per ZIP (collisions first), NYC ZIP-prefix rule (drop non-NYC or placeholder ZIPs, keep small NYC ZIPs and flag them), per-year IQR outlier_flag, low_data_flag, the two derived columns, the website validator run in the notebook, and the totals reconciliation. Changed: removed a wrong claim that the housing data has no coordinates (housing_step2 has latitude/longitude); replaced pandas' Spearman (needs scipy, not in requirements.txt) with the Pearson correlation of ranks; after a test run, tightened the ZIP rule with named placeholders (10000, 11111, not USPS-assigned) and a named non-NYC ZIP that passes the prefix test (11021, Great Neck, Nassau County), and kept real NYC single-building and housing-only ZIPs with a flag instead of dropping them. Markdown avoids hard-coded counts; the summary table is printed by the run. Accepted collisions_zip_year.csv as a fallback name because Yassin's open PR writes the uncompressed file. Tested on Walid's real data/housing_zip_year.csv and a stand-in collisions table built from Ahmed's data/collisions_step2.csv.gz with the Prompt 1 definitions (the stand-in housing table built the same way matched Walid's file exactly). The final run needs Yassin's real file.
+================================================
