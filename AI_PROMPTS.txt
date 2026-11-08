@@ -2057,3 +2057,13 @@ Do not push either branch, create pull requests, or merge changes yet.
 
 Report the resulting branch structure and file differences before proceeding.
 
+
+================================================
+Date: 2026-11-08
+Student: Ahmed Sanad
+Tool: Claude Code Sonnet 5.5
+Related Requirement: Website - use the real integrated table
+Prompt: PART B: branch `feature/website-real-data`
+Wire the Streamlit app to the real file. Do not rewrite it: change only how the data is loaded (the app currently reads data/dummy_zip_year.csv). Use `data/zip_year.csv` when it exists, fall back to the dummy file with a visible banner "Showing dummy data". Keep src.data.validate passing. Check the filters, search by ZIP, the Generate Report button and every chart with real values (a ZIP with a missing borough, a low_data_flag ZIP, 2026 partial-year label). Add one test in tests/ that loads the real file shape. Run `pytest` and `streamlit run app.py`; list what you clicked and what you saw.
+(This is Part B of the same prompt logged with the analysis PR; the shared rules header is there.)
+How the output was used: The loader already preferred data/zip_year.csv, so only the banner text and one placeholder sentence changed; two tests were added; the click-through results are in the PR description.
