@@ -57,3 +57,31 @@ def test_negative_count_raises(table):
     table.loc[table.index[0], "collision_count"] = -1
     with pytest.raises(DataValidationError, match="negative"):
         validate(table)
+
+
+def test_real_file_shape_loads(table, tmp_path):
+    """The integration notebook's real output has extra columns (flag, top factor, match status), leading-zero
+    ZIPs and a partial 2026: the loader must keep the required columns and the 5-digit string ZIPs."""
+    real = table.copy()
+    real.loc[real.index[0], "zip_code"] = "00083"
+    real.loc[real.index[1], "zip_code"] = "10999"
+    real.loc[real.index[1], "year"] = 2026
+    real.loc[real.index[1], "is_partial_year"] = True
+    real["low_data_flag"] = False
+    real.loc[real.index[2], "low_data_flag"] = True
+    real["top_contributing_factor"] = "Driver Inattention/Distraction"
+    real["match_status"] = "both"
+    path = tmp_path / "zip_year.csv"
+    real.to_csv(path, index=False)
+    result = load_data(path)
+    assert list(result.columns) == REQUIRED_COLUMNS
+    assert result["zip_code"].str.fullmatch(r"\d{5}").all() and "00083" in set(result["zip_code"])
+    assert result["is_partial_year"].dtype == bool and (result.loc[result["year"] == 2026, "is_partial_year"]).all()
+
+
+def test_committed_real_table_validates_when_present():
+    """If data/zip_year.csv exists on this machine, it must pass the website validator (skipped otherwise)."""
+    from src.data import REAL_PATH
+    if not REAL_PATH.exists():
+        pytest.skip("data/zip_year.csv not present (it is git-ignored until deployment)")
+    assert len(load_data(REAL_PATH)) > 0

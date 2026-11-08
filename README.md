@@ -53,7 +53,7 @@ The collisions notebook ends with a "Prompts used" cell that points to `AI_PROMP
 
 ## Run the website
 
-The site is a Streamlit app (Plotly charts). It currently runs on a **dummy** ZIP x year table (`data/dummy_zip_year.csv`, committed) and shows a "DUMMY DATA" banner. When the join notebook produces `data/zip_year.csv`, the app uses that file automatically and the banner disappears.
+The site is a Streamlit app (Plotly charts). It currently runs on a **dummy** ZIP x year table (`data/dummy_zip_year.csv`, committed) and shows a "Showing dummy data" banner. When the join notebook produces `data/zip_year.csv`, the app uses that file automatically and the banner disappears.
 
 ```bash
 # from the repository root, with the venv active

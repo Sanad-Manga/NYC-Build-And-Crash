@@ -98,8 +98,8 @@ st.title("NYC Build and Crash")
 st.caption("Do the neighborhoods where NYC approves the most new construction also see more collisions? "
            "We compare ZIP-level patterns; this is correlation only, never proof of cause.")
 if is_dummy(DATA_PATH):
-    st.warning("**DUMMY DATA**: every number on this page is randomly generated for testing the layout. "
-               "It says nothing about the real city.", icon="⚠️")
+    st.warning("**Showing dummy data**: `data/zip_year.csv` was not found, so every number on this page is randomly "
+               "generated for testing the layout. It says nothing about the real city.", icon="⚠️")
 
 _, middle, _ = st.columns([1, 2, 1])
 generate = middle.button("Generate Report", type="primary", width="stretch")
@@ -171,7 +171,7 @@ collisions, and more injuries to pedestrians, cyclists and motorists?
 (2) Construction happens in areas that were already busy, so both rise for the same reason.
 (3) There is no clear relationship.
 
-**Findings.** *Placeholder: to be written from the real joined data. Until then the charts above use dummy numbers.*
+**Findings.** *The written findings are in `phase3_analysis_ahmed.ipynb`; the charts above show whatever table is loaded (see the banner when it is dummy data).*
 
 **Limitations.**
 - About 28% of collisions have no ZIP code, so ZIP-level collision counts are undercounts (more so in 2022-2023).
