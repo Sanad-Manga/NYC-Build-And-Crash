@@ -2602,3 +2602,12 @@ Related Requirement: Website layout and readability
 Prompt: The general UI is still bad. Improve spacing, hierarchy and readability of the Dashboard, Research questions and Story tabs without changing behaviour.
 How the output was used: Appended a CSS-only block to assets/style.css (clearer filter panel with a highlighted search, larger KPI tiles, calmer chart grid, framed research cards with readable findings, story findings as separate cards, readable text width). No Python, callbacks or layout structure changed. Checked: 43 tests pass; local browser at 1200px and 375px: no sideways scroll on any tab, 4 charts after Generate Report, 8 research cards, Story lists render.
 ================================================
+
+================================================
+Date: 2026-11-10
+Student: Ahmed Sanad
+Tool: Claude Code (Sonnet 5.5)
+Related Requirement: Website story section
+Prompt: The Story tab copies the research answers instead of answering the data-story questions (question, data, discovery, limits, impact). Rewrite it as a readable story: a one-sentence summary, five short plain-language takeaways that synthesise the eight research answers, and clearer sections.
+How the output was used: Rewrote story_tab in dash_app.py and added story CSS. Every number in the takeaways was taken from the merged assets/rq/*.md findings or the dashboard (none new). Checked: 43 tests pass; local browser: 5 sections, 5 takeaways, no sideways scroll.
+================================================
