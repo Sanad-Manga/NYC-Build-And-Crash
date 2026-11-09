@@ -51,23 +51,49 @@ def trend_line(df: pd.DataFrame, metric: str) -> go.Figure:
     return _style(fig)
 
 
-def pearson_r(df: pd.DataFrame):
-    """Pearson correlation of per-ZIP new-building jobs and collisions, plus the number of ZIPs."""
-    per_zip = df.groupby("zip_code")[["new_building_count", "collision_count"]].sum()
+def pearson_r(df: pd.DataFrame, housing: str = "new_building_count", collision: str = "collision_count"):
+    """Pearson correlation of two per-ZIP measures (default: new-building jobs, collisions) and the ZIP count."""
+    per_zip = df.groupby("zip_code")[[housing, collision]].sum()
     if len(per_zip) < 3 or per_zip.std().eq(0).any():
         return None, len(per_zip)
-    return float(per_zip["new_building_count"].corr(per_zip["collision_count"])), len(per_zip)
+    return float(per_zip[housing].corr(per_zip[collision])), len(per_zip)
 
 
-def construction_vs_crashes(df: pd.DataFrame) -> go.Figure:
-    """(c) Relationship between the two domains: new-building jobs vs collisions, one dot per ZIP."""
-    per_zip = df.groupby(["zip_code", "borough"], as_index=False)[["new_building_count", "collision_count"]].sum()
-    fig = px.scatter(per_zip, x="new_building_count", y="collision_count", color="borough",
+def trend_both(df: pd.DataFrame, housing: str, collision: str) -> go.Figure:
+    """(b2) Yearly totals of the housing and collision measures on two y-axes; 2026 is marked partial."""
+    yearly = df.groupby("year", as_index=False)[[housing, collision]].sum().sort_values("year")
+    fig = go.Figure()
+    for metric, color, axis in ((housing, "#4e79a7", "y"), (collision, "#e15759", "y2")):
+        full, partial = yearly[yearly["year"] < YEAR_MAX], yearly[yearly["year"] == YEAR_MAX]
+        fig.add_scatter(x=full["year"], y=full[metric], mode="lines+markers", name=metric_label(metric),
+                        yaxis=axis, line={"color": color}, hovertemplate="%{x}: %{y:,}<extra>" + metric_label(metric) + "</extra>")
+        if not partial.empty:
+            if not full.empty:
+                fig.add_scatter(x=[full["year"].iloc[-1], YEAR_MAX], y=[full[metric].iloc[-1], partial[metric].iloc[0]],
+                                mode="lines", yaxis=axis, line={"color": color, "dash": "dash"},
+                                showlegend=False, hoverinfo="skip")
+            fig.add_scatter(x=partial["year"], y=partial[metric], mode="markers", yaxis=axis,
+                            name=f"{metric_label(metric)}, 2026 partial (to 31 Oct)",
+                            marker={"color": "white", "line": {"color": color, "width": 2}, "size": 11},
+                            hovertemplate="%{x} (partial): %{y:,}<extra></extra>")
+    fig.update_layout(template=TEMPLATE, title="Housing and collision totals per year",
+                      xaxis={"title": "Year", "dtick": 1},
+                      yaxis={"title": axis_title(housing), "rangemode": "tozero"},
+                      yaxis2={"title": axis_title(collision), "overlaying": "y", "side": "right",
+                              "rangemode": "tozero", "showgrid": False})
+    return _style(fig)
+
+
+def construction_vs_crashes(df: pd.DataFrame, housing: str = "new_building_count",
+                            collision: str = "collision_count") -> go.Figure:
+    """(c) Relationship between the two domains: a housing measure vs a collision measure, one dot per ZIP."""
+    per_zip = df.groupby(["zip_code", "borough"], as_index=False)[[housing, collision]].sum()
+    fig = px.scatter(per_zip, x=housing, y=collision, color="borough",
                      color_discrete_map=BOROUGH_COLORS, template=TEMPLATE,
                      hover_name="zip_code", hover_data={"borough": True, "zip_code": False},
-                     labels={"new_building_count": "New-building jobs started (count per ZIP)",
-                             "collision_count": "Collisions (count per ZIP)", "borough": "Borough"},
-                     title="New-building jobs vs collisions")
+                     labels={housing: f"{axis_title(housing)}, count per ZIP",
+                             collision: f"{axis_title(collision)}, count per ZIP", "borough": "Borough"},
+                     title=f"{metric_label(housing)} vs {metric_label(collision).lower()}")
     fig.update_traces(marker={"size": 9, "opacity": 0.8})
     return _style(fig)
 

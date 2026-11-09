@@ -2429,3 +2429,18 @@ Do not commit or push yet. Leave the completed changes ready for my review.
 When finished, report the exact before/after counts, changed files, full test results, fresh-clone verification, any unresolved issues, and final Git status.
 How the output was used: Inspected the review and discovered PR #10 was already merged upstream. Preserved the existing remote cutoff/hash fixes and all main prompt entries, including Walid's; synced the existing feature branch and merged origin/main without creating a commit. Completed source-before-filter validation, date-boundary/partial-year portability tests, dynamic handoff documentation and relative saved outputs while retaining the aggregation algorithm and 15-column CSV interface. The copied verified Stage 2 input contained 448,091 records; the common window retained 447,497, excluded 594 by date, and aggregated 321,092 valid-ZIP crashes to 1,040 ZIP-year rows. A real fresh clone/new venv/shared-requirements/pip-check test with candidate files overlaid and copied input completed code counts 1-9 with zero errors; all 11 regression groups, independent group checks and CSV round-trip passed. No source API regeneration or VS Code UI run is claimed. Input bytes and teammate files were preserved, old derived output was archived, and no commit, push, rebase, force-push or PR merge was performed.
 ================================================
+
+================================================
+Date: 2026-11-09
+Student: Ahmed Sanad
+Tool: Claude Code (Claude Sonnet 5.5)
+Related Requirement: Website - Dash version for Vercel (dropdown filters with housing and collision categories, search mode, Generate Report, 4 chart types, research-question tab, story section)
+
+Prompt: STEP 2 of the master prompt: build the website in Dash for Vercel on a new branch feature/dash-vercel. Reuse src/ unchanged where possible, keep the Streamlit app.py untouched as a fallback, add Housing category and Collision category dropdowns (hide optional columns when absent), extend src/search.py, make Generate Report the only trigger, add a research-questions tab scanning assets/rq with pytest tests, a five-part story, and Vercel packaging with a lean dependency set (checking Vercel's current docs). Test locally and open a PR with the exact Vercel settings.
+
+How the output was used:
+Kept: dash_app.py, vercel_app.py, pyproject.toml, vercel.json, src/research.py, parse_categories in src/search.py, optional-column handling in src/data.py and src/report.py, tests/test_dash_categories.py.
+Checked: pytest, 1728 filter combinations through the WSGI test client, and a browser click-through of search, Generate Report, tabs and charts.
+Changed after testing: a search with no recognised words now leaves the dropdowns unchanged, and the search message shows category labels instead of column names.
+Not verified: the live Vercel build (needs Ahmed's login).
+================================================

@@ -14,14 +14,46 @@ METRICS = {
 }
 
 
+# Optional housing metrics (only offered when the column exists in the table).
+EXTRA_METRICS = {
+    "alteration_job_count": ("Alteration jobs started", "jobs"),
+    "demolition_job_count": ("Demolition jobs started", "jobs"),
+}
+
+# Dash site dropdowns: label shown to the user -> metric column. One entry per "category".
+HOUSING_CATEGORIES = {
+    "All jobs": "housing_job_count",
+    "New buildings": "new_building_count",
+    "Alterations": "alteration_job_count",
+    "Demolitions": "demolition_job_count",
+}
+COLLISION_CATEGORIES = {
+    "All collisions": "collision_count",
+    "Persons injured": "persons_injured",
+    "Persons killed": "persons_killed",
+    "Pedestrians injured": "pedestrians_injured",
+    "Cyclists injured": "cyclist_injured",
+    "Motorists injured": "motorist_injured",
+}
+
+
+def available_categories(categories: dict, columns) -> dict:
+    """Keep only the categories whose column exists (e.g. hide Alterations if the column is absent)."""
+    return {label: col for label, col in categories.items() if col in columns}
+
+
+def _info(metric: str) -> tuple:
+    return METRICS[metric] if metric in METRICS else EXTRA_METRICS[metric]
+
+
 def metric_label(metric: str) -> str:
     """Human-readable name of a metric column."""
-    return METRICS[metric][0]
+    return _info(metric)[0]
 
 
 def axis_title(metric: str) -> str:
     """Axis title with units, e.g. 'Collisions (crashes)'."""
-    label, unit = METRICS[metric]
+    label, unit = _info(metric)
     return f"{label} ({unit})"
 
 
