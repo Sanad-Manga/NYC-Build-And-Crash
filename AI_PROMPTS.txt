@@ -2447,3 +2447,12 @@ Related Requirement: Phase 2 - data integration, final run and data/zip_year.csv
 Prompt: [pasted the team lead's "Issa 1: run the integration for real (PR 12)" task: pull main, regenerate the inputs, Restart + Run All with saved outputs, state the ZIP-rule removals, export the agreed column order, commit data/zip_year.csv, rewrite the PR description] claude do issa 1 for now
 How the output was used: Merged origin/main, ran the integration notebook on Yassin's and Walid's output files (the NYC Open Data API returned 503, so the input notebooks could not be re-run; both files were checked against independent rebuilds and matched exactly), added the "Result on this run" markdown for the ZIP rule and the agreed extras column order, committed data/zip_year.csv (1,123 x 25, passes src.data.validate), and verified it byte for byte from a fresh clone.
 ================================================
+
+================================================
+Date: 2026-11-09
+Student: Mohamed Issa
+Tool: Claude Code (Opus 5.5)
+Related Requirement: Phase 3 - two research questions (phase3_analysis_issa.ipynb, assets/rq/issa_q1.*, assets/rq/issa_q2.*)
+Prompt: [pasted the team lead's "Issa 2: two research questions" task: Q1 change 2022-2025 in construction vs collisions per ZIP (scatter, quadrants, Spearman as Pearson on ranks with a permutation p-value), Q2 borough share of collisions minus share of housing jobs (diverging heatmap), full years 2022-2025, low_data rows left out, findings and charts saved to assets/rq/] now do issa 2
+How the output was used: Kept both analyses and charts. Changed after checking the data: Q1 uses housing_job_count because new buildings were too sparse per ZIP (median 5 a year, 51 of 209 ZIPs with no change), with new buildings kept as a sensitivity check; added a check for ZIP-coding breaks (11413 and 11422 fall to about 0 crashes in 2025, 11216 jumps) and reported rho with and without them; padded the scatter so the quadrant labels do not cover points; used matplotlib because saving Plotly to PNG needs kaleido, which is not in requirements.txt. The finding paragraphs are generated from the computed values, so the markdown and assets/rq/*.md match the printed outputs.
+================================================
