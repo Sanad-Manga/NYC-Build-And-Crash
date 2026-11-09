@@ -2611,3 +2611,12 @@ Related Requirement: Website story section
 Prompt: The Story tab copies the research answers instead of answering the data-story questions (question, data, discovery, limits, impact). Rewrite it as a readable story: a one-sentence summary, five short plain-language takeaways that synthesise the eight research answers, and clearer sections.
 How the output was used: Rewrote story_tab in dash_app.py and added story CSS. Every number in the takeaways was taken from the merged assets/rq/*.md findings or the dashboard (none new). Checked: 43 tests pass; local browser: 5 sections, 5 takeaways, no sideways scroll.
 ================================================
+
+================================================
+Date: 2026-11-10
+Student: Ahmed Sanad
+Tool: Claude Code (Sonnet 5.5)
+Related Requirement: README
+Prompt: The README is far too long for no real reason. Shorten it while keeping setup steps, deployment instructions, each member's contribution, dataset links and the entry-point notebook sentence.
+How the output was used: Rewrote README.md from about 190 to about 90 lines: removed the layout tree, the column contract table, the per-notebook read/write columns and the duplicate research-question table (these are in the notebooks, docs/CONTRACT.md and on the site). All facts were kept from the existing README; links and file names were checked to exist.
+================================================
