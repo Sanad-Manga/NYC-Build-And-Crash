@@ -1,0 +1,1124 @@
+zip_code,year,borough,housing_job_count,new_building_count,collision_count,persons_injured,persons_killed,pedestrians_injured,cyclist_injured,motorist_injured,is_partial_year,pedestrians_killed,cyclist_killed,motorist_killed,alteration_job_count,demolition_job_count,proposed_dwelling_units_new_buildings,top_contributing_factor,low_data_flag,outlier_flag,match_status,new_buildings_per_year_rank,injuries_per_100_collisions,extreme_injury_count
+10001,2022,Manhattan,1828,0,517,198,1,77,46,65,False,1,0,0,1591,0,0,Driver Inattention/Distraction,False,True,both,164,38.3,0
+10001,2023,Manhattan,1549,1,458,185,2,50,42,82,False,1,0,1,1308,2,0,Driver Inattention/Distraction,False,True,both,131,40.39,0
+10001,2024,Manhattan,1439,3,495,233,0,85,62,76,False,0,0,0,1216,7,61,Driver Inattention/Distraction,False,True,both,107,47.07,0
+10001,2025,Manhattan,1359,3,551,248,1,89,56,82,False,1,0,0,1131,6,656,Driver Inattention/Distraction,False,True,both,122,45.01,0
+10001,2026,Manhattan,1204,5,496,229,1,68,62,79,True,0,0,0,986,15,790,Driver Inattention/Distraction,False,True,both,97,46.17,0
+10002,2022,Manhattan,863,4,743,353,1,96,85,141,False,1,0,0,808,0,73,Driver Inattention/Distraction,False,False,both,109,47.51,0
+10002,2023,Manhattan,755,2,750,403,2,95,87,198,False,2,0,0,701,2,73,Driver Inattention/Distraction,False,False,both,115,53.73,0
+10002,2024,Manhattan,656,3,664,338,5,97,82,146,False,5,0,0,614,0,191,Driver Inattention/Distraction,False,False,both,107,50.9,0
+10002,2025,Manhattan,644,3,618,283,1,79,63,109,False,1,0,0,596,5,0,Driver Inattention/Distraction,False,False,both,122,45.79,0
+10002,2026,Manhattan,449,4,583,294,0,83,62,116,True,0,0,0,413,5,126,Driver Inattention/Distraction,False,False,both,105,50.43,0
+10003,2022,Manhattan,1858,0,346,167,1,37,50,64,False,1,0,0,1800,0,0,Driver Inattention/Distraction,False,True,both,164,48.27,0
+10003,2023,Manhattan,1321,1,348,166,1,25,61,70,False,1,0,0,1247,8,52,Driver Inattention/Distraction,False,True,both,131,47.7,0
+10003,2024,Manhattan,1348,1,389,224,0,54,81,78,False,0,0,0,1289,0,25,Driver Inattention/Distraction,False,True,both,125,57.58,0
+10003,2025,Manhattan,1244,2,380,201,1,58,88,41,False,0,0,0,1192,3,22,Driver Inattention/Distraction,False,True,both,135,52.89,0
+10003,2026,Manhattan,1099,7,271,166,1,50,54,45,True,1,0,0,1033,5,229,Driver Inattention/Distraction,False,True,both,77,61.25,0
+10004,2022,Manhattan,331,1,76,9,0,3,3,3,False,0,0,0,302,0,0,Driver Inattention/Distraction,False,False,both,149,11.84,0
+10004,2023,Manhattan,258,1,61,10,0,1,3,4,False,0,0,0,230,0,0,Driver Inattention/Distraction,False,False,both,131,16.39,0
+10004,2024,Manhattan,215,0,96,30,0,10,5,15,False,0,0,0,190,0,0,Driver Inattention/Distraction,False,False,both,148,31.25,0
+10004,2025,Manhattan,225,3,67,22,0,8,2,12,False,0,0,0,198,0,0,Driver Inattention/Distraction,False,False,both,122,32.84,0
+10004,2026,Manhattan,174,1,48,19,0,2,1,14,True,0,0,0,152,0,99,Driver Inattention/Distraction,False,False,both,138,39.58,0
+10005,2022,Manhattan,419,0,59,12,0,3,7,2,False,0,0,0,386,0,0,Driver Inattention/Distraction,False,False,both,164,20.34,0
+10005,2023,Manhattan,231,0,55,10,0,6,1,2,False,0,0,0,206,0,0,Driver Inattention/Distraction,False,False,both,151,18.18,0
+10005,2024,Manhattan,271,0,56,10,0,5,3,2,False,0,0,0,241,0,0,Driver Inattention/Distraction,False,False,both,148,17.86,0
+10005,2025,Manhattan,362,0,51,22,0,7,7,6,False,0,0,0,308,0,0,Driver Inattention/Distraction,False,False,both,159,43.14,0
+10005,2026,Manhattan,217,1,46,14,0,8,2,1,True,0,0,0,196,0,99,Driver Inattention/Distraction,False,False,both,138,30.43,0
+10006,2022,Manhattan,185,0,54,10,0,2,2,4,False,0,0,0,184,0,0,Driver Inattention/Distraction,False,False,both,164,18.52,0
+10006,2023,Manhattan,137,0,44,12,0,5,3,4,False,0,0,0,135,0,0,Driver Inattention/Distraction,False,False,both,151,27.27,0
+10006,2024,Manhattan,200,0,46,16,0,6,0,10,False,0,0,0,193,0,0,Driver Inattention/Distraction,False,False,both,148,34.78,0
+10006,2025,Manhattan,147,0,66,20,0,6,2,12,False,0,0,0,138,0,0,Driver Inattention/Distraction,False,False,both,159,30.3,0
+10006,2026,Manhattan,181,0,50,16,0,4,4,8,True,0,0,0,175,0,0,Driver Inattention/Distraction,False,False,both,161,32.0,0
+10007,2022,Manhattan,459,0,139,44,1,17,7,19,False,0,0,0,426,0,0,Driver Inattention/Distraction,False,False,both,164,31.65,0
+10007,2023,Manhattan,374,0,148,63,0,17,19,20,False,0,0,0,329,1,0,Driver Inattention/Distraction,False,False,both,151,42.57,0
+10007,2024,Manhattan,404,0,158,67,0,22,18,26,False,0,0,0,364,0,0,Driver Inattention/Distraction,False,False,both,148,42.41,0
+10007,2025,Manhattan,453,2,148,69,0,15,19,30,False,0,0,0,397,2,35,Driver Inattention/Distraction,False,False,both,135,46.62,0
+10007,2026,Manhattan,397,1,101,50,1,23,5,21,True,0,0,0,347,2,50,Driver Inattention/Distraction,False,False,both,138,49.5,0
+10009,2022,Manhattan,639,1,225,136,0,32,30,60,False,0,0,0,619,0,64,Driver Inattention/Distraction,False,False,both,149,60.44,0
+10009,2023,Manhattan,586,1,225,118,2,25,38,42,False,1,1,0,571,0,0,Driver Inattention/Distraction,False,False,both,131,52.44,0
+10009,2024,Manhattan,507,0,216,122,2,31,40,41,False,2,0,0,487,2,0,Driver Inattention/Distraction,False,False,both,148,56.48,0
+10009,2025,Manhattan,429,4,256,152,1,47,46,55,False,1,0,0,401,6,584,Driver Inattention/Distraction,False,False,both,112,59.38,0
+10009,2026,Manhattan,339,3,188,97,1,20,33,27,True,0,0,0,315,4,4,Driver Inattention/Distraction,False,False,both,115,51.6,0
+10010,2022,Manhattan,1157,1,271,136,0,37,49,47,False,0,0,0,1102,0,60,Driver Inattention/Distraction,False,True,both,149,50.18,0
+10010,2023,Manhattan,1045,2,279,157,1,44,37,71,False,0,1,0,977,0,123,Driver Inattention/Distraction,False,True,both,115,56.27,1
+10010,2024,Manhattan,802,1,262,152,0,45,45,61,False,0,0,0,742,9,69,Driver Inattention/Distraction,False,False,both,125,58.02,0
+10010,2025,Manhattan,825,0,279,164,0,47,41,67,False,0,0,0,775,1,0,Driver Inattention/Distraction,False,False,both,159,58.78,0
+10010,2026,Manhattan,724,0,223,113,0,26,28,51,True,0,0,0,655,0,0,Driver Inattention/Distraction,False,False,both,161,50.67,0
+10011,2022,Manhattan,1718,2,374,146,1,38,43,57,False,1,0,0,1603,0,172,Driver Inattention/Distraction,False,True,both,132,39.04,0
+10011,2023,Manhattan,1521,1,399,161,1,54,45,46,False,1,0,0,1405,3,34,Driver Inattention/Distraction,False,True,both,131,40.35,0
+10011,2024,Manhattan,1423,4,384,179,1,55,47,72,False,0,0,0,1306,6,89,Driver Inattention/Distraction,False,True,both,96,46.61,0
+10011,2025,Manhattan,1430,3,352,155,0,41,50,54,False,0,0,0,1331,4,529,Driver Inattention/Distraction,False,True,both,122,44.03,0
+10011,2026,Manhattan,1070,2,302,124,1,39,44,34,True,1,0,0,970,8,126,Driver Inattention/Distraction,False,True,both,122,41.06,0
+10012,2022,Manhattan,1258,1,269,111,0,27,39,42,False,0,0,0,1211,0,0,Driver Inattention/Distraction,False,True,both,149,41.26,0
+10012,2023,Manhattan,1060,0,275,154,1,36,54,56,False,0,0,0,1029,0,0,Driver Inattention/Distraction,False,True,both,151,56.0,0
+10012,2024,Manhattan,966,0,256,119,2,29,37,43,False,2,0,0,922,7,0,Driver Inattention/Distraction,False,False,both,148,46.48,0
+10012,2025,Manhattan,920,2,282,142,0,35,43,51,False,0,0,0,867,0,95,Driver Inattention/Distraction,False,False,both,135,50.35,0
+10012,2026,Manhattan,774,1,246,116,0,41,30,34,True,0,0,0,713,5,0,Driver Inattention/Distraction,False,True,both,138,47.15,0
+10013,2022,Manhattan,1532,2,494,142,1,31,33,73,False,1,0,0,1425,0,99,Driver Inattention/Distraction,False,True,both,132,28.74,0
+10013,2023,Manhattan,1393,2,479,146,0,46,27,69,False,0,0,0,1272,2,132,Driver Inattention/Distraction,False,True,both,115,30.48,0
+10013,2024,Manhattan,1164,5,488,176,0,47,29,96,False,0,0,0,1059,6,133,Driver Inattention/Distraction,False,True,both,83,36.07,0
+10013,2025,Manhattan,1151,3,457,184,1,45,32,95,False,0,0,0,1020,3,97,Driver Inattention/Distraction,False,True,both,122,40.26,0
+10013,2026,Manhattan,949,4,378,176,0,59,29,65,True,0,0,0,835,4,37,Driver Inattention/Distraction,False,True,both,105,46.56,0
+10014,2022,Manhattan,1407,3,196,64,0,14,20,28,False,0,0,0,1322,0,321,Driver Inattention/Distraction,False,True,both,120,32.65,0
+10014,2023,Manhattan,1184,1,209,69,0,15,14,34,False,0,0,0,1108,0,75,Driver Inattention/Distraction,False,True,both,131,33.01,0
+10014,2024,Manhattan,1009,0,218,69,0,26,13,26,False,0,0,0,941,1,0,Driver Inattention/Distraction,False,False,both,148,31.65,0
+10014,2025,Manhattan,1110,2,307,136,1,25,46,55,False,1,0,0,1045,3,12,Driver Inattention/Distraction,False,True,both,135,44.3,0
+10014,2026,Manhattan,846,1,226,94,0,25,20,43,True,0,0,0,784,3,2,Driver Inattention/Distraction,False,True,both,138,41.59,0
+10016,2022,Manhattan,1582,4,521,251,2,66,72,94,False,2,0,0,1521,0,539,Driver Inattention/Distraction,False,True,both,109,48.18,0
+10016,2023,Manhattan,1282,1,507,305,1,76,81,128,False,0,1,0,1219,2,14,Driver Inattention/Distraction,False,True,both,131,60.16,0
+10016,2024,Manhattan,1185,2,526,307,0,92,72,136,False,0,0,0,1100,12,163,Driver Inattention/Distraction,False,True,both,117,58.37,0
+10016,2025,Manhattan,1096,3,479,292,1,85,69,116,False,1,0,0,1012,3,145,Driver Inattention/Distraction,False,True,both,122,60.96,0
+10016,2026,Manhattan,1038,2,442,275,0,67,81,107,True,0,0,0,963,18,229,Driver Inattention/Distraction,False,True,both,122,62.22,0
+10017,2022,Manhattan,1436,2,217,143,0,41,22,74,False,0,0,0,1409,0,0,Driver Inattention/Distraction,False,True,both,132,65.9,0
+10017,2023,Manhattan,1180,0,273,148,1,43,27,73,False,0,1,0,1137,2,0,Driver Inattention/Distraction,False,True,both,151,54.21,0
+10017,2024,Manhattan,1106,0,276,167,0,41,39,77,False,0,0,0,1038,2,0,Driver Inattention/Distraction,False,True,both,148,60.51,0
+10017,2025,Manhattan,998,0,288,175,1,52,32,75,False,1,0,0,919,1,0,Driver Inattention/Distraction,False,True,both,159,60.76,0
+10017,2026,Manhattan,908,2,232,133,1,44,30,50,True,0,0,0,853,5,0,Driver Inattention/Distraction,False,True,both,122,57.33,0
+10018,2022,Manhattan,1157,4,334,106,1,38,20,42,False,0,1,0,1066,0,161,Driver Inattention/Distraction,False,True,both,109,31.74,0
+10018,2023,Manhattan,940,1,321,105,2,41,21,39,False,1,1,0,845,0,128,Driver Inattention/Distraction,False,False,both,131,32.71,0
+10018,2024,Manhattan,843,0,371,157,1,48,34,68,False,1,0,0,741,7,0,Driver Inattention/Distraction,False,False,both,148,42.32,0
+10018,2025,Manhattan,895,3,358,149,1,60,32,43,False,1,0,0,775,1,0,Driver Inattention/Distraction,False,False,both,122,41.62,0
+10018,2026,Manhattan,719,5,254,106,1,31,35,28,True,0,0,0,621,3,2300,Driver Inattention/Distraction,False,False,both,97,41.73,0
+10019,2022,Manhattan,1874,2,565,269,0,69,76,114,False,0,0,0,1757,0,250,Driver Inattention/Distraction,False,True,both,132,47.61,0
+10019,2023,Manhattan,1568,6,500,236,0,65,64,103,False,0,0,0,1475,2,1062,Driver Inattention/Distraction,False,True,both,70,47.2,0
+10019,2024,Manhattan,1431,0,551,298,3,97,69,114,False,2,1,0,1358,2,0,Driver Inattention/Distraction,False,True,both,148,54.08,0
+10019,2025,Manhattan,1615,1,581,290,2,106,79,90,False,2,0,0,1520,7,18,Driver Inattention/Distraction,False,True,both,147,49.91,0
+10019,2026,Manhattan,1088,0,427,221,2,68,41,94,True,2,0,0,1024,0,0,Driver Inattention/Distraction,False,True,both,161,51.76,0
+10020,2022,Manhattan,440,0,20,10,0,4,2,2,False,0,0,0,361,0,0,Driver Inattention/Distraction,False,False,both,164,50.0,0
+10020,2023,Manhattan,293,0,25,15,0,6,7,2,False,0,0,0,275,0,0,Driver Inattention/Distraction,False,False,both,151,60.0,0
+10020,2024,Manhattan,255,0,17,5,0,2,3,0,False,0,0,0,225,0,0,Driver Inattention/Distraction,False,False,both,148,29.41,0
+10020,2025,Manhattan,241,0,29,16,0,6,1,5,False,0,0,0,190,0,0,Driver Inattention/Distraction,False,False,both,159,55.17,0
+10020,2026,Manhattan,222,0,15,10,0,5,4,0,True,0,0,0,195,0,0,Backing Unsafely,False,False,both,161,66.67,0
+10021,2022,Manhattan,1072,4,162,56,1,21,19,13,False,1,0,0,1038,0,149,Driver Inattention/Distraction,False,False,both,109,34.57,0
+10021,2023,Manhattan,914,0,150,70,0,20,14,34,False,0,0,0,889,0,0,Driver Inattention/Distraction,False,False,both,151,46.67,0
+10021,2024,Manhattan,963,1,177,82,0,26,18,37,False,0,0,0,933,8,99,Driver Inattention/Distraction,False,False,both,125,46.33,0
+10021,2025,Manhattan,927,0,196,77,2,26,15,31,False,2,0,0,880,4,0,Driver Inattention/Distraction,False,False,both,159,39.29,0
+10021,2026,Manhattan,656,1,124,77,0,28,18,27,True,0,0,0,627,1,70,Driver Inattention/Distraction,False,False,both,138,62.1,0
+10022,2022,Manhattan,2397,1,448,250,0,66,67,101,False,0,0,0,2342,0,31,Driver Inattention/Distraction,False,True,both,149,55.8,0
+10022,2023,Manhattan,1999,1,380,223,0,50,56,103,False,0,0,0,1943,4,83,Driver Inattention/Distraction,False,True,both,131,58.68,0
+10022,2024,Manhattan,1759,1,429,238,0,69,69,90,False,0,0,0,1697,6,0,Driver Inattention/Distraction,False,True,both,125,55.48,0
+10022,2025,Manhattan,1696,1,416,228,3,79,60,75,False,1,1,0,1648,10,0,Driver Inattention/Distraction,False,True,both,147,54.81,0
+10022,2026,Manhattan,1323,1,298,167,1,45,50,51,True,1,0,0,1278,1,141,Driver Inattention/Distraction,False,True,both,138,56.04,0
+10023,2022,Manhattan,1262,0,209,105,0,33,26,36,False,0,0,0,1181,0,0,Driver Inattention/Distraction,False,True,both,164,50.24,0
+10023,2023,Manhattan,1041,0,194,106,0,26,31,44,False,0,0,0,973,0,0,Driver Inattention/Distraction,False,True,both,151,54.64,0
+10023,2024,Manhattan,966,1,228,140,0,43,36,56,False,0,0,0,904,0,50,Driver Inattention/Distraction,False,False,both,125,61.4,0
+10023,2025,Manhattan,1027,2,268,140,2,39,42,46,False,0,1,1,953,6,68,Driver Inattention/Distraction,False,True,both,135,52.24,0
+10023,2026,Manhattan,744,1,193,87,1,16,30,33,True,0,0,0,687,0,423,Driver Inattention/Distraction,False,False,both,138,45.08,0
+10024,2022,Manhattan,1180,1,151,55,0,20,14,18,False,0,0,0,1142,0,45,Driver Inattention/Distraction,False,True,both,149,36.42,0
+10024,2023,Manhattan,972,0,164,66,0,19,17,24,False,0,0,0,937,4,0,Driver Inattention/Distraction,False,True,both,151,40.24,0
+10024,2024,Manhattan,955,1,141,69,0,16,16,32,False,0,0,0,944,0,37,Driver Inattention/Distraction,False,False,both,125,48.94,0
+10024,2025,Manhattan,768,0,232,102,2,32,28,27,False,2,0,0,751,1,0,Driver Inattention/Distraction,False,False,both,159,43.97,0
+10024,2026,Manhattan,658,1,179,81,1,20,18,31,True,1,0,0,639,0,1,Driver Inattention/Distraction,False,False,both,138,45.25,0
+10025,2022,Manhattan,1267,0,210,62,2,13,22,25,False,2,0,0,1245,0,0,Driver Inattention/Distraction,False,True,both,164,29.52,0
+10025,2023,Manhattan,1032,0,216,87,0,12,23,46,False,0,0,0,1015,1,0,Driver Inattention/Distraction,False,True,both,151,40.28,0
+10025,2024,Manhattan,1061,1,230,69,1,26,12,30,False,1,0,0,1049,0,84,Driver Inattention/Distraction,False,True,both,125,30.0,0
+10025,2025,Manhattan,853,0,394,191,0,51,49,71,False,0,0,0,831,4,0,Driver Inattention/Distraction,False,False,both,159,48.48,0
+10025,2026,Manhattan,596,1,301,169,2,49,31,67,True,2,0,0,586,0,340,Driver Inattention/Distraction,False,False,both,138,56.15,0
+10026,2022,Manhattan,244,1,242,129,1,24,32,61,False,0,0,1,231,0,55,Driver Inattention/Distraction,False,False,both,149,53.31,0
+10026,2023,Manhattan,203,0,199,90,1,21,25,37,False,1,0,0,193,2,0,Driver Inattention/Distraction,False,False,both,151,45.23,0
+10026,2024,Manhattan,185,3,228,105,1,23,31,44,False,1,0,0,174,1,236,Driver Inattention/Distraction,False,False,both,107,46.05,0
+10026,2025,Manhattan,249,0,262,116,0,25,32,44,False,0,0,0,238,5,0,Other Vehicular,False,False,both,159,44.27,0
+10026,2026,Manhattan,199,2,179,92,1,24,24,31,True,0,0,1,193,0,177,Driver Inattention/Distraction,False,False,both,122,51.4,0
+10027,2022,Manhattan,732,5,521,256,0,53,50,138,False,0,0,0,679,0,475,Driver Inattention/Distraction,False,False,both,100,49.14,0
+10027,2023,Manhattan,576,0,523,280,0,52,69,149,False,0,0,0,544,2,0,Driver Inattention/Distraction,False,False,both,151,53.54,0
+10027,2024,Manhattan,677,1,532,244,0,56,64,118,False,0,0,0,634,3,91,Driver Inattention/Distraction,False,False,both,125,45.86,0
+10027,2025,Manhattan,555,5,617,317,0,61,77,152,False,0,0,0,511,0,371,Driver Inattention/Distraction,False,False,both,102,51.38,0
+10027,2026,Manhattan,477,2,467,288,1,67,40,154,True,0,0,0,445,3,32,Driver Inattention/Distraction,False,False,both,122,61.67,0
+10028,2022,Manhattan,893,1,178,69,1,26,17,25,False,0,1,0,862,0,10,Driver Inattention/Distraction,False,False,both,149,38.76,0
+10028,2023,Manhattan,768,1,160,74,1,21,19,27,False,1,0,0,723,3,26,Driver Inattention/Distraction,False,False,both,131,46.25,0
+10028,2024,Manhattan,774,6,131,65,0,26,13,23,False,0,0,0,749,7,314,Driver Inattention/Distraction,False,False,both,75,49.62,0
+10028,2025,Manhattan,713,1,156,81,1,30,19,28,False,0,0,1,696,4,86,Driver Inattention/Distraction,False,False,both,147,51.92,0
+10028,2026,Manhattan,524,0,144,65,0,20,22,18,True,0,0,0,499,5,0,Driver Inattention/Distraction,False,False,both,161,45.14,0
+10029,2022,Manhattan,679,6,703,311,1,80,59,162,False,1,0,0,648,0,314,Driver Inattention/Distraction,False,False,both,95,44.24,0
+10029,2023,Manhattan,479,3,741,339,0,87,74,173,False,0,0,0,456,5,0,Driver Inattention/Distraction,False,False,both,104,45.75,0
+10029,2024,Manhattan,543,0,675,396,4,89,92,195,False,2,0,2,524,1,0,Driver Inattention/Distraction,False,False,both,148,58.67,0
+10029,2025,Manhattan,523,6,720,370,1,89,59,189,False,1,0,0,499,5,196,Driver Inattention/Distraction,False,False,both,92,51.39,0
+10029,2026,Manhattan,410,4,588,343,0,54,61,200,True,0,0,0,393,1,1277,Driver Inattention/Distraction,False,False,both,105,58.33,0
+10030,2022,Manhattan,199,2,182,66,0,22,11,29,False,0,0,0,191,0,81,Driver Inattention/Distraction,False,False,both,132,36.26,0
+10030,2023,Manhattan,155,1,203,107,0,22,20,62,False,0,0,0,142,0,15,Driver Inattention/Distraction,False,False,both,131,52.71,0
+10030,2024,Manhattan,191,0,226,121,0,28,26,63,False,0,0,0,184,1,0,Driver Inattention/Distraction,False,False,both,148,53.54,0
+10030,2025,Manhattan,145,0,232,121,1,29,26,57,False,0,0,1,133,2,0,Driver Inattention/Distraction,False,False,both,159,52.16,0
+10030,2026,Manhattan,99,1,206,103,0,17,19,58,True,0,0,0,92,0,72,Driver Inattention/Distraction,False,False,both,138,50.0,0
+10031,2022,Manhattan,406,3,267,104,1,22,17,57,False,1,0,0,384,0,815,Driver Inattention/Distraction,False,False,both,120,38.95,0
+10031,2023,Manhattan,367,1,246,97,0,17,20,53,False,0,0,0,337,6,126,Driver Inattention/Distraction,False,False,both,131,39.43,0
+10031,2024,Manhattan,329,0,251,107,0,38,25,38,False,0,0,0,316,1,0,Driver Inattention/Distraction,False,False,both,148,42.63,0
+10031,2025,Manhattan,274,0,368,151,1,37,34,62,False,1,0,0,259,0,0,Driver Inattention/Distraction,False,False,both,159,41.03,0
+10031,2026,Manhattan,232,1,227,103,1,28,23,46,True,0,0,0,216,5,12,Driver Inattention/Distraction,False,False,both,138,45.37,0
+10032,2022,Manhattan,438,2,424,181,1,45,42,79,False,0,0,0,421,0,40,Driver Inattention/Distraction,False,False,both,132,42.69,0
+10032,2023,Manhattan,362,0,349,186,3,39,36,96,False,1,1,1,348,4,0,Driver Inattention/Distraction,False,False,both,151,53.3,0
+10032,2024,Manhattan,321,2,374,188,1,39,34,111,False,0,0,0,312,3,0,Driver Inattention/Distraction,False,False,both,117,50.27,0
+10032,2025,Manhattan,288,5,356,202,1,54,24,113,False,0,1,0,278,1,307,Driver Inattention/Distraction,False,False,both,102,56.74,0
+10032,2026,Manhattan,243,1,309,168,0,44,26,83,True,0,0,0,237,0,16,Driver Inattention/Distraction,False,False,both,138,54.37,0
+10033,2022,Manhattan,318,1,331,139,0,34,13,83,False,0,0,0,307,0,164,Driver Inattention/Distraction,False,False,both,149,41.99,0
+10033,2023,Manhattan,301,0,302,149,3,31,24,88,False,0,0,3,292,1,0,Driver Inattention/Distraction,False,False,both,151,49.34,0
+10033,2024,Manhattan,266,0,323,142,3,42,15,78,False,2,0,0,257,0,0,Driver Inattention/Distraction,False,False,both,148,43.96,0
+10033,2025,Manhattan,209,1,381,160,0,48,18,82,False,0,0,0,199,0,0,Driver Inattention/Distraction,False,False,both,147,41.99,0
+10033,2026,Manhattan,169,2,307,161,3,45,16,82,True,1,0,0,148,4,99,Driver Inattention/Distraction,False,False,both,122,52.44,0
+10034,2022,Manhattan,262,2,218,106,2,17,7,74,False,2,0,0,253,0,285,Driver Inattention/Distraction,False,False,both,132,48.62,0
+10034,2023,Manhattan,228,0,228,133,1,20,5,105,False,0,0,1,217,0,0,Driver Inattention/Distraction,False,False,both,151,58.33,0
+10034,2024,Manhattan,216,0,215,103,0,28,5,67,False,0,0,0,210,0,0,Driver Inattention/Distraction,False,False,both,148,47.91,0
+10034,2025,Manhattan,189,3,254,123,0,29,8,81,False,0,0,0,174,4,273,Driver Inattention/Distraction,False,False,both,122,48.43,0
+10034,2026,Manhattan,124,1,225,78,1,15,3,51,True,0,0,0,115,0,50,Driver Inattention/Distraction,False,False,both,138,34.67,0
+10035,2022,Manhattan,268,8,504,228,0,54,20,144,False,0,0,0,252,0,495,Driver Inattention/Distraction,False,False,both,84,45.24,0
+10035,2023,Manhattan,280,0,514,266,1,58,28,172,False,1,0,0,264,0,0,Driver Inattention/Distraction,False,False,both,151,51.75,0
+10035,2024,Manhattan,229,4,500,247,1,54,32,156,False,0,0,1,208,2,130,Driver Inattention/Distraction,False,False,both,96,49.4,0
+10035,2025,Manhattan,263,7,539,294,2,56,45,175,False,2,0,0,239,2,508,Driver Inattention/Distraction,False,False,both,84,54.55,0
+10035,2026,Manhattan,225,9,449,218,0,47,36,113,True,0,0,0,193,9,1594,Driver Inattention/Distraction,False,False,both,59,48.55,0
+10036,2022,Manhattan,1543,2,466,197,2,67,43,76,False,1,0,1,1435,0,29,Driver Inattention/Distraction,False,True,both,132,42.27,0
+10036,2023,Manhattan,1245,1,520,255,1,70,54,123,False,1,0,0,1153,1,0,Driver Inattention/Distraction,False,True,both,131,49.04,0
+10036,2024,Manhattan,1245,4,460,213,1,77,42,87,False,0,0,1,1158,2,215,Driver Inattention/Distraction,False,True,both,96,46.3,0
+10036,2025,Manhattan,1344,3,589,258,1,93,62,80,False,0,0,1,1222,17,254,Driver Inattention/Distraction,False,True,both,122,43.8,0
+10036,2026,Manhattan,1019,0,478,230,0,67,58,86,True,0,0,0,928,5,0,Driver Inattention/Distraction,False,True,both,161,48.12,0
+10037,2022,Manhattan,110,0,179,83,1,16,7,60,False,1,0,0,108,0,0,Driver Inattention/Distraction,False,False,both,164,46.37,0
+10037,2023,Manhattan,78,2,174,93,0,19,11,57,False,0,0,0,74,1,73,Driver Inattention/Distraction,False,False,both,115,53.45,0
+10037,2024,Manhattan,104,0,177,91,2,28,18,42,False,2,0,0,100,0,0,Driver Inattention/Distraction,False,False,both,148,51.41,0
+10037,2025,Manhattan,87,1,235,109,1,33,21,50,False,0,1,0,80,1,6,Driver Inattention/Distraction,False,False,both,147,46.38,0
+10037,2026,Manhattan,57,0,152,81,0,20,11,45,True,0,0,0,53,2,0,Driver Inattention/Distraction,False,False,both,161,53.29,0
+10038,2022,Manhattan,497,1,159,44,0,16,12,13,False,0,0,0,454,0,0,Driver Inattention/Distraction,False,False,both,149,27.67,0
+10038,2023,Manhattan,463,0,143,54,0,23,6,21,False,0,0,0,417,1,0,Driver Inattention/Distraction,False,False,both,151,37.76,0
+10038,2024,Manhattan,468,1,163,60,0,31,9,18,False,0,0,0,422,0,6,Driver Inattention/Distraction,False,False,both,125,36.81,0
+10038,2025,Manhattan,371,0,176,51,0,18,12,18,False,0,0,0,333,1,0,Driver Inattention/Distraction,False,False,both,159,28.98,0
+10038,2026,Manhattan,375,2,126,48,0,17,12,17,True,0,0,0,338,0,219,Driver Inattention/Distraction,False,False,both,122,38.1,0
+10039,2022,Manhattan,159,2,134,44,0,10,6,27,False,0,0,0,150,0,23,Driver Inattention/Distraction,False,False,both,132,32.84,0
+10039,2023,Manhattan,61,0,144,75,0,15,6,50,False,0,0,0,60,0,0,Driver Inattention/Distraction,False,False,both,151,52.08,0
+10039,2024,Manhattan,92,0,156,69,0,13,8,47,False,0,0,0,88,1,0,Driver Inattention/Distraction,False,False,both,148,44.23,0
+10039,2025,Manhattan,94,0,171,62,0,11,12,33,False,0,0,0,89,0,0,Driver Inattention/Distraction,False,False,both,159,36.26,0
+10039,2026,Manhattan,77,0,134,73,0,12,14,37,True,0,0,0,71,2,0,Driver Inattention/Distraction,False,False,both,161,54.48,0
+10040,2022,Manhattan,176,0,122,57,0,16,9,31,False,0,0,0,175,0,0,Driver Inattention/Distraction,False,False,both,164,46.72,0
+10040,2023,Manhattan,143,0,124,72,0,17,3,50,False,0,0,0,141,0,0,Driver Inattention/Distraction,False,False,both,151,58.06,0
+10040,2024,Manhattan,145,1,127,65,1,14,3,48,False,0,0,1,139,0,0,Driver Inattention/Distraction,False,False,both,125,51.18,0
+10040,2025,Manhattan,111,0,179,93,0,27,10,49,False,0,0,0,110,0,0,Driver Inattention/Distraction,False,False,both,159,51.96,0
+10040,2026,Manhattan,107,1,128,48,1,19,6,14,True,0,0,0,102,0,99,Driver Inattention/Distraction,False,False,both,138,37.5,0
+10041,2022,Manhattan,36,0,1,0,0,0,0,0,False,0,0,0,33,0,0,,False,False,both,164,0.0,0
+10041,2023,Manhattan,26,0,0,0,0,0,0,0,False,0,0,0,24,0,0,,False,False,housing only,151,,0
+10041,2024,Manhattan,22,0,2,0,0,0,0,0,False,0,0,0,20,0,0,Passing or Lane Usage Improper,False,False,both,148,0.0,0
+10041,2025,Manhattan,22,0,4,3,0,0,1,2,False,0,0,0,20,0,0,Driver Inattention/Distraction,False,False,both,159,75.0,0
+10041,2026,Manhattan,10,0,1,0,0,0,0,0,True,0,0,0,9,0,0,,False,False,both,161,0.0,0
+10044,2022,Manhattan,45,0,0,0,0,0,0,0,False,0,0,0,40,0,0,,False,False,housing only,164,,0
+10044,2023,Manhattan,63,0,0,0,0,0,0,0,False,0,0,0,62,0,0,,False,False,housing only,151,,0
+10044,2024,Manhattan,46,0,1,1,0,0,0,1,False,0,0,0,45,0,0,Driver Inattention/Distraction,False,False,both,148,100.0,0
+10044,2025,Manhattan,62,0,0,0,0,0,0,0,False,0,0,0,61,0,0,,False,False,housing only,159,,0
+10044,2026,Manhattan,34,0,0,0,0,0,0,0,True,0,0,0,32,1,0,,False,False,housing only,161,,0
+10045,2022,Manhattan,0,0,1,0,0,0,0,0,False,0,0,0,0,0,0,,True,False,collisions only,164,0.0,0
+10045,2023,Manhattan,0,0,1,0,0,0,0,0,False,0,0,0,0,0,0,Passing Too Closely,True,False,collisions only,151,0.0,0
+10045,2025,Manhattan,0,0,2,0,0,0,0,0,False,0,0,0,0,0,0,View Obstructed/Limited,True,False,collisions only,159,0.0,0
+10045,2026,Manhattan,0,0,2,0,0,0,0,0,True,0,0,0,0,0,0,,True,False,collisions only,161,0.0,0
+10048,2022,Manhattan,0,0,1,0,0,0,0,0,False,0,0,0,0,0,0,Passing Too Closely,True,False,collisions only,164,0.0,0
+10048,2025,Manhattan,0,0,2,1,0,1,0,0,False,0,0,0,0,0,0,Driver Inattention/Distraction,True,False,collisions only,159,50.0,0
+10055,2022,Manhattan,14,0,1,1,0,1,0,0,False,0,0,0,12,0,0,Backing Unsafely,False,False,both,164,100.0,0
+10055,2023,Manhattan,61,0,1,0,0,0,0,0,False,0,0,0,58,0,0,,False,False,both,151,0.0,0
+10055,2024,Manhattan,15,0,0,0,0,0,0,0,False,0,0,0,13,0,0,,False,False,housing only,148,,0
+10055,2025,Manhattan,3,0,1,0,0,0,0,0,False,0,0,0,1,0,0,,True,False,both,159,0.0,0
+10055,2026,Manhattan,3,0,0,0,0,0,0,0,True,0,0,0,3,0,0,,True,False,housing only,161,,0
+10065,2022,Manhattan,1071,1,291,89,0,16,21,47,False,0,0,0,992,0,108,Driver Inattention/Distraction,False,False,both,149,30.58,0
+10065,2023,Manhattan,1014,0,317,119,1,34,22,57,False,1,0,0,951,2,0,Driver Inattention/Distraction,False,True,both,151,37.54,0
+10065,2024,Manhattan,1001,1,243,104,0,26,27,47,False,0,0,0,930,3,126,Driver Inattention/Distraction,False,False,both,125,42.8,0
+10065,2025,Manhattan,897,2,330,156,0,45,35,70,False,0,0,0,829,3,15,Driver Inattention/Distraction,False,False,both,135,47.27,0
+10065,2026,Manhattan,695,0,249,131,1,36,35,48,True,1,0,0,622,2,0,Driver Inattention/Distraction,False,False,both,161,52.61,0
+10069,2022,Manhattan,41,0,15,7,0,2,3,1,False,0,0,0,41,0,0,Driver Inattention/Distraction,False,False,both,164,46.67,0
+10069,2023,Manhattan,40,0,13,6,1,5,1,0,False,1,0,0,38,0,0,Driver Inattention/Distraction,False,False,both,151,46.15,0
+10069,2024,Manhattan,29,0,8,2,0,1,0,0,False,0,0,0,29,0,0,Driver Inattention/Distraction,False,False,both,148,25.0,0
+10069,2025,Manhattan,32,0,17,8,0,4,2,0,False,0,0,0,32,0,0,Driver Inattention/Distraction,False,False,both,159,47.06,0
+10069,2026,Manhattan,25,0,11,3,0,1,1,0,True,0,0,0,25,0,0,Driver Inattention/Distraction,False,False,both,161,27.27,0
+10075,2022,Manhattan,552,4,90,32,1,11,9,12,False,1,0,0,542,0,231,Driver Inattention/Distraction,False,False,both,109,35.56,0
+10075,2023,Manhattan,528,1,97,44,0,14,10,19,False,0,0,0,514,1,16,Driver Inattention/Distraction,False,False,both,131,45.36,0
+10075,2024,Manhattan,559,1,92,39,1,18,5,14,False,0,0,1,546,3,88,Driver Inattention/Distraction,False,False,both,125,42.39,0
+10075,2025,Manhattan,414,2,105,53,1,13,8,30,False,1,0,0,400,6,67,Driver Inattention/Distraction,False,False,both,135,50.48,0
+10075,2026,Manhattan,356,0,74,33,0,16,1,14,True,0,0,0,339,6,0,Driver Inattention/Distraction,False,False,both,161,44.59,0
+10080,2026,Manhattan,0,0,1,0,0,0,0,0,True,0,0,0,0,0,0,,True,False,collisions only,161,0.0,0
+10103,2022,Manhattan,33,0,1,0,0,0,0,0,False,0,0,0,31,0,0,View Obstructed/Limited,False,False,both,164,0.0,0
+10103,2023,Manhattan,51,0,1,0,0,0,0,0,False,0,0,0,48,0,0,Backing Unsafely,False,False,both,151,0.0,0
+10103,2024,Manhattan,28,0,0,0,0,0,0,0,False,0,0,0,19,0,0,,False,False,housing only,148,,0
+10103,2025,Manhattan,38,0,1,0,0,0,0,0,False,0,0,0,35,0,0,,False,False,both,159,0.0,0
+10103,2026,Manhattan,18,0,1,1,0,0,0,0,True,0,0,0,14,0,0,Passing or Lane Usage Improper,False,False,both,161,100.0,0
+10104,2022,Manhattan,18,0,0,0,0,0,0,0,False,0,0,0,17,0,0,,False,False,housing only,164,,0
+10104,2023,Manhattan,26,0,0,0,0,0,0,0,False,0,0,0,26,0,0,,False,False,housing only,151,,0
+10104,2024,Manhattan,83,0,0,0,0,0,0,0,False,0,0,0,77,0,0,,False,False,housing only,148,,0
+10104,2025,Manhattan,57,0,0,0,0,0,0,0,False,0,0,0,51,0,0,,False,False,housing only,159,,0
+10104,2026,Manhattan,37,0,0,0,0,0,0,0,True,0,0,0,34,0,0,,False,False,housing only,161,,0
+10105,2022,Manhattan,35,0,1,1,0,0,1,0,False,0,0,0,29,0,0,Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,False,False,both,164,100.0,0
+10105,2023,Manhattan,26,0,1,0,0,0,0,0,False,0,0,0,26,0,0,Oversized Vehicle,False,False,both,151,0.0,0
+10105,2024,Manhattan,44,0,2,1,0,0,0,1,False,0,0,0,44,0,0,Driver Inattention/Distraction,False,False,both,148,50.0,0
+10105,2025,Manhattan,38,0,3,1,0,0,0,0,False,0,0,0,37,0,0,Backing Unsafely,False,False,both,159,33.33,0
+10105,2026,Manhattan,5,0,2,0,0,0,0,0,True,0,0,0,1,0,0,Unsafe Lane Changing,False,False,both,161,0.0,0
+10106,2022,Manhattan,40,0,0,0,0,0,0,0,False,0,0,0,40,0,0,,False,False,housing only,164,,0
+10106,2023,Manhattan,19,0,1,1,0,0,0,1,False,0,0,0,19,0,0,Backing Unsafely,False,False,both,151,100.0,0
+10106,2024,Manhattan,6,0,0,0,0,0,0,0,False,0,0,0,6,0,0,,False,False,housing only,148,,0
+10106,2025,Manhattan,10,0,0,0,0,0,0,0,False,0,0,0,10,0,0,,False,False,housing only,159,,0
+10106,2026,Manhattan,7,0,0,0,0,0,0,0,True,0,0,0,7,0,0,,False,False,housing only,161,,0
+10107,2022,Manhattan,10,0,0,0,0,0,0,0,False,0,0,0,10,0,0,,False,False,housing only,164,,0
+10107,2023,Manhattan,21,0,0,0,0,0,0,0,False,0,0,0,21,0,0,,False,False,housing only,151,,0
+10107,2024,Manhattan,21,0,0,0,0,0,0,0,False,0,0,0,21,0,0,,False,False,housing only,148,,0
+10107,2025,Manhattan,29,0,1,1,0,0,0,1,False,0,0,0,29,0,0,,False,False,both,159,100.0,0
+10107,2026,Manhattan,4,0,0,0,0,0,0,0,True,0,0,0,4,0,0,,True,False,housing only,161,,0
+10110,2022,Manhattan,6,0,0,0,0,0,0,0,False,0,0,0,6,0,0,,False,False,housing only,164,,0
+10110,2023,Manhattan,18,0,1,0,0,0,0,0,False,0,0,0,18,0,0,Unsafe Lane Changing,False,False,both,151,0.0,0
+10110,2024,Manhattan,20,0,1,0,0,0,0,0,False,0,0,0,20,0,0,Passing Too Closely,False,False,both,148,0.0,0
+10110,2025,Manhattan,13,0,0,0,0,0,0,0,False,0,0,0,13,0,0,,False,False,housing only,159,,0
+10110,2026,Manhattan,12,0,0,0,0,0,0,0,True,0,0,0,12,0,0,,False,False,housing only,161,,0
+10111,2022,Manhattan,0,0,1,2,0,0,0,2,False,0,0,0,0,0,0,,True,False,collisions only,164,200.0,0
+10111,2025,Manhattan,0,0,1,1,0,0,0,1,False,0,0,0,0,0,0,,True,False,collisions only,159,100.0,0
+10112,2022,Manhattan,50,0,2,1,0,0,1,0,False,0,0,0,45,0,0,Passing Too Closely,False,False,both,164,50.0,0
+10112,2023,Manhattan,95,0,3,2,0,1,1,0,False,0,0,0,91,0,0,Failure to Yield Right-of-Way,False,False,both,151,66.67,0
+10112,2024,Manhattan,56,0,3,1,0,1,0,0,False,0,0,0,46,0,0,Driver Inattention/Distraction,False,False,both,148,33.33,0
+10112,2025,Manhattan,61,0,1,0,0,0,0,0,False,0,0,0,46,0,0,Turning Improperly,False,False,both,159,0.0,0
+10112,2026,Manhattan,54,0,4,3,0,1,2,0,True,0,0,0,46,0,0,Driver Inattention/Distraction,False,False,both,161,75.0,0
+10115,2022,Manhattan,15,0,0,0,0,0,0,0,False,0,0,0,15,0,0,,False,False,housing only,164,,0
+10115,2023,Manhattan,2,0,2,0,0,0,0,0,False,0,0,0,2,0,0,Alcohol Involvement,True,False,both,151,0.0,0
+10115,2024,Manhattan,14,0,0,0,0,0,0,0,False,0,0,0,14,0,0,,False,False,housing only,148,,0
+10115,2025,Manhattan,6,0,4,5,0,0,1,4,False,0,0,0,6,0,0,Fell Asleep,False,False,both,159,125.0,0
+10115,2026,Manhattan,5,0,1,0,0,0,0,0,True,0,0,0,4,0,0,,False,False,both,161,0.0,0
+10118,2022,Manhattan,68,0,2,1,0,0,1,0,False,0,0,0,66,0,0,Following Too Closely,False,False,both,164,50.0,0
+10118,2023,Manhattan,114,0,1,0,0,0,0,0,False,0,0,0,110,0,0,Driver Inattention/Distraction,False,False,both,151,0.0,0
+10118,2024,Manhattan,77,0,1,0,0,0,0,0,False,0,0,0,77,0,0,Unsafe Speed,False,False,both,148,0.0,0
+10118,2025,Manhattan,76,0,1,0,0,0,0,0,False,0,0,0,76,0,0,,False,False,both,159,0.0,0
+10118,2026,Manhattan,58,0,3,1,0,0,1,0,True,0,0,0,55,0,0,Driver Inattention/Distraction,False,False,both,161,33.33,0
+10119,2022,Manhattan,111,0,5,4,0,2,1,0,False,0,0,0,111,0,0,Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,False,False,both,164,80.0,0
+10119,2023,Manhattan,164,0,6,3,0,1,1,1,False,0,0,0,162,0,0,Backing Unsafely,False,False,both,151,50.0,0
+10119,2024,Manhattan,114,0,8,6,0,1,1,4,False,0,0,0,113,0,0,Driver Inattention/Distraction,False,False,both,148,75.0,0
+10119,2025,Manhattan,186,0,3,1,0,0,0,1,False,0,0,0,184,0,0,,False,False,both,159,33.33,0
+10119,2026,Manhattan,76,0,7,4,0,1,2,0,True,0,0,0,76,0,0,Driver Inattention/Distraction,False,False,both,161,57.14,0
+10120,2022,Manhattan,10,0,1,1,0,1,0,0,False,0,0,0,10,0,0,Driver Inexperience,False,False,both,164,100.0,0
+10120,2023,Manhattan,10,0,3,1,0,1,0,0,False,0,0,0,10,0,0,Driver Inattention/Distraction,False,False,both,151,33.33,0
+10120,2024,Manhattan,28,0,3,1,0,1,0,0,False,0,0,0,28,0,0,Unsafe Lane Changing,False,False,both,148,33.33,0
+10120,2025,Manhattan,10,0,1,3,0,0,0,3,False,0,0,0,10,0,0,,False,False,both,159,300.0,0
+10120,2026,Manhattan,3,0,1,1,0,0,0,0,True,0,0,0,3,0,0,Driver Inattention/Distraction,True,False,both,161,100.0,0
+10121,2022,Manhattan,9,0,2,0,0,0,0,0,False,0,0,0,9,0,0,Failure to Yield Right-of-Way,False,False,both,164,0.0,0
+10121,2023,Manhattan,68,0,1,1,0,0,0,1,False,0,0,0,66,0,0,Following Too Closely,False,False,both,151,100.0,0
+10121,2024,Manhattan,31,0,2,0,0,0,0,0,False,0,0,0,27,0,0,Driver Inattention/Distraction,False,False,both,148,0.0,0
+10121,2025,Manhattan,16,0,1,0,0,0,0,0,False,0,0,0,15,0,0,,False,False,both,159,0.0,0
+10121,2026,Manhattan,27,0,1,0,0,0,0,0,True,0,0,0,26,0,0,,False,False,both,161,0.0,0
+10122,2022,Manhattan,4,0,0,0,0,0,0,0,False,0,0,0,4,0,0,,True,False,housing only,164,,0
+10122,2023,Manhattan,8,0,1,0,0,0,0,0,False,0,0,0,8,0,0,Alcohol Involvement,False,False,both,151,0.0,0
+10122,2024,Manhattan,7,0,0,0,0,0,0,0,False,0,0,0,7,0,0,,False,False,housing only,148,,0
+10122,2025,Manhattan,4,0,0,0,0,0,0,0,False,0,0,0,4,0,0,,True,False,housing only,159,,0
+10122,2026,Manhattan,15,0,0,0,0,0,0,0,True,0,0,0,15,0,0,,False,False,housing only,161,,0
+10123,2022,Manhattan,3,0,0,0,0,0,0,0,False,0,0,0,3,0,0,,True,False,housing only,164,,0
+10123,2023,Manhattan,6,0,0,0,0,0,0,0,False,0,0,0,6,0,0,,False,False,housing only,151,,0
+10123,2024,Manhattan,6,0,0,0,0,0,0,0,False,0,0,0,6,0,0,,False,False,housing only,148,,0
+10123,2025,Manhattan,3,0,1,0,0,0,0,0,False,0,0,0,3,0,0,,True,False,both,159,0.0,0
+10123,2026,Manhattan,0,0,1,0,0,0,0,0,True,0,0,0,0,0,0,,True,False,collisions only,161,0.0,0
+10128,2022,Manhattan,949,1,248,100,1,30,24,37,False,1,0,0,924,0,45,Driver Inattention/Distraction,False,False,both,149,40.32,0
+10128,2023,Manhattan,813,0,243,96,1,28,26,33,False,0,0,1,780,3,0,Driver Inattention/Distraction,False,False,both,151,39.51,0
+10128,2024,Manhattan,713,0,222,93,2,25,31,32,False,2,0,0,686,0,0,Driver Inattention/Distraction,False,False,both,148,41.89,0
+10128,2025,Manhattan,702,0,223,97,1,19,27,43,False,1,0,0,681,0,0,Driver Inattention/Distraction,False,False,both,159,43.5,0
+10128,2026,Manhattan,541,1,214,105,0,40,21,34,True,0,0,0,514,0,0,Driver Inattention/Distraction,False,False,both,138,49.07,0
+10151,2022,Manhattan,48,0,0,0,0,0,0,0,False,0,0,0,48,0,0,,False,False,housing only,164,,0
+10151,2023,Manhattan,25,0,0,0,0,0,0,0,False,0,0,0,25,0,0,,False,False,housing only,151,,0
+10151,2024,Manhattan,20,0,0,0,0,0,0,0,False,0,0,0,20,0,0,,False,False,housing only,148,,0
+10151,2025,Manhattan,14,0,0,0,0,0,0,0,False,0,0,0,14,0,0,,False,False,housing only,159,,0
+10151,2026,Manhattan,4,0,0,0,0,0,0,0,True,0,0,0,4,0,0,,True,False,housing only,161,,0
+10152,2024,Manhattan,0,0,1,1,0,0,1,0,False,0,0,0,0,0,0,Following Too Closely,True,False,collisions only,148,100.0,0
+10153,2022,Manhattan,89,0,1,1,0,0,1,0,False,0,0,0,88,0,0,Unsafe Lane Changing,False,False,both,164,100.0,0
+10153,2023,Manhattan,38,0,3,1,0,0,0,1,False,0,0,0,37,0,0,Driver Inattention/Distraction,False,False,both,151,33.33,0
+10153,2024,Manhattan,32,0,1,0,0,0,0,0,False,0,0,0,32,0,0,Passing Too Closely,False,False,both,148,0.0,0
+10153,2025,Manhattan,60,0,1,1,0,1,0,0,False,0,0,0,59,0,0,Traffic Control Disregarded,False,False,both,159,100.0,0
+10153,2026,Manhattan,23,0,1,0,0,0,0,0,True,0,0,0,23,0,0,Other Vehicular,False,False,both,161,0.0,0
+10154,2022,Manhattan,0,0,1,0,0,0,0,0,False,0,0,0,0,0,0,Alcohol Involvement,True,False,collisions only,164,0.0,0
+10154,2025,Manhattan,0,0,1,0,0,0,0,0,False,0,0,0,0,0,0,,True,False,collisions only,159,0.0,0
+10155,2022,Manhattan,45,0,1,1,0,1,0,0,False,0,0,0,45,0,0,,False,False,both,164,100.0,0
+10155,2023,Manhattan,29,0,2,1,0,1,0,0,False,0,0,0,29,0,0,Driver Inattention/Distraction,False,False,both,151,50.0,0
+10155,2024,Manhattan,33,0,0,0,0,0,0,0,False,0,0,0,33,0,0,,False,False,housing only,148,,0
+10155,2025,Manhattan,14,0,0,0,0,0,0,0,False,0,0,0,14,0,0,,False,False,housing only,159,,0
+10155,2026,Manhattan,7,0,0,0,0,0,0,0,True,0,0,0,7,0,0,,False,False,housing only,161,,0
+10158,2022,Manhattan,20,0,1,0,0,0,0,0,False,0,0,0,16,0,0,,False,False,both,164,0.0,0
+10158,2023,Manhattan,12,0,0,0,0,0,0,0,False,0,0,0,12,0,0,,False,False,housing only,151,,0
+10158,2024,Manhattan,12,0,0,0,0,0,0,0,False,0,0,0,12,0,0,,False,False,housing only,148,,0
+10158,2025,Manhattan,6,0,0,0,0,0,0,0,False,0,0,0,6,0,0,,False,False,housing only,159,,0
+10158,2026,Manhattan,5,0,0,0,0,0,0,0,True,0,0,0,5,0,0,,False,False,housing only,161,,0
+10162,2023,Manhattan,3,0,1,0,0,0,0,0,False,0,0,0,3,0,0,Turning Improperly,True,False,both,151,0.0,0
+10162,2025,Manhattan,2,0,0,0,0,0,0,0,False,0,0,0,2,0,0,,True,False,housing only,159,,0
+10162,2026,Manhattan,5,0,0,0,0,0,0,0,True,0,0,0,5,0,0,,False,False,housing only,161,,0
+10165,2022,Manhattan,0,0,1,1,0,0,0,1,False,0,0,0,0,0,0,Unsafe Lane Changing,True,False,collisions only,164,100.0,0
+10165,2023,Manhattan,0,0,3,1,0,0,1,0,False,0,0,0,0,0,0,Backing Unsafely,True,False,collisions only,151,33.33,0
+10165,2024,Manhattan,0,0,5,0,0,0,0,0,False,0,0,0,0,0,0,Driver Inattention/Distraction,False,False,collisions only,148,0.0,0
+10165,2025,Manhattan,0,0,2,1,0,1,0,0,False,0,0,0,0,0,0,Driver Inattention/Distraction,True,False,collisions only,159,50.0,0
+10165,2026,Manhattan,0,0,5,2,0,0,1,1,True,0,0,0,0,0,0,,False,False,collisions only,161,40.0,0
+10167,2026,Manhattan,0,0,1,0,0,0,0,0,True,0,0,0,0,0,0,Passenger Distraction,True,False,collisions only,161,0.0,0
+10168,2022,Manhattan,2,0,9,3,0,0,0,2,False,0,0,0,2,0,0,Driver Inattention/Distraction,False,False,both,164,33.33,0
+10168,2023,Manhattan,7,0,8,15,0,8,2,4,False,0,0,0,7,0,0,Driver Inattention/Distraction,False,False,both,151,187.5,0
+10168,2024,Manhattan,12,0,7,2,0,0,0,2,False,0,0,0,12,0,0,Driver Inattention/Distraction,False,False,both,148,28.57,0
+10168,2025,Manhattan,9,0,11,5,0,3,1,0,False,0,0,0,8,0,0,Driver Inattention/Distraction,False,False,both,159,45.45,0
+10168,2026,Manhattan,4,0,8,3,0,0,2,1,True,0,0,0,4,0,0,Driver Inattention/Distraction,False,False,both,161,37.5,0
+10169,2022,Manhattan,31,0,4,2,0,0,0,2,False,0,0,0,31,0,0,Backing Unsafely,False,False,both,164,50.0,0
+10169,2023,Manhattan,24,0,1,1,0,0,0,1,False,0,0,0,24,0,0,Driver Inattention/Distraction,False,False,both,151,100.0,0
+10169,2024,Manhattan,18,0,1,1,0,0,0,1,False,0,0,0,18,0,0,Following Too Closely,False,False,both,148,100.0,0
+10169,2025,Manhattan,2,0,3,1,0,0,0,1,False,0,0,0,2,0,0,Driver Inattention/Distraction,True,False,both,159,33.33,0
+10169,2026,Manhattan,8,0,5,3,0,1,0,2,True,0,0,0,8,0,0,Following Too Closely,False,False,both,161,60.0,0
+10170,2022,Manhattan,87,0,0,0,0,0,0,0,False,0,0,0,87,0,0,,False,False,housing only,164,,0
+10170,2023,Manhattan,65,0,3,2,0,0,2,0,False,0,0,0,65,0,0,Driver Inattention/Distraction,False,False,both,151,66.67,0
+10170,2024,Manhattan,35,0,1,1,0,1,0,0,False,0,0,0,35,0,0,,False,False,both,148,100.0,0
+10170,2025,Manhattan,40,0,0,0,0,0,0,0,False,0,0,0,40,0,0,,False,False,housing only,159,,0
+10170,2026,Manhattan,25,0,0,0,0,0,0,0,True,0,0,0,25,0,0,,False,False,housing only,161,,0
+10171,2022,Manhattan,44,0,0,0,0,0,0,0,False,0,0,0,43,0,0,,False,False,housing only,164,,0
+10171,2023,Manhattan,21,0,0,0,0,0,0,0,False,0,0,0,21,0,0,,False,False,housing only,151,,0
+10171,2024,Manhattan,16,0,1,0,0,0,0,0,False,0,0,0,16,0,0,,False,False,both,148,0.0,0
+10171,2025,Manhattan,35,0,1,1,0,1,0,0,False,0,0,0,35,0,0,Driver Inattention/Distraction,False,False,both,159,100.0,0
+10171,2026,Manhattan,8,0,1,0,0,0,0,0,True,0,0,0,8,0,0,,False,False,both,161,0.0,0
+10172,2022,Manhattan,52,0,6,6,0,2,1,3,False,0,0,0,49,0,0,Brakes Defective,False,False,both,164,100.0,0
+10172,2023,Manhattan,59,0,5,0,0,0,0,0,False,0,0,0,57,0,0,Failure to Yield Right-of-Way,False,False,both,151,0.0,0
+10172,2024,Manhattan,22,0,8,6,0,2,1,3,False,0,0,0,22,0,0,Driver Inattention/Distraction,False,False,both,148,75.0,0
+10172,2025,Manhattan,20,0,7,3,0,2,1,0,False,0,0,0,20,0,0,Failure to Yield Right-of-Way,False,False,both,159,42.86,0
+10172,2026,Manhattan,40,0,2,1,0,0,1,0,True,0,0,0,39,0,0,Driver Inattention/Distraction,False,False,both,161,50.0,0
+10173,2022,Manhattan,33,0,0,0,0,0,0,0,False,0,0,0,32,0,0,,False,False,housing only,164,,0
+10173,2023,Manhattan,13,0,0,0,0,0,0,0,False,0,0,0,10,0,0,,False,False,housing only,151,,0
+10173,2024,Manhattan,4,0,2,0,0,0,0,0,False,0,0,0,3,0,0,Outside Car Distraction,True,False,both,148,0.0,0
+10173,2025,Manhattan,5,0,0,0,0,0,0,0,False,0,0,0,5,0,0,,False,False,housing only,159,,0
+10173,2026,Manhattan,12,0,0,0,0,0,0,0,True,0,0,0,12,0,0,,False,False,housing only,161,,0
+10174,2022,Manhattan,18,0,1,1,0,0,1,0,False,0,0,0,18,0,0,Aggressive Driving/Road Rage,False,False,both,164,100.0,0
+10174,2023,Manhattan,3,0,1,1,0,0,1,0,False,0,0,0,3,0,0,Passenger Distraction,True,False,both,151,100.0,0
+10174,2024,Manhattan,2,0,0,0,0,0,0,0,False,0,0,0,2,0,0,,True,False,housing only,148,,0
+10174,2025,Manhattan,3,0,0,0,0,0,0,0,False,0,0,0,3,0,0,,True,False,housing only,159,,0
+10174,2026,Manhattan,2,0,1,0,0,0,0,0,True,0,0,0,2,0,0,,True,False,both,161,0.0,0
+10175,2022,Manhattan,19,0,0,0,0,0,0,0,False,0,0,0,19,0,0,,False,False,housing only,164,,0
+10175,2023,Manhattan,3,0,0,0,0,0,0,0,False,0,0,0,3,0,0,,True,False,housing only,151,,0
+10175,2024,Manhattan,6,0,0,0,0,0,0,0,False,0,0,0,6,0,0,,False,False,housing only,148,,0
+10175,2025,Manhattan,3,0,0,0,0,0,0,0,False,0,0,0,3,0,0,,True,False,housing only,159,,0
+10175,2026,Manhattan,3,0,0,0,0,0,0,0,True,0,0,0,3,0,0,,True,False,housing only,161,,0
+10176,2022,Manhattan,14,0,1,1,0,0,1,0,False,0,0,0,14,0,0,Outside Car Distraction,False,False,both,164,100.0,0
+10176,2023,Manhattan,9,0,1,0,0,0,0,0,False,0,0,0,9,0,0,,False,False,both,151,0.0,0
+10176,2024,Manhattan,5,0,0,0,0,0,0,0,False,0,0,0,5,0,0,,False,False,housing only,148,,0
+10176,2025,Manhattan,8,0,0,0,0,0,0,0,False,0,0,0,8,0,0,,False,False,housing only,159,,0
+10176,2026,Manhattan,2,0,1,0,0,0,0,0,True,0,0,0,2,0,0,Other Vehicular,True,False,both,161,0.0,0
+10177,2022,Manhattan,29,0,0,0,0,0,0,0,False,0,0,0,29,0,0,,False,False,housing only,164,,0
+10177,2023,Manhattan,8,0,0,0,0,0,0,0,False,0,0,0,8,0,0,,False,False,housing only,151,,0
+10177,2024,Manhattan,5,0,1,0,0,0,0,0,False,0,0,0,5,0,0,Passing or Lane Usage Improper,False,False,both,148,0.0,0
+10177,2025,Manhattan,2,0,0,0,0,0,0,0,False,0,0,0,2,0,0,,True,False,housing only,159,,0
+10177,2026,Manhattan,5,0,0,0,0,0,0,0,True,0,0,0,5,0,0,,False,False,housing only,161,,0
+10178,2022,Manhattan,10,0,0,0,0,0,0,0,False,0,0,0,10,0,0,,False,False,housing only,164,,0
+10178,2023,Manhattan,27,0,0,0,0,0,0,0,False,0,0,0,26,0,0,,False,False,housing only,151,,0
+10178,2024,Manhattan,11,0,1,1,0,0,0,1,False,0,0,0,11,0,0,Driver Inattention/Distraction,False,False,both,148,100.0,0
+10178,2025,Manhattan,26,0,2,1,0,0,0,1,False,0,0,0,26,0,0,Driver Inattention/Distraction,False,False,both,159,50.0,0
+10178,2026,Manhattan,12,0,0,0,0,0,0,0,True,0,0,0,12,0,0,,False,False,housing only,161,,0
+10179,2022,Manhattan,0,0,2,1,0,1,0,0,False,0,0,0,0,0,0,Passing or Lane Usage Improper,True,False,collisions only,164,50.0,0
+10179,2025,Manhattan,0,0,1,0,0,0,0,0,False,0,0,0,0,0,0,,True,False,collisions only,159,0.0,0
+10271,2022,Manhattan,40,0,3,1,0,1,0,0,False,0,0,0,40,0,0,Driver Inattention/Distraction,False,False,both,164,33.33,0
+10271,2023,Manhattan,51,0,1,0,0,0,0,0,False,0,0,0,48,0,0,,False,False,both,151,0.0,0
+10271,2024,Manhattan,31,0,0,0,0,0,0,0,False,0,0,0,31,0,0,,False,False,housing only,148,,0
+10271,2025,Manhattan,4,0,0,0,0,0,0,0,False,0,0,0,3,0,0,,True,False,housing only,159,,0
+10271,2026,Manhattan,10,0,2,0,0,0,0,0,True,0,0,0,10,0,0,,False,False,both,161,0.0,0
+10278,2022,Manhattan,0,0,4,0,0,0,0,0,False,0,0,0,0,0,0,,True,False,collisions only,164,0.0,0
+10278,2023,Manhattan,1,0,8,1,0,0,1,0,False,0,0,0,1,0,0,Driver Inattention/Distraction,False,False,both,151,12.5,0
+10278,2024,Manhattan,0,0,7,1,0,1,0,0,False,0,0,0,0,0,0,Alcohol Involvement,False,False,collisions only,148,14.29,0
+10278,2025,Manhattan,0,0,10,4,0,1,2,1,False,0,0,0,0,0,0,Driver Inattention/Distraction,False,False,collisions only,159,40.0,0
+10278,2026,Manhattan,0,0,3,0,0,0,0,0,True,0,0,0,0,0,0,Driver Inattention/Distraction,True,False,collisions only,161,0.0,0
+10279,2023,Manhattan,0,0,1,0,0,0,0,0,False,0,0,0,0,0,0,Driver Inattention/Distraction,True,False,collisions only,151,0.0,0
+10279,2025,Manhattan,0,0,2,0,0,0,0,0,False,0,0,0,0,0,0,Passing or Lane Usage Improper,True,False,collisions only,159,0.0,0
+10279,2026,Manhattan,0,0,1,0,0,0,0,0,True,0,0,0,0,0,0,,True,False,collisions only,161,0.0,0
+10280,2022,Manhattan,55,0,12,4,0,2,1,1,False,0,0,0,55,0,0,Driver Inattention/Distraction,False,False,both,164,33.33,0
+10280,2023,Manhattan,43,0,16,9,0,4,1,4,False,0,0,0,43,0,0,Driver Inattention/Distraction,False,False,both,151,56.25,0
+10280,2024,Manhattan,41,0,10,6,0,4,0,2,False,0,0,0,40,0,0,Driver Inattention/Distraction,False,False,both,148,60.0,0
+10280,2025,Manhattan,63,0,12,3,0,2,0,0,False,0,0,0,63,0,0,Other Vehicular,False,False,both,159,25.0,0
+10280,2026,Manhattan,54,0,12,4,0,3,1,0,True,0,0,0,53,0,0,Driver Inattention/Distraction,False,False,both,161,33.33,0
+10281,2022,Manhattan,164,0,3,0,0,0,0,0,False,0,0,0,152,0,0,Physical Disability,False,False,both,164,0.0,0
+10281,2023,Manhattan,124,0,5,3,0,0,2,1,False,0,0,0,107,0,0,Driver Inattention/Distraction,False,False,both,151,60.0,0
+10281,2024,Manhattan,67,0,6,2,0,0,2,0,False,0,0,0,36,0,0,Driver Inattention/Distraction,False,False,both,148,33.33,0
+10281,2025,Manhattan,64,0,3,2,0,0,1,1,False,0,0,0,49,0,0,Driver Inattention/Distraction,False,False,both,159,66.67,0
+10281,2026,Manhattan,68,0,7,1,0,0,0,0,True,0,0,0,52,0,0,Obstruction/Debris,False,False,both,161,14.29,0
+10282,2022,Manhattan,174,0,9,1,0,1,0,0,False,0,0,0,148,0,0,Driver Inattention/Distraction,False,False,both,164,11.11,0
+10282,2023,Manhattan,104,0,10,4,0,4,0,0,False,0,0,0,84,0,0,Driver Inattention/Distraction,False,False,both,151,40.0,0
+10282,2024,Manhattan,73,0,5,2,0,0,2,0,False,0,0,0,50,0,0,Backing Unsafely,False,False,both,148,40.0,0
+10282,2025,Manhattan,66,0,7,5,0,4,0,1,False,0,0,0,46,0,0,Other Vehicular,False,False,both,159,71.43,0
+10282,2026,Manhattan,63,0,11,5,0,1,2,2,True,0,0,0,43,0,0,Alcohol Involvement,False,False,both,161,45.45,0
+10301,2022,Staten Island,358,23,467,223,0,46,12,161,False,0,0,0,301,0,825,Driver Inattention/Distraction,False,False,both,19,47.75,0
+10301,2023,Staten Island,326,28,425,184,1,39,10,128,False,1,0,0,256,12,35,Driver Inattention/Distraction,False,True,both,11,43.29,0
+10301,2024,Staten Island,404,16,387,187,1,36,15,132,False,1,0,0,347,10,103,Driver Inattention/Distraction,False,False,both,16,48.32,0
+10301,2025,Staten Island,387,17,383,190,0,43,10,131,False,0,0,0,332,11,29,Driver Inattention/Distraction,False,False,both,27,49.61,0
+10301,2026,Staten Island,301,29,244,115,0,24,12,75,True,0,0,0,234,10,69,Driver Inattention/Distraction,False,True,both,6,47.13,0
+10302,2022,Staten Island,214,32,8,3,0,1,0,2,False,0,0,0,169,0,48,Driver Inattention/Distraction,False,False,both,9,37.5,0
+10302,2023,Staten Island,143,18,8,6,0,0,0,6,False,0,0,0,111,3,35,Driver Inattention/Distraction,False,False,both,22,75.0,0
+10302,2024,Staten Island,177,12,6,2,0,2,0,0,False,0,0,0,151,4,14,Backing Unsafely,False,False,both,30,33.33,0
+10302,2025,Staten Island,158,5,3,8,0,4,0,4,False,0,0,0,137,4,7,Unsafe Lane Changing,False,False,both,102,266.67,0
+10302,2026,Staten Island,130,5,2,0,0,0,0,0,True,0,0,0,112,5,26,,False,False,both,97,0.0,0
+10303,2022,Staten Island,159,16,0,0,0,0,0,0,False,0,0,0,132,0,26,,False,False,housing only,39,,0
+10303,2023,Staten Island,201,29,0,0,0,0,0,0,False,0,0,0,142,15,28,,False,True,housing only,10,,0
+10303,2024,Staten Island,278,7,0,0,0,0,0,0,False,0,0,0,255,5,2,,False,False,housing only,66,,0
+10303,2025,Staten Island,269,9,0,0,0,0,0,0,False,0,0,0,246,5,8,,False,False,housing only,74,,0
+10303,2026,Staten Island,157,7,0,0,0,0,0,0,True,0,0,0,135,9,14,,False,False,housing only,77,,0
+10304,2022,Staten Island,315,26,433,179,2,28,6,139,False,1,0,1,262,0,38,Driver Inattention/Distraction,False,False,both,13,41.34,0
+10304,2023,Staten Island,306,41,405,199,0,29,9,155,False,0,0,0,230,12,106,Driver Inattention/Distraction,False,True,both,7,49.14,0
+10304,2024,Staten Island,333,17,324,136,1,26,11,96,False,0,0,1,282,12,20,Driver Inattention/Distraction,False,False,both,13,41.98,0
+10304,2025,Staten Island,347,16,376,166,2,34,11,112,False,1,0,1,292,16,346,Driver Inattention/Distraction,False,False,both,34,44.15,0
+10304,2026,Staten Island,250,28,247,106,0,18,2,81,True,0,0,0,180,14,200,Driver Inattention/Distraction,False,True,both,7,42.91,0
+10305,2022,Staten Island,350,46,329,159,1,31,2,124,False,1,0,0,282,0,45,Driver Inattention/Distraction,False,True,both,5,48.33,0
+10305,2023,Staten Island,348,66,333,163,1,29,5,128,False,0,1,0,245,13,67,Driver Inattention/Distraction,False,True,both,4,48.95,0
+10305,2024,Staten Island,401,30,327,167,1,27,6,133,False,1,0,0,330,18,36,Driver Inattention/Distraction,False,True,both,4,51.07,0
+10305,2025,Staten Island,406,47,348,186,1,29,5,151,False,1,0,0,313,22,78,Driver Inattention/Distraction,False,True,both,4,53.45,0
+10305,2026,Staten Island,288,25,250,133,1,27,4,99,True,0,0,1,221,20,44,Driver Inattention/Distraction,False,False,both,10,53.2,0
+10306,2022,Staten Island,466,68,385,183,0,28,10,145,False,0,0,0,366,0,71,Driver Inattention/Distraction,False,True,both,4,47.53,0
+10306,2023,Staten Island,432,51,478,298,1,45,6,245,False,0,0,1,342,13,59,Driver Inattention/Distraction,False,True,both,6,62.34,1
+10306,2024,Staten Island,537,16,491,237,3,36,11,190,False,3,0,0,471,23,18,Driver Inattention/Distraction,False,False,both,16,48.27,0
+10306,2025,Staten Island,590,39,502,289,0,48,9,228,False,0,0,0,488,35,59,Driver Inattention/Distraction,False,True,both,5,57.57,0
+10306,2026,Staten Island,438,74,378,197,0,32,10,148,True,0,0,0,300,35,105,Driver Inattention/Distraction,False,True,both,1,52.12,0
+10307,2022,Staten Island,161,34,76,25,0,2,0,23,False,0,0,0,113,0,44,Driver Inattention/Distraction,False,True,both,8,32.89,0
+10307,2023,Staten Island,129,26,68,28,0,6,3,19,False,0,0,0,91,4,34,Driver Inattention/Distraction,False,True,both,15,41.18,0
+10307,2024,Staten Island,166,15,81,23,2,2,3,18,False,1,0,1,127,12,12,Driver Inattention/Distraction,False,False,both,23,28.4,0
+10307,2025,Staten Island,196,16,73,24,0,6,2,16,False,0,0,0,162,4,24,Driver Inattention/Distraction,False,False,both,34,32.88,0
+10307,2026,Staten Island,136,16,57,19,0,2,2,14,True,0,0,0,98,12,32,Driver Inattention/Distraction,False,False,both,28,33.33,0
+10308,2022,Staten Island,146,21,126,50,0,15,1,34,False,0,0,0,116,0,26,Driver Inattention/Distraction,False,False,both,22,39.68,0
+10308,2023,Staten Island,201,66,115,50,1,8,2,40,False,0,0,1,116,7,106,Driver Inattention/Distraction,False,True,both,4,43.48,0
+10308,2024,Staten Island,246,24,119,58,0,14,2,41,False,0,0,0,203,11,22,Driver Inattention/Distraction,False,True,both,9,48.74,0
+10308,2025,Staten Island,238,15,133,67,0,8,0,56,False,0,0,0,195,15,23,Driver Inattention/Distraction,False,False,both,39,50.38,0
+10308,2026,Staten Island,202,20,120,58,2,9,4,45,True,1,0,1,165,10,31,Driver Inattention/Distraction,False,False,both,18,48.33,0
+10309,2022,Staten Island,320,76,198,89,3,11,1,76,False,0,0,3,225,0,91,Driver Inattention/Distraction,False,True,both,2,44.95,0
+10309,2023,Staten Island,497,268,202,83,1,15,2,65,False,1,0,0,208,9,380,Driver Inattention/Distraction,False,True,both,1,41.09,0
+10309,2024,Staten Island,377,36,232,103,0,19,4,79,False,0,0,0,313,12,68,Driver Inattention/Distraction,False,True,both,3,44.4,0
+10309,2025,Staten Island,484,50,234,98,0,9,1,82,False,0,0,0,369,48,72,Driver Inattention/Distraction,False,True,both,3,41.88,0
+10309,2026,Staten Island,354,66,223,104,0,13,1,87,True,0,0,0,248,29,120,Driver Inattention/Distraction,False,True,both,2,46.64,0
+10310,2022,Staten Island,204,24,254,113,0,19,2,92,False,0,0,0,167,0,32,Driver Inattention/Distraction,False,False,both,15,44.49,0
+10310,2023,Staten Island,191,27,234,110,0,13,7,85,False,0,0,0,144,8,41,Driver Inattention/Distraction,False,True,both,14,47.01,0
+10310,2024,Staten Island,261,5,232,128,0,21,11,89,False,0,0,0,234,5,4,Driver Inattention/Distraction,False,False,both,83,55.17,0
+10310,2025,Staten Island,233,14,239,126,1,20,4,94,False,1,0,0,194,9,21,Driver Inattention/Distraction,False,False,both,42,52.72,0
+10310,2026,Staten Island,147,10,185,83,1,21,7,48,True,0,0,1,121,2,16,Driver Inattention/Distraction,False,False,both,54,44.86,0
+10312,2022,Staten Island,395,94,328,148,0,19,4,124,False,0,0,0,284,0,113,Driver Inattention/Distraction,False,True,both,1,45.12,0
+10312,2023,Staten Island,447,176,318,172,0,31,6,135,False,0,0,0,241,12,221,Driver Inattention/Distraction,False,True,both,2,54.09,0
+10312,2024,Staten Island,629,62,369,195,3,36,7,147,False,0,0,3,535,11,56,Driver Inattention/Distraction,False,True,both,1,52.85,0
+10312,2025,Staten Island,582,53,363,188,1,28,5,149,False,1,0,0,481,25,93,Driver Inattention/Distraction,False,True,both,2,51.79,0
+10312,2026,Staten Island,380,46,292,141,0,27,7,100,True,0,0,0,288,26,76,Driver Inattention/Distraction,False,True,both,3,48.29,0
+10314,2022,Staten Island,666,70,114,55,2,10,1,44,False,1,0,1,552,0,67,Driver Inattention/Distraction,False,True,both,3,48.25,0
+10314,2023,Staten Island,551,88,137,73,0,7,0,66,False,0,0,0,403,14,109,Driver Inattention/Distraction,False,True,both,3,53.28,0
+10314,2024,Staten Island,781,37,129,67,0,16,0,51,False,0,0,0,661,37,28,Driver Inattention/Distraction,False,True,both,2,51.94,0
+10314,2025,Staten Island,800,38,124,65,0,7,3,55,False,0,0,0,688,23,54,Driver Inattention/Distraction,False,True,both,6,52.42,0
+10314,2026,Staten Island,560,38,100,53,1,6,1,44,True,0,0,1,447,34,62,Driver Inattention/Distraction,False,True,both,4,53.0,0
+10451,2022,Bronx,430,12,571,298,4,58,35,188,False,0,1,2,408,0,958,Driver Inattention/Distraction,False,False,both,61,52.19,0
+10451,2023,Bronx,301,1,522,355,1,63,25,256,False,1,0,0,272,0,266,Driver Inattention/Distraction,False,False,both,131,68.01,0
+10451,2024,Bronx,363,5,494,278,3,63,43,167,False,2,1,0,329,7,216,Driver Inattention/Distraction,False,False,both,83,56.28,0
+10451,2025,Bronx,305,5,580,340,1,83,33,190,False,1,0,0,288,3,949,Driver Inattention/Distraction,False,False,both,102,58.62,0
+10451,2026,Bronx,209,4,442,251,0,62,35,125,True,0,0,0,194,2,318,Driver Inattention/Distraction,False,False,both,105,56.79,0
+10452,2022,Bronx,426,9,429,160,0,36,9,110,False,0,0,0,390,0,765,Driver Inattention/Distraction,False,False,both,73,37.3,0
+10452,2023,Bronx,300,6,335,230,2,41,10,176,False,0,0,1,275,1,926,Driver Inattention/Distraction,False,False,both,70,68.66,1
+10452,2024,Bronx,360,5,389,208,0,57,12,133,False,0,0,0,328,11,512,Driver Inattention/Distraction,False,False,both,83,53.47,0
+10452,2025,Bronx,313,20,457,243,0,50,13,164,False,0,0,0,258,21,1463,Driver Inattention/Distraction,False,False,both,22,53.17,0
+10452,2026,Bronx,287,6,311,154,0,38,8,93,True,0,0,0,263,5,260,Driver Inattention/Distraction,False,False,both,90,49.52,0
+10453,2022,Bronx,450,18,453,263,0,47,22,189,False,0,0,0,399,0,796,Driver Inattention/Distraction,False,False,both,31,58.06,0
+10453,2023,Bronx,326,5,426,260,0,49,16,176,False,0,0,0,285,8,343,Driver Inattention/Distraction,False,False,both,78,61.03,0
+10453,2024,Bronx,392,4,418,288,0,57,20,201,False,0,0,0,354,7,202,Driver Inattention/Distraction,False,False,both,96,68.9,0
+10453,2025,Bronx,310,17,415,274,2,57,18,178,False,1,0,1,245,33,880,Driver Inattention/Distraction,False,False,both,27,66.02,0
+10453,2026,Bronx,306,14,323,170,1,44,14,89,True,1,0,0,267,17,711,Driver Inattention/Distraction,False,False,both,35,52.63,0
+10454,2022,Bronx,329,4,488,222,2,38,18,154,False,0,0,2,312,0,198,Driver Inattention/Distraction,False,False,both,109,45.49,0
+10454,2023,Bronx,257,4,367,186,1,43,24,110,False,0,1,0,233,6,17,Driver Inattention/Distraction,False,False,both,96,50.68,0
+10454,2024,Bronx,199,3,333,208,0,48,28,128,False,0,0,0,181,4,105,Driver Inattention/Distraction,False,False,both,107,62.46,0
+10454,2025,Bronx,217,7,365,250,0,60,20,152,False,0,0,0,193,6,442,Driver Inattention/Distraction,False,False,both,84,68.49,0
+10454,2026,Bronx,185,7,379,215,1,45,19,130,True,1,0,0,166,5,493,Driver Inattention/Distraction,False,False,both,77,56.73,0
+10455,2022,Bronx,322,9,511,292,1,51,32,192,False,0,1,0,302,0,316,Driver Inattention/Distraction,False,False,both,73,57.14,0
+10455,2023,Bronx,211,2,493,303,2,41,40,216,False,0,0,2,194,8,62,Driver Inattention/Distraction,False,False,both,115,61.46,0
+10455,2024,Bronx,236,6,450,324,2,59,36,220,False,1,0,1,207,3,342,Driver Inattention/Distraction,False,False,both,75,72.0,0
+10455,2025,Bronx,266,9,411,279,3,52,27,179,False,1,1,0,234,6,348,Driver Inattention/Distraction,False,False,both,74,67.88,0
+10455,2026,Bronx,228,9,359,218,3,43,16,131,True,1,0,0,200,9,398,Driver Inattention/Distraction,False,False,both,59,60.72,0
+10456,2022,Bronx,409,10,556,301,1,73,31,182,False,0,0,1,368,0,416,Driver Inattention/Distraction,False,False,both,69,54.14,0
+10456,2023,Bronx,376,5,507,268,0,79,27,148,False,0,0,0,340,7,473,Driver Inattention/Distraction,False,False,both,78,52.86,0
+10456,2024,Bronx,458,7,481,303,1,70,26,191,False,1,0,0,422,6,410,Driver Inattention/Distraction,False,False,both,66,62.99,0
+10456,2025,Bronx,430,11,535,317,2,111,31,154,False,2,0,0,375,12,300,Driver Inattention/Distraction,False,False,both,63,59.25,0
+10456,2026,Bronx,328,9,402,235,1,61,39,112,True,1,0,0,305,5,480,Driver Inattention/Distraction,False,False,both,59,58.46,0
+10457,2022,Bronx,425,15,695,333,2,67,37,215,False,0,0,2,383,0,614,Driver Inattention/Distraction,False,False,both,44,47.91,0
+10457,2023,Bronx,366,7,661,400,0,67,25,292,False,0,0,0,318,18,438,Driver Inattention/Distraction,False,False,both,63,60.51,1
+10457,2024,Bronx,472,16,619,354,2,92,38,212,False,0,0,2,392,26,563,Driver Inattention/Distraction,False,False,both,16,57.19,0
+10457,2025,Bronx,431,31,615,337,0,70,33,204,False,0,0,0,333,47,1712,Driver Inattention/Distraction,False,True,both,8,54.8,0
+10457,2026,Bronx,325,14,544,330,1,74,32,190,True,1,0,0,278,23,742,Driver Inattention/Distraction,False,False,both,35,60.66,0
+10458,2022,Bronx,596,19,650,314,2,93,24,172,False,0,0,1,526,0,667,Driver Inattention/Distraction,False,False,both,25,48.31,0
+10458,2023,Bronx,405,5,559,331,1,69,12,229,False,1,0,0,348,13,293,Driver Inattention/Distraction,False,False,both,78,59.21,0
+10458,2024,Bronx,408,6,585,310,2,86,15,200,False,0,0,1,349,14,283,Driver Inattention/Distraction,False,False,both,75,52.99,0
+10458,2025,Bronx,424,20,645,361,0,94,30,207,False,0,0,0,336,37,1501,Driver Inattention/Distraction,False,False,both,22,55.97,0
+10458,2026,Bronx,358,25,498,283,1,72,31,144,True,0,0,1,296,18,1255,Driver Inattention/Distraction,False,False,both,10,56.83,0
+10459,2022,Bronx,305,10,654,308,2,63,25,211,False,2,0,0,281,0,514,Driver Inattention/Distraction,False,False,both,69,47.09,0
+10459,2023,Bronx,246,2,541,284,0,46,18,207,False,0,0,0,230,4,75,Driver Inattention/Distraction,False,False,both,115,52.5,0
+10459,2024,Bronx,250,12,526,336,1,87,31,205,False,1,0,0,217,10,476,Driver Inattention/Distraction,False,False,both,30,63.88,0
+10459,2025,Bronx,260,12,512,314,1,69,31,187,False,0,0,1,222,11,278,Driver Inattention/Distraction,False,False,both,54,61.33,0
+10459,2026,Bronx,206,10,408,314,1,57,16,200,True,1,0,0,180,11,300,Driver Inattention/Distraction,False,False,both,54,76.96,1
+10460,2022,Bronx,355,18,631,325,0,59,20,215,False,0,0,0,327,0,354,Driver Inattention/Distraction,False,False,both,31,51.51,0
+10460,2023,Bronx,175,4,530,311,1,57,23,211,False,0,0,1,155,1,471,Driver Inattention/Distraction,False,False,both,96,58.68,0
+10460,2024,Bronx,264,7,560,308,1,66,20,217,False,1,0,0,233,10,194,Driver Inattention/Distraction,False,False,both,66,55.0,0
+10460,2025,Bronx,293,21,556,355,1,75,33,210,False,1,0,0,235,29,1150,Driver Inattention/Distraction,False,False,both,20,63.85,0
+10460,2026,Bronx,237,16,448,295,0,63,38,159,True,0,0,0,181,28,1128,Driver Inattention/Distraction,False,False,both,28,65.85,0
+10461,2022,Bronx,330,9,524,237,0,53,9,163,False,0,0,0,312,0,173,Driver Inattention/Distraction,False,False,both,73,45.23,0
+10461,2023,Bronx,356,3,458,223,2,52,20,138,False,1,1,0,329,2,0,Driver Inattention/Distraction,False,False,both,104,48.69,0
+10461,2024,Bronx,352,12,432,215,1,46,8,148,False,1,0,0,318,5,14,Driver Inattention/Distraction,False,False,both,30,49.77,0
+10461,2025,Bronx,331,11,422,225,0,58,15,128,False,0,0,0,268,14,113,Driver Inattention/Distraction,False,False,both,63,53.32,0
+10461,2026,Bronx,244,17,391,222,1,36,18,147,True,0,0,0,195,16,698,Driver Inattention/Distraction,False,False,both,25,56.78,0
+10462,2022,Bronx,387,8,557,270,3,54,23,178,False,3,0,0,369,0,191,Driver Inattention/Distraction,False,False,both,84,48.47,0
+10462,2023,Bronx,321,8,502,275,0,69,14,177,False,0,0,0,301,0,51,Driver Inattention/Distraction,False,False,both,52,54.78,0
+10462,2024,Bronx,397,0,458,262,3,59,17,163,False,0,1,2,379,5,0,Driver Inattention/Distraction,False,False,both,148,57.21,0
+10462,2025,Bronx,413,8,414,237,0,63,14,142,False,0,0,0,385,10,127,Driver Inattention/Distraction,False,False,both,80,57.25,0
+10462,2026,Bronx,360,5,382,222,0,54,18,117,True,0,0,0,336,10,220,Driver Inattention/Distraction,False,False,both,97,58.12,0
+10463,2022,Bronx,470,15,445,164,4,46,10,99,False,3,0,1,442,0,584,Driver Inattention/Distraction,False,False,both,44,36.85,0
+10463,2023,Bronx,396,5,399,184,0,36,15,122,False,0,0,0,367,2,53,Driver Inattention/Distraction,False,False,both,78,46.12,0
+10463,2024,Bronx,390,5,386,193,1,51,15,125,False,0,0,1,364,9,80,Driver Inattention/Distraction,False,False,both,83,50.0,0
+10463,2025,Bronx,402,22,448,232,0,55,16,154,False,0,0,0,354,16,576,Driver Inattention/Distraction,False,False,both,14,51.79,0
+10463,2026,Bronx,319,8,367,187,0,34,22,120,True,0,0,0,288,8,380,Driver Inattention/Distraction,False,False,both,67,50.95,0
+10464,2022,Bronx,66,9,46,26,0,4,1,18,False,0,0,0,48,0,4,Driver Inattention/Distraction,False,False,both,73,56.52,0
+10464,2023,Bronx,56,0,64,43,0,4,5,34,False,0,0,0,49,0,0,Driver Inattention/Distraction,False,False,both,151,67.19,0
+10464,2024,Bronx,69,7,52,39,0,2,1,36,False,0,0,0,52,3,9,Driver Inattention/Distraction,False,False,both,66,75.0,0
+10464,2025,Bronx,36,1,36,17,1,5,0,12,False,0,0,0,31,1,2,Failure to Yield Right-of-Way,False,False,both,147,47.22,0
+10464,2026,Bronx,32,0,35,18,0,2,1,15,True,0,0,0,30,0,0,Alcohol Involvement,False,False,both,161,51.43,0
+10465,2022,Bronx,229,8,372,165,1,29,8,120,False,1,0,0,202,0,8,Driver Inattention/Distraction,False,False,both,84,44.35,0
+10465,2023,Bronx,201,14,309,155,0,21,2,126,False,0,0,0,164,3,16,Driver Inattention/Distraction,False,False,both,29,50.16,0
+10465,2024,Bronx,240,6,238,153,1,21,7,120,False,0,0,1,211,2,9,Driver Inattention/Distraction,False,False,both,75,64.29,0
+10465,2025,Bronx,408,14,270,155,1,23,5,113,False,0,0,1,363,6,25,Driver Inattention/Distraction,False,False,both,42,57.41,0
+10465,2026,Bronx,230,6,273,171,0,21,3,140,True,0,0,0,206,6,88,Other Vehicular,False,False,both,90,62.64,0
+10466,2022,Bronx,308,8,666,367,0,74,17,268,False,0,0,0,276,0,48,Driver Inattention/Distraction,False,False,both,84,55.11,0
+10466,2023,Bronx,312,5,532,281,0,58,11,200,False,0,0,0,289,4,35,Driver Inattention/Distraction,False,False,both,78,52.82,0
+10466,2024,Bronx,519,16,474,303,2,53,9,228,False,1,0,1,460,12,40,Driver Inattention/Distraction,False,False,both,16,63.92,0
+10466,2025,Bronx,441,24,476,286,1,54,10,217,False,1,0,0,381,9,322,Driver Inattention/Distraction,False,False,both,13,60.08,0
+10466,2026,Bronx,323,23,430,264,1,63,22,155,True,1,0,0,259,20,207,Driver Inattention/Distraction,False,False,both,13,61.4,0
+10467,2022,Bronx,474,13,740,285,2,87,21,169,False,2,0,0,442,0,596,Driver Inattention/Distraction,False,False,both,53,38.51,0
+10467,2023,Bronx,407,13,604,308,4,59,25,215,False,0,0,4,348,14,450,Driver Inattention/Distraction,False,False,both,32,50.99,0
+10467,2024,Bronx,604,17,620,364,2,91,25,230,False,1,0,1,527,19,378,Driver Inattention/Distraction,False,False,both,13,58.71,0
+10467,2025,Bronx,432,18,636,370,2,100,17,219,False,2,0,0,364,26,403,Driver Inattention/Distraction,False,False,both,24,58.18,0
+10467,2026,Bronx,323,20,506,291,3,71,13,166,True,3,0,0,270,22,1090,Driver Inattention/Distraction,False,False,both,18,57.51,0
+10468,2022,Bronx,398,13,573,265,1,64,20,164,False,0,0,1,361,0,370,Driver Inattention/Distraction,False,False,both,53,46.25,0
+10468,2023,Bronx,296,6,524,295,3,67,22,192,False,1,0,2,260,6,124,Driver Inattention/Distraction,False,False,both,70,56.3,0
+10468,2024,Bronx,329,4,491,318,3,66,26,217,False,0,0,3,282,17,93,Driver Inattention/Distraction,False,False,both,96,64.77,0
+10468,2025,Bronx,323,14,546,329,1,68,24,220,False,1,0,0,270,23,728,Driver Inattention/Distraction,False,False,both,42,60.26,0
+10468,2026,Bronx,301,22,457,298,0,45,19,206,True,0,0,0,244,25,1731,Driver Inattention/Distraction,False,False,both,15,65.21,0
+10469,2022,Bronx,366,16,651,421,2,44,11,352,False,1,1,0,329,0,209,Driver Inattention/Distraction,False,False,both,39,64.67,0
+10469,2023,Bronx,259,13,490,324,2,48,13,252,False,0,0,1,211,12,36,Driver Inattention/Distraction,False,False,both,32,66.12,0
+10469,2024,Bronx,486,16,451,343,1,60,15,260,False,1,0,0,436,11,48,Driver Inattention/Distraction,False,False,both,16,76.05,0
+10469,2025,Bronx,460,16,428,318,1,48,17,233,False,1,0,0,399,14,156,Driver Inattention/Distraction,False,False,both,34,74.3,0
+10469,2026,Bronx,306,14,382,287,2,43,14,193,True,1,0,1,255,10,262,Driver Inattention/Distraction,False,False,both,35,75.13,0
+10470,2022,Bronx,133,3,253,106,0,19,2,80,False,0,0,0,123,0,5,Driver Inattention/Distraction,False,False,both,120,41.9,0
+10470,2023,Bronx,70,0,178,85,1,13,5,63,False,0,0,1,65,1,0,Driver Inattention/Distraction,False,False,both,151,47.75,0
+10470,2024,Bronx,120,9,172,105,1,15,7,80,False,0,1,0,103,5,66,Driver Inattention/Distraction,False,False,both,47,61.05,0
+10470,2025,Bronx,97,6,156,90,0,14,4,64,False,0,0,0,81,4,48,Driver Inattention/Distraction,False,False,both,92,57.69,0
+10470,2026,Bronx,90,13,189,110,0,26,6,69,True,0,0,0,64,5,479,Driver Inattention/Distraction,False,False,both,40,58.2,0
+10471,2022,Bronx,182,4,138,60,0,10,3,47,False,0,0,0,168,0,30,Driver Inattention/Distraction,False,False,both,109,43.48,0
+10471,2023,Bronx,191,3,134,49,0,4,2,40,False,0,0,0,170,1,8,Driver Inattention/Distraction,False,False,both,104,36.57,0
+10471,2024,Bronx,168,3,129,74,0,12,5,55,False,0,0,0,149,2,277,Driver Inattention/Distraction,False,False,both,107,57.36,0
+10471,2025,Bronx,194,5,116,70,0,9,3,56,False,0,0,0,163,4,37,Driver Inattention/Distraction,False,False,both,102,60.34,0
+10471,2026,Bronx,139,8,99,39,2,6,4,23,True,1,0,1,104,5,25,Driver Inattention/Distraction,False,False,both,67,39.39,0
+10472,2022,Bronx,241,3,579,232,4,38,21,152,False,0,1,2,230,0,111,Driver Inattention/Distraction,False,False,both,120,40.07,0
+10472,2023,Bronx,227,5,463,260,1,51,20,170,False,1,0,0,201,3,135,Driver Inattention/Distraction,False,False,both,78,56.16,0
+10472,2024,Bronx,252,1,446,256,1,57,22,166,False,0,1,0,225,4,27,Driver Inattention/Distraction,False,False,both,125,57.4,0
+10472,2025,Bronx,237,5,404,240,1,53,17,153,False,0,0,1,209,4,41,Driver Inattention/Distraction,False,False,both,102,59.41,0
+10472,2026,Bronx,170,3,303,185,0,31,12,115,True,0,0,0,152,1,20,Driver Inattention/Distraction,False,False,both,115,61.06,0
+10473,2022,Bronx,205,9,411,164,1,45,6,95,False,1,0,0,188,0,583,Driver Inattention/Distraction,False,False,both,73,39.9,0
+10473,2023,Bronx,261,6,319,147,3,30,8,97,False,2,0,1,240,4,205,Driver Inattention/Distraction,False,False,both,70,46.08,0
+10473,2024,Bronx,307,6,310,170,1,37,14,108,False,0,0,1,288,3,7,Driver Inattention/Distraction,False,False,both,75,54.84,0
+10473,2025,Bronx,238,10,301,158,0,32,6,95,False,0,0,0,211,4,366,Driver Inattention/Distraction,False,False,both,69,52.49,0
+10473,2026,Bronx,178,11,258,142,0,28,7,76,True,0,0,0,145,6,648,Driver Inattention/Distraction,False,False,both,47,55.04,0
+10474,2022,Bronx,184,2,387,123,2,17,3,101,False,0,0,1,165,0,16,Driver Inattention/Distraction,False,False,both,132,31.78,0
+10474,2023,Bronx,180,1,342,117,1,18,6,91,False,0,1,0,162,4,7,Driver Inattention/Distraction,False,False,both,131,34.21,0
+10474,2024,Bronx,164,1,311,179,3,20,9,149,False,0,0,3,137,15,0,Driver Inattention/Distraction,False,False,both,125,57.56,0
+10474,2025,Bronx,136,2,320,130,1,31,10,86,False,1,0,0,121,3,60,Driver Inattention/Distraction,False,False,both,135,40.62,0
+10474,2026,Bronx,95,0,200,104,0,13,4,80,True,0,0,0,79,3,0,Driver Inattention/Distraction,False,False,both,161,52.0,0
+10475,2022,Bronx,185,7,305,126,0,23,1,100,False,0,0,0,177,0,11,Driver Inattention/Distraction,False,False,both,93,41.31,0
+10475,2023,Bronx,135,2,249,138,0,30,7,99,False,0,0,0,125,2,12,Driver Inattention/Distraction,False,False,both,115,55.42,0
+10475,2024,Bronx,101,2,208,135,1,24,2,105,False,1,0,0,90,3,0,Driver Inattention/Distraction,False,False,both,117,64.9,0
+10475,2025,Bronx,112,4,239,155,1,40,5,106,False,0,0,1,95,0,11,Driver Inattention/Distraction,False,False,both,112,64.85,0
+10475,2026,Bronx,108,11,184,107,1,19,7,73,True,1,0,0,93,1,82,Driver Inattention/Distraction,False,False,both,47,58.15,0
+11001,2022,Queens,35,1,27,10,0,1,1,8,False,0,0,0,26,0,1,Failure to Yield Right-of-Way,False,False,both,149,37.04,0
+11001,2023,Queens,20,2,29,23,0,2,1,20,False,0,0,0,12,3,2,Failure to Yield Right-of-Way,False,False,both,115,79.31,0
+11001,2024,Queens,56,4,24,17,0,1,1,15,False,0,0,0,43,2,1,Driver Inattention/Distraction,False,False,both,96,70.83,0
+11001,2025,Queens,53,5,26,16,0,1,1,13,False,0,0,0,43,2,3,Driver Inattention/Distraction,False,False,both,102,61.54,0
+11001,2026,Queens,46,4,17,14,0,1,1,12,True,0,0,0,38,2,1,Driver Inattention/Distraction,False,False,both,105,82.35,0
+11004,2022,Queens,168,9,116,51,0,6,0,44,False,0,0,0,141,0,6,Driver Inattention/Distraction,False,False,both,73,43.97,0
+11004,2023,Queens,115,5,109,56,0,8,4,43,False,0,0,0,91,1,142,Driver Inattention/Distraction,False,False,both,78,51.38,0
+11004,2024,Queens,152,5,129,72,0,11,5,56,False,0,0,0,128,5,3,Driver Inattention/Distraction,False,False,both,83,55.81,0
+11004,2025,Queens,144,4,122,63,0,12,0,50,False,0,0,0,124,4,2,Driver Inattention/Distraction,False,False,both,112,51.64,0
+11004,2026,Queens,120,8,89,47,0,12,2,33,True,0,0,0,91,5,6,Driver Inattention/Distraction,False,False,both,67,52.81,0
+11005,2022,Queens,30,0,4,4,0,0,0,4,False,0,0,0,30,0,0,Driver Inattention/Distraction,False,False,both,164,100.0,0
+11005,2023,Queens,31,0,3,3,0,1,0,2,False,0,0,0,29,0,0,Animals Action,False,False,both,151,100.0,0
+11005,2024,Queens,20,1,8,5,0,0,0,5,False,0,0,0,19,0,0,Driver Inattention/Distraction,False,False,both,125,62.5,0
+11005,2025,Queens,39,0,6,3,0,0,0,3,False,0,0,0,37,0,0,Driver Inattention/Distraction,False,False,both,159,50.0,0
+11005,2026,Queens,30,0,3,1,0,0,0,1,True,0,0,0,29,0,0,,False,False,both,161,33.33,0
+11040,2022,Queens,29,2,18,4,0,0,0,4,False,0,0,0,20,0,1,Driver Inattention/Distraction,False,False,both,132,22.22,0
+11040,2023,Queens,22,2,15,1,0,0,0,1,False,0,0,0,16,1,0,Backing Unsafely,False,False,both,115,6.67,0
+11040,2024,Queens,34,0,17,10,0,1,0,9,False,0,0,0,32,0,0,Following Too Closely,False,False,both,148,58.82,0
+11040,2025,Queens,29,2,20,5,0,3,0,2,False,0,0,0,25,1,1,Driver Inattention/Distraction,False,False,both,135,25.0,0
+11040,2026,Queens,36,2,15,2,0,1,0,1,True,0,0,0,28,1,0,Other Vehicular,False,False,both,122,13.33,0
+11101,2022,Queens,1116,19,833,394,2,60,71,223,False,0,0,1,1040,0,1035,Driver Inattention/Distraction,False,True,both,25,47.3,0
+11101,2023,Queens,1020,13,823,461,2,61,75,294,False,0,0,1,922,17,527,Driver Inattention/Distraction,False,True,both,32,56.01,0
+11101,2024,Queens,774,9,830,438,2,69,72,269,False,0,2,0,691,25,531,Driver Inattention/Distraction,False,False,both,47,52.77,0
+11101,2025,Queens,842,27,823,414,1,60,69,241,False,1,0,0,709,35,2556,Driver Inattention/Distraction,False,False,both,12,50.3,0
+11101,2026,Queens,749,31,725,345,1,59,58,171,True,0,0,0,633,33,2256,Driver Inattention/Distraction,False,True,both,5,47.59,0
+11102,2022,Queens,306,18,201,62,0,14,8,32,False,0,0,0,276,0,2878,Driver Inattention/Distraction,False,False,both,31,30.85,0
+11102,2023,Queens,289,9,239,110,1,24,14,70,False,0,1,0,265,6,138,Driver Inattention/Distraction,False,False,both,47,46.03,0
+11102,2024,Queens,275,8,260,127,0,34,10,79,False,0,0,0,243,16,118,Driver Inattention/Distraction,False,False,both,58,48.85,0
+11102,2025,Queens,243,8,239,114,0,25,19,65,False,0,0,0,211,13,307,Driver Inattention/Distraction,False,False,both,80,47.7,0
+11102,2026,Queens,196,15,180,80,1,21,13,30,True,0,0,0,149,19,677,Failure to Yield Right-of-Way,False,False,both,31,44.44,0
+11103,2022,Queens,333,5,335,135,0,27,17,73,False,0,0,0,305,0,88,Driver Inattention/Distraction,False,False,both,100,40.3,0
+11103,2023,Queens,206,5,345,179,2,33,17,120,False,1,0,1,182,2,15,Driver Inattention/Distraction,False,False,both,78,51.88,0
+11103,2024,Queens,257,1,348,166,1,41,15,102,False,0,0,1,236,6,7,Driver Inattention/Distraction,False,False,both,125,47.7,0
+11103,2025,Queens,255,6,339,161,0,44,21,87,False,0,0,0,208,11,92,Failure to Yield Right-of-Way,False,False,both,92,47.49,0
+11103,2026,Queens,184,4,253,110,0,30,13,53,True,0,0,0,155,5,209,Failure to Yield Right-of-Way,False,False,both,105,43.48,0
+11104,2022,Queens,164,1,167,103,0,20,19,54,False,0,0,0,160,0,63,Driver Inattention/Distraction,False,False,both,149,61.68,0
+11104,2023,Queens,119,1,151,86,0,23,13,33,False,0,0,0,113,1,29,Driver Inattention/Distraction,False,False,both,131,56.95,0
+11104,2024,Queens,171,0,162,92,1,21,20,46,False,0,1,0,166,0,0,Driver Inattention/Distraction,False,False,both,148,56.79,0
+11104,2025,Queens,137,0,140,87,0,21,15,35,False,0,0,0,128,3,0,Driver Inattention/Distraction,False,False,both,159,62.14,0
+11104,2026,Queens,95,2,94,59,0,9,12,25,True,0,0,0,86,3,33,Driver Inattention/Distraction,False,False,both,122,62.77,0
+11105,2022,Queens,325,4,224,78,0,14,7,52,False,0,0,0,299,0,33,Driver Inattention/Distraction,False,False,both,109,34.82,0
+11105,2023,Queens,312,3,198,70,1,18,6,42,False,0,1,0,278,8,0,Driver Inattention/Distraction,False,False,both,104,35.35,0
+11105,2024,Queens,331,6,219,90,1,19,10,60,False,0,0,1,289,14,132,Failure to Yield Right-of-Way,False,False,both,75,41.1,0
+11105,2025,Queens,294,6,204,93,5,20,5,58,False,3,0,1,257,5,47,Driver Inattention/Distraction,False,False,both,92,45.59,0
+11105,2026,Queens,198,1,151,63,1,17,10,25,True,0,0,1,175,4,26,Failure to Yield Right-of-Way,False,False,both,138,41.72,0
+11106,2022,Queens,296,3,292,150,0,33,19,89,False,0,0,0,277,0,368,Driver Inattention/Distraction,False,False,both,120,51.37,0
+11106,2023,Queens,277,5,307,167,0,38,24,92,False,0,0,0,246,2,94,Driver Inattention/Distraction,False,False,both,78,54.4,0
+11106,2024,Queens,299,2,339,211,1,50,21,132,False,0,0,1,285,3,335,Failure to Yield Right-of-Way,False,False,both,117,62.24,0
+11106,2025,Queens,294,8,291,167,0,38,31,78,False,0,0,0,256,13,127,Failure to Yield Right-of-Way,False,False,both,80,57.39,0
+11106,2026,Queens,153,6,212,122,1,25,25,51,True,1,0,0,124,15,250,Failure to Yield Right-of-Way,False,False,both,90,57.55,0
+11109,2022,Queens,8,0,6,1,0,1,0,0,False,0,0,0,7,0,0,Driver Inattention/Distraction,False,False,both,164,16.67,0
+11109,2023,Queens,10,0,7,1,0,0,1,0,False,0,0,0,10,0,0,Driver Inattention/Distraction,False,False,both,151,14.29,0
+11109,2024,Queens,20,0,5,0,0,0,0,0,False,0,0,0,20,0,0,Driver Inattention/Distraction,False,False,both,148,0.0,0
+11109,2025,Queens,11,0,9,4,0,1,0,2,False,0,0,0,11,0,0,Driver Inattention/Distraction,False,False,both,159,44.44,0
+11109,2026,Queens,10,0,9,3,0,1,1,1,True,0,0,0,10,0,0,Driver Inattention/Distraction,False,False,both,161,33.33,0
+11201,2022,Brooklyn,1653,7,675,254,1,65,53,123,False,0,0,1,1575,0,892,Driver Inattention/Distraction,False,True,both,93,37.63,0
+11201,2023,Brooklyn,1369,6,731,287,2,65,57,148,False,1,0,1,1281,4,121,Driver Inattention/Distraction,False,True,both,70,39.26,0
+11201,2024,Brooklyn,1205,9,743,299,1,60,56,173,False,0,0,0,1119,8,829,Driver Inattention/Distraction,False,True,both,47,40.24,1
+11201,2025,Brooklyn,1236,2,988,334,0,87,53,174,False,0,0,0,1151,8,164,Driver Inattention/Distraction,False,True,both,135,33.81,0
+11201,2026,Brooklyn,878,8,766,320,2,64,51,172,True,1,0,0,804,6,553,Driver Inattention/Distraction,False,True,both,67,41.78,0
+11203,2022,Brooklyn,376,14,998,575,0,88,48,417,False,0,0,0,338,0,813,Driver Inattention/Distraction,False,False,both,48,57.62,1
+11203,2023,Brooklyn,280,5,950,612,0,90,32,462,False,0,0,0,241,7,195,Driver Inattention/Distraction,False,False,both,78,64.42,0
+11203,2024,Brooklyn,484,4,915,613,1,101,39,452,False,1,0,0,440,5,17,Driver Inattention/Distraction,False,False,both,96,66.99,0
+11203,2025,Brooklyn,436,13,962,705,3,93,36,544,False,2,0,0,382,13,494,Driver Inattention/Distraction,False,False,both,52,73.28,0
+11203,2026,Brooklyn,302,12,714,466,0,70,35,327,True,0,0,0,244,14,498,Driver Inattention/Distraction,False,False,both,44,65.27,0
+11204,2022,Brooklyn,510,13,449,234,3,52,45,118,False,1,0,1,468,0,16,Driver Inattention/Distraction,False,False,both,53,52.12,0
+11204,2023,Brooklyn,420,12,509,270,2,69,50,128,False,1,0,1,369,5,15,Driver Inattention/Distraction,False,False,both,39,53.05,0
+11204,2024,Brooklyn,462,11,485,272,2,90,45,118,False,0,0,2,403,20,38,Driver Inattention/Distraction,False,False,both,36,56.08,0
+11204,2025,Brooklyn,432,16,463,280,2,82,36,130,False,2,0,0,365,15,118,Driver Inattention/Distraction,False,False,both,34,60.48,0
+11204,2026,Brooklyn,351,9,379,228,2,60,37,100,True,0,0,0,307,6,21,Driver Inattention/Distraction,False,False,both,59,60.16,0
+11205,2022,Brooklyn,652,19,354,142,0,23,30,77,False,0,0,0,570,0,345,Driver Inattention/Distraction,False,False,both,25,40.11,0
+11205,2023,Brooklyn,519,13,333,149,1,19,45,76,False,1,0,0,447,7,63,Driver Inattention/Distraction,False,False,both,32,44.74,0
+11205,2024,Brooklyn,485,17,399,217,2,38,57,106,False,2,0,0,418,14,146,Driver Inattention/Distraction,False,False,both,13,54.39,0
+11205,2025,Brooklyn,486,12,511,228,2,36,51,110,False,1,0,0,428,7,100,Driver Inattention/Distraction,False,False,both,54,44.62,0
+11205,2026,Brooklyn,417,18,348,165,0,31,42,70,True,0,0,0,340,20,727,Driver Inattention/Distraction,False,False,both,23,47.41,0
+11206,2022,Brooklyn,709,10,797,314,2,64,66,149,False,1,0,1,661,0,295,Driver Inattention/Distraction,False,False,both,69,39.4,0
+11206,2023,Brooklyn,605,16,772,362,1,79,60,188,False,1,0,0,531,10,171,Driver Inattention/Distraction,False,False,both,27,46.89,0
+11206,2024,Brooklyn,511,14,711,384,4,85,69,207,False,1,2,1,419,20,67,Driver Inattention/Distraction,False,False,both,26,54.01,0
+11206,2025,Brooklyn,530,14,876,482,2,116,84,244,False,0,1,0,455,15,467,Driver Inattention/Distraction,False,False,both,42,55.02,0
+11206,2026,Brooklyn,441,15,657,326,1,85,58,146,True,1,0,0,374,17,482,Driver Inattention/Distraction,False,False,both,31,49.62,0
+11207,2022,Brooklyn,743,23,1763,957,2,159,40,726,False,1,1,0,678,0,1407,Driver Inattention/Distraction,False,True,both,19,54.28,0
+11207,2023,Brooklyn,584,26,1593,990,1,155,44,754,False,1,0,0,504,10,1055,Driver Inattention/Distraction,False,True,both,15,62.15,0
+11207,2024,Brooklyn,618,9,1588,1019,4,158,58,774,False,3,0,1,545,18,238,Driver Inattention/Distraction,False,True,both,47,64.17,1
+11207,2025,Brooklyn,614,22,1528,959,4,161,52,713,False,3,0,1,508,27,530,Driver Inattention/Distraction,False,True,both,14,62.76,1
+11207,2026,Brooklyn,441,27,1059,646,3,99,42,462,True,2,0,0,356,22,1460,Driver Inattention/Distraction,False,True,both,9,61.0,0
+11208,2022,Brooklyn,477,27,1100,596,0,92,36,452,False,0,0,0,438,0,170,Driver Inattention/Distraction,False,False,both,12,54.18,0
+11208,2023,Brooklyn,394,14,1121,625,1,105,44,440,False,0,0,1,342,16,36,Driver Inattention/Distraction,False,True,both,29,55.75,1
+11208,2024,Brooklyn,517,14,1036,584,0,114,25,426,False,0,0,0,463,16,448,Driver Inattention/Distraction,False,False,both,26,56.37,0
+11208,2025,Brooklyn,423,29,1025,615,2,109,29,447,False,0,0,2,360,11,635,Driver Inattention/Distraction,False,False,both,9,60.0,0
+11208,2026,Brooklyn,281,15,672,345,3,79,21,222,True,1,0,1,236,7,713,Driver Inattention/Distraction,False,False,both,31,51.34,0
+11209,2022,Brooklyn,587,2,407,161,0,32,17,95,False,0,0,0,558,0,4,Driver Inattention/Distraction,False,False,both,132,39.56,0
+11209,2023,Brooklyn,488,4,407,179,1,53,15,94,False,0,0,1,462,3,21,Driver Inattention/Distraction,False,False,both,96,43.98,0
+11209,2024,Brooklyn,513,4,346,168,0,36,30,94,False,0,0,0,480,10,5,Driver Inattention/Distraction,False,False,both,96,48.55,0
+11209,2025,Brooklyn,510,4,381,215,0,47,29,115,False,0,0,0,468,16,12,Driver Inattention/Distraction,False,False,both,112,56.43,0
+11209,2026,Brooklyn,355,8,298,151,0,34,17,90,True,0,0,0,326,8,40,Driver Inattention/Distraction,False,False,both,67,50.67,0
+11210,2022,Brooklyn,432,13,576,330,1,78,25,212,False,1,0,0,402,0,155,Driver Inattention/Distraction,False,False,both,53,57.29,0
+11210,2023,Brooklyn,259,9,514,341,0,64,35,226,False,0,0,0,222,12,126,Driver Inattention/Distraction,False,False,both,47,66.34,0
+11210,2024,Brooklyn,359,5,470,329,0,75,32,210,False,0,0,0,326,11,53,Driver Inattention/Distraction,False,False,both,83,70.0,0
+11210,2025,Brooklyn,320,7,543,353,1,79,22,224,False,0,0,1,272,16,114,Driver Inattention/Distraction,False,False,both,84,65.01,0
+11210,2026,Brooklyn,237,10,348,243,2,51,18,152,True,1,0,0,186,17,168,Driver Inattention/Distraction,False,False,both,54,69.83,0
+11211,2022,Brooklyn,939,24,860,325,0,80,69,142,False,0,0,0,854,0,611,Driver Inattention/Distraction,False,False,both,15,37.79,0
+11211,2023,Brooklyn,656,17,777,392,2,67,72,222,False,1,1,0,578,12,118,Driver Inattention/Distraction,False,False,both,24,50.45,0
+11211,2024,Brooklyn,799,13,672,285,0,52,65,147,False,0,0,0,708,20,120,Driver Inattention/Distraction,False,False,both,29,42.41,0
+11211,2025,Brooklyn,740,11,648,281,5,53,76,121,False,3,0,1,642,19,512,Driver Inattention/Distraction,False,False,both,63,43.36,0
+11211,2026,Brooklyn,562,11,497,265,1,50,49,133,True,1,0,0,482,17,278,Driver Inattention/Distraction,False,False,both,47,53.32,0
+11212,2022,Brooklyn,538,13,1130,581,0,114,40,404,False,0,0,0,500,0,471,Driver Inattention/Distraction,False,False,both,53,51.42,0
+11212,2023,Brooklyn,418,3,989,568,1,113,34,401,False,0,0,1,383,3,7,Driver Inattention/Distraction,False,False,both,104,57.43,0
+11212,2024,Brooklyn,722,5,980,573,2,121,33,402,False,1,0,0,670,6,324,Driver Inattention/Distraction,False,False,both,83,58.47,0
+11212,2025,Brooklyn,575,14,972,626,3,150,40,408,False,2,0,1,498,17,689,Driver Inattention/Distraction,False,False,both,42,64.4,0
+11212,2026,Brooklyn,392,14,764,443,3,89,33,278,True,3,0,0,327,20,534,Driver Inattention/Distraction,False,False,both,35,57.98,0
+11213,2022,Brooklyn,369,6,453,269,3,41,24,196,False,2,0,0,336,0,59,Driver Inattention/Distraction,False,False,both,95,59.38,0
+11213,2023,Brooklyn,317,3,418,229,1,52,14,152,False,0,0,0,282,4,28,Driver Inattention/Distraction,False,False,both,104,54.78,0
+11213,2024,Brooklyn,383,1,539,298,2,60,32,195,False,0,0,2,363,2,4,Driver Inattention/Distraction,False,False,both,125,55.29,0
+11213,2025,Brooklyn,286,5,800,446,2,103,31,281,False,2,0,0,256,5,74,Driver Inattention/Distraction,False,False,both,102,55.75,1
+11213,2026,Brooklyn,201,4,597,343,0,64,25,228,True,0,0,0,173,3,64,Driver Inattention/Distraction,False,False,both,105,57.45,0
+11214,2022,Brooklyn,570,9,427,146,1,43,16,69,False,1,0,0,532,0,31,Driver Inattention/Distraction,False,False,both,73,34.19,0
+11214,2023,Brooklyn,498,13,492,225,2,55,32,120,False,2,0,0,457,9,80,Driver Inattention/Distraction,False,False,both,32,45.73,0
+11214,2024,Brooklyn,500,11,571,310,0,97,37,157,False,0,0,0,447,19,36,Driver Inattention/Distraction,False,False,both,36,54.29,0
+11214,2025,Brooklyn,482,14,637,339,1,84,20,195,False,1,0,0,427,13,110,Driver Inattention/Distraction,False,False,both,42,53.22,0
+11214,2026,Brooklyn,315,10,484,262,3,49,30,156,True,2,0,0,270,8,33,Driver Inattention/Distraction,False,False,both,54,54.13,0
+11215,2022,Brooklyn,1253,18,677,292,0,62,87,120,False,0,0,0,1148,0,1736,Driver Inattention/Distraction,False,True,both,31,43.13,0
+11215,2023,Brooklyn,944,7,616,296,1,45,77,145,False,0,1,0,863,7,18,Driver Inattention/Distraction,False,False,both,63,48.05,0
+11215,2024,Brooklyn,1025,9,509,275,0,49,67,144,False,0,0,0,921,20,258,Driver Inattention/Distraction,False,False,both,47,54.03,0
+11215,2025,Brooklyn,998,14,502,242,1,41,56,114,False,0,0,1,870,35,257,Driver Inattention/Distraction,False,True,both,42,48.21,0
+11215,2026,Brooklyn,704,19,404,181,0,32,46,76,True,0,0,0,597,24,702,Driver Inattention/Distraction,False,False,both,22,44.8,0
+11216,2022,Brooklyn,567,12,247,119,1,22,15,72,False,0,0,1,512,0,340,Driver Inattention/Distraction,False,False,both,61,48.18,0
+11216,2023,Brooklyn,465,7,273,157,3,34,21,88,False,1,0,2,411,10,45,Driver Inattention/Distraction,False,False,both,63,57.51,0
+11216,2024,Brooklyn,478,0,323,198,1,46,28,118,False,1,0,0,422,15,0,Driver Inattention/Distraction,False,False,both,148,61.3,0
+11216,2025,Brooklyn,486,11,659,428,0,82,59,253,False,0,0,0,424,6,325,Driver Inattention/Distraction,False,False,both,63,64.95,1
+11216,2026,Brooklyn,347,9,431,293,1,29,37,208,True,0,0,0,282,4,171,Driver Inattention/Distraction,False,False,both,59,67.98,0
+11217,2022,Brooklyn,915,13,577,251,1,43,48,142,False,1,0,0,836,0,1215,Driver Inattention/Distraction,False,False,both,53,43.5,0
+11217,2023,Brooklyn,662,5,618,314,1,66,62,157,False,1,0,0,598,6,376,Driver Inattention/Distraction,False,False,both,78,50.81,0
+11217,2024,Brooklyn,601,7,626,319,2,52,57,194,False,1,1,0,544,7,136,Driver Inattention/Distraction,False,False,both,66,50.96,0
+11217,2025,Brooklyn,766,14,651,319,2,69,44,176,False,0,0,1,686,12,1347,Driver Inattention/Distraction,False,False,both,42,49.0,0
+11217,2026,Brooklyn,594,10,528,297,0,47,53,172,True,0,0,0,522,14,665,Driver Inattention/Distraction,False,False,both,54,56.25,0
+11218,2022,Brooklyn,422,14,549,273,2,64,51,137,False,2,0,0,376,0,393,Driver Inattention/Distraction,False,False,both,48,49.73,0
+11218,2023,Brooklyn,374,5,540,299,3,75,46,156,False,1,1,1,311,12,38,Driver Inattention/Distraction,False,False,both,78,55.37,0
+11218,2024,Brooklyn,409,8,536,311,1,64,47,179,False,1,0,0,349,17,35,Driver Inattention/Distraction,False,False,both,58,58.02,0
+11218,2025,Brooklyn,386,12,519,334,1,69,32,198,False,1,0,0,325,16,99,Driver Inattention/Distraction,False,False,both,54,64.35,0
+11218,2026,Brooklyn,325,8,355,206,0,45,29,106,True,0,0,0,279,7,27,Driver Inattention/Distraction,False,False,both,67,58.03,0
+11219,2022,Brooklyn,526,25,525,274,2,75,58,99,False,0,0,0,466,0,126,Driver Inattention/Distraction,False,False,both,14,52.19,0
+11219,2023,Brooklyn,488,23,500,244,2,64,43,102,False,2,0,0,406,12,58,Driver Inattention/Distraction,False,True,both,18,48.8,0
+11219,2024,Brooklyn,453,8,530,332,1,107,51,146,False,1,0,0,378,27,19,Driver Inattention/Distraction,False,False,both,58,62.64,0
+11219,2025,Brooklyn,544,29,516,285,0,80,39,124,False,0,0,0,437,38,150,Driver Inattention/Distraction,False,False,both,9,55.23,0
+11219,2026,Brooklyn,399,23,390,244,0,78,27,103,True,0,0,0,304,30,119,Driver Inattention/Distraction,False,False,both,13,62.56,0
+11220,2022,Brooklyn,871,12,639,310,1,93,49,141,False,1,0,0,801,0,602,Driver Inattention/Distraction,False,False,both,61,48.51,0
+11220,2023,Brooklyn,719,5,801,409,3,91,77,187,False,1,0,2,660,5,26,Driver Inattention/Distraction,False,False,both,78,51.06,0
+11220,2024,Brooklyn,738,2,765,445,5,122,62,229,False,3,2,0,675,15,4,Driver Inattention/Distraction,False,False,both,117,58.17,0
+11220,2025,Brooklyn,698,6,721,397,4,99,56,177,False,3,0,0,625,4,47,Driver Inattention/Distraction,False,False,both,92,55.06,0
+11220,2026,Brooklyn,547,1,526,282,2,73,33,133,True,1,0,0,486,5,0,Driver Inattention/Distraction,False,False,both,138,53.61,0
+11221,2022,Brooklyn,715,15,590,266,2,41,42,159,False,0,0,0,651,0,616,Driver Inattention/Distraction,False,False,both,44,45.08,0
+11221,2023,Brooklyn,474,7,562,275,0,50,37,163,False,0,0,0,427,8,35,Driver Inattention/Distraction,False,False,both,63,48.93,0
+11221,2024,Brooklyn,571,9,579,303,3,51,34,209,False,0,1,2,500,11,81,Driver Inattention/Distraction,False,False,both,47,52.33,0
+11221,2025,Brooklyn,544,17,732,413,2,70,51,258,False,2,0,0,474,4,496,Driver Inattention/Distraction,False,False,both,27,56.42,0
+11221,2026,Brooklyn,340,12,548,289,0,46,42,178,True,0,0,0,284,8,518,Driver Inattention/Distraction,False,False,both,44,52.74,0
+11222,2022,Brooklyn,853,17,631,191,1,39,23,114,False,0,0,1,767,0,1140,Driver Inattention/Distraction,False,False,both,35,30.27,0
+11222,2023,Brooklyn,692,12,512,154,2,21,27,95,False,0,1,1,598,10,73,Driver Inattention/Distraction,False,False,both,39,30.08,0
+11222,2024,Brooklyn,647,10,514,179,1,30,40,100,False,1,0,0,562,11,28,Driver Inattention/Distraction,False,False,both,41,34.82,0
+11222,2025,Brooklyn,588,15,513,193,1,29,41,103,False,1,0,0,472,11,2215,Driver Inattention/Distraction,False,False,both,39,37.62,0
+11222,2026,Brooklyn,430,9,385,121,0,20,25,58,True,0,0,0,361,9,245,Driver Inattention/Distraction,False,False,both,59,31.43,0
+11223,2022,Brooklyn,551,13,499,275,0,66,32,159,False,0,0,0,472,0,55,Driver Inattention/Distraction,False,False,both,53,55.11,0
+11223,2023,Brooklyn,549,16,609,337,0,72,44,199,False,0,0,0,464,14,19,Driver Inattention/Distraction,False,False,both,27,55.34,0
+11223,2024,Brooklyn,456,12,592,384,1,81,36,236,False,1,0,0,371,26,19,Driver Inattention/Distraction,False,False,both,30,64.86,1
+11223,2025,Brooklyn,479,17,583,368,3,74,32,217,False,3,0,0,384,25,103,Driver Inattention/Distraction,False,False,both,27,63.12,0
+11223,2026,Brooklyn,324,5,441,280,1,53,23,177,True,0,0,1,261,12,191,Driver Inattention/Distraction,False,False,both,97,63.49,0
+11224,2022,Brooklyn,270,8,221,85,0,24,6,51,False,0,0,0,235,0,223,Driver Inattention/Distraction,False,False,both,84,38.46,0
+11224,2023,Brooklyn,235,3,234,105,1,21,15,61,False,1,0,0,216,2,434,Driver Inattention/Distraction,False,False,both,104,44.87,0
+11224,2024,Brooklyn,291,7,294,132,0,40,12,75,False,0,0,0,266,3,484,Driver Inattention/Distraction,False,False,both,66,44.9,0
+11224,2025,Brooklyn,224,1,368,200,1,48,18,119,False,1,0,0,203,4,160,Driver Inattention/Distraction,False,False,both,147,54.35,0
+11224,2026,Brooklyn,165,13,273,145,0,37,12,66,True,0,0,0,125,3,1516,Driver Inattention/Distraction,False,False,both,40,53.11,0
+11225,2022,Brooklyn,386,8,441,231,0,35,36,144,False,0,0,0,357,0,503,Driver Inattention/Distraction,False,False,both,84,52.38,0
+11225,2023,Brooklyn,287,8,395,220,1,36,26,140,False,0,0,1,256,6,57,Driver Inattention/Distraction,False,False,both,52,55.7,0
+11225,2024,Brooklyn,315,4,421,214,0,35,22,150,False,0,0,0,278,11,71,Driver Inattention/Distraction,False,False,both,96,50.83,0
+11225,2025,Brooklyn,372,14,480,249,1,43,30,153,False,1,0,0,334,9,943,Driver Inattention/Distraction,False,False,both,42,51.88,0
+11225,2026,Brooklyn,231,7,360,241,0,28,33,155,True,0,0,0,194,10,250,Driver Inattention/Distraction,False,False,both,77,66.94,0
+11226,2022,Brooklyn,580,19,856,485,2,110,60,279,False,1,1,0,535,0,1543,Driver Inattention/Distraction,False,False,both,25,56.66,0
+11226,2023,Brooklyn,431,8,913,626,2,104,91,391,False,1,1,0,374,7,185,Driver Inattention/Distraction,False,False,both,52,68.57,0
+11226,2024,Brooklyn,456,5,899,610,3,129,60,389,False,3,0,0,414,7,93,Driver Inattention/Distraction,False,False,both,83,67.85,0
+11226,2025,Brooklyn,392,7,774,468,0,102,51,279,False,0,0,0,355,18,443,Driver Inattention/Distraction,False,False,both,84,60.47,0
+11226,2026,Brooklyn,362,11,698,439,1,100,56,240,True,1,0,0,311,20,499,Driver Inattention/Distraction,False,False,both,47,62.89,0
+11228,2022,Brooklyn,340,5,280,120,2,23,12,74,False,1,0,1,318,0,7,Driver Inattention/Distraction,False,False,both,100,42.86,0
+11228,2023,Brooklyn,307,9,323,158,1,20,13,111,False,1,0,0,282,5,25,Driver Inattention/Distraction,False,False,both,47,48.92,0
+11228,2024,Brooklyn,254,1,276,176,1,29,16,119,False,1,0,0,244,1,1,Driver Inattention/Distraction,False,False,both,125,63.77,0
+11228,2025,Brooklyn,288,0,288,166,1,28,13,104,False,1,0,0,263,7,0,Driver Inattention/Distraction,False,False,both,159,57.64,0
+11228,2026,Brooklyn,214,7,230,149,1,26,20,89,True,0,0,0,195,3,44,Driver Inattention/Distraction,False,False,both,77,64.78,0
+11229,2022,Brooklyn,422,16,519,309,2,80,33,180,False,2,0,0,386,0,197,Driver Inattention/Distraction,False,False,both,39,59.54,0
+11229,2023,Brooklyn,344,5,503,314,3,82,32,183,False,2,1,0,304,13,177,Driver Inattention/Distraction,False,False,both,78,62.43,0
+11229,2024,Brooklyn,420,8,529,381,2,86,36,235,False,1,0,1,377,12,43,Driver Inattention/Distraction,False,False,both,58,72.02,0
+11229,2025,Brooklyn,417,9,524,374,2,96,29,217,False,2,0,0,359,11,83,Driver Inattention/Distraction,False,False,both,74,71.37,0
+11229,2026,Brooklyn,307,4,345,253,0,48,19,168,True,0,0,0,262,15,200,Driver Inattention/Distraction,False,False,both,105,73.33,0
+11230,2022,Brooklyn,429,13,570,322,2,85,35,181,False,0,0,2,373,0,33,Driver Inattention/Distraction,False,False,both,53,56.49,0
+11230,2023,Brooklyn,439,9,565,365,4,89,51,206,False,3,1,0,370,16,58,Driver Inattention/Distraction,False,False,both,47,64.6,0
+11230,2024,Brooklyn,352,3,633,406,2,86,45,248,False,1,1,0,304,16,19,Driver Inattention/Distraction,False,False,both,107,64.14,0
+11230,2025,Brooklyn,329,10,538,359,4,91,34,211,False,1,0,1,278,13,66,Driver Inattention/Distraction,False,False,both,69,66.73,0
+11230,2026,Brooklyn,252,3,483,297,0,66,16,180,True,0,0,0,206,13,13,Driver Inattention/Distraction,False,False,both,115,61.49,0
+11231,2022,Brooklyn,778,9,349,111,0,26,22,55,False,0,0,0,696,0,485,Driver Inattention/Distraction,False,False,both,73,31.81,0
+11231,2023,Brooklyn,571,10,346,120,0,21,20,68,False,0,0,0,492,9,16,Driver Inattention/Distraction,False,False,both,43,34.68,0
+11231,2024,Brooklyn,548,10,306,124,1,22,24,76,False,1,0,0,485,2,906,Driver Inattention/Distraction,False,False,both,41,40.52,0
+11231,2025,Brooklyn,536,12,345,109,0,22,17,66,False,0,0,0,449,18,313,Driver Inattention/Distraction,False,False,both,54,31.59,0
+11231,2026,Brooklyn,458,7,285,95,0,14,26,47,True,0,0,0,371,18,327,Driver Inattention/Distraction,False,False,both,77,33.33,0
+11232,2022,Brooklyn,494,5,371,218,1,34,61,97,False,0,0,0,453,0,15,Driver Inattention/Distraction,False,False,both,100,58.76,0
+11232,2023,Brooklyn,354,5,426,207,1,29,54,94,False,0,0,0,304,12,0,Driver Inattention/Distraction,False,False,both,78,48.59,0
+11232,2024,Brooklyn,348,4,421,238,0,26,52,137,False,0,0,0,291,10,34,Driver Inattention/Distraction,False,False,both,96,56.53,0
+11232,2025,Brooklyn,312,1,395,236,2,42,39,124,False,2,0,0,264,3,0,Driver Inattention/Distraction,False,False,both,147,59.75,0
+11232,2026,Brooklyn,267,5,275,186,0,30,29,110,True,0,0,0,197,6,33,Driver Inattention/Distraction,False,False,both,97,67.64,0
+11233,2022,Brooklyn,594,8,843,401,2,63,31,290,False,2,0,0,562,0,424,Driver Inattention/Distraction,False,False,both,84,47.57,0
+11233,2023,Brooklyn,426,2,756,434,1,79,29,314,False,0,1,0,385,7,27,Driver Inattention/Distraction,False,False,both,115,57.41,0
+11233,2024,Brooklyn,550,9,730,391,0,81,27,271,False,0,0,0,502,5,102,Driver Inattention/Distraction,False,False,both,47,53.56,0
+11233,2025,Brooklyn,446,18,758,399,0,91,26,259,False,0,0,0,385,15,590,Driver Inattention/Distraction,False,False,both,24,52.64,0
+11233,2026,Brooklyn,321,8,667,391,1,77,24,263,True,0,0,1,289,3,400,Driver Inattention/Distraction,False,False,both,67,58.62,0
+11234,2022,Brooklyn,423,6,996,577,3,83,28,451,False,1,1,1,389,0,5,Driver Inattention/Distraction,False,False,both,95,57.93,0
+11234,2023,Brooklyn,329,9,921,540,0,92,28,405,False,0,0,0,290,4,7,Driver Inattention/Distraction,False,False,both,47,58.63,0
+11234,2024,Brooklyn,554,7,860,580,2,99,19,450,False,1,0,1,494,14,10,Driver Inattention/Distraction,False,False,both,66,67.44,0
+11234,2025,Brooklyn,513,6,875,652,4,76,31,529,False,0,0,3,467,10,22,Driver Inattention/Distraction,False,False,both,92,74.51,0
+11234,2026,Brooklyn,306,11,675,524,2,65,18,423,True,0,0,1,258,6,87,Driver Inattention/Distraction,False,False,both,47,77.63,0
+11235,2022,Brooklyn,513,19,493,228,2,56,24,134,False,2,0,0,470,0,122,Driver Inattention/Distraction,False,False,both,25,46.25,0
+11235,2023,Brooklyn,447,21,507,268,1,84,32,133,False,0,0,1,389,13,68,Driver Inattention/Distraction,False,True,both,20,52.86,0
+11235,2024,Brooklyn,473,16,648,373,1,108,25,216,False,0,1,0,413,22,70,Driver Inattention/Distraction,False,False,both,16,57.56,0
+11235,2025,Brooklyn,493,16,603,339,1,93,22,198,False,1,0,0,427,16,218,Driver Inattention/Distraction,False,False,both,34,56.22,0
+11235,2026,Brooklyn,319,5,453,276,0,56,20,175,True,0,0,0,279,15,57,Driver Inattention/Distraction,False,False,both,97,60.93,0
+11236,2022,Brooklyn,373,9,1111,664,4,114,41,501,False,1,1,2,342,0,12,Driver Inattention/Distraction,False,False,both,73,59.77,0
+11236,2023,Brooklyn,288,5,1100,726,2,104,29,582,False,0,0,2,257,4,43,Driver Inattention/Distraction,False,True,both,78,66.0,0
+11236,2024,Brooklyn,463,9,1067,812,3,114,24,657,False,3,0,0,427,6,14,Driver Inattention/Distraction,False,True,both,47,76.1,0
+11236,2025,Brooklyn,521,11,1032,812,1,109,33,645,False,1,0,0,473,8,305,Driver Inattention/Distraction,False,False,both,63,78.68,0
+11236,2026,Brooklyn,266,6,871,661,0,94,25,520,True,0,0,0,229,9,55,Driver Inattention/Distraction,False,False,both,90,75.89,0
+11237,2022,Brooklyn,444,3,465,169,0,33,34,88,False,0,0,0,377,0,23,Driver Inattention/Distraction,False,False,both,120,36.34,0
+11237,2023,Brooklyn,437,4,400,173,0,29,25,102,False,0,0,0,357,10,34,Driver Inattention/Distraction,False,False,both,96,43.25,0
+11237,2024,Brooklyn,371,3,458,203,4,34,36,126,False,2,0,2,311,2,8,Driver Inattention/Distraction,False,False,both,107,44.32,0
+11237,2025,Brooklyn,265,5,602,244,0,71,31,120,False,0,0,0,208,5,250,Driver Inattention/Distraction,False,False,both,102,40.53,0
+11237,2026,Brooklyn,250,2,469,190,0,38,19,112,True,0,0,0,209,3,35,Driver Inattention/Distraction,False,False,both,122,40.51,0
+11238,2022,Brooklyn,700,14,395,227,3,32,44,136,False,1,0,2,647,0,1320,Driver Inattention/Distraction,False,False,both,48,57.47,0
+11238,2023,Brooklyn,668,6,378,194,2,46,46,83,False,0,1,1,593,15,125,Driver Inattention/Distraction,False,False,both,70,51.32,0
+11238,2024,Brooklyn,627,8,406,237,0,37,57,133,False,0,0,0,568,4,62,Driver Inattention/Distraction,False,False,both,58,58.37,0
+11238,2025,Brooklyn,655,17,533,338,2,56,52,206,False,1,0,1,569,18,270,Driver Inattention/Distraction,False,False,both,27,63.41,0
+11238,2026,Brooklyn,538,28,416,224,1,37,50,115,True,1,0,0,436,24,1680,Driver Inattention/Distraction,False,True,both,7,53.85,0
+11239,2022,Brooklyn,128,2,175,93,1,20,2,70,False,0,0,1,125,0,184,Driver Inattention/Distraction,False,False,both,132,53.14,0
+11239,2023,Brooklyn,118,2,140,56,0,16,2,33,False,0,0,0,113,2,634,Driver Inattention/Distraction,False,False,both,115,40.0,0
+11239,2024,Brooklyn,112,0,146,67,0,15,3,49,False,0,0,0,108,0,0,Driver Inattention/Distraction,False,False,both,148,45.89,0
+11239,2025,Brooklyn,81,7,170,94,1,30,2,59,False,1,0,0,68,0,553,Driver Inattention/Distraction,False,False,both,84,55.29,0
+11239,2026,Brooklyn,51,3,131,74,0,20,1,52,True,0,0,0,46,0,449,Driver Inattention/Distraction,False,False,both,115,56.49,0
+11249,2022,Brooklyn,632,11,382,143,1,26,45,67,False,1,0,0,571,0,78,Driver Inattention/Distraction,False,False,both,66,37.43,0
+11249,2023,Brooklyn,451,5,354,162,0,31,32,78,False,0,0,0,409,1,23,Driver Inattention/Distraction,False,False,both,78,45.76,0
+11249,2024,Brooklyn,396,8,281,125,1,19,26,72,False,1,0,0,341,4,390,Driver Inattention/Distraction,False,False,both,58,44.48,0
+11249,2025,Brooklyn,447,9,326,124,1,27,25,58,False,1,0,0,380,5,152,Driver Inattention/Distraction,False,False,both,74,38.04,0
+11249,2026,Brooklyn,404,6,236,100,0,18,22,46,True,0,0,0,340,7,64,Driver Inattention/Distraction,False,False,both,90,42.37,0
+11251,2022,Brooklyn,48,0,0,0,0,0,0,0,False,0,0,0,42,0,0,,False,False,housing only,164,,0
+11251,2023,Brooklyn,20,0,1,2,0,0,0,2,False,0,0,0,13,0,0,Unsafe Speed,False,False,both,151,200.0,0
+11251,2024,Brooklyn,11,0,1,1,0,0,1,0,False,0,0,0,6,0,0,Failure to Yield Right-of-Way,False,False,both,148,100.0,0
+11251,2025,Brooklyn,5,0,3,0,0,0,0,0,False,0,0,0,2,0,0,Passing Too Closely,False,False,both,159,0.0,0
+11251,2026,Brooklyn,5,0,0,0,0,0,0,0,True,0,0,0,5,0,0,,False,False,housing only,161,,0
+11354,2022,Queens,745,23,404,181,2,58,23,88,False,1,0,1,676,0,746,Failure to Yield Right-of-Way,False,False,both,19,44.8,0
+11354,2023,Queens,581,17,400,183,1,62,15,97,False,0,1,0,528,7,245,Failure to Yield Right-of-Way,False,False,both,24,45.75,0
+11354,2024,Queens,526,8,452,218,0,67,18,122,False,0,0,0,476,12,129,Failure to Yield Right-of-Way,False,False,both,58,48.23,0
+11354,2025,Queens,553,11,668,339,1,89,28,192,False,1,0,0,490,10,173,Driver Inattention/Distraction,False,False,both,63,50.75,0
+11354,2026,Queens,461,17,442,210,1,78,17,98,True,1,0,0,370,23,54,Driver Inattention/Distraction,False,False,both,25,47.51,0
+11355,2022,Queens,573,30,371,185,0,59,16,93,False,0,0,0,501,0,120,Failure to Yield Right-of-Way,False,False,both,10,49.87,0
+11355,2023,Queens,494,35,355,185,1,77,19,82,False,1,0,0,386,24,113,Failure to Yield Right-of-Way,False,True,both,8,52.11,0
+11355,2024,Queens,435,18,426,234,2,73,25,114,False,0,1,0,362,22,57,Failure to Yield Right-of-Way,False,False,both,12,54.93,0
+11355,2025,Queens,442,17,553,350,1,114,32,176,False,1,0,0,351,29,82,Failure to Yield Right-of-Way,False,False,both,27,63.29,1
+11355,2026,Queens,338,20,334,161,1,56,28,54,True,1,0,0,261,15,78,Failure to Yield Right-of-Way,False,False,both,18,48.2,0
+11356,2022,Queens,158,8,159,47,0,5,2,37,False,0,0,0,141,0,13,Failure to Yield Right-of-Way,False,False,both,84,29.56,0
+11356,2023,Queens,168,8,158,55,1,13,2,35,False,1,0,0,143,10,6,Backing Unsafely,False,False,both,52,34.81,0
+11356,2024,Queens,189,14,188,68,0,15,4,44,False,0,0,0,154,7,23,Driver Inattention/Distraction,False,False,both,26,36.17,0
+11356,2025,Queens,176,14,278,128,0,28,7,84,False,0,0,0,148,8,119,Driver Inattention/Distraction,False,False,both,42,46.04,0
+11356,2026,Queens,122,2,189,88,0,21,5,55,True,0,0,0,99,6,2,Driver Inattention/Distraction,False,False,both,122,46.56,0
+11357,2022,Queens,362,36,166,67,0,12,3,47,False,0,0,0,284,0,30,Failure to Yield Right-of-Way,False,True,both,6,40.36,0
+11357,2023,Queens,321,23,157,62,1,11,3,48,False,0,0,1,246,14,21,Failure to Yield Right-of-Way,False,True,both,18,39.49,0
+11357,2024,Queens,431,25,161,79,0,16,4,58,False,0,0,0,347,16,25,Failure to Yield Right-of-Way,False,True,both,7,49.07,0
+11357,2025,Queens,363,22,242,111,0,26,5,77,False,0,0,0,280,25,30,Failure to Yield Right-of-Way,False,False,both,14,45.87,0
+11357,2026,Queens,279,21,165,82,0,13,3,62,True,0,0,0,207,21,23,Driver Inattention/Distraction,False,False,both,16,49.7,0
+11358,2022,Queens,296,20,201,104,2,17,4,79,False,2,0,0,257,0,30,Failure to Yield Right-of-Way,False,False,both,24,51.74,0
+11358,2023,Queens,293,19,197,107,0,14,8,81,False,0,0,0,242,10,37,Failure to Yield Right-of-Way,False,False,both,21,54.31,0
+11358,2024,Queens,276,11,220,132,1,36,10,84,False,0,0,0,229,12,12,Driver Inattention/Distraction,False,False,both,36,60.0,0
+11358,2025,Queens,323,21,269,141,0,41,8,88,False,0,0,0,248,20,54,Failure to Yield Right-of-Way,False,False,both,20,52.42,0
+11358,2026,Queens,248,9,215,90,2,16,9,59,True,0,1,0,189,26,15,Driver Inattention/Distraction,False,False,both,59,41.86,0
+11359,2022,Queens,2,0,4,0,0,0,0,0,False,0,0,0,2,0,0,Alcohol Involvement,True,False,both,164,0.0,0
+11359,2023,Queens,2,0,3,1,0,0,1,0,False,0,0,0,1,1,0,Backing Unsafely,True,False,both,151,33.33,0
+11359,2024,Queens,1,0,5,0,0,0,0,0,False,0,0,0,1,0,0,Pavement Slippery,False,False,both,148,0.0,0
+11359,2025,Queens,8,0,6,1,0,1,0,0,False,0,0,0,6,0,0,Driver Inattention/Distraction,False,False,both,159,16.67,0
+11359,2026,Queens,5,0,5,1,0,0,0,1,True,0,0,0,5,0,0,Backing Unsafely,False,False,both,161,20.0,0
+11360,2022,Queens,132,8,60,19,0,6,1,11,False,0,0,0,112,0,3,Failure to Yield Right-of-Way,False,False,both,84,31.67,0
+11360,2023,Queens,135,6,49,20,0,5,1,14,False,0,0,0,115,1,2,Driver Inattention/Distraction,False,False,both,70,40.82,0
+11360,2024,Queens,130,3,53,25,0,2,2,21,False,0,0,0,116,1,46,Driver Inattention/Distraction,False,False,both,107,47.17,0
+11360,2025,Queens,135,6,70,33,0,8,4,19,False,0,0,0,116,3,102,Driver Inattention/Distraction,False,False,both,92,47.14,0
+11360,2026,Queens,104,6,65,35,0,13,4,18,True,0,0,0,87,2,5,Driver Inattention/Distraction,False,False,both,90,53.85,0
+11361,2022,Queens,380,36,248,91,0,21,4,65,False,0,0,0,324,0,38,Driver Inattention/Distraction,False,True,both,6,36.69,0
+11361,2023,Queens,341,30,232,112,0,17,4,89,False,0,0,0,286,9,34,Driver Inattention/Distraction,False,True,both,9,48.28,1
+11361,2024,Queens,290,26,259,121,0,28,12,77,False,0,0,0,229,10,20,Driver Inattention/Distraction,False,True,both,6,46.72,0
+11361,2025,Queens,318,29,269,93,1,28,8,55,False,1,0,0,237,21,38,Driver Inattention/Distraction,False,False,both,9,34.57,0
+11361,2026,Queens,218,17,191,69,0,22,6,38,True,0,0,0,169,11,25,Driver Inattention/Distraction,False,False,both,25,36.13,0
+11362,2022,Queens,171,15,82,35,1,11,0,23,False,0,0,1,144,0,23,Driver Inattention/Distraction,False,False,both,44,42.68,0
+11362,2023,Queens,122,8,106,46,0,6,2,38,False,0,0,0,100,5,6,Driver Inattention/Distraction,False,False,both,52,43.4,0
+11362,2024,Queens,125,9,104,67,0,5,0,61,False,0,0,0,92,9,9,Driver Inattention/Distraction,False,False,both,47,64.42,1
+11362,2025,Queens,148,6,110,47,0,7,1,37,False,0,0,0,119,3,3,Driver Inattention/Distraction,False,False,both,92,42.73,0
+11362,2026,Queens,107,7,99,43,0,9,2,32,True,0,0,0,88,3,5,Driver Inattention/Distraction,False,False,both,77,43.43,0
+11363,2022,Queens,69,3,52,14,0,5,4,5,False,0,0,0,62,0,4,Driver Inattention/Distraction,False,False,both,120,26.92,0
+11363,2023,Queens,62,4,39,17,0,3,2,12,False,0,0,0,49,5,3,Driver Inattention/Distraction,False,False,both,96,43.59,0
+11363,2024,Queens,66,3,69,34,0,7,0,27,False,0,0,0,59,0,1,Driver Inattention/Distraction,False,False,both,107,49.28,0
+11363,2025,Queens,49,2,63,34,0,3,1,30,False,0,0,0,44,2,2,Driver Inattention/Distraction,False,False,both,135,53.97,0
+11363,2026,Queens,45,1,44,24,0,3,4,16,True,0,0,0,38,2,0,Driver Inattention/Distraction,False,False,both,138,54.55,0
+11364,2022,Queens,372,16,166,68,1,12,9,47,False,1,0,0,324,0,13,Driver Inattention/Distraction,False,False,both,39,40.96,0
+11364,2023,Queens,185,8,164,82,0,8,3,71,False,0,0,0,141,9,5,Driver Inattention/Distraction,False,False,both,52,50.0,0
+11364,2024,Queens,219,10,176,91,0,7,1,83,False,0,0,0,181,6,6,Driver Inattention/Distraction,False,False,both,41,51.7,0
+11364,2025,Queens,208,4,198,78,0,22,3,50,False,0,0,0,172,5,3,Driver Inattention/Distraction,False,False,both,112,39.39,0
+11364,2026,Queens,181,7,124,64,1,15,3,44,True,1,0,0,147,7,5,Driver Inattention/Distraction,False,False,both,77,51.61,0
+11365,2022,Queens,250,19,201,75,1,18,2,50,False,0,0,1,212,0,35,Driver Inattention/Distraction,False,False,both,25,37.31,0
+11365,2023,Queens,210,10,220,93,1,23,9,57,False,0,0,1,168,7,9,Driver Inattention/Distraction,False,False,both,43,42.27,0
+11365,2024,Queens,259,9,185,82,0,17,7,51,False,0,0,0,222,6,30,Driver Inattention/Distraction,False,False,both,47,44.32,0
+11365,2025,Queens,238,7,224,86,0,14,7,57,False,0,0,0,180,20,8,Driver Inattention/Distraction,False,False,both,84,38.39,0
+11365,2026,Queens,336,13,172,79,0,15,9,50,True,0,0,0,273,14,21,Driver Inattention/Distraction,False,False,both,40,45.93,0
+11366,2022,Queens,122,5,120,65,0,13,3,46,False,0,0,0,106,0,1,Driver Inattention/Distraction,False,False,both,100,54.17,0
+11366,2023,Queens,119,13,144,59,0,11,4,41,False,0,0,0,75,11,9,Driver Inattention/Distraction,False,False,both,32,40.97,0
+11366,2024,Queens,151,1,147,83,1,19,6,55,False,0,0,1,120,11,0,Driver Inattention/Distraction,False,False,both,125,56.46,0
+11366,2025,Queens,190,12,158,95,0,15,7,68,False,0,0,0,140,10,29,Driver Inattention/Distraction,False,False,both,54,60.13,0
+11366,2026,Queens,140,1,125,65,0,20,3,31,True,0,0,0,118,5,0,Driver Inattention/Distraction,False,False,both,138,52.0,0
+11367,2022,Queens,311,3,238,92,0,27,3,60,False,0,0,0,279,0,0,Driver Inattention/Distraction,False,False,both,120,38.66,0
+11367,2023,Queens,208,3,233,130,0,44,8,75,False,0,0,0,159,3,2,Driver Inattention/Distraction,False,False,both,104,55.79,0
+11367,2024,Queens,193,0,265,153,0,32,11,106,False,0,0,0,159,3,0,Driver Inattention/Distraction,False,False,both,148,57.74,0
+11367,2025,Queens,248,3,266,146,0,35,9,90,False,0,0,0,205,2,2,Driver Inattention/Distraction,False,False,both,122,54.89,0
+11367,2026,Queens,190,2,169,87,1,23,5,50,True,1,0,0,153,7,0,Driver Inattention/Distraction,False,False,both,122,51.48,0
+11368,2022,Queens,493,24,928,367,2,99,47,183,False,1,0,1,408,0,998,Driver Inattention/Distraction,False,False,both,15,39.55,0
+11368,2023,Queens,529,10,853,445,2,89,47,263,False,1,0,1,448,11,45,Driver Inattention/Distraction,False,False,both,43,52.17,0
+11368,2024,Queens,455,20,823,458,0,113,42,276,False,0,0,0,352,13,313,Driver Inattention/Distraction,False,False,both,11,55.65,0
+11368,2025,Queens,486,32,697,405,2,101,53,212,False,0,0,1,355,30,1688,Driver Inattention/Distraction,False,True,both,7,58.11,0
+11368,2026,Queens,466,18,643,349,1,85,45,180,True,1,0,0,358,10,73,Driver Inattention/Distraction,False,False,both,23,54.28,0
+11369,2022,Queens,148,10,343,167,1,27,19,110,False,1,0,0,122,0,144,Driver Inattention/Distraction,False,False,both,69,48.69,0
+11369,2023,Queens,129,2,349,172,2,18,8,140,False,0,0,2,118,0,2,Driver Inattention/Distraction,False,False,both,115,49.28,0
+11369,2024,Queens,212,2,384,206,1,31,11,158,False,1,0,0,201,3,2,Driver Inattention/Distraction,False,False,both,117,53.65,0
+11369,2025,Queens,181,12,401,206,0,38,18,127,False,0,0,0,145,8,28,Driver Inattention/Distraction,False,False,both,54,51.37,0
+11369,2026,Queens,105,11,313,195,2,35,21,120,True,2,0,0,83,3,111,Driver Inattention/Distraction,False,False,both,47,62.3,0
+11370,2022,Queens,92,0,245,99,0,17,9,60,False,0,0,0,81,0,0,Driver Inattention/Distraction,False,False,both,164,40.41,0
+11370,2023,Queens,97,3,226,110,2,17,10,77,False,1,0,1,85,0,3,Driver Inattention/Distraction,False,False,both,104,48.67,0
+11370,2024,Queens,143,0,212,130,0,21,16,89,False,0,0,0,126,4,0,Driver Inattention/Distraction,False,False,both,148,61.32,0
+11370,2025,Queens,120,3,218,147,0,30,11,99,False,0,0,0,104,4,7,Driver Inattention/Distraction,False,False,both,122,67.43,0
+11370,2026,Queens,72,0,154,85,0,14,7,51,True,0,0,0,53,11,0,Driver Inattention/Distraction,False,False,both,161,55.19,0
+11371,2023,Queens,0,0,1,0,0,0,0,0,False,0,0,0,0,0,0,Driverless/Runaway Vehicle,True,False,collisions only,151,0.0,0
+11372,2022,Queens,360,2,590,268,1,67,33,148,False,0,0,1,351,0,24,Driver Inattention/Distraction,False,False,both,132,45.42,0
+11372,2023,Queens,262,3,620,299,3,81,43,144,False,1,1,1,249,1,7,Driver Inattention/Distraction,False,False,both,104,48.23,0
+11372,2024,Queens,377,1,685,368,4,101,59,194,False,3,0,1,365,0,0,Driver Inattention/Distraction,False,False,both,125,53.72,0
+11372,2025,Queens,366,0,536,246,0,75,36,106,False,0,0,0,351,2,0,Driver Inattention/Distraction,False,False,both,159,45.9,0
+11372,2026,Queens,247,0,406,216,0,58,33,94,True,0,0,0,233,3,0,Driver Inattention/Distraction,False,False,both,161,53.2,0
+11373,2022,Queens,441,11,687,265,1,80,40,123,False,0,0,1,395,0,229,Driver Inattention/Distraction,False,False,both,66,38.57,0
+11373,2023,Queens,436,12,664,297,0,89,35,143,False,0,0,0,395,11,91,Driver Inattention/Distraction,False,False,both,39,44.73,0
+11373,2024,Queens,381,5,623,302,2,89,39,159,False,2,0,0,337,12,137,Driver Inattention/Distraction,False,False,both,83,48.48,0
+11373,2025,Queens,313,12,567,283,4,86,40,133,False,2,0,1,262,14,84,Driver Inattention/Distraction,False,False,both,54,49.91,0
+11373,2026,Queens,346,7,499,234,0,66,35,100,True,0,0,0,309,5,218,Driver Inattention/Distraction,False,False,both,77,46.89,0
+11374,2022,Queens,319,2,252,158,0,48,12,81,False,0,0,0,302,0,1,Driver Inattention/Distraction,False,False,both,132,62.7,0
+11374,2023,Queens,227,2,225,98,0,28,11,51,False,0,0,0,217,0,88,Driver Inattention/Distraction,False,False,both,115,43.56,0
+11374,2024,Queens,264,0,234,109,0,25,7,68,False,0,0,0,254,4,0,Driver Inattention/Distraction,False,False,both,148,46.58,0
+11374,2025,Queens,272,6,240,130,0,28,11,78,False,0,0,0,251,7,738,Driver Inattention/Distraction,False,False,both,92,54.17,0
+11374,2026,Queens,158,0,244,117,1,32,7,65,True,1,0,0,149,0,0,Driver Inattention/Distraction,False,False,both,161,47.95,0
+11375,2022,Queens,608,5,321,133,0,36,13,76,False,0,0,0,576,0,104,Driver Inattention/Distraction,False,False,both,100,41.43,0
+11375,2023,Queens,476,0,397,149,0,36,22,84,False,0,0,0,447,3,0,Driver Inattention/Distraction,False,False,both,151,37.53,0
+11375,2024,Queens,544,6,415,161,0,32,14,109,False,0,0,0,499,8,255,Driver Inattention/Distraction,False,False,both,75,38.8,0
+11375,2025,Queens,477,4,454,181,0,61,26,81,False,0,0,0,444,7,6,Driver Inattention/Distraction,False,False,both,112,39.87,0
+11375,2026,Queens,356,0,349,149,0,37,8,88,True,0,0,0,326,4,0,Driver Inattention/Distraction,False,False,both,161,42.69,0
+11377,2022,Queens,528,14,680,314,1,57,49,172,False,1,0,0,489,0,337,Driver Inattention/Distraction,False,False,both,48,46.18,0
+11377,2023,Queens,399,7,665,390,2,67,44,250,False,2,0,0,360,8,32,Driver Inattention/Distraction,False,False,both,63,58.65,0
+11377,2024,Queens,464,11,600,344,3,66,53,201,False,2,0,1,416,17,98,Driver Inattention/Distraction,False,False,both,36,57.33,0
+11377,2025,Queens,360,10,675,388,0,62,49,236,False,0,0,0,316,7,283,Driver Inattention/Distraction,False,False,both,69,57.48,0
+11377,2026,Queens,337,15,546,287,2,49,34,162,True,1,0,1,288,9,320,Driver Inattention/Distraction,False,False,both,31,52.56,0
+11378,2022,Queens,272,6,442,204,1,24,21,152,False,1,0,0,249,0,11,Driver Inattention/Distraction,False,False,both,95,46.15,0
+11378,2023,Queens,272,11,393,202,2,18,22,151,False,0,0,1,222,12,17,Driver Inattention/Distraction,False,False,both,42,51.4,0
+11378,2024,Queens,248,12,325,169,0,23,23,114,False,0,0,0,209,8,5,Driver Inattention/Distraction,False,False,both,30,52.0,0
+11378,2025,Queens,294,17,391,202,1,20,14,150,False,1,0,0,235,15,38,Driver Inattention/Distraction,False,False,both,27,51.66,0
+11378,2026,Queens,181,12,330,171,0,23,16,117,True,0,0,0,139,15,50,Driver Inattention/Distraction,False,False,both,44,51.82,0
+11379,2022,Queens,189,9,236,104,0,16,7,73,False,0,0,0,169,0,14,Failure to Yield Right-of-Way,False,False,both,73,44.07,0
+11379,2023,Queens,172,7,254,157,1,21,13,109,False,1,0,0,151,0,10,Driver Inattention/Distraction,False,False,both,63,61.81,0
+11379,2024,Queens,228,4,211,115,1,23,7,80,False,0,0,1,191,12,5,Failure to Yield Right-of-Way,False,False,both,96,54.5,0
+11379,2025,Queens,209,2,215,120,1,29,13,67,False,0,1,0,197,2,6,Failure to Yield Right-of-Way,False,False,both,135,55.81,0
+11379,2026,Queens,118,5,186,108,0,25,12,51,True,0,0,0,105,0,12,Driver Inattention/Distraction,False,False,both,97,58.06,0
+11385,2022,Queens,617,11,943,426,2,83,47,255,False,0,0,2,559,0,44,Failure to Yield Right-of-Way,False,False,both,66,45.17,0
+11385,2023,Queens,483,4,891,465,0,85,42,318,False,0,0,0,424,7,12,Driver Inattention/Distraction,False,False,both,96,52.19,0
+11385,2024,Queens,533,10,830,423,0,75,49,277,False,0,0,0,486,8,22,Driver Inattention/Distraction,False,False,both,41,50.96,0
+11385,2025,Queens,463,10,843,420,1,85,49,252,False,1,0,0,411,11,177,Driver Inattention/Distraction,False,False,both,69,49.82,0
+11385,2026,Queens,357,8,637,339,1,70,26,206,True,1,0,0,310,11,380,Driver Inattention/Distraction,False,False,both,67,53.22,0
+11411,2022,Queens,72,0,247,128,0,17,0,110,False,0,0,0,60,0,0,Driver Inattention/Distraction,False,False,both,164,51.82,0
+11411,2023,Queens,93,0,199,131,0,13,2,116,False,0,0,0,76,1,0,Driver Inattention/Distraction,False,False,both,151,65.83,0
+11411,2024,Queens,237,0,192,117,0,23,5,89,False,0,0,0,228,0,0,Driver Inattention/Distraction,False,False,both,148,60.94,0
+11411,2025,Queens,147,0,215,137,2,15,2,120,False,0,0,0,139,0,0,Driver Inattention/Distraction,False,False,both,159,63.72,0
+11411,2026,Queens,84,1,145,93,0,16,2,74,True,0,0,0,69,2,1,Driver Inattention/Distraction,False,False,both,138,64.14,0
+11412,2022,Queens,173,12,340,195,0,21,8,164,False,0,0,0,144,0,10,Failure to Yield Right-of-Way,False,False,both,61,57.35,0
+11412,2023,Queens,170,8,319,199,0,27,8,159,False,0,0,0,139,0,6,Driver Inattention/Distraction,False,False,both,52,62.38,0
+11412,2024,Queens,358,5,318,218,0,25,4,180,False,0,0,0,326,0,6,Driver Inattention/Distraction,False,False,both,83,68.55,0
+11412,2025,Queens,315,7,327,201,1,38,15,140,False,0,0,1,282,3,6,Driver Inattention/Distraction,False,False,both,84,61.47,0
+11412,2026,Queens,192,4,253,152,0,24,7,115,True,0,0,0,171,1,6,Driver Inattention/Distraction,False,False,both,105,60.08,0
+11413,2022,Queens,205,6,520,279,1,31,8,238,False,0,0,1,174,0,6,Driver Inattention/Distraction,False,False,both,95,53.65,0
+11413,2023,Queens,267,18,424,322,1,43,6,271,False,0,0,1,208,7,22,Driver Inattention/Distraction,False,False,both,22,75.94,0
+11413,2024,Queens,509,30,392,296,0,31,9,250,False,0,0,0,456,5,41,Driver Inattention/Distraction,False,True,both,4,75.51,0
+11413,2025,Queens,401,12,12,4,0,2,0,1,False,0,0,0,339,9,5,Failure to Yield Right-of-Way,False,False,both,54,33.33,0
+11413,2026,Queens,263,21,8,6,0,1,0,5,True,0,0,0,192,8,30,Driver Inattention/Distraction,False,False,both,16,75.0,0
+11414,2022,Queens,175,4,208,123,0,20,8,93,False,0,0,0,164,0,8,Failure to Yield Right-of-Way,False,False,both,109,59.13,0
+11414,2023,Queens,124,4,176,110,1,17,5,85,False,0,0,1,111,0,3,Failure to Yield Right-of-Way,False,False,both,96,62.5,0
+11414,2024,Queens,196,15,171,84,0,16,6,59,False,0,0,0,172,1,33,Driver Inattention/Distraction,False,False,both,23,49.12,0
+11414,2025,Queens,199,15,182,97,0,17,5,74,False,0,0,0,172,1,157,Driver Inattention/Distraction,False,False,both,39,53.3,0
+11414,2026,Queens,129,2,159,94,0,14,1,75,True,0,0,0,116,1,3,Driver Inattention/Distraction,False,False,both,122,59.12,0
+11415,2022,Queens,136,3,110,30,0,7,1,20,False,0,0,0,127,0,4,Passing or Lane Usage Improper,False,False,both,120,27.27,0
+11415,2023,Queens,102,1,99,46,0,13,3,29,False,0,0,0,94,2,0,Failure to Yield Right-of-Way,False,False,both,131,46.46,0
+11415,2024,Queens,119,1,106,64,0,13,2,47,False,0,0,0,110,3,0,Failure to Yield Right-of-Way,False,False,both,125,60.38,0
+11415,2025,Queens,99,4,140,88,0,11,2,74,False,0,0,0,89,1,78,Failure to Yield Right-of-Way,False,False,both,112,62.86,0
+11415,2026,Queens,76,2,103,48,1,10,6,28,True,1,0,0,64,4,2,Driver Inattention/Distraction,False,False,both,122,46.6,0
+11416,2022,Queens,109,3,157,94,0,17,5,68,False,0,0,0,98,0,12,Failure to Yield Right-of-Way,False,False,both,120,59.87,0
+11416,2023,Queens,106,3,170,105,1,17,4,79,False,1,0,0,91,0,4,Failure to Yield Right-of-Way,False,False,both,104,61.76,0
+11416,2024,Queens,125,3,170,106,0,21,6,77,False,0,0,0,115,2,4,Failure to Yield Right-of-Way,False,False,both,107,62.35,0
+11416,2025,Queens,124,1,153,93,0,11,5,73,False,0,0,0,112,3,2,Driver Inattention/Distraction,False,False,both,147,60.78,0
+11416,2026,Queens,91,3,124,77,1,16,8,46,True,0,0,1,74,6,32,Failure to Yield Right-of-Way,False,False,both,115,62.1,0
+11417,2022,Queens,151,16,309,172,0,17,5,144,False,0,0,0,128,0,12,Passing or Lane Usage Improper,False,False,both,39,55.66,0
+11417,2023,Queens,116,1,283,163,3,29,11,116,False,2,1,0,103,3,2,Driver Inattention/Distraction,False,False,both,131,57.6,0
+11417,2024,Queens,214,5,270,194,0,28,8,148,False,0,0,0,194,2,5,Driver Inattention/Distraction,False,False,both,83,71.85,0
+11417,2025,Queens,182,6,270,161,1,25,8,121,False,1,0,0,157,5,9,Driver Inattention/Distraction,False,False,both,92,59.63,0
+11417,2026,Queens,117,6,186,112,1,16,7,85,True,0,0,1,93,1,25,Driver Inattention/Distraction,False,False,both,90,60.22,0
+11418,2022,Queens,204,2,328,155,0,25,7,110,False,0,0,0,187,0,17,Failure to Yield Right-of-Way,False,False,both,132,47.26,0
+11418,2023,Queens,179,4,296,128,0,24,11,84,False,0,0,0,162,0,23,Passing or Lane Usage Improper,False,False,both,96,43.24,0
+11418,2024,Queens,253,5,331,178,0,43,10,119,False,0,0,0,226,6,11,Driver Inattention/Distraction,False,False,both,83,53.78,0
+11418,2025,Queens,193,5,331,173,3,41,11,107,False,2,0,0,172,3,224,Failure to Yield Right-of-Way,False,False,both,102,52.27,0
+11418,2026,Queens,200,8,223,95,0,23,13,54,True,0,0,0,160,10,130,Driver Inattention/Distraction,False,False,both,67,42.6,0
+11419,2022,Queens,212,3,375,202,3,53,9,127,False,1,0,2,184,0,1,Passing or Lane Usage Improper,False,False,both,120,53.87,0
+11419,2023,Queens,190,10,392,229,1,58,13,143,False,0,0,1,160,4,29,Failure to Yield Right-of-Way,False,False,both,43,58.42,0
+11419,2024,Queens,317,2,347,203,2,45,16,129,False,2,0,0,276,7,8,Driver Inattention/Distraction,False,False,both,117,58.5,0
+11419,2025,Queens,285,8,391,207,2,56,12,129,False,1,0,0,247,8,8,Driver Inattention/Distraction,False,False,both,80,52.94,0
+11419,2026,Queens,220,7,270,174,0,37,16,115,True,0,0,0,177,9,17,Driver Inattention/Distraction,False,False,both,77,64.44,0
+11420,2022,Queens,233,21,548,319,0,41,9,264,False,0,0,0,175,0,18,Failure to Yield Right-of-Way,False,False,both,22,58.21,0
+11420,2023,Queens,212,8,494,317,2,42,7,260,False,0,0,2,162,5,3,Passing or Lane Usage Improper,False,False,both,52,64.17,0
+11420,2024,Queens,361,15,469,302,1,43,9,242,False,1,0,0,317,5,12,Driver Inattention/Distraction,False,False,both,23,64.39,0
+11420,2025,Queens,409,22,537,305,1,47,13,232,False,0,0,0,340,14,23,Driver Inattention/Distraction,False,False,both,14,56.8,0
+11420,2026,Queens,214,13,397,290,0,30,8,242,True,0,0,0,160,8,10,Driver Inattention/Distraction,False,False,both,40,73.05,0
+11421,2022,Queens,145,5,251,120,0,32,6,69,False,0,0,0,123,0,0,Failure to Yield Right-of-Way,False,False,both,100,47.81,0
+11421,2023,Queens,129,0,257,151,0,44,10,86,False,0,0,0,126,0,0,Failure to Yield Right-of-Way,False,False,both,151,58.75,0
+11421,2024,Queens,179,0,260,136,1,30,11,91,False,0,0,1,172,1,0,Driver Inattention/Distraction,False,False,both,148,52.31,0
+11421,2025,Queens,176,1,220,108,2,18,12,71,False,2,0,0,164,1,0,Driver Inattention/Distraction,False,False,both,147,49.09,0
+11421,2026,Queens,104,1,189,82,0,19,11,49,True,0,0,0,97,0,0,Driver Inattention/Distraction,False,False,both,138,43.39,0
+11422,2022,Queens,147,4,386,248,1,19,3,226,False,0,1,0,118,0,6,Driver Inattention/Distraction,False,False,both,109,64.25,0
+11422,2023,Queens,149,17,350,227,0,22,11,193,False,0,0,0,102,5,53,Driver Inattention/Distraction,False,False,both,24,64.86,0
+11422,2024,Queens,313,8,303,244,0,19,5,219,False,0,0,0,281,2,10,Driver Inattention/Distraction,False,False,both,58,80.53,0
+11422,2025,Queens,306,10,0,0,0,0,0,0,False,0,0,0,260,5,19,,False,False,housing only,69,,0
+11422,2026,Queens,163,11,0,0,0,0,0,0,True,0,0,0,134,2,20,,False,False,housing only,47,,0
+11423,2022,Queens,157,4,289,142,2,21,5,114,False,2,0,0,134,0,4,Driver Inattention/Distraction,False,False,both,109,49.13,0
+11423,2023,Queens,151,8,292,171,0,26,6,135,False,0,0,0,120,4,6,Driver Inattention/Distraction,False,False,both,52,58.56,0
+11423,2024,Queens,283,9,271,153,0,28,9,110,False,0,0,0,248,8,5,Driver Inattention/Distraction,False,False,both,47,56.46,0
+11423,2025,Queens,228,12,352,205,3,31,16,144,False,1,0,1,186,7,23,Driver Inattention/Distraction,False,False,both,54,58.24,0
+11423,2026,Queens,181,7,240,161,1,26,6,121,True,1,0,0,140,8,8,Driver Inattention/Distraction,False,False,both,77,67.08,0
+11426,2022,Queens,122,3,135,51,1,9,1,41,False,0,0,1,105,0,0,Driver Inattention/Distraction,False,False,both,120,37.78,0
+11426,2023,Queens,127,7,149,77,0,11,4,62,False,0,0,0,97,9,159,Driver Inattention/Distraction,False,False,both,63,51.68,0
+11426,2024,Queens,192,6,125,81,1,9,1,71,False,1,0,0,165,7,15,Driver Inattention/Distraction,False,False,both,75,64.8,0
+11426,2025,Queens,198,4,134,69,0,6,2,60,False,0,0,0,174,4,1,Driver Inattention/Distraction,False,False,both,112,51.49,0
+11426,2026,Queens,117,3,93,50,0,3,2,45,True,0,0,0,98,2,2,Driver Inattention/Distraction,False,False,both,115,53.76,0
+11427,2022,Queens,116,0,175,80,0,10,2,68,False,0,0,0,105,0,0,Driver Inattention/Distraction,False,False,both,164,45.71,0
+11427,2023,Queens,127,1,161,63,0,14,2,47,False,0,0,0,111,3,1,Driver Inattention/Distraction,False,False,both,131,39.13,0
+11427,2024,Queens,195,1,172,99,0,13,4,82,False,0,0,0,177,2,1,Driver Inattention/Distraction,False,False,both,125,57.56,0
+11427,2025,Queens,157,1,195,134,1,20,1,112,False,1,0,0,142,3,1,Driver Inattention/Distraction,False,False,both,147,68.72,0
+11427,2026,Queens,87,3,136,92,2,13,3,74,True,1,0,1,69,1,3,Driver Inattention/Distraction,False,False,both,115,67.65,0
+11428,2022,Queens,67,1,174,67,0,16,2,48,False,0,0,0,60,0,0,Driver Inattention/Distraction,False,False,both,149,38.51,0
+11428,2023,Queens,86,2,156,91,1,16,4,71,False,1,0,0,73,2,1,Driver Inattention/Distraction,False,False,both,115,58.33,1
+11428,2024,Queens,204,7,155,82,1,19,4,58,False,0,0,1,190,1,6,Driver Inattention/Distraction,False,False,both,66,52.9,0
+11428,2025,Queens,125,3,188,131,0,22,7,98,False,0,0,0,114,1,312,Driver Inattention/Distraction,False,False,both,122,69.68,0
+11428,2026,Queens,105,2,119,55,0,10,1,40,True,0,0,0,93,1,1,Driver Inattention/Distraction,False,False,both,122,46.22,0
+11429,2022,Queens,85,5,263,118,0,17,7,93,False,0,0,0,68,0,8,Driver Inattention/Distraction,False,False,both,100,44.87,0
+11429,2023,Queens,95,2,215,124,1,19,4,101,False,0,0,1,78,0,1,Driver Inattention/Distraction,False,False,both,115,57.67,0
+11429,2024,Queens,261,10,198,134,0,18,2,114,False,0,0,0,232,3,4,Driver Inattention/Distraction,False,False,both,41,67.68,0
+11429,2025,Queens,234,9,221,121,0,23,4,91,False,0,0,0,210,3,7,Driver Inattention/Distraction,False,False,both,74,54.75,0
+11429,2026,Queens,118,2,158,104,0,11,3,88,True,0,0,0,104,1,71,Driver Inattention/Distraction,False,False,both,122,65.82,0
+11430,2022,Queens,2,0,24,11,0,1,0,10,False,0,0,0,2,0,0,Passing or Lane Usage Improper,False,False,both,164,45.83,0
+11430,2023,Queens,4,0,17,6,0,0,1,5,False,0,0,0,4,0,0,Passing or Lane Usage Improper,False,False,both,151,35.29,0
+11430,2024,Queens,5,0,27,15,0,1,0,14,False,0,0,0,5,0,0,Driver Inattention/Distraction,False,False,both,148,55.56,0
+11430,2025,Queens,6,1,64,51,0,1,0,50,False,0,0,0,5,0,0,Driver Inattention/Distraction,False,False,both,147,79.69,0
+11430,2026,Queens,6,0,54,41,0,2,0,39,True,0,0,0,6,0,0,Other Vehicular,False,False,both,161,75.93,0
+11432,2022,Queens,454,17,571,259,0,86,5,158,False,0,0,0,396,0,588,Driver Inattention/Distraction,False,False,both,35,45.36,0
+11432,2023,Queens,375,6,552,305,1,89,18,186,False,0,0,0,312,21,4,Driver Inattention/Distraction,False,False,both,70,55.25,0
+11432,2024,Queens,426,12,562,291,1,92,14,179,False,1,0,0,372,11,121,Driver Inattention/Distraction,False,False,both,30,51.78,0
+11432,2025,Queens,462,22,626,352,1,115,22,190,False,1,0,0,376,28,1673,Driver Inattention/Distraction,False,False,both,14,56.23,0
+11432,2026,Queens,309,14,428,260,1,82,21,140,True,1,0,0,255,12,955,Driver Inattention/Distraction,False,False,both,35,60.75,0
+11433,2022,Queens,258,14,383,191,1,45,7,131,False,0,0,1,225,0,24,Driver Inattention/Distraction,False,False,both,48,49.87,0
+11433,2023,Queens,167,8,371,222,1,55,14,143,False,0,0,1,139,1,9,Driver Inattention/Distraction,False,False,both,52,59.84,0
+11433,2024,Queens,321,10,349,238,1,58,14,150,False,1,0,0,289,5,406,Driver Inattention/Distraction,False,False,both,41,68.19,0
+11433,2025,Queens,328,18,383,229,2,60,14,146,False,2,0,0,282,6,31,Driver Inattention/Distraction,False,False,both,24,59.79,0
+11433,2026,Queens,164,9,274,158,1,39,12,91,True,1,0,0,134,3,57,Driver Inattention/Distraction,False,False,both,59,57.66,0
+11434,2022,Queens,385,24,706,374,0,46,12,314,False,0,0,0,298,0,10,Failure to Yield Right-of-Way,False,False,both,15,52.97,0
+11434,2023,Queens,311,26,700,462,4,56,12,393,False,0,0,4,237,9,48,Driver Inattention/Distraction,False,True,both,15,66.0,0
+11434,2024,Queens,655,25,693,462,2,65,22,363,False,2,0,0,569,16,21,Driver Inattention/Distraction,False,True,both,7,66.67,0
+11434,2025,Queens,520,22,517,306,1,47,23,219,False,1,0,0,428,17,143,Driver Inattention/Distraction,False,False,both,14,59.19,0
+11434,2026,Queens,341,20,337,223,0,41,11,151,True,0,0,0,269,9,104,Driver Inattention/Distraction,False,False,both,18,66.17,0
+11435,2022,Queens,305,17,535,205,0,42,9,142,False,0,0,0,270,0,2056,Driver Inattention/Distraction,False,False,both,35,38.32,0
+11435,2023,Queens,272,14,552,292,1,55,18,201,False,0,0,1,227,12,196,Driver Inattention/Distraction,False,False,both,29,52.9,0
+11435,2024,Queens,362,16,524,292,0,64,20,192,False,0,0,0,314,13,38,Driver Inattention/Distraction,False,False,both,16,55.73,0
+11435,2025,Queens,281,13,588,327,1,78,22,204,False,0,0,1,236,10,485,Driver Inattention/Distraction,False,False,both,52,55.61,0
+11435,2026,Queens,267,24,440,253,0,48,18,162,True,0,0,0,199,25,1452,Driver Inattention/Distraction,False,False,both,12,57.5,0
+11436,2022,Queens,103,5,182,94,0,8,2,82,False,0,0,0,85,0,6,Failure to Yield Right-of-Way,False,False,both,100,51.65,0
+11436,2023,Queens,127,8,184,117,0,8,1,108,False,0,0,0,105,2,4,Driver Inattention/Distraction,False,False,both,52,63.59,0
+11436,2024,Queens,265,11,157,103,0,15,1,85,False,0,0,0,232,7,7,Driver Inattention/Distraction,False,False,both,36,65.61,0
+11436,2025,Queens,188,4,208,117,0,13,7,97,False,0,0,0,159,5,6,Driver Inattention/Distraction,False,False,both,112,56.25,0
+11436,2026,Queens,114,8,142,90,0,10,2,77,True,0,0,0,85,8,13,Driver Inattention/Distraction,False,False,both,67,63.38,0
+11691,2022,Queens,356,30,493,169,3,52,9,104,False,2,0,1,304,0,405,Driver Inattention/Distraction,False,False,both,10,34.28,0
+11691,2023,Queens,287,28,430,196,1,43,13,135,False,1,0,0,241,4,381,Driver Inattention/Distraction,False,True,both,11,45.58,0
+11691,2024,Queens,368,23,467,233,0,64,15,151,False,0,0,0,316,18,535,Driver Inattention/Distraction,False,True,both,10,49.89,0
+11691,2025,Queens,365,63,515,210,0,54,11,140,False,0,0,0,273,13,1471,Driver Inattention/Distraction,False,True,both,1,40.78,0
+11691,2026,Queens,222,16,360,160,1,46,18,90,True,1,0,0,183,7,485,Driver Inattention/Distraction,False,False,both,28,44.44,0
+11692,2022,Queens,162,17,122,55,0,10,0,44,False,0,0,0,143,0,315,Driver Inattention/Distraction,False,False,both,35,45.08,0
+11692,2023,Queens,111,13,106,57,0,6,4,47,False,0,0,0,94,3,24,Driver Inattention/Distraction,False,False,both,32,53.77,0
+11692,2024,Queens,91,7,130,60,0,13,4,40,False,0,0,0,77,4,14,Driver Inattention/Distraction,False,False,both,66,46.15,0
+11692,2025,Queens,80,7,124,49,1,14,3,31,False,0,1,0,69,1,159,Driver Inattention/Distraction,False,False,both,84,39.52,0
+11692,2026,Queens,66,7,91,42,1,7,6,25,True,1,0,0,54,5,120,Driver Inattention/Distraction,False,False,both,77,46.15,0
+11693,2022,Queens,69,2,99,45,1,5,4,35,False,1,0,0,65,0,7,Driver Inattention/Distraction,False,False,both,132,45.45,0
+11693,2023,Queens,82,2,101,57,1,7,1,46,False,0,0,1,74,3,3,Driver Inattention/Distraction,False,False,both,115,56.44,0
+11693,2024,Queens,80,0,105,61,0,8,1,51,False,0,0,0,72,2,0,Driver Inattention/Distraction,False,False,both,148,58.1,0
+11693,2025,Queens,103,3,121,69,0,9,5,54,False,0,0,0,93,0,2,Driver Inattention/Distraction,False,False,both,122,57.02,0
+11693,2026,Queens,54,4,98,54,0,3,5,43,True,0,0,0,45,1,5,Driver Inattention/Distraction,False,False,both,105,55.1,0
+11694,2022,Queens,197,12,96,37,0,8,3,26,False,0,0,0,176,0,357,Driver Inattention/Distraction,False,False,both,61,38.54,0
+11694,2023,Queens,133,5,91,39,1,6,4,29,False,1,0,0,120,0,4,Driver Inattention/Distraction,False,False,both,78,42.86,0
+11694,2024,Queens,178,2,114,61,0,10,11,38,False,0,0,0,159,2,40,Driver Inattention/Distraction,False,False,both,117,53.51,0
+11694,2025,Queens,128,4,135,50,0,15,2,32,False,0,0,0,114,2,72,Driver Inattention/Distraction,False,False,both,112,37.04,0
+11694,2026,Queens,81,1,92,55,0,10,4,38,True,0,0,0,74,2,1,Driver Inattention/Distraction,False,False,both,138,59.78,0
+11695,2022,Queens,0,0,1,0,0,0,0,0,False,0,0,0,0,0,0,Driver Inattention/Distraction,True,False,collisions only,164,0.0,0
+11697,2022,Queens,50,9,10,2,0,0,0,2,False,0,0,0,34,0,8,Driver Inattention/Distraction,False,False,both,73,20.0,0
+11697,2023,Queens,78,28,9,3,0,0,1,2,False,0,0,0,42,7,27,Backing Unsafely,False,True,both,11,33.33,0
+11697,2024,Queens,50,1,8,1,0,0,1,0,False,0,0,0,36,9,1,Driver Inattention/Distraction,False,False,both,125,12.5,0
+11697,2025,Queens,83,9,9,4,0,1,1,2,False,0,0,0,64,8,9,Driver Inattention/Distraction,False,False,both,74,44.44,0
+11697,2026,Queens,57,7,6,6,0,0,0,6,True,0,0,0,42,4,7,Other Vehicular,False,False,both,77,100.0,0
