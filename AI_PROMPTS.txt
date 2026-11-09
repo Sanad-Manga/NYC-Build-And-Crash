@@ -2272,3 +2272,160 @@ If you find a critical source-schema or validation issue, stop and report it rat
 After implementation, provide the full verification report, actual aggregation totals, changed files, and Git status for my review.
 How the output was used: Implemented phase2_collisions_aggregation_yassin.ipynb using only Ahmed's validated local Stage 2 gzip. Exported 1,040 unique ZIP/year rows across 228 ZIPs, reconciling 321,359 collisions, 169,747 persons injured, 721 persons killed and 17 extreme-injury crashes. Documented missing-ZIP exclusions, all-years ZIP borough modes and deterministic factor ties. Notebook structure/syntax, a fresh .venv kernel run (counts 1-8), nine focused regression groups, per-group independent checks and CSV round-trip passed; the coverage chart was rendered and visually checked. An initial empty-eligibility regression exposed a pandas StringDtype reduction issue in the new validator; it was fixed and all tests rerun. Input and teammate files were preserved. No API download, housing join, commit, push, merge or fresh-clone verification was performed.
 ================================================
+Date: 2026-11-09
+Student: Yassin
+Tool: Codex
+Related Requirement: PR 10 - Common window, portable validation, prompt preservation and reproducibility
+Prompt: # Fix PR #10 — Yassin Phase 2 Collision Aggregation
+
+Read `FIXES_YASSIN_PR10.md` carefully. Use `PHASE2_PROMPTS.md` only for the original project context.
+
+Repository: `D:\NYC-Build-And-Crash-Phase2-Yassin`
+
+Branch: `feature/yassin-collisions-aggregation`
+
+PR: #10
+
+Reviewer: Ahmed Sanad
+
+## Objective
+
+Fix every review issue in `FIXES_YASSIN_PR10.md` without rewriting the already validated aggregation logic.
+
+Preserve the current output filename, column names, notebook ownership, and existing metrics.
+
+Work only on my feature branch. Do not merge the PR into main.
+
+## Y-A — Critical: Apply the team's common date window
+
+The team has agreed on:
+
+- Start: 2022-01-01, inclusive.
+- End: 2026-10-31, inclusive.
+- Implement the upper bound as crash_date < 2026-11-01.
+
+Immediately after loading and validating the Stage 2 input, filter records to this window.
+
+This must happen BEFORE missing-ZIP exclusions and aggregation.
+
+Print and validate:
+- Rows before filtering.
+- Rows after filtering.
+- Rows excluded by the date cutoff.
+- Record counts by year.
+- Actual minimum and maximum crash dates.
+- Missing-ZIP counts and percentages by year AFTER the filter.
+
+Assert the filtered source frame contains no dates outside the agreed window.
+
+Recalculate every downstream statistic from the filtered records, including collision totals, ZIP-year groups, casualty totals, extreme-injury counts, missingness, borough conflicts, factor summaries, and chart values.
+
+Update every markdown statement containing old results. Every reported number must match an output from the final notebook execution.
+
+Change the limitations section to state that 2026 covers January 1 through October 31 and is therefore a partial year matching the housing dataset.
+
+Do not hardcode expected output counts.
+
+The output does not contain crash_date, so verify the date bounds on the filtered source frame and verify the appropriate year and partial-year properties on the reloaded aggregate. Do not add a crash_date column to the agreed output schema.
+
+## Y-B — Critical: Fix reproducibility and portability
+
+Remove:
+- Hardcoded source-file SHA-256 assertions.
+- Assertions requiring exact counts from the November 7 snapshot.
+- Other checks that prevent valid newer or older source snapshots from working.
+
+Preserve:
+- Input schema validation.
+- Valid ZIP and year types.
+- Collision-ID uniqueness.
+- Unique ZIP-year output keys.
+- Nonnegative integer counts.
+- Reconciliation of all aggregated totals against the filtered eligible source records.
+- Export/reload validation.
+- Deterministic borough and contributing-factor tie handling.
+
+Check the notebook's saved outputs for absolute Windows paths such as `D:\`.
+
+Replace them with relative paths. Inspect saved code-cell output, not just the Python source.
+
+Run a fresh-clone verification with a new virtual environment and the shared requirements. Since generated input data is Git-ignored, make the Stage 2 input available through a clearly documented, reproducible method. Do not claim the input was regenerated from the API if it was copied from the verified dataset.
+
+Execute the notebook from a fresh kernel, all cells in order, with no errors. Verify execution counts are sequential.
+
+Confirm the notebook does not depend on my specific computer directory or one exact gzip file hash.
+
+## Y-C — Major: Resolve the AI_PROMPTS.txt merge conflict
+
+Fetch the latest origin/main and inspect the incoming changes.
+
+Merge origin/main into this feature branch.
+
+Resolve the AI_PROMPTS.txt conflict by preserving every existing teammate entry, including Walid's new entries.
+
+Keep my Phase 2 entries at the bottom, in the course-required format.
+
+Do not change, shorten, reconstruct, or duplicate existing prompts.
+
+Verify:
+
+`git diff origin/main -- AI_PROMPTS.txt`
+
+The resulting diff must show only legitimate additions from my branch and no deleted teammate content.
+
+Preserve the original prompts verbatim.
+
+Append a new entry documenting this fix request and the actual corrections performed, without inventing verification results.
+
+If unrelated merge conflicts occur, report them instead of guessing how to resolve teammates' code.
+
+## Y-D — Minor: Improve Issa's handoff
+
+Keep the accepted export filename:
+
+`data/collisions_zip_year.csv`
+
+Do NOT change it to .csv.gz.
+
+Keep the existing 15-column output schema and metric names.
+
+Update the final handoff markdown to include:
+- Agreed window: January 1, 2022 through October 31, 2026.
+- Actual final output row count.
+- Exact output column names.
+- The fact that ZIP codes must be read as strings.
+- The fact that 2026 is partial.
+- The command or notebook steps Issa needs to regenerate the file.
+
+Keep all research conclusions correlational rather than causal.
+
+## Final acceptance checks
+
+After the fixes, run the complete notebook and verify all of Ahmed's acceptance criteria:
+
+1. Filtered input starts on 2022-01-01 and ends no later than 2026-10-31.
+2. Missing-ZIP exclusions and percentages are recalculated by year.
+3. Sum of collision_count equals the count of eligible filtered input records.
+4. No absolute computer paths remain in saved notebook outputs.
+5. Fresh-clone execution passes from the first through final code cell with zero errors.
+6. Git diff shows no removed teammate prompt entries.
+7. PR diff contains only `phase2_collisions_aggregation_yassin.ipynb` and `AI_PROMPTS.txt`.
+8. Every markdown number matches the results printed by the final run.
+9. All eight casualty metrics reconcile.
+10. Export/reload checks pass using the agreed CSV filename.
+
+## Restrictions
+
+Do not edit Ahmed's, Walid's, or Issa's notebooks.
+
+Do not modify requirements.txt, website code, or unrelated project files.
+
+Do not force-push, rebase shared work, or merge the PR into main.
+
+Do not delete the verified Stage 2 input.
+
+Do not commit or push yet. Leave the completed changes ready for my review.
+
+When finished, report the exact before/after counts, changed files, full test results, fresh-clone verification, any unresolved issues, and final Git status.
+How the output was used: Inspected the review and discovered PR #10 was already merged upstream. Preserved the existing remote cutoff/hash fixes and all main prompt entries, including Walid's; synced the existing feature branch and merged origin/main without creating a commit. Completed source-before-filter validation, date-boundary/partial-year portability tests, dynamic handoff documentation and relative saved outputs while retaining the aggregation algorithm and 15-column CSV interface. The copied verified Stage 2 input contained 448,091 records; the common window retained 447,497, excluded 594 by date, and aggregated 321,092 valid-ZIP crashes to 1,040 ZIP-year rows. A real fresh clone/new venv/shared-requirements/pip-check test with candidate files overlaid and copied input completed code counts 1-9 with zero errors; all 11 regression groups, independent group checks and CSV round-trip passed. No source API regeneration or VS Code UI run is claimed. Input bytes and teammate files were preserved, old derived output was archived, and no commit, push, rebase, force-push or PR merge was performed.
+================================================
