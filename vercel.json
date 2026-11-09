@@ -1,0 +1,8 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "vercel_app.py": {
+      "excludeFiles": "{**/*.ipynb,app.py,tests/**,docs/**,scripts/**,.venv/**,AI_PROMPTS.txt,AGENTS.md,README.md,requirements.txt}"
+    }
+  }
+}

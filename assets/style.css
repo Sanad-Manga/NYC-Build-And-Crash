@@ -1,0 +1,25 @@
+:root { --fg:#1f2933; --muted:#5f6c7b; --line:#d9dee5; --accent:#4e79a7; --warn-bg:#fff4d6; --warn-fg:#6b4e00; }
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--fg); margin: 0; background: #fff; }
+.page { max-width: 1200px; margin: 0 auto; padding: 16px; }
+h1 { margin: 8px 0 4px; }
+.muted { color: var(--muted); }
+.banner { background: var(--warn-bg); color: var(--warn-fg); border: 1px solid #e6c866; border-radius: 6px; padding: 10px 14px; margin: 10px 0; font-weight: 600; }
+.panel { border: 1px solid var(--line); border-radius: 8px; padding: 12px; margin: 12px 0; }
+.filter-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 10px; }
+.lbl { display: block; font-weight: 600; margin-bottom: 4px; font-size: 14px; }
+.search { width: 100%; box-sizing: border-box; padding: 8px 10px; border: 1px solid #b8c0cc; border-radius: 4px; font-size: 15px; }
+.hint { color: var(--muted); font-size: 13px; margin-top: 4px; }
+.hint.warn { color: var(--warn-fg); }
+.center { text-align: center; margin: 8px 0; }
+button.primary { background: var(--accent); color: #fff; border: 0; border-radius: 6px; padding: 12px 36px; font-size: 17px; font-weight: 600; cursor: pointer; }
+button.primary:hover { filter: brightness(0.92); }
+.info { background: #eef3f8; border: 1px solid var(--line); border-radius: 6px; padding: 14px; margin: 12px 0; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 10px 0; }
+.stat { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+.big { font-size: 26px; font-weight: 700; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 16px; }
+.caption { color: var(--muted); font-size: 13px; margin: 2px 0 12px; }
+.card { border: 1px solid var(--line); border-radius: 8px; padding: 12px; }
+.rq-img { max-width: 100%; height: auto; }
+.finding-box { margin-top: 8px; }
+@media (max-width: 600px) { .page { padding: 12px; } }

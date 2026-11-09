@@ -97,6 +97,34 @@ Rules:
 - Python version and environment variables: _to be added_
 - Data: `data/zip_year.csv` is git-ignored, so the deployment must either commit it or generate it during the build. Decision: _to be added_
 
+## Website on Vercel (Dash)
+
+`dash_app.py` is the Dash version of the website (same `src/` logic, same Plotly charts); `app.py` (Streamlit) stays as a fallback. Vercel cannot run Streamlit (it needs a long-running server), so the deployed site is the Dash app.
+
+```bash
+# from the repository root, with the venv active (pip install -r requirements.txt; it includes dash)
+python dash_app.py                # opens http://127.0.0.1:8050
+```
+
+Tabs: **Dashboard** (search box, Borough / Year / Housing category / Collision category / optional ZIP dropdowns, **Generate Report**; nothing updates until the button is clicked), **Research questions** (reads `assets/rq/<name>_q<1|2>.md` and `.png`; missing files show "not yet available") and **Story**. If `data/zip_year.csv` is missing the site falls back to `data/dummy_zip_year.csv` and shows a "Showing dummy data" banner. The housing categories "Alterations" and "Demolitions" are hidden (with a note) when `alteration_job_count` / `demolition_job_count` are absent from the table.
+
+### Vercel packaging (exception to the one-requirements.txt rule)
+
+The root `requirements.txt` stays the single file for the notebooks, tests and the Streamlit fallback. The Vercel function must not install notebook packages (jupyter, seaborn, nbconvert, pytest ...), so the **web dependencies live in `pyproject.toml`** (`dash==4.4.1`, `plotly==7.1.0`, `pandas==3.1.0`, `numpy==2.5.4`; the last three match `requirements.txt`). `[tool.vercel] entrypoint = "vercel_app:app"` points Vercel at `vercel_app.py`, which exposes the Flask object of the Dash app as `app`. `.python-version` selects Python 3.14, and `vercel.json` excludes notebooks, tests and docs from the function bundle. The data file and `assets/` are bundled because Vercel includes every file reachable in the project. The lean dependency set measured 294 MB of installed packages in a fresh virtual environment (limit: 500 MB uncompressed per the Vercel docs).
+
+Vercel project settings (set once in the Vercel dashboard, after signing in with GitHub):
+
+1. New Project, import `Sanad-Manga/NYC-Build-And-Crash`.
+2. Framework Preset: **Other**.
+3. Root Directory: leave empty (repository root).
+4. Build Command, Output Directory: leave empty (no override). Install Command: leave empty (Vercel installs from `pyproject.toml`).
+5. Environment Variables: none.
+6. Production Branch: **main** (Settings, Git).
+7. Deploy. Python version comes from `.python-version` (3.14); no setting needed.
+8. In the build log check that jupyter / streamlit / seaborn are NOT being installed. If they are, tell the team: the install command has to be overridden.
+
+*Status: tested locally (tests, WSGI test client, browser click-through). The live deployment is to be confirmed by Ahmed after the first Vercel build.*
+
 ## Team and contributions
 
 Team of four. Status reflects the repository on 5 Nov 2026; "open PR" means the work is in a pull request that is not merged yet.
