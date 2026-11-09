@@ -22,6 +22,9 @@ COUNT_COLUMNS = [
     "persons_killed", "pedestrians_injured", "cyclist_injured", "motorist_injured",
 ]
 REQUIRED_COLUMNS = ["zip_code", "year", "borough"] + COUNT_COLUMNS + ["is_partial_year"]
+# Optional count columns: kept when present (the Dash site offers them as housing categories),
+# silently absent otherwise. They must still be non-negative integers when they exist.
+OPTIONAL_COUNT_COLUMNS = ["alteration_job_count", "demolition_job_count"]
 
 
 class DataValidationError(ValueError):
@@ -41,7 +44,7 @@ def is_dummy(path) -> bool:
 def validate(df: pd.DataFrame) -> pd.DataFrame:
     """Check columns, dtypes and value ranges; raise DataValidationError with a clear message.
 
-    Extra columns are allowed. On success only the REQUIRED_COLUMNS are returned (a copy).
+    Extra columns are allowed. On success the REQUIRED_COLUMNS (plus any OPTIONAL_COUNT_COLUMNS present) are returned (a copy).
     """
     missing = [c for c in REQUIRED_COLUMNS if c not in df.columns]
     if missing:
@@ -66,7 +69,14 @@ def validate(df: pd.DataFrame) -> pd.DataFrame:
         raise DataValidationError("is_partial_year must be a boolean column.")
     if df.duplicated(["zip_code", "year"]).any():
         raise DataValidationError("There must be exactly one row per zip_code x year; found duplicates.")
-    return df[REQUIRED_COLUMNS].copy()
+    for col in OPTIONAL_COUNT_COLUMNS:
+        if col in df.columns:
+            if not pd.api.types.is_integer_dtype(df[col]):
+                raise DataValidationError(f"{col} must be an integer count column, got {df[col].dtype}.")
+            if (df[col] < 0).any():
+                raise DataValidationError(f"{col} contains negative counts.")
+    kept = REQUIRED_COLUMNS + [c for c in OPTIONAL_COUNT_COLUMNS if c in df.columns]
+    return df[kept].copy()
 
 
 def load_data(path=None) -> pd.DataFrame:

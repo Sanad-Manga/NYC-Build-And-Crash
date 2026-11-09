@@ -103,3 +103,71 @@ def describe_query(parsed: dict) -> tuple:
     understood = ", ".join(parts) if parts else "nothing recognised"
     ignored = ", ".join(parsed["unparsed"])
     return understood, ignored
+
+
+# ---------------------------------------------------------------- Dash site: two category dropdowns
+# Phrases for the housing category and for the collision category (longest first within each group).
+HOUSING_PHRASES = [
+    ("new construction", "new_building_count"), ("new buildings", "new_building_count"),
+    ("new building", "new_building_count"),
+    ("alterations", "alteration_job_count"), ("alteration", "alteration_job_count"),
+    ("demolitions", "demolition_job_count"), ("demolition", "demolition_job_count"),
+    ("demolished", "demolition_job_count"),
+    ("all jobs", "housing_job_count"), ("buildings", "housing_job_count"), ("building", "housing_job_count"),
+    ("filings", "housing_job_count"), ("filing", "housing_job_count"),
+    ("jobs", "housing_job_count"), ("job", "housing_job_count"), ("housing", "housing_job_count"),
+]
+COLLISION_PHRASES = [
+    ("persons injured", "persons_injured"), ("persons killed", "persons_killed"),
+    ("pedestrians injured", "pedestrians_injured"), ("pedestrian injuries", "pedestrians_injured"),
+    ("cyclists injured", "cyclist_injured"), ("cyclist injuries", "cyclist_injured"),
+    ("motorists injured", "motorist_injured"), ("motorist injuries", "motorist_injured"),
+    ("all collisions", "collision_count"),
+    ("pedestrians", "pedestrians_injured"), ("pedestrian", "pedestrians_injured"),
+    ("cyclists", "cyclist_injured"), ("cyclist", "cyclist_injured"),
+    ("bikers", "cyclist_injured"),
+    ("motorists", "motorist_injured"), ("motorist", "motorist_injured"),
+    ("killed", "persons_killed"), ("deaths", "persons_killed"), ("fatalities", "persons_killed"),
+    ("injuries", "persons_injured"), ("injury", "persons_injured"), ("injured", "persons_injured"),
+    ("collisions", "collision_count"), ("collision", "collision_count"),
+    ("crashes", "collision_count"), ("crash", "collision_count"),
+]
+
+
+def parse_categories(text) -> dict:
+    """Like parse_query but returns a housing category and a collision category separately.
+
+    Result: {borough, year, zip_code, housing, collision, unparsed}; missing parts are None.
+    "Queens 2024 demolitions cyclists" -> housing = demolition_job_count, collision = cyclist_injured.
+    A second phrase for the same category, and any word that is not understood, go to `unparsed`.
+    This function never raises: unknown input is reported back as ignored words.
+    """
+    result = {"borough": None, "year": None, "zip_code": None, "housing": None, "collision": None,
+              "unparsed": []}
+    if not isinstance(text, str):
+        return result
+    rest = re.sub(r"[^a-z0-9 ]+", " ", text.lower())
+    for key, phrases in (("housing", HOUSING_PHRASES), ("collision", COLLISION_PHRASES)):
+        for phrase, column in phrases:
+            pattern = _phrase_regex(phrase)
+            if pattern.search(rest):
+                if result[key] is None:
+                    result[key] = column
+                else:
+                    result["unparsed"].append(phrase)
+                rest = pattern.sub(" ", rest)
+    base = parse_query(rest)               # borough / year / ZIP / leftovers from what remains
+    for field in ("borough", "year", "zip_code"):
+        result[field] = base[field]
+    result["unparsed"] += base["unparsed"]
+    return result
+
+
+def describe_categories(parsed: dict) -> tuple:
+    """Plain-language (understood, ignored) strings for a parse_categories result."""
+    parts = []
+    for key, label in (("borough", "borough"), ("year", "year"), ("zip_code", "ZIP"),
+                       ("housing", "housing measure"), ("collision", "collision measure")):
+        if parsed[key]:
+            parts.append(f"{label} = {parsed[key]}")
+    return (", ".join(parts) if parts else "nothing recognised"), ", ".join(parsed["unparsed"])

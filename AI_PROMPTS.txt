@@ -2450,6 +2450,21 @@ How the output was used: Merged origin/main, ran the integration notebook on Yas
 
 ================================================
 Date: 2026-11-09
+Student: Ahmed Sanad
+Tool: Claude Code (Claude Sonnet 5.5)
+Related Requirement: Website - Dash version for Vercel (dropdown filters with housing and collision categories, search mode, Generate Report, 4 chart types, research-question tab, story section)
+
+Prompt: STEP 2 of the master prompt: build the website in Dash for Vercel on a new branch feature/dash-vercel. Reuse src/ unchanged where possible, keep the Streamlit app.py untouched as a fallback, add Housing category and Collision category dropdowns (hide optional columns when absent), extend src/search.py, make Generate Report the only trigger, add a research-questions tab scanning assets/rq with pytest tests, a five-part story, and Vercel packaging with a lean dependency set (checking Vercel's current docs). Test locally and open a PR with the exact Vercel settings.
+
+How the output was used:
+Kept: dash_app.py, vercel_app.py, pyproject.toml, vercel.json, src/research.py, parse_categories in src/search.py, optional-column handling in src/data.py and src/report.py, tests/test_dash_categories.py.
+Checked: pytest, 1728 filter combinations through the WSGI test client, and a browser click-through of search, Generate Report, tabs and charts.
+Changed after testing: a search with no recognised words now leaves the dropdowns unchanged, and the search message shows category labels instead of column names.
+Not verified: the live Vercel build (needs Ahmed's login).
+================================================
+
+================================================
+Date: 2026-11-09
 Student: Mohamed Issa
 Tool: Claude Code (Opus 5.5)
 Related Requirement: Phase 3 - two research questions (phase3_analysis_issa.ipynb, assets/rq/issa_q1.*, assets/rq/issa_q2.*)
