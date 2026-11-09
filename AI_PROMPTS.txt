@@ -2575,3 +2575,21 @@ Related Requirement: Final submission checks (README, dataset links in notebooks
 Prompt: Two final reviews of the repo against the project PDF found: the seven Phase 2 and Phase 3 notebooks had no dataset links; the README still had "to be confirmed" notes for the live URL and the Vercel settings; the PDF asks for one notebook while the repo has twelve; and contributions were not described per visualization and website component. Fix these with minimal edits.
 How the output was used: Added one markdown cell with both NYC Open Data links to the seven notebooks (cells and outputs otherwise untouched; notebooks round-tripped byte-identical before editing). README: removed the two confirmation notes, added an entry-point notebook sentence (00_project_overview.ipynb with the other eleven as linked parts) and a short who-built-what paragraph. Walid's own "to be confirmed by Walid" row was left for him.
 ================================================
+
+================================================
+Date: 2026-11-09
+Student: Ahmed Sanad
+Tool: Claude Code (Sonnet 5.5)
+Related Requirement: Website visual polish
+Prompt: The site looks too plain. Give it a visual refresh without changing behaviour, and make the housing-vs-collisions scatter a bubble chart so size carries a third value (a map is not possible: the data has no ZIP boundaries or coordinates).
+How the output was used: Appended a CSS block to assets/style.css (gradient header, card shadows, accent stat tiles, pill button, tab styling) and changed construction_vs_crashes in src/charts.py so bubble area = people injured per ZIP (floored at 1; hover shows the true value; falls back to fixed-size dots if the column is missing). Display names on the site are now Mohamed Issa, Mohamed Walid and Yassin Elshaer (src/research.py MEMBERS) and in the README. Also made each research-question chart image a link that opens it at full size in a new tab (dash_app.py rq_card). No callbacks or data logic changed. Checked: 43 tests pass, local browser at 1200px and 375px (no sideways scroll, 4 charts after Generate Report).
+================================================
+
+================================================
+Date: 2026-11-09
+Student: Ahmed Sanad
+Tool: Claude Code (Sonnet 5.5)
+Related Requirement: Research-question findings readability
+Prompt: Yassin's two research-question findings are too long and full of repeated caveats. Condense them without changing any number.
+How the output was used: Rewrote assets/rq/yassin_q1.md and yassin_q2.md to about 650-700 characters each (question on line 1 kept); every number was checked against the original text (none new). The two matching quoted findings in 00_project_overview.ipynb were updated to the same text.
+================================================

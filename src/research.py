@@ -7,7 +7,7 @@ A missing .md or .png never raises: the entry is marked unavailable / has image 
 """
 from pathlib import Path
 
-MEMBERS = {"ahmed": "Ahmed Sanad", "issa": "Issa", "walid": "Walid", "yassin": "Yassin"}
+MEMBERS = {"ahmed": "Ahmed Sanad", "issa": "Mohamed Issa", "walid": "Mohamed Walid", "yassin": "Yassin Elshaer"}
 QUESTION_NUMBERS = (1, 2)
 RQ_DIR = Path(__file__).resolve().parent.parent / "assets" / "rq"
 NOT_AVAILABLE = "not yet available"

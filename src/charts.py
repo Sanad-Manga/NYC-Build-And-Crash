@@ -87,14 +87,24 @@ def trend_both(df: pd.DataFrame, housing: str, collision: str) -> go.Figure:
 def construction_vs_crashes(df: pd.DataFrame, housing: str = "new_building_count",
                             collision: str = "collision_count") -> go.Figure:
     """(c) Relationship between the two domains: a housing measure vs a collision measure, one dot per ZIP."""
-    per_zip = df.groupby(["zip_code", "borough"], as_index=False)[[housing, collision]].sum()
+    size_col = "persons_injured" if "persons_injured" in df.columns and collision != "persons_injured"         and housing != "persons_injured" else None
+    cols = [housing, collision] + ([size_col] if size_col else [])
+    per_zip = df.groupby(["zip_code", "borough"], as_index=False)[cols].sum()
+    extra = {}
+    if size_col:   # bubble area = people injured (floored at 1 so a ZIP with none stays visible)
+        per_zip["bubble_size"] = per_zip[size_col].clip(lower=1)
+        extra = {"size": "bubble_size", "size_max": 24}
     fig = px.scatter(per_zip, x=housing, y=collision, color="borough",
                      color_discrete_map=BOROUGH_COLORS, template=TEMPLATE,
-                     hover_name="zip_code", hover_data={"borough": True, "zip_code": False},
+                     hover_name="zip_code",
+                     hover_data={"borough": True, "zip_code": False, "bubble_size": False,
+                                 **({size_col: True} if size_col else {})},
                      labels={housing: f"{axis_title(housing)}, count per ZIP",
-                             collision: f"{axis_title(collision)}, count per ZIP", "borough": "Borough"},
-                     title=f"{metric_label(housing)} vs {metric_label(collision).lower()}")
-    fig.update_traces(marker={"size": 9, "opacity": 0.8})
+                             collision: f"{axis_title(collision)}, count per ZIP", "borough": "Borough",
+                             "persons_injured": "People injured"},
+                     title=f"{metric_label(housing)} vs {metric_label(collision).lower()}"
+                           + (" (bubble size = people injured)" if size_col else ""), **extra)
+    fig.update_traces(marker={"opacity": 0.75, "line": {"width": 0.6, "color": "white"}, **({} if size_col else {"size": 9})})
     return _style(fig)
 
 
