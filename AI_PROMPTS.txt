@@ -2497,6 +2497,24 @@ How the output was used: Claude built phase3_analysis_ahmed.ipynb. Because the P
 Date: 2026-11-09
 Student: Yassin
 Tool: OpenAI Codex
+Related Requirement: Phase 3 - two research questions
+Prompt (verbatim excerpt from Ahmed's supplied task, including its pasted Markdown escapes):
+You are Yassin's coding agent (Yassin, team of 4, NYC Build and Crash, due today). Rules: VS Code + .venv only, relative paths, never commit to main, never force-push, never edit a teammate's file, one branch off origin/main (feature/rq-yassin), fresh-clone test, every number in markdown equals a printed output, correlation-only wording, no "causes". Do not merge your own PR; tell Ahmed when done. Append your entries to the bottom of AI_PROMPTS.txt (existing lines untouched).\
+\
+TASK: create phase3_analysis_yassin.ipynb with TWO research questions, each with exactly one labelled chart (title, axis labels with units, interactive Plotly or matplotlib). The notebook reads data/zip_year.csv (written by Issa's phase2_data_integration_issa.ipynb; raise a FileNotFoundError naming it if missing; read zip_code as string). Write the code now; run it when data/zip_year.csv is on main (git pull origin main). Columns pedestrians_killed, cyclist_killed, motorist_killed are extras in that file; if one is missing, tell Ahmed instead of inventing it. Use FULL years 2022-2025 for group comparisons (2026 is January to October only; in line charts draw 2026 dashed and label it partial), leave out rows with low_data_flag == True and say how many. Do not repeat Ahmed's questions (new buildings vs pedestrian+cyclist injury rate by quartile; contributing-factor profile).\
+\
+Q1: "How deadly are the crashes in ZIP codes with a lot of new construction?" Rank ZIPs by new_building_count summed over 2022-2025; compare top quartile vs bottom quartile on persons_killed per 1,000 collisions and on (pedestrians_killed + cyclist_killed) per 1,000 collisions. Deaths are rare: pool the group totals, give a bootstrap 95% interval (2,000 draws, fixed seed, resample ZIPs) and say plainly in the finding if the intervals overlap. Chart: grouped bars with error bars.\
+Q2: "Which boroughs account for a larger share of collisions than of construction, and has that changed?" For each borough and year compute share of citywide collisions minus share of citywide new_building_count (or housing_job_count if new buildings are sparse, and say so). Chart: one line per borough over 2022-2026, 2026 dashed and labelled partial.\
+\
+For each question write a markdown block: the question and why it matters to New Yorkers, method with the alternative you rejected, why this chart, the finding with the printed numbers, the limitation (28% of crashes have no ZIP and are excluded, more in 2022-2023; no traffic or population denominator; ZIP codes are not neighbourhoods; busy areas have both more building and more traffic). Save each chart as assets/rq/yassin_q1.png and assets/rq/yassin_q2.png and its one-paragraph finding as assets/rq/yassin_q1.md and assets/rq/yassin_q2.md (create the folder). End with a "Contribution note" (Yassin authored the collisions initial cleaning, the collisions ZIP x year aggregation and these two questions) and a "Prompts used" cell. Open a PR and paste the printed key numbers in it.\
+\
+How the output was used: Created phase3_analysis_yassin.ipynb and the two website chart/finding pairs. Implemented pooled fatality rates with fixed-seed ZIP-cluster bootstrap intervals, borough new-building share gaps, input validation and regression checks. Findings are generated from calculations. Documented the related question now merged by Issa, low-data exclusions, missing ZIP selection and partial 2026 limitations.
+================================================
+
+================================================
+Date: 2026-11-09
+Student: Yassin
+Tool: OpenAI Codex
 Related Requirement: Final overview notebook assembly
 Prompt (verbatim excerpt from Ahmed's supplied task, including pasted Markdown escapes):
 You are Yassin's coding agent (Yassin owns the final notebook assembly). Branch docs/overview-notebook off origin/main; never commit to main, never edit another notebook, do not merge your own PR; tell Ahmed when done. Rules: relative paths, every number equals a printed output of the linked notebook.\
