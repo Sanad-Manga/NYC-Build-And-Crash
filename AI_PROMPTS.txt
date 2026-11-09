@@ -2539,3 +2539,12 @@ TASK: create 00_project_overview\.ipynb (mostly markdown plus one small code cel
 Open a PR; list in the description which numbers you took from which notebook.
 How the output was used: Created only 00_project_overview.ipynb plus this log entry. Assembled dataset counts from saved Phase 1 outputs, explained the later collision snapshot used in integration, traced actual join/zero-fill/post-join rules, listed notebook interfaces and merged research findings, and distinguished assignments and pending PRs from merged contributions. Added one nonfatal file-availability code cell. No teammate notebook or asset was edited.
 ================================================
+
+================================================
+Date: 2026-11-09
+Student: Ahmed Sanad
+Tool: Claude Code (Sonnet 5.5)
+Related Requirement: Website story section
+Prompt: The live Story tab listed only 5 of the 8 research findings because story_tab() in dash_app.py capped the entries at the first 5. Remove the cap so all available findings are listed.
+How the output was used: One-line change in dash_app.py. Checked with the vercel_app test client (8 story entries, page returns 200) and the existing test suite (43 passed).
+================================================
