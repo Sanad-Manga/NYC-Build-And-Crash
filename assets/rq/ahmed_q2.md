@@ -1,0 +1,3 @@
+Do ZIP codes with the most new construction have a different mix of top contributing factors than ZIP codes with the least?
+
+The two profiles are similar. "Driver Inattention/Distraction" is the most common top factor in 89.8% of ZIP-years in the top-quartile ZIPs (176 ZIP-years) and in 94.8% in the bottom-quartile ZIPs (172 ZIP-years); "Failure to Yield Right-of-Way" is second with 9.7% and 2.9%. The two profiles differ by 6.8 percentage points in total (permutation p = 0.2032), so we see no clear difference. Only the single most common factor of each ZIP-year is available, one factor dominates both groups, and busy ZIPs have both more construction and more traffic, so this is an association between groups, not an explanation. Source: phase3_analysis_ahmed.ipynb.
