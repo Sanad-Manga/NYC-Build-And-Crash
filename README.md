@@ -20,7 +20,7 @@ The two datasets share no row-level key, so each is aggregated to **ZIP code x y
 ## Repository layout
 
 ```
-00_project_overview.ipynb                    overview of data, pipeline, run order and the eight findings (Yassin)
+00_project_overview.ipynb                    overview of data, pipeline, run order and the eight findings (Yassin Elshaer)
 phase1_housing_initial_cleaning_issa.ipynb   housing: loading, missing values, duplicates
 phase1_housing_eda_cleaning_walid.ipynb      housing: EDA, outliers, inconsistencies, ZIP/date standards
 phase1_collisions_initial_cleaning_yassin.ipynb  collisions: initial cleaning and audit
@@ -29,9 +29,9 @@ phase2_housing_zip_year_walid.ipynb          housing aggregated to ZIP x year
 phase2_collisions_aggregation_yassin.ipynb   collisions aggregated to ZIP x year
 phase2_data_integration_issa.ipynb           join, post-join cleaning, writes data/zip_year.csv
 phase3_analysis_ahmed.ipynb                  research questions (Ahmed)
-phase3_analysis_issa.ipynb                   research questions (Issa)
-phase3_analysis_walid.ipynb                  research questions (Walid)
-phase3_analysis_yassin.ipynb                 research questions (Yassin)
+phase3_analysis_issa.ipynb                   research questions (Mohamed Issa)
+phase3_analysis_walid.ipynb                  research questions (Mohamed Walid)
+phase3_analysis_yassin.ipynb                 research questions (Yassin Elshaer)
 dash_app.py                                  the website (Dash)
 vercel_app.py, vercel.json, pyproject.toml   Vercel entry point and web-only dependencies
 app.py                                       earlier Streamlit version of the website (kept as a fallback)
@@ -159,9 +159,9 @@ Team of four; Ahmed Sanad is team leader. Contributions below come from `docs/TE
 | **Ahmed Sanad** | Collisions EDA and cleaning (PR 3); prompt log (PR 2) | Website skeleton with filters, search and Generate Report (PR 8) | Analysis notebook and 2 research questions (PR 13); Dash website for Vercel (PR 16); Story and research-question fixes (PR 21, 23, 24); README |
 | **Mohamed Issa** | Housing loading and initial cleaning (PR 6) | Integration, post-join cleaning and `data/zip_year.csv` (PR 12) | 2 research questions (PR 17) |
 | **Mohamed Walid** | Housing EDA and cleaning (PR 1); team standards (PR 5) | Housing ZIP x year aggregation (PR 11) | 2 research questions (PR 18); deployment testing (to be confirmed by Walid) |
-| **Yassin** | Collisions initial cleaning (PR 4, 15, 20) | Collisions ZIP x year aggregation (PR 10) | 2 research questions (PR 19); `00_project_overview.ipynb` (PR 22) |
+| **Yassin Elshaer** | Collisions initial cleaning (PR 4, 15, 20) | Collisions ZIP x year aggregation (PR 10) | 2 research questions (PR 19); `00_project_overview.ipynb` (PR 22) |
 
-**Who built what (visualizations and website).** Ahmed: the Dash website (filters with a category from each dataset, search mode, the single Generate Report button, four report charts, research-questions and Story tabs), plus two research-question charts (grouped injury-rate bars; stacked contributing-factor profile). Issa: the integrated ZIP x year table the site reads, plus two charts (change scatter with quadrants; borough-by-year diverging heatmap). Walid: the housing ZIP x year aggregation, plus two charts (box plot of collisions per housing job; bubble scatter of planned dwelling units against pedestrian injury rate). Yassin: the collisions ZIP x year aggregation and the overview notebook, plus two charts (grouped bars with bootstrap intervals; borough share lines with a dashed partial-year segment).
+**Who built what (visualizations and website).** Ahmed: the Dash website (filters with a category from each dataset, search mode, the single Generate Report button, four report charts, research-questions and Story tabs), plus two research-question charts (grouped injury-rate bars; stacked contributing-factor profile). Mohamed Issa: the integrated ZIP x year table the site reads, plus two charts (change scatter with quadrants; borough-by-year diverging heatmap). Mohamed Walid: the housing ZIP x year aggregation, plus two charts (box plot of collisions per housing job; bubble scatter of planned dwelling units against pedestrian injury rate). Yassin Elshaer: the collisions ZIP x year aggregation and the overview notebook, plus two charts (grouped bars with bootstrap intervals; borough share lines with a dashed partial-year segment).
 
 ## The eight research questions
 
@@ -171,12 +171,12 @@ Question wording is the first line of each `assets/rq/<name>_q<n>.md`; the findi
 |---|---|---|---|
 | Ahmed | Are ZIP codes with more new buildings also the ZIP codes where pedestrians and cyclists are hurt more often per collision? | Grouped bar, bootstrap 95% intervals | `phase3_analysis_ahmed.ipynb` |
 | Ahmed | Do ZIP codes with the most new construction have a different mix of top contributing factors than ZIP codes with the least? | Horizontal stacked bar | `phase3_analysis_ahmed.ipynb` |
-| Issa | Where is construction growing fastest, and do collisions in those ZIP codes move the same way? | Scatter | `phase3_analysis_issa.ipynb` |
-| Issa | Does the borough pattern of construction match the borough pattern of collisions over time? | Heatmap | `phase3_analysis_issa.ipynb` |
-| Walid | Is demolition activity in a ZIP code associated with more or fewer collisions per housing job? | Box plot with points | `phase3_analysis_walid.ipynb` |
-| Walid | Do ZIP codes adding many planned dwelling units in new buildings have a different pedestrian injury rate than ZIP codes adding few? | Bubble scatter | `phase3_analysis_walid.ipynb` |
-| Yassin | How deadly are the crashes in ZIP codes with a lot of new construction? | Grouped bar, bootstrap 95% intervals | `phase3_analysis_yassin.ipynb` |
-| Yassin | Which boroughs account for a larger share of collisions than of construction, and has that changed? | Line chart | `phase3_analysis_yassin.ipynb` |
+| Mohamed Issa | Where is construction growing fastest, and do collisions in those ZIP codes move the same way? | Scatter | `phase3_analysis_issa.ipynb` |
+| Mohamed Issa | Does the borough pattern of construction match the borough pattern of collisions over time? | Heatmap | `phase3_analysis_issa.ipynb` |
+| Mohamed Walid | Is demolition activity in a ZIP code associated with more or fewer collisions per housing job? | Box plot with points | `phase3_analysis_walid.ipynb` |
+| Mohamed Walid | Do ZIP codes adding many planned dwelling units in new buildings have a different pedestrian injury rate than ZIP codes adding few? | Bubble scatter | `phase3_analysis_walid.ipynb` |
+| Yassin Elshaer | How deadly are the crashes in ZIP codes with a lot of new construction? | Grouped bar, bootstrap 95% intervals | `phase3_analysis_yassin.ipynb` |
+| Yassin Elshaer | Which boroughs account for a larger share of collisions than of construction, and has that changed? | Line chart | `phase3_analysis_yassin.ipynb` |
 
 ## Use of AI
 
