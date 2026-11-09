@@ -2513,6 +2513,15 @@ How the output was used: Created phase3_analysis_yassin.ipynb and the two websit
 
 ================================================
 Date: 2026-11-09
+Student: Ahmed Sanad
+Tool: Claude Code (Sonnet 5.5)
+Related Requirement: Website research-question tab (assets/rq/*.md format)
+Prompt: The Research questions tab showed an empty finding for Issa and Walid because src/research.py reads line 1 as the question and the rest as the finding, and their .md files were one paragraph. Prepend each question as line 1 (taken from the notebook headings) and keep the finding text unchanged.
+How the output was used: Edited only assets/rq/issa_q1.md, issa_q2.md, walid_q1.md, walid_q2.md. Checked with src.research.scan_research (6 of 8 available, every finding non-empty) and a vercel_app test-client smoke test.
+================================================
+
+================================================
+Date: 2026-11-09
 Student: Yassin
 Tool: OpenAI Codex
 Related Requirement: Final overview notebook assembly
