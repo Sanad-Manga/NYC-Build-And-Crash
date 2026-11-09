@@ -1,1 +1,3 @@
+Do ZIP codes adding many planned dwelling units in new buildings have a different pedestrian injury rate than ZIP codes adding few?
+
 Among 214 eligible NYC ZIP codes in 2022–2025, planned dwelling-unit totals ranged from 0 to 4,649, including 47 ZIPs with zero planned units. The Spearman rank correlation between planned units and pedestrians injured per 100 collisions was 0.237, indicating a positive rank association; the two-sided 10,000-permutation p-value was 0.0005, so it was statistically detectable at the 0.05 level. The result is descriptive and does not show that planned housing activity caused pedestrian injuries.
