@@ -1,0 +1,16 @@
+# Web deployment only (Vercel). The notebooks, tests and the Streamlit fallback use the root requirements.txt.
+# Vercel reads the dependencies below; it must NOT install the notebook packages (jupyter, seaborn, nbconvert, pytest ...).
+[project]
+name = "nyc-build-and-crash-web"
+version = "1.0.0"
+description = "Dash website for the NYC Build and Crash project (Vercel deployment)"
+requires-python = ">=3.12"
+dependencies = [
+    "dash==4.4.1",
+    "plotly==7.1.0",
+    "pandas==3.1.0",
+    "numpy==2.5.4",
+]
+
+[tool.vercel]
+entrypoint = "vercel_app:app"

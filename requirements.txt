@@ -9,3 +9,4 @@ nbformat==5.11.1
 streamlit==1.66.1
 plotly==7.1.0
 pytest==9.2.0
+dash==4.4.1
