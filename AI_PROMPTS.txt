@@ -2516,7 +2516,7 @@ Date: 2026-11-09
 Student: Yassin
 Tool: OpenAI Codex
 Related Requirement: Final overview notebook assembly
-Prompt (verbatim excerpt from Ahmed's supplied task, including pasted Markdown escapes):
+Prompt: [Verbatim excerpt from Ahmed's supplied task, including pasted Markdown escapes]
 You are Yassin's coding agent (Yassin owns the final notebook assembly). Branch docs/overview-notebook off origin/main; never commit to main, never edit another notebook, do not merge your own PR; tell Ahmed when done. Rules: relative paths, every number equals a printed output of the linked notebook.\
 \
 TASK: create 00_project_overview\.ipynb (mostly markdown plus one small code cell that checks every notebook file listed exists and prints OK or MISSING). It must contain, in this order:\
