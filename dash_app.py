@@ -135,53 +135,91 @@ def research_tab():
     ])
 
 
+def _finding(title, text, source):
+    return html.Li([html.B(title + " "), text, html.Div(f"From: {source}", className="muted")])
+
+
 def story_tab():
-    available = [e for e in scan_research() if e["available"]]
-    # one finding per member (their first available question) so every team member's result appears
-    entries = [next(e for e in available if e["name"] == name) for name in MEMBERS
-               if any(e["name"] == name for e in available)]
-    if entries:
-        discovery = html.Ul([html.Li([
-            html.B(f"{e['member']}, question {e['number']}. "), e["question"], " ",
-            html.Span(e["finding"].replace("\n", " "), className="finding"),
-            html.Div(f"Source: assets/rq/{e['name']}_q{e['number']}.md, notebook "
-                     f"phase3_analysis_{e['name']}.ipynb", className="muted")]) for e in entries])
-    else:
-        discovery = html.P("The findings will appear here once the research-question files are in assets/rq/. "
-                           "Until then, nothing is claimed.", className="muted")
+    """The data story: question, data, discovery, limits, impact. The discovery is a plain-language synthesis of
+    the eight research answers (numbers taken from assets/rq/*.md); the full answers are on the Research tab."""
     return html.Div([
-        html.H2("1. The question, and why it matters to New Yorkers"),
-        html.P("Do the ZIP codes where New York City sees the most building activity also see more motor vehicle "
-               "collisions, and more injuries to pedestrians, cyclists and motorists? Construction changes streets, "
-               "traffic and crowds, so the answer could help residents, planners and safety groups know where to look "
-               "first. We only ask about association."),
-        html.H2("2. The data"),
-        html.Ul([
-            html.Li(html.A("DOB NOW: Build job application filings (NYC Open Data w9ak-ipjd)",
-                           href="https://data.cityofnewyork.us/d/w9ak-ipjd", target="_blank", rel="noopener")),
-            html.Li(html.A("Motor Vehicle Collisions, Crashes (NYC Open Data h9gi-nx95)",
-                           href="https://data.cityofnewyork.us/d/h9gi-nx95", target="_blank", rel="noopener")),
-        ]),
-        html.P("Both datasets were cleaned in separate notebooks, then joined into one table with one row per "
-               "ZIP code and year (2022 to 2026). Crashes without a ZIP code cannot be placed, so they are excluded "
-               "from the ZIP-level counts; rows we could not use are described in the Phase 1 and Phase 2 notebooks."),
-        html.H2("3. The discovery"),
-        discovery,
-        html.H2("4. The limits"),
-        html.Ul([
-            html.Li("About 28% of crashes have no ZIP code and are excluded, more of them in 2022 and 2023, so "
-                    "ZIP-level collision counts are undercounts."),
-            html.Li("2026 covers January to October only; never compare its totals with a full year."),
-            html.Li("There is no traffic or population denominator: a busy ZIP may simply have more cars and people."),
-            html.Li("ZIP codes are not neighbourhoods."),
-            html.Li("Filings are not completed construction."),
-            html.Li("We can only describe association between the two datasets; nothing here shows cause and effect."),
-        ]),
-        html.H2("5. The impact"),
-        html.P("Residents and community boards could use the report to see which ZIPs show high building activity "
-               "and high collision counts together. Planners and safety groups could look next at those ZIPs, "
-               "adding traffic counts and population to check whether the pattern holds. This is a starting point "
-               "for questions, not a claim that building causes crashes."),
+        html.Div([html.B("In one sentence: "),
+                  "ZIP codes with a lot of construction also have a lot of collisions, but their crashes are not "
+                  "clearly more injurious or deadly, so building activity and crash counts mostly rise together "
+                  "with the size of the area."], className="story-summary"),
+        html.Section([
+            html.H2("1. The question, and why it matters to New Yorkers"),
+            html.P("Do the ZIP codes where New York City sees the most building activity also see more motor vehicle "
+                   "collisions, and more injuries to pedestrians, cyclists and motorists? Construction changes streets, "
+                   "traffic and crowds, so the answer could help residents, planners and safety groups know where to "
+                   "look first. We only ask about association."),
+        ], className="story-sec"),
+        html.Section([
+            html.H2("2. The data"),
+            html.P("Two NYC Open Data sets: building job filings (what is being built) and police-reported motor "
+                   "vehicle crashes (what happens on the street). They share no record-level key, so we count each by "
+                   "ZIP code and year and compare the counts: 1,123 ZIP-by-year rows, 232 ZIP codes, 375,144 housing "
+                   "jobs started and 321,092 collisions in 2022 to 2026."),
+            html.Ul([
+                html.Li(html.A("DOB NOW: Build job application filings (NYC Open Data w9ak-ipjd)",
+                               href="https://data.cityofnewyork.us/d/w9ak-ipjd", target="_blank", rel="noopener")),
+                html.Li(html.A("Motor Vehicle Collisions, Crashes (NYC Open Data h9gi-nx95)",
+                               href="https://data.cityofnewyork.us/d/h9gi-nx95", target="_blank", rel="noopener")),
+            ]),
+            html.P("Crashes without a ZIP code cannot be placed, so they are left out of the ZIP-level counts. How each "
+                   "dataset was cleaned is in the Phase 1 and Phase 2 notebooks.", className="muted"),
+        ], className="story-sec"),
+        html.Section([
+            html.H2("3. The discovery"),
+            html.P("Five things stand out. The numbers come from the eight research questions; the charts and full "
+                   "answers are on the Research questions tab.", className="muted"),
+            html.Ol([
+                _finding("More building goes with more crashes.",
+                         "ZIP codes with more housing jobs started also have more collisions (correlation 0.54 on the "
+                         "dashboard chart). Big, busy areas have both.",
+                         "Dashboard scatter; Ahmed question 1"),
+                _finding("But the crashes there are not worse.",
+                         "In the ZIP codes with the most new buildings, 15.5 pedestrians and cyclists were injured per "
+                         "100 collisions, against 21.4 in the ZIP codes with the fewest. Deaths per 1,000 collisions "
+                         "were similar (2.18 against 2.40, intervals overlap), and the leading cause is the same: "
+                         "driver inattention (89.8% against 94.8% of ZIP-years).",
+                         "Ahmed questions 1 and 2, Yassin question 1"),
+                _finding("Where construction grew, crashes did not follow.",
+                         "From 2022 to 2025 the change in housing jobs and the change in collisions are weakly and "
+                         "negatively related across 209 ZIP codes (rank correlation -0.22): growing ZIP codes, if "
+                         "anything, saw collisions fall slightly.",
+                         "Issa question 1"),
+                _finding("Boroughs differ, and Brooklyn stands out.",
+                         "Brooklyn has a larger share of the city's collisions than of its construction, about 10 "
+                         "percentage points, in every year we looked at and under two different measures of construction.",
+                         "Issa question 2, Yassin question 2"),
+                _finding("Demolitions and planned housing add little.",
+                         "ZIP codes with the most demolitions had a higher median collision rate per housing job "
+                         "(118.22 against 101.21), but the uncertainty range includes zero. More planned dwelling "
+                         "units go with a slightly higher pedestrian injury rate (rank correlation 0.24).",
+                         "Walid questions 1 and 2"),
+            ], className="takeaways"),
+        ], className="story-sec"),
+        html.Section([
+            html.H2("4. The limits"),
+            html.Ul([
+                html.Li("About 28% of crashes have no ZIP code and are excluded, more of them in 2022 and 2023, so "
+                        "ZIP-level collision counts are undercounts."),
+                html.Li("2026 covers January to October only; never compare its totals with a full year."),
+                html.Li("There is no traffic or population denominator: a busy ZIP may simply have more cars and "
+                        "people."),
+                html.Li("ZIP codes are not neighbourhoods, and filings are not completed construction."),
+                html.Li("We can only describe association between the two datasets; nothing here shows cause and "
+                        "effect."),
+            ]),
+        ], className="story-sec"),
+        html.Section([
+            html.H2("5. The impact"),
+            html.P("Residents and community boards could use the report to see which ZIPs show high building activity "
+                   "and high collision counts together. Planners and safety groups could look next at those ZIPs, "
+                   "adding traffic counts and population to check whether the pattern holds. This is a starting point "
+                   "for questions, not a claim that building causes crashes."),
+        ], className="story-sec"),
     ])
 
 

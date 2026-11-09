@@ -130,3 +130,16 @@ button.primary { font-size: 18px; padding: 14px 56px; }
 .page p { max-width: 78ch; }
 .page .card p, .page .stats p, .page .center, .page .hint { max-width: none; }
 @media (max-width: 600px) { .page { padding: 12px 12px 48px; } .panel { padding: 14px 12px 12px; } .stat .big { font-size: 26px; } button.primary { font-size: 17px; padding: 13px 20px; } }
+
+/* story tab */
+.story-summary { background: linear-gradient(120deg, #eaf3ff, #e6f7f5); border: 1px solid #cfe0f3; border-radius: 14px;
+  padding: 16px 20px; margin: 4px 0 18px; font-size: 1.08rem; line-height: 1.55; }
+.story-sec { background: var(--card); border: 1px solid #e3e9f2; border-radius: 14px; box-shadow: var(--shadow); padding: 4px 20px 16px; margin: 0 0 16px; }
+.story-sec h2 { margin-top: 16px; }
+.takeaways { list-style: none; counter-reset: t; padding: 0; margin: 10px 0 0; display: grid; gap: 12px; }
+.takeaways li { counter-increment: t; position: relative; background: #f7faff; border: 1px solid #e3e9f2; border-radius: 12px; padding: 14px 16px 12px 52px; line-height: 1.6; }
+.takeaways li::before { content: counter(t); position: absolute; left: 14px; top: 14px; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--accent); color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.takeaways li .muted { margin-top: 6px; font-size: 13px; }
+.story-sec ul li { box-shadow: none; }
+@media (max-width: 600px) { .story-sec { padding: 2px 14px 14px; } .takeaways li { padding-left: 48px; } }
