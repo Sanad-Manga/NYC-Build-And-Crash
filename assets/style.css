@@ -91,3 +91,42 @@ button.primary:active { transform: translateY(0); }
 .banner { border-radius: 12px; }
 @media (max-width: 600px) { .page > h1 { font-size: 1.55rem; padding: 14px 14px 2px; } .page > h1 + p.muted { padding: 0 14px 14px; font-size: .95rem; } }
 .card a { display: block; cursor: zoom-in; }
+
+/* ===== layout/readability pass (CSS only) ===== */
+body { font-size: 16px; line-height: 1.6; }
+.page { max-width: 1160px; padding: 20px 20px 64px; }
+.page h2 { margin: 28px 0 10px; padding-bottom: 6px; border-bottom: 2px solid #dbe6f5; font-size: 1.25rem; letter-spacing: -0.01em; }
+.card h2 { border-bottom: 0; padding-bottom: 0; margin: 0 0 8px; }
+/* filters: one clear block, labels aligned, search stands out */
+.panel { padding: 18px 18px 14px; border-top: 4px solid var(--accent); }
+.search-box { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px dashed #d3deee; }
+.search { min-height: 46px; font-size: 16px; padding: 10px 14px; }
+.filter-row { gap: 14px; }
+.hint { font-size: 13px; }
+.center { margin: 14px 0 6px; }
+button.primary { font-size: 18px; padding: 14px 56px; }
+/* report: clear heading, bigger KPI tiles, charts in a calm 2-column grid */
+#report > div > h2:first-child, #report h2:first-child { margin-top: 18px; border: 0; padding: 0; font-size: 1.35rem; color: var(--accent); }
+.stats { gap: 14px; margin: 14px 0 18px; }
+.stat { padding: 14px 16px; }
+.stat .big { font-size: 32px; }
+.stat div:last-child { color: var(--muted); font-size: 14px; }
+.grid { gap: 20px; }
+.chart { padding: 12px 12px 6px; }
+.caption { font-size: 14px; line-height: 1.45; padding: 4px 10px 10px; }
+.info { padding: 16px 18px; line-height: 1.6; }
+/* research cards: readable finding, framed chart, subtle hover */
+.card { padding: 18px; transition: box-shadow .15s ease, transform .15s ease; }
+.card:hover { box-shadow: 0 10px 26px rgba(20,35,58,.12); transform: translateY(-2px); }
+.card > p:first-of-type { font-weight: 600; font-size: 17px; line-height: 1.45; }
+.card .rq-img { border: 1px solid #e3e9f2; background: #fff; }
+.finding-box { font-size: 15px; line-height: 1.6; padding: 12px 14px; margin-top: 12px; }
+/* story: a readable column, findings as separate cards */
+.page ul { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 14px; }
+.page ul li { background: var(--card); border: 1px solid #e3e9f2; border-left: 5px solid var(--accent2); border-radius: 12px;
+  padding: 14px 16px; box-shadow: var(--shadow); line-height: 1.6; }
+.page ul li .muted { margin-top: 8px; font-size: 13px; }
+.page ul li a { color: var(--accent); font-weight: 600; }
+.page p { max-width: 78ch; }
+.page .card p, .page .stats p, .page .center, .page .hint { max-width: none; }
+@media (max-width: 600px) { .page { padding: 12px 12px 48px; } .panel { padding: 14px 12px 12px; } .stat .big { font-size: 26px; } button.primary { font-size: 17px; padding: 13px 20px; } }
