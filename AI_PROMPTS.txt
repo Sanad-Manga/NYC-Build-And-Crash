@@ -2566,3 +2566,12 @@ Related Requirement: Final cleanup before submission
 Prompt: Final review found three small leftovers in teammates files: stale lines in 00_project_overview.ipynb (old baseline, "Pending" for its own merged PR, notes addressed to Ahmed, deployment URL pointing to the README), a stray Q1 sentence at the end of assets/rq/yassin_q2.md, and the kernelspec name housing_venv in phase2_housing_zip_year_walid.ipynb (fails under nbconvert). Fix all three with minimal edits.
 How the output was used: Edited only those three files (8 changed lines). Checked: both notebooks still valid JSON, overview availability cell runs, all 29 local links resolve, every quoted finding still matches assets/rq/*.md, yassin_q2.md still parsed by src.research. Contributor results, code and data were not changed.
 ================================================
+
+================================================
+Date: 2026-11-09
+Student: Ahmed Sanad
+Tool: Claude Code (Sonnet 5.5)
+Related Requirement: Final submission checks (README, dataset links in notebooks)
+Prompt: Two final reviews of the repo against the project PDF found: the seven Phase 2 and Phase 3 notebooks had no dataset links; the README still had "to be confirmed" notes for the live URL and the Vercel settings; the PDF asks for one notebook while the repo has twelve; and contributions were not described per visualization and website component. Fix these with minimal edits.
+How the output was used: Added one markdown cell with both NYC Open Data links to the seven notebooks (cells and outputs otherwise untouched; notebooks round-tripped byte-identical before editing). README: removed the two confirmation notes, added an entry-point notebook sentence (00_project_overview.ipynb with the other eleven as linked parts) and a short who-built-what paragraph. Walid's own "to be confirmed by Walid" row was left for him.
+================================================
