@@ -2492,3 +2492,23 @@ Both: state the confounder (busy ZIPs have both more building and more traffic),
 End with a one-paragraph conclusion, "Contribution note" (Ahmed authored the collisions EDA/cleaning, the website skeleton and this analysis) and "Prompts used".
 (Parts B and C of the same prompt - website real data, Render deployment - are logged in their own PRs.)
 How the output was used: Claude built phase3_analysis_ahmed.ipynb. Because the Phase 2 PRs were not merged, it was run on an interim data/zip_year.csv produced locally by running the teammates' branches; it must be re-run after they merge. Kept: full years 2022-2025, low_data_flag ZIP-years excluded, a 100-collision minimum per ZIP (my addition, justified in the notebook), quartile comparison with bootstrap intervals, Spearman with a permutation p-value, and the Q2 permutation test. Findings text was filled from printed numbers.
+
+================================================
+Date: 2026-11-09
+Student: Yassin
+Tool: OpenAI Codex
+Related Requirement: Final overview notebook assembly
+Prompt (verbatim excerpt from Ahmed's supplied task, including pasted Markdown escapes):
+You are Yassin's coding agent (Yassin owns the final notebook assembly). Branch docs/overview-notebook off origin/main; never commit to main, never edit another notebook, do not merge your own PR; tell Ahmed when done. Rules: relative paths, every number equals a printed output of the linked notebook.\
+\
+TASK: create 00_project_overview\.ipynb (mostly markdown plus one small code cell that checks every notebook file listed exists and prints OK or MISSING). It must contain, in this order:\
+1\. The question and why it matters to New Yorkers; the three hypotheses (construction brings danger / busy areas have both / no relationship); correlation only.\
+2\. The two datasets: name, ID, link (https\://data.cityofnewyork.us/d/w9ak-ipjd and https\://data.cityofnewyork.us/d/h9gi-nx95), rows and columns before and after cleaning, geographic and time attributes, known issues, reason for choosing them (copy the numbers from the Phase 1 notebooks' printed outputs, never from memory).\
+3\. The integration: ZIP x year, why (no shared key, aggregate first, never match individual records), the join type, the zero-fill rule, post-join cleaning in one paragraph each.\
+4\. A table of every notebook in run order with its owner, input file, output file and one-line purpose (phase1 x4, phase2 x3, phase3 x4 including the three analysis notebooks of Issa, Walid, Yassin and Ahmed's phase3_analysis_ahmed.ipynb).\
+5\. The eight research questions (two per member): question, chart type, notebook, one-line finding taken from assets/rq/\*.md once they exist (leave a clear "to be filled when the PR merges" line for any that are not on main yet and tell Ahmed).\
+6\. Contributions per member and phase (use docs/TEAM_PLAN.md and the real merged PR list; do not claim anything that is not on main).\
+7\. Where the AI prompt log is (AI_PROMPTS.txt) and the website link placeholder "deployment URL: see README".\
+Open a PR; list in the description which numbers you took from which notebook.
+How the output was used: Created only 00_project_overview.ipynb plus this log entry. Assembled dataset counts from saved Phase 1 outputs, explained the later collision snapshot used in integration, traced actual join/zero-fill/post-join rules, listed notebook interfaces and merged research findings, and distinguished assignments and pending PRs from merged contributions. Added one nonfatal file-availability code cell. No teammate notebook or asset was edited.
+================================================
