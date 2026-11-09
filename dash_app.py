@@ -14,7 +14,7 @@ from src.data import (BOROUGHS, YEAR_MAX, YEAR_MIN, DataValidationError, is_dumm
                       resolve_data_path)
 from src.report import (COLLISION_CATEGORIES, HOUSING_CATEGORIES, apply_filters, available_categories,
                         filters_text, metric_label, summary)
-from src.research import NOT_AVAILABLE, scan_research
+from src.research import MEMBERS, NOT_AVAILABLE, scan_research
 from src.search import describe_categories, parse_categories
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -122,7 +122,10 @@ def research_tab():
 
 
 def story_tab():
-    entries = [e for e in scan_research() if e["available"]][:5]
+    available = [e for e in scan_research() if e["available"]]
+    # one finding per member (their first available question) so every team member's result appears
+    entries = [next(e for e in available if e["name"] == name) for name in MEMBERS
+               if any(e["name"] == name for e in available)]
     if entries:
         discovery = html.Ul([html.Li([
             html.B(f"{e['member']}, question {e['number']}. "), e["question"], " ",
