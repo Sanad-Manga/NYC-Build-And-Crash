@@ -2464,6 +2464,15 @@ Not verified: the live Vercel build (needs Ahmed's login).
 ================================================
 
 ================================================
+Date: 2026-11-09
+Student: Mohamed Issa
+Tool: Claude Code (Opus 5.5)
+Related Requirement: Phase 3 - two research questions (phase3_analysis_issa.ipynb, assets/rq/issa_q1.*, assets/rq/issa_q2.*)
+Prompt: [pasted the team lead's "Issa 2: two research questions" task: Q1 change 2022-2025 in construction vs collisions per ZIP (scatter, quadrants, Spearman as Pearson on ranks with a permutation p-value), Q2 borough share of collisions minus share of housing jobs (diverging heatmap), full years 2022-2025, low_data rows left out, findings and charts saved to assets/rq/] now do issa 2
+How the output was used: Kept both analyses and charts. Changed after checking the data: Q1 uses housing_job_count because new buildings were too sparse per ZIP (median 5 a year, 51 of 209 ZIPs with no change), with new buildings kept as a sensitivity check; added a check for ZIP-coding breaks (11413 and 11422 fall to about 0 crashes in 2025, 11216 jumps) and reported rho with and without them; padded the scatter so the quadrant labels do not cover points; used matplotlib because saving Plotly to PNG needs kaleido, which is not in requirements.txt. The finding paragraphs are generated from the computed values, so the markdown and assets/rq/*.md match the printed outputs.
+================================================
+
+================================================
 Date: 2026-11-08
 Student: Ahmed Sanad
 Tool: Claude Code Sonnet 5.5
