@@ -4,8 +4,9 @@ Team project for **Data Engineering and Visualization** (German International Un
 
 **Question.** Do the NYC neighborhoods (ZIP codes) with the most new construction also have more, or different, traffic collisions? We answer it with two NYC Open Data datasets, a documented cleaning and integration pipeline, eight research questions, and an interactive website. We only describe association between the two datasets, never cause and effect.
 
-- **Live website:** https://nyc-build-and-crash.vercel.app (to be confirmed by Ahmed as the URL submitted)
+- **Live website:** https://nyc-build-and-crash.vercel.app
 - **Repository:** https://github.com/Sanad-Manga/NYC-Build-And-Crash
+- **Entry-point notebook:** [00_project_overview.ipynb](00_project_overview.ipynb) holds the project overview, both dataset links, the integration explanation, the research findings and the prompts used. The other eleven notebooks (`phase1_*`, `phase2_*`, `phase3_*`) are its linked parts, one per cleaning, aggregation, integration or analysis step, and each lists its own prompts and dataset links.
 
 ## Datasets
 
@@ -127,7 +128,7 @@ The team rule is one shared `requirements.txt`, and the notebooks, tests and the
 5. Environment variables: none.
 6. Production Branch: **main**; every merge to `main` redeploys.
 
-These are the settings in the repository's deployment notes. Whether the existing Vercel project was configured exactly this way is to be confirmed by Ahmed (the project was already present and building from `main` when the deployment was checked).
+These are the settings used for the deployment. The site is built by Vercel from `main` and was checked in a browser on the live URL: real data (no dummy banner), search, one Generate Report button with 4 charts, the research-questions tab with all 8 cards, and the 5-part Story tab.
 
 ## Data contract for `data/zip_year.csv`
 
@@ -159,6 +160,8 @@ Team of four; Ahmed Sanad is team leader. Contributions below come from `docs/TE
 | **Mohamed Issa** | Housing loading and initial cleaning (PR 6) | Integration, post-join cleaning and `data/zip_year.csv` (PR 12) | 2 research questions (PR 17) |
 | **Mohamed Walid** | Housing EDA and cleaning (PR 1); team standards (PR 5) | Housing ZIP x year aggregation (PR 11) | 2 research questions (PR 18); deployment testing (to be confirmed by Walid) |
 | **Yassin** | Collisions initial cleaning (PR 4, 15, 20) | Collisions ZIP x year aggregation (PR 10) | 2 research questions (PR 19); `00_project_overview.ipynb` (PR 22) |
+
+**Who built what (visualizations and website).** Ahmed: the Dash website (filters with a category from each dataset, search mode, the single Generate Report button, four report charts, research-questions and Story tabs), plus two research-question charts (grouped injury-rate bars; stacked contributing-factor profile). Issa: the integrated ZIP x year table the site reads, plus two charts (change scatter with quadrants; borough-by-year diverging heatmap). Walid: the housing ZIP x year aggregation, plus two charts (box plot of collisions per housing job; bubble scatter of planned dwelling units against pedestrian injury rate). Yassin: the collisions ZIP x year aggregation and the overview notebook, plus two charts (grouped bars with bootstrap intervals; borough share lines with a dashed partial-year segment).
 
 ## The eight research questions
 
