@@ -2548,3 +2548,12 @@ Related Requirement: Website story section
 Prompt: The live Story tab listed only 5 of the 8 research findings because story_tab() in dash_app.py capped the entries at the first 5. Remove the cap so all available findings are listed.
 How the output was used: Correction: no code was changed by this entry. When the branch was rebuilt on latest main, PR #23 (Story: one finding per member) had already replaced the cap, so the planned dash_app.py edit matched nothing and PR #24 added only this log entry. The Story tab now shows one finding per member (4 entries), a deliberate choice from PR #23; the Research questions tab shows all 8.
 ================================================
+
+================================================
+Date: 2026-11-09
+Student: Ahmed Sanad
+Tool: Claude Code (Sonnet 5.5)
+Related Requirement: Final README, final verification and submission email draft
+Prompt: Write the final README from the repository state (facts only, anything unverifiable marked "to be confirmed by Ahmed"): summary, datasets with links, layout, setup, notebook run order with outputs and run times, website, Vercel deployment and requirements exception, data contract, contributions from TEAM_PLAN and merged PRs, the eight research questions, use of AI, limitations. Then verify a fresh clone of main (new venv, every notebook, pytest) and draft the submission email without sending it.
+How the output was used: README.md rewritten from the merged files; run times are measured from one fresh-clone run of every notebook; question wording is the first line of each assets/rq/*.md. Items I could not verify (live URL is the one to submit, Vercel settings of the existing project, Walid's deployment testing) are marked "to be confirmed". The email was saved as a Gmail draft, not sent.
+================================================
