@@ -106,8 +106,13 @@ def dashboard_tab():
 
 def rq_card(entry):
     if entry["image"]:
-        image = html.Img(src=f"/assets/rq/{entry['image']}", className="rq-img",
-                         alt=f"Chart for {entry['member']}, question {entry['number']}")
+        src = f"/assets/rq/{entry['image']}"
+        image = html.Div([
+            html.A(html.Img(src=src, className="rq-img",
+                            alt=f"Chart for {entry['member']}, question {entry['number']}"),
+                   href=src, target="_blank", rel="noopener",
+                   title="Open the chart at full size in a new tab"),
+            html.Div("Click the chart to open it at full size.", className="hint")])
     else:
         image = html.Div("Chart image: " + NOT_AVAILABLE, className="muted")
     finding = html.P(entry["finding"], className="finding") if entry["available"] else \
