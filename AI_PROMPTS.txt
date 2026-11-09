@@ -2582,7 +2582,7 @@ Student: Ahmed Sanad
 Tool: Claude Code (Sonnet 5.5)
 Related Requirement: Website visual polish
 Prompt: The site looks too plain. Give it a visual refresh without changing behaviour, and make the housing-vs-collisions scatter a bubble chart so size carries a third value (a map is not possible: the data has no ZIP boundaries or coordinates).
-How the output was used: Appended a CSS block to assets/style.css (gradient header, card shadows, accent stat tiles, pill button, tab styling) and changed construction_vs_crashes in src/charts.py so bubble area = people injured per ZIP (floored at 1; hover shows the true value; falls back to fixed-size dots if the column is missing). Also made each research-question chart image a link that opens it at full size in a new tab (dash_app.py rq_card). No callbacks or data logic changed. Checked: 43 tests pass, local browser at 1200px and 375px (no sideways scroll, 4 charts after Generate Report).
+How the output was used: Appended a CSS block to assets/style.css (gradient header, card shadows, accent stat tiles, pill button, tab styling) and changed construction_vs_crashes in src/charts.py so bubble area = people injured per ZIP (floored at 1; hover shows the true value; falls back to fixed-size dots if the column is missing). Display names on the site are now Mohamed Issa, Mohamed Walid and Yassin Elshaer (src/research.py MEMBERS). Also made each research-question chart image a link that opens it at full size in a new tab (dash_app.py rq_card). No callbacks or data logic changed. Checked: 43 tests pass, local browser at 1200px and 375px (no sideways scroll, 4 charts after Generate Report).
 ================================================
 
 ================================================
