@@ -2557,3 +2557,12 @@ Related Requirement: Final README, final verification and submission email draft
 Prompt: Write the final README from the repository state (facts only, anything unverifiable marked "to be confirmed by Ahmed"): summary, datasets with links, layout, setup, notebook run order with outputs and run times, website, Vercel deployment and requirements exception, data contract, contributions from TEAM_PLAN and merged PRs, the eight research questions, use of AI, limitations. Then verify a fresh clone of main (new venv, every notebook, pytest) and draft the submission email without sending it.
 How the output was used: README.md rewritten from the merged files; run times are measured from one fresh-clone run of every notebook; question wording is the first line of each assets/rq/*.md. Items I could not verify (live URL is the one to submit, Vercel settings of the existing project, Walid's deployment testing) are marked "to be confirmed". The email was saved as a Gmail draft, not sent.
 ================================================
+
+================================================
+Date: 2026-11-09
+Student: Ahmed Sanad
+Tool: Claude Code (Sonnet 5.5)
+Related Requirement: Final cleanup before submission
+Prompt: Final review found three small leftovers in teammates files: stale lines in 00_project_overview.ipynb (old baseline, "Pending" for its own merged PR, notes addressed to Ahmed, deployment URL pointing to the README), a stray Q1 sentence at the end of assets/rq/yassin_q2.md, and the kernelspec name housing_venv in phase2_housing_zip_year_walid.ipynb (fails under nbconvert). Fix all three with minimal edits.
+How the output was used: Edited only those three files (8 changed lines). Checked: both notebooks still valid JSON, overview availability cell runs, all 29 local links resolve, every quoted finding still matches assets/rq/*.md, yassin_q2.md still parsed by src.research. Contributor results, code and data were not changed.
+================================================
