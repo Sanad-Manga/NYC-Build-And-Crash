@@ -48,8 +48,15 @@ def collision_label(column):
 
 
 # ---------------------------------------------------------------- layout helpers
-def field(label, component):
-    return html.Div([html.Label(label, className="lbl"), component], className="field")
+def field(label, component, control_id, is_input=False):
+    """A labelled control. Text input: <label for>. Dropdown: a group named by the label (Dash's dropdown
+    button is named from its value, so the label would not be announced otherwise)."""
+    label_id = f"{control_id}-label"
+    if is_input:
+        return html.Div([html.Label(label, id=label_id, htmlFor=control_id, className="lbl"), component],
+                        className="field")
+    return html.Div([html.Label(label, id=label_id, className="lbl"), component], className="field",
+                    role="group", **{"aria-labelledby": label_id})
 
 
 def dropdown(id_, options, value):
@@ -60,23 +67,25 @@ def build_filters():
     return html.Div([
         html.Div([
             field("Search mode", dcc.Input(id="search", type="text", debounce=True, className="search",
-                                           placeholder="e.g. Brooklyn 2022 new buildings")),
+                                           placeholder="e.g. Brooklyn 2022 new buildings"),
+                  "search", is_input=True),
             html.Div("Press Enter: the text sets the dropdowns below. Then click Generate Report.",
                      className="hint"),
             html.Div(id="search-msg", className="hint", role="status"),
         ], className="search-box"),
         html.Div([
             field("Borough", dropdown("borough", [{"label": "All boroughs", "value": ALL}] +
-                                      [{"label": b, "value": b} for b in BOROUGHS], ALL)),
+                                      [{"label": b, "value": b} for b in BOROUGHS], ALL),
+                  "borough"),
             field("Year", dropdown("year", [{"label": "All years", "value": ALL}] +
                                    [{"label": f"{y} (partial, to 31 Oct)" if y == YEAR_MAX else str(y), "value": y}
-                                    for y in YEARS], ALL)),
+                                    for y in YEARS], ALL), "year"),
             field("Housing category", dropdown("housing", [{"label": l, "value": c} for l, c in HOUSING.items()],
-                                               "housing_job_count")),
+                                               "housing_job_count"), "housing"),
             field("Collision category", dropdown("collision", [{"label": l, "value": c} for l, c in COLLISION.items()],
-                                                 "collision_count")),
+                                                 "collision_count"), "collision"),
             field("ZIP codes (optional)", dcc.Dropdown(id="zips", options=ALL_ZIPS, value=[], multi=True,
-                                                       placeholder="All ZIP codes")),
+                                                       placeholder="All ZIP codes"), "zips"),
         ], className="filter-row"),
         html.Div(f"Not available in this data, so hidden: {', '.join(MISSING_HOUSING)}.", className="hint warn")
         if MISSING_HOUSING else None,
@@ -104,7 +113,7 @@ def rq_card(entry):
     finding = html.P(entry["finding"], className="finding") if entry["available"] else \
         html.P(NOT_AVAILABLE, className="muted")
     return html.Div([
-        html.H4(f"{entry['member']}, question {entry['number']}"),
+        html.H2(f"{entry['member']}, question {entry['number']}", className="card-title"),
         html.P([html.B("Question: "), entry["question"]]),
         image,
         html.Div([html.B("Finding: "), finding], className="finding-box"),
@@ -136,12 +145,12 @@ def story_tab():
         discovery = html.P("The findings will appear here once the research-question files are in assets/rq/. "
                            "Until then, nothing is claimed.", className="muted")
     return html.Div([
-        html.H3("1. The question, and why it matters to New Yorkers"),
+        html.H2("1. The question, and why it matters to New Yorkers"),
         html.P("Do the ZIP codes where New York City sees the most building activity also see more motor vehicle "
                "collisions, and more injuries to pedestrians, cyclists and motorists? Construction changes streets, "
                "traffic and crowds, so the answer could help residents, planners and safety groups know where to look "
                "first. We only ask about association."),
-        html.H3("2. The data"),
+        html.H2("2. The data"),
         html.Ul([
             html.Li(html.A("DOB NOW: Build job application filings (NYC Open Data w9ak-ipjd)",
                            href="https://data.cityofnewyork.us/d/w9ak-ipjd", target="_blank", rel="noopener")),
@@ -151,9 +160,9 @@ def story_tab():
         html.P("Both datasets were cleaned in separate notebooks, then joined into one table with one row per "
                "ZIP code and year (2022 to 2026). Crashes without a ZIP code cannot be placed, so they are excluded "
                "from the ZIP-level counts; rows we could not use are described in the Phase 1 and Phase 2 notebooks."),
-        html.H3("3. The discovery"),
+        html.H2("3. The discovery"),
         discovery,
-        html.H3("4. The limits"),
+        html.H2("4. The limits"),
         html.Ul([
             html.Li("About 28% of crashes have no ZIP code and are excluded, more of them in 2022 and 2023, so "
                     "ZIP-level collision counts are undercounts."),
@@ -163,7 +172,7 @@ def story_tab():
             html.Li("Filings are not completed construction."),
             html.Li("We can only describe association between the two datasets; nothing here shows cause and effect."),
         ]),
-        html.H3("5. The impact"),
+        html.H2("5. The impact"),
         html.P("Residents and community boards could use the report to see which ZIPs show high building activity "
                "and high collision counts together. Planners and safety groups could look next at those ZIPs, "
                "adding traffic counts and population to check whether the pattern holds. This is a starting point "
@@ -236,8 +245,9 @@ def apply_search(text, housing_now, collision_now):
 
 
 def _graph(fig, caption, id_):
-    return html.Div([dcc.Graph(figure=fig, id=id_, config={"displaylogo": False}),
-                     html.P(caption, className="caption")], className="chart")
+    return html.Figure([dcc.Graph(figure=fig, id=id_, config={"displaylogo": False}),
+                        html.Figcaption(caption, id=f"{id_}-caption", className="caption")],
+                       className="chart", **{"aria-labelledby": f"{id_}-caption"})
 
 
 def stat(value, label):
@@ -286,7 +296,7 @@ def generate_report(n_clicks, borough, year, housing, collision, zips):
                "People injured, split by pedestrians, cyclists and motorists; ignores the collision category.",
                "chart-grouped"),
     ], className="grid")
-    heading = html.H3(f"Report: {filters_text(borough, year, zl)}. "
+    heading = html.H2(f"Report: {filters_text(borough, year, zl)}. "
                       f"Housing: {housing_label(h)}. Collisions: {collision_label(c)}.")
     return html.Div([heading, cards, partial, body]), ""
 
