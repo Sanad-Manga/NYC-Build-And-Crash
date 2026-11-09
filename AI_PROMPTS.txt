@@ -2593,3 +2593,12 @@ Related Requirement: Research-question findings readability
 Prompt: Yassin's two research-question findings are too long and full of repeated caveats. Condense them without changing any number.
 How the output was used: Rewrote assets/rq/yassin_q1.md and yassin_q2.md to about 650-700 characters each (question on line 1 kept); every number was checked against the original text (none new). The two matching quoted findings in 00_project_overview.ipynb were updated to the same text.
 ================================================
+
+================================================
+Date: 2026-11-09
+Student: Ahmed Sanad
+Tool: Claude Code (Sonnet 5.5)
+Related Requirement: Website layout and readability
+Prompt: The general UI is still bad. Improve spacing, hierarchy and readability of the Dashboard, Research questions and Story tabs without changing behaviour.
+How the output was used: Appended a CSS-only block to assets/style.css (clearer filter panel with a highlighted search, larger KPI tiles, calmer chart grid, framed research cards with readable findings, story findings as separate cards, readable text width). No Python, callbacks or layout structure changed. Checked: 43 tests pass; local browser at 1200px and 375px: no sideways scroll on any tab, 4 charts after Generate Report, 8 research cards, Story lists render.
+================================================
